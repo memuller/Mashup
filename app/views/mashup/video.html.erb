@@ -1,0 +1,11 @@
+<h2> Videos</h2>
+
+<%- @videos.entries.each do |entrie|-%>
+	<div>
+		<p><%= entrie.title%></p>
+		<%= link_to truncate(entrie.url,:lenght => 50,:ommision =>"..."), entrie.url%>
+		<small>
+			<%= time_ago_in_words entrie.published%>
+			<%= entrie.author%>
+		</small>
+<%- end-%>

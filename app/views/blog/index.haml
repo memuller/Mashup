@@ -1,0 +1,9 @@
+%h2 Blogs
+
+- @blogs.entries.each do |blog|
+	%div
+		%p= blog.title
+		%a{:href => blog.url}= truncate(blog.url,:lenght => 50,:ommision =>"...")
+		%small
+			= time_ago_in_words blog.published
+			= blog.author

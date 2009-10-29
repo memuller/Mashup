@@ -1,0 +1,5 @@
+%h1 Video#index
+
+- @videos.entries.each do |video|
+	%p= video.title
+	%a{:href => video.url}= video.url

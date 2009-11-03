@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class MashupControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+
+  test "the blog" do
+		get :blog
+    assert_response :success
   end
+
 end

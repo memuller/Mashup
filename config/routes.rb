@@ -41,4 +41,6 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:tag'	, :tag => nil
   map.connect ':controller/:action/:tag.:format'	, :tag => nil
+
+#	map.root :controller => 'mashup', :action => "index"
 end

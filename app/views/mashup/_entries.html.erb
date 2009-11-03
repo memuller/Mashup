@@ -1,9 +1,13 @@
-<%- feed.entries.each do |entrie|-%>
-	<div>
-		<p><%= auto_link entrie.title%></p>
-		<%= link_to truncate(entrie.url,:lenght => 50,:ommision =>"..."), entrie.url%>
-		<small>
-			<%= time_ago_in_words entrie.published%>
-			<%= entrie.author%>
-		</small>
-<%- end-%>
+<% if !feed.blank? -%>
+	<%- feed.each do |entrie|-%>
+		<div>
+			<p><%= auto_link entrie.title%></p>
+			<%= link_to truncate(entrie.url,:lenght => 50,:ommision =>"..."), entrie.url%>
+			<small>
+				<%= time_ago_in_words entrie.published%>
+				<%= entrie.author%>
+			</small>
+	<%- end-%>
+<% else %>
+	<div>não há itens</div>
+<% end %>

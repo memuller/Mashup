@@ -25,6 +25,10 @@ class MashupController < ApplicationController
 		@bookmarks = Mashup.bookmark
   end
 
+  def timeline
+		@mashup = Mashup.timeline
+  end
+
 	def expire
 			flash[:notice] = "cache EXPIRED"
 			expire_page :action => "index"

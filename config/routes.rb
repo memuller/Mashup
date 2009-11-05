@@ -42,5 +42,5 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:tag'	, :tag => nil
   map.connect ':controller/:action/:tag.:format'	, :tag => nil
 
-#	map.root :controller => 'mashup', :action => "index"
+	map.root :controller => 'analytic', :action => "index"
 end

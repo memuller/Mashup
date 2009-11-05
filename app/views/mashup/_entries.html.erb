@@ -1,13 +1,18 @@
+<div>
 <% if !feed.blank? -%>
+	<% reset_cycle -%>
 	<%- feed.each do |entrie|-%>
-		<div>
-			<p><%= auto_link entrie.title%></p>
-			<%= link_to truncate(entrie.url,:lenght => 50,:ommision =>"..."), entrie.url%>
+		<div class="<%= cycle("even", "odd") -%>">
+			<img src="<%= entrie.links[1] -%>" class="avatar" width="48" height="48">
+			<p><%= auto_link entrie.content%></p>
 			<small>
 				<%= time_ago_in_words entrie.published%>
 				<%= entrie.author%>
 			</small>
+			<%= link_to truncate(entrie.url, :length => 50,:ommision =>"..."), entrie.url, :class => "origin"%>
+		</div>
 	<%- end-%>
 <% else %>
-	<div>não há itens</div>
+	<small class="no-entrie">Nenhuma atualiza&ccedil;&atilde;o!</small>
 <% end %>
+</div>

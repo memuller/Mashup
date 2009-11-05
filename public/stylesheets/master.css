@@ -1,10 +1,14 @@
 body{margin:0;font: .8em sans-serif;}
 h1
 ,h2{margin:.5em}
-h1{color:#07f}
-h2{background-color:#07f;padding:.5em;color:#fff;margin:auto 0;}
+h1{color:#07f;font-weight:900;}
+h2
+,h3
+,h4
+,h5
+,h6{background-color:#07f;padding:.5em;color:#fff;margin:auto 0;;border-top:2px solid #fff;}
 div div
-	,small{padding:.3em 0 1em 12em;border-top:1px solid #dde;}
+	,small{padding:.3em 0 1em 48px;border-top:1px solid #dde;}
 small{color:#777}
 .even small
 	,.odd small {border:none;}
@@ -15,4 +19,6 @@ small{color:#777}
 a{color:#077;}
 	a:visited
 		,a.origin{color:#49c;}
-a.origin {font-size:.9em;}
+a.origin {font-size:.85em;}
+
+img{width:3.6em;height:3.6em;}

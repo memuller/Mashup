@@ -1,0 +1,9 @@
+%h1 Tags + acessadas nos &uacute;ltimos 7 dias
+
+= render :partial => 'list_tags', :locals => { :tags => @data[:last_7_days]} 
+
+%h2 Tags + acessadas de todos os tempos
+
+= render :partial => 'list_tags',  :locals => { :tags => @data[:all_time]}
+
+

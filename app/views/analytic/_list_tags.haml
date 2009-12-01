@@ -1,0 +1,14 @@
+.tags
+	- reset_cycle 
+	- 10.times do |n|
+		- entrie = tags.points[n]
+		- next if entrie.nil? 
+		- tag = clean_tag entrie.title
+		- next if tag.empty? 
+		%div{:class => cycle("even", "odd")}
+			%p 
+				= tag 
+				= link_to "visualizar", tag_path( tag )
+			%small	
+				Pageviews 
+				= entrie.metrics[0][:pageviews]

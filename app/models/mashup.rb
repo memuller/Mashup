@@ -1,22 +1,26 @@
 class Mashup
 
-	@feed_urls = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cancaonova",
-								"http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cançãonova",			
-	 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=cancaonova",
-							"http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=cancaonova",	
-							"http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[cancaonova]"	,
-							"http://search.twitter.com//search.atom?rpp=10&page=1&tag=cancaonova"
-							]
-	@feed_urls_TEMP = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cancaonova",
-									"http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cançãonova",			
-		 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=cancaonova",
-								"http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=cancaonova",	
-								"http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[cancaonova]"	,
-								"http://search.twitter.com//search.atom?rpp=10&page=1&tag=cancaonova"
+	def self.initialize tag = nil
+		RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
+		@tag = tag
+		@feed_urls = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cancaonova,"+@tag,
+									"http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cançãonova+"+@tag,			
+		 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=cancaonova,"+@tag,
+								"http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=cancaonova+"+@tag,	
+								"http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[cancaonova,"+@tag+"]"	,
+								"http://search.twitter.com/search.atom?rpp=10&page=1&tag=cancaonova+"+@tag
 								]
-
-	def self.all
+		@feed_urls_TEMP = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cancaonova,"+@tag,
+										"http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cançãonova,"+@tag,			
+			 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=cancaonova,"+@tag,
+									"http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=cancaonova+"+@tag,	
+									"http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[cancaonova,"+@tag+"]"	,
+									"http://search.twitter.com/search.atom?rpp=10&page=1&tag=cancaonova+"+@tag
+									]
+	end
 		
+	def self.all tag
+		initialize tag
 		feeds = fetch_and_parse_feed(@feed_urls)				
 
 		{ 
@@ -29,8 +33,11 @@ class Mashup
 	end
 
 	def self.blog
+		fetch_and_parse_feed(@feed_urls[0]).entries	
+/#
 		feed = fetch_and_parse_feed([@feed_urls_TEMP[0],@feed_urls_TEMP[1]])	
 		merge_feed(feed,[@feed_urls[0],@feed_urls[1]]	)		
+#/
 	end
 
 	def self.bookmark
@@ -56,12 +63,12 @@ class Mashup
 	def self.timeline
 		feed_urls = @feed_urls[5]	
 		feed = fetch_and_parse_feed(feed_urls).entries
-
+		
+		
 		half_hour, hour, two_hour,four_hour, eight_hour = [], [], [], [], []
 
-		feed.each do |sort|
+		feed.each do |sort|			
 			if sort.published > 30.minutes.ago
-RAILS_DEFAULT_LOGGER.debug "30 minutes ago #{sort.published} < #{30.minutes.ago}"				 
 				half_hour << sort
 			elsif sort.published > 1.hour.ago 
 				hour << sort
@@ -81,11 +88,17 @@ RAILS_DEFAULT_LOGGER.debug "30 minutes ago #{sort.published} < #{30.minutes.ago}
 	private 
 
 		def self.fetch_and_parse_feed feed_urls		
-			feed = Feedzirra::Feed.fetch_and_parse(feed_urls)		
-			
-#			:on_success => lambda {|feed| puts feed.title },
-#			:on_failure => lambda {|url, response_code, response_header, response_body| puts response_body })
-
+			feed = Feedzirra::Feed.fetch_and_parse(feed_urls,		
+				:on_success => lambda {|url, feed| 
+						if feed.url.include? "search.twitter.com"
+							feed.entries.each do |entry|
+								RAILS_DEFAULT_LOGGER.debug  entry.title
+							end
+						end
+						
+				}
+#				,:on_failure => lambda {|url, response_code, response_header, response_body| puts response_body })
+			)
 		end
 
 		def self.merge_feed feed_list, feed_hash

@@ -1,24 +1,25 @@
-body{margin:0;font: .8em sans-serif;}
-h1
-,h2{margin:.5em}
+body{margin:0;font: 1em sans-serif;}
+h1{margin:.5em}
 h1{color:#07f;font-weight:900;}
 h2
 ,h3
 ,h4
 ,h5
-,h6{background-color:#07f;padding:.5em;color:#fff;margin:auto 0;;border-top:2px solid #fff;}
+,h6{background-color:#07f;padding:.5em .5em .5em 16px;color:#fff;margin:auto 0;border-top:2px solid #fff;}
 div div
-	,small{padding:.3em 0 1em 48px;border-top:1px solid #dde;}
-small{color:#777}
+	,small{padding:.3em 0 1em 48px;border-top:1px solid #dde;clear:both;}
+small{color:#777;clear:both;}
 .even small
 	,.odd small {border:none;}
 .no-entrie{display:block;padding:2em 0 2em 1em;font-weight:900;}
 .even
 	,.no-entrie{background-color:#eef;}
-.avatar{float:left;margin:.5em;border:1px solid #eef;background-color:#fff;padding:.2em}
+.avatar
+	,p img{float:left;margin:.5em;padding:.2em;border:1px solid #eef;background-color:#fff;}
+		p img{margin:0 .5em;}
 a{color:#077;}
 	a:visited
 		,a.origin{color:#49c;}
-a.origin {font-size:.85em;}
+a.origin {font-size:.85em;display:block;clear:both;}
 
-img{width:3.6em;height:3.6em;}
+.avatar{width:3.6em;height:3.6em;}

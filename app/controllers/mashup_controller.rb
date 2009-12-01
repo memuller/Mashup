@@ -2,7 +2,8 @@ class MashupController < ApplicationController
 	caches_page :index, :video, :photo
 	
   def index
-		@mashup = Mashup.all
+		tag = params[:tag].nil? ?  nil.to_s : params[:tag]		 
+		@mashup = Mashup.all(tag)
   end
 
   def video

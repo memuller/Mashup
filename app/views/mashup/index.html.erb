@@ -1,22 +1,26 @@
 <h1>Mashup</h1>
 
-<h2> Blogs</h2>
+<div class="columm">
+	<h2> Blogs</h2>
+	<%= render :partial => 'entries', :locals => { :feed => @mashup[:blogs] } %>
+</div>
 
-<%= render :partial => 'entries', :locals => { :feed => @mashup[:blogs] } %>
-
+<div class="columm">
 <h2> Bookmarks</h2>
-
 <%= render :partial => 'entries', :locals => { :feed => @mashup[:bookmarks] } %>
+</div>
 
+<div class="columm">
 <h2> Microtexts</h2>
-
 <%= render :partial => 'entries', :locals => { :feed => @mashup[:microtexts] } %>
+</div>
 
+<div class="columm">
 <h2>Videos</h2>
-
 <%= render :partial => 'entries', :locals => { :feed => @mashup[:videos] } %>
+</div>
 
+<div class="columm">
 <h2> Photos</h2>
-
-<%= render :partial => 'photo', :locals => { :photos => @mashup[:photos] } %>
-
+<%= render :partial => 'entries', :locals => { :feed => @mashup[:photos] } %>
+</div>

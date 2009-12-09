@@ -2,8 +2,11 @@ class Analytic
 	
 	def self.index
 		initialize
-		{:all_time => all_time,
-		:last_7_days => last_7_days}
+		{
+			:all_time => all_time,
+			:last_7_days => last_7_days,
+			:last_day => last_day
+		}
 	end
 
 	protected
@@ -13,20 +16,39 @@ class Analytic
 		end
 
 		def self.all_time
-			@ga.get({ :start_date => '2008-10-01', 
-	              :end_date => DateTime.now.strftime("%Y-%m-%d"),
-	              :dimensions => ['pageTitle'],
-	              :metrics => ['pageviews'],
-	              :sort => ['-pageviews'] })
+			@ga.get(
+								{ 
+									:start_date => '2008-10-01', 
+				          :end_date => DateTime.now.strftime("%Y-%m-%d"),
+				          :dimensions => ['pageTitle'],
+				          :metrics => ['pageviews'],
+				          :sort => ['-pageviews'] 
+								}
+							)
 		end
 
 		def self.last_7_days
-			@ga.get({ :start_date => (DateTime.now - 1.week).strftime("%Y-%m-%d"), 
+			@ga.get(
+							{ 
+								:start_date => (DateTime.now - 1.week).strftime("%Y-%m-%d"), 
 	              :end_date => (DateTime.now).strftime("%Y-%m-%d"),
 	              :dimensions => ['pageTitle'],
 	              :metrics => ['pageviews'],
-	              :sort => ['-pageviews'] })
+	              :sort => ['-pageviews'] 
+							}
+						 )
 		end
 
+		def self.last_day
+			@ga.get(
+							{ 
+								:start_date => (DateTime.now - 1.day).strftime("%Y-%m-%d"), 
+	              :end_date => (DateTime.now).strftime("%Y-%m-%d"),
+	              :dimensions => ['pageTitle'],
+	              :metrics => ['pageviews'],
+	              :sort => ['-pageviews'] 
+							}
+						 )
+		end
 
 end

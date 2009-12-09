@@ -1,8 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
 
-	map.tag '/:tag' , :controller => "mashup" , :action => "index" 
-	map.tag '/:tag' , :controller => "mashup" , :action => "index" 
+	map.tag '/tag/:tag' , :controller => "tag" 
 
-	map.root :controller => 'analytic', :action => "index"
+	map.media_tag '/:action/tag/:tag' , :controller => "tag"
+	
+	map.media '/blog' , :controller => "tag", :action =>  "blog" 
+
+	map.root :controller => 'analytic'
 
 end

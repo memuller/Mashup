@@ -7,7 +7,11 @@ h2
 ,h5
 ,h6{background-color:#07f;padding:.5em .5em .5em 16px;color:#fff;margin:auto 0;border-top:2px solid #fff;}
 div div
-	,small{padding:.3em 0 1em 48px;border-top:1px solid #dde;clear:both;}
+	,small{border-top:1px solid #dde;clear:both;}
+
+	div div small
+	,div div p{margin:1em}
+
 small{color:#777;clear:both;}
 .even small
 	,.odd small {border:none;}
@@ -18,8 +22,22 @@ small{color:#777;clear:both;}
 	,p img{float:left;margin:.5em;padding:.2em;border:1px solid #eef;background-color:#fff;}
 		p img{margin:0 .5em;}
 a{color:#077;}
+	a:hover{color:#033}
 	a:visited
 		,a.origin{color:#49c;}
 a.origin {font-size:.85em;display:block;clear:both;}
 
 .avatar{width:3.6em;height:3.6em;}
+
+ol.tags{padding:0;}
+.tags li{list-style:upper-roman inside;padding:1em;}
+	.tags li p{display:inline;}
+	.tags li small{display:block;text-align:right;}
+	
+.columm{width:30%;float:left;margin:0 .1em;}
+	.columm h2
+		,.columm h3
+		,.columm h4{text-align:center;border-right:1px solid #fff;}
+		.columm h3{margin-top:0.625em;background-color:#55A7FF;}
+		.columm h4{margin-top:1.05em;background-color:#AAD3FF;}
+		

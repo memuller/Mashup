@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class AnalyticControllerTest < ActionController::TestCase
-  # Replace this with your real tests.
+
   test "get last tags access" do
-    assert true
+		get :index
+    assert :success
+		assert_not_nil assigns(:data)
   end
 end

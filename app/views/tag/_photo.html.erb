@@ -1,0 +1,10 @@
+<%- photos.entries.each do |entry|-%>
+	<div>
+		<p><%= auto_link entry.title%></p>
+		<%= auto_link entry.summary%>
+		<%= link_to truncate(entry.url,:lenght => 50,:ommision =>"..."), entry.url%>
+		<small>
+			<%= time_ago_in_words entry.published%>
+			<%= entry.author%>
+		</small>
+<%- end-%>

@@ -1,0 +1,26 @@
+<h1>Mashup</h1>
+
+<div class="columm">
+	<h2> Blogs</h2>
+	<%= render :partial => 'entries', :locals => { :feed => @content[:blogs] } %>
+</div>
+
+<div class="columm">
+<h2> Bookmarks</h2>
+<%= render :partial => 'entries', :locals => { :feed => @content[:bookmarks] } %>
+</div>
+
+<div class="columm">
+<h2> Microtexts</h2>
+<%= render :partial => 'entries', :locals => { :feed => @content[:microtexts] } %>
+</div>
+
+<div class="columm">
+<h2>Videos</h2>
+<%= render :partial => 'entries', :locals => { :feed => @content[:videos] } %>
+</div>
+
+<div class="columm">
+<h2> Photos</h2>
+<%= render :partial => 'entries', :locals => { :feed => @content[:photos] } %>
+</div>

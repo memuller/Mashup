@@ -1,0 +1,26 @@
+%h1 Mashup
+
+.columm
+	%h2
+		%a{:href => "/blog/tag/#{params[:tag]}"} Blogs
+	= render :partial => 'entries', :locals => { :feed => @content[:blogs] } 
+
+.columm
+	%h2 
+		%a{:href => "/bookmark/tag/#{params[:tag]}"} Bookmarks
+	= render :partial => 'entries', :locals => { :feed => @content[:bookmarks] }
+
+.columm
+	%h2 
+		%a{:href => "/microtext/tag/#{params[:tag]}"} Microtexts
+	= render :partial => 'entries', :locals => { :feed => @content[:microtexts] }
+
+.columm
+	%h2 
+		%a{:href => "/video/tag/#{params[:tag]}"} Videos
+	= render :partial => 'entries', :locals => { :feed => @content[:videos] }
+
+	.columm
+	%h2 
+		%a{:href => "/photo/tag/#{params[:tag]}"} Photos
+	= render :partial => 'entries', :locals => { :feed => @content[:photos] }

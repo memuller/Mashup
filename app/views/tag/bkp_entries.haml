@@ -1,0 +1,18 @@
+%div
+	- if !feed.blank? 
+		- reset_cycle 
+		- feed.each do |entry|
+			%div{:class => cycle("even", "odd")}
+				- unless entry.links.nil? 
+					%img{:src => entry.links, :class => "avatar", :width => "48", :height => "48" }
+				%p
+					= auto_link entry.content
+				%small
+					= time_ago_in_words entry.published
+					= entry.author
+
+				= link_to truncate(entry.url, :length => 50,:ommision =>"..."), entry.url, :class => "origin"
+
+	- else
+		%small{:class => "no-entrie"}
+			Nenhuma atualiza&ccedil;&atilde;o!

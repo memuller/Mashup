@@ -1,20 +1,27 @@
 class Tag
+	@url_feed = Hash.new
+	@url_feed[:blog] = "http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=##"
 
-	@blog_feed = "http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=##"
+	@url_feed[:bookmark] = "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=##"
+
+	@url_feed[:video_tag] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=##"
+	@url_feed[:video] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&q=##"
+
+	@url_feed[:photo] = "http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[##]"
+
+	@url_feed[:microtext] = "http://search.twitter.com/search.atom?rpp=10&page=1&tag=##"
 
 	def self.initialize tag = nil
 RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
 		@tag = tag
-		@feed_urls = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cancaonova,"+@tag,
-									"http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cançãonova+"+@tag,			
-		 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=cancaonova,"+@tag,
+		@feed_urls = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=,"+@tag,
+		 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=,"+@tag,
 								"http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=cancaonova+"+@tag,	
 								"http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[cancaonova,"+@tag+"]"	,
 								"http://search.twitter.com/search.atom?rpp=10&page=1&tag=cancaonova+"+@tag
 								]
-		@feed_urls_TEMP = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cancaonova,"+@tag,
-										"http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=cançãonova,"+@tag,			
-			 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=cancaonova,"+@tag,
+		@feed_urls_TEMP = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=,"+@tag,
+			 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=,"+@tag,
 									"http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=cancaonova+"+@tag,	
 									"http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[cancaonova,"+@tag+"]"	,
 									"http://search.twitter.com/search.atom?rpp=10&page=1&tag=cancaonova+"+@tag
@@ -22,57 +29,75 @@ RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
 	end
 		
 	def self.all tag
-		initialize tag
-		feeds = fetch_and_parse_feed( @feed_urls)				
-
-		{ :blogs => feeds[@feed_urls_TEMP[0]].entries, 
-			:bookmarks => feeds[@feed_urls_TEMP[1]].entries,
-			:videos => feeds[@feed_urls_TEMP[2]].entries,
-			:photos => feeds[@feed_urls_TEMP[3]].entries,
-			:microtexts => feeds[@feed_urls_TEMP[4]].entries
+		{
+			:blogs => blog( tag), 
+			:bookmarks => bookmark( tag),
+			:videos => video( tag),
+			:photos => photo( tag),
+			:microtexts => microtext( tag)
 		}
 	end
 
 	def self.blog tag
-		url = set_feed( @blog_feed, tag )			
+		url = [
+						set_feed( @url_feed[:blog], default_tag( tag ) ),			
+						set_feed( @url_feed[:blog], tilde_tag( tag ) ),			
+						set_feed( @url_feed[:blog], space_tilde_tag( tag ) ),
+						set_feed( @url_feed[:blog], space_tag( tag ) )						
+					]	
 
-#		url = []
-#			url << set_feed( @blog_feed, default_tag( tag ) )			
-#			url << set_feed( @blog_feed, tilde_tag( tag ) )			
-#			url << set_feed( @blog_feed, space_tag( tag ) )			
-#			url << set_feed( @blog_feed, space_tilde_tag( tag ) )			
-
-
-		fetch_and_parse_feed( url ).entries	
+		fetch_and_parse_feed( url )	
 	end
 	
-	def self.bookmark
-		url = set_feed( @blog_feed, tag )
-		fetch_and_parse_feed( url ).entries	
+	def self.bookmark tag
+		url = [
+						set_feed( @url_feed[:bookmark], default_tag( tag ) ),			
+						set_feed( @url_feed[:bookmark], tilde_tag( tag ) ),			
+						set_feed( @url_feed[:bookmark], space_tilde_tag( tag ) ),
+						set_feed( @url_feed[:bookmark], space_tag( tag ) )						
+					]	
 
-		feed_urls = @feed_urls[2]	
-		fetch_and_parse_feed(feed_urls).entries				
+		fetch_and_parse_feed( url )	
 	end
+	
+		def self.video tag
+			url_video = [
+							set_feed( @url_feed[:video], default_tag( tag ) ),			
+							set_feed( @url_feed[:video], tilde_tag( tag ) ),			
+							set_feed( @url_feed[:video], space_tilde_tag( tag ) ),
+							set_feed( @url_feed[:video], space_tag( tag ) )						
+						]	
 
-	def self.video
-		feed_urls = @feed_urls[3]	
-		fetch_and_parse_feed(feed_urls).entries				
-	end
+	#		url_video =	set_feed( @bookmark_feed, default_tag( tag ) )
+			fetch_and_parse_feed( url_video )	
+		end
 
-	def self.photo
-		feed_urls = @feed_urls[4]	
-		fetch_and_parse_feed( feed_urls).entries				
-	end
+		def self.photo tag
+			feed_url = [
+							set_feed( @url_feed[:photo], default_tag( tag ) ),			
+							set_feed( @url_feed[:photo], tilde_tag( tag ) ),			
+							set_feed( @url_feed[:photo], space_tilde_tag( tag ) ),
+							set_feed( @url_feed[:photo], space_tag( tag ) )						
+						]	
+	#		url_video =	set_feed( @bookmark_feed, default_tag( tag ) )
+			fetch_and_parse_feed( feed_url )	
+		end
 
-	def self.microtext
-		feed_urls = @feed_urls[5]	
-		fetch_and_parse_feed(feed_urls).entries				
-	end
+		def self.microtext tag
+			feed_url = [
+							set_feed( @url_feed[:microtext], default_tag( tag ) ),			
+							set_feed( @url_feed[:microtext], tilde_tag( tag ) ),			
+							set_feed( @url_feed[:microtext], space_tilde_tag( tag ) ),
+							set_feed( @url_feed[:microtext], space_tag( tag ) )						
+						]	
+			fetch_and_parse_feed( feed_url )	
+		end
+
+
 
 	def self.timeline
 		feed_urls = @feed_urls[5]	
-		feed = fetch_and_parse_feed(feed_urls).entries
-		
+		feed = fetch_and_parse_feed(feed_urls).entries		
 		
 		half_hour, hour, two_hour,four_hour, eight_hour = [], [], [], [], []
 
@@ -100,27 +125,51 @@ RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
 			feed.gsub( %r{##}, tag )
 		end
 
-		def self.fetch_and_parse_feed feed_urls		
+		@to_merge = []
+		def self.fetch_and_parse_feed feed_urls				 
+
 			Feedzirra::Feed.fetch_and_parse(
 				feed_urls,		
-				:on_success => lambda {|url, feed| 
-					
-RAILS_DEFAULT_LOGGER.debug feed.size					
-					
-					if feed.url.include? "search.twitter.com"
-						feed.entries.each do |entry|
-							RAILS_DEFAULT_LOGGER.debug  entry.title
-						end
-					end
+				:on_success => lambda {|feedurl, feeditem|
+RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
+					feeditem.entries.each do |entry|
+							@to_merge.push(
+									[entry.id,
+									entry.author,
+									entry.content,
+									entry.published,
+									entry.url,
+									(entry.methods.include?( "links")) ? entry.links[1] : nil]
+								)
+					end	
+				
 				},	
 				:on_failure => lambda {|url, response_code, response_header, response_body|
 #					puts response_body + 
-					puts "ERROR RETORNO	"
-					[:entries]
+					puts "ERROR RETORNO	= #{url}"
 				}
 			)
+			
+/#
+.each do
+	
+	feed.entries.each do |entry|
+			@to_hash.push(
+				0	"iten_id" => entry.id,
+				1	"author" => entry.author,
+				2	"content" => entry.content,
+				3	"published" =>entry.published,
+				4	"url" => entry.url,
+				5	"links" => (entry.methods.include?( "links")) ? entry.links[1] : nil
+				)
+	end
+/				
+			@to_merge.uniq!
+			@to_merge.sort{ |row1,row2| row1[3] <=> row2[3]}.reverse
+			
 		end
-
+		
+		
 		def self.merge_feed feed_list, feed_hash
 			return_feed = []
 			feed_list.each do |feed|
@@ -129,65 +178,66 @@ RAILS_DEFAULT_LOGGER.debug feed.size
 			
 		end
 
-		def to_param
+		def self.to_param
 			params[:page] = "1" if params[:page].nil?
 		end
 
 
 
 
-	  def default_tag(tags=nil)
+	  def self.default_tag(tags=nil)
 	    change_tag_default(tags, "cancaonova")
 	  end
 
-	  def tilde_tag(tags=nil)
+	  def self.tilde_tag(tags=nil)
 	    change_tag_default(tags, "cançãonova")
 	  end
 
-	  def space_tag(tags=nil)
-	    change_tag_default(tags, "cancao%20nova")
+	  def self.space_tag(tags=nil)
+	    change_tag_default(tags, quote_tags("cancao%20nova"))
 	  end
 
-	  def space_tilde_tag(tags=nil)
-	    change_tag_default(tags, "canção%20nova")
+	  def self.space_tilde_tag(tags=nil)
+	    change_tag_default(tags, quote_tags("canção%20nova"))
 	  end
 
-	  def comma_tag(tags=nil)
-	    change_tag_default(tags, "cancao,nova")
+	  def self.comma_tag(tags=nil)
+	    change_tag_default(tags, quote_tags("cancao,nova"))
 	  end
 
-	  def comma_tilde_tag(tags=nil)
-	    change_tag_default(tags, "canção,nova")
+	  def self.comma_tilde_tag(tags=nil)
+	    change_tag_default(tags, quote_tags("canção,nova"))
 	  end
 
-	  def change_tag_default(tags, new_tag)
+	  def self.change_tag_default(tags, new_tag)
 	    result = remove_tag_default tags
-	    result == nil ? quote_tags(new_tag) : result + quote_tags(new_tag)
+#	    result == nil ? quote_tags(new_tag) : result + quote_tags(new_tag)
+	    result+"+"+new_tag
 	  end
 
-	  def remove_tag_default(tags=nil)
+	  def self.remove_tag_default(tags=nil)
 			unless tags.nil?
 				tags.gsub(/\s+/,'+')
 
 				%w(+cancaonova.com cancaonova.com+ cancaonova.com +cancaonova cancaonova+ cancaonova can%C3%A7%C3%A3o%20nova cancao_nova / %2F).each do |var|
-				  tags.to_s.gsub!("[#{var}]", '')
+				  tags.to_s.gsub!("[#{var}]", nil.to_s)
 				end			
 
 				%w(++ %20).each do |var|
 					tags.to_s.gsub!("[#{var}]", '+')
 				end
 				tags.gsub!(%r{&} , "+")
-				tags.gsub(/([^ a-zA-Z0-9_.-\\+]+)/n,"")
+				tags.gsub!(/([^ a-zA-Z0-9_.-\\+]+)/n,nil.to_s)
 			end
 
 			tags.to_s
 	  end
 
-		def remove_slash(tags=nil)
+		def self.remove_slash(tags=nil)
 			tags.gsub('/','').gsub('%2F','')
 		end
 
-		def quote_tags tags
+		def self.quote_tags tags
 				"%22#{tags}%22"
 		end
 

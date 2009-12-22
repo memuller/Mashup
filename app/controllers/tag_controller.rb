@@ -1,6 +1,6 @@
 class TagController < ApplicationController
 	
-	caches_page :index, :video, :photo
+	caches_page :index, :video, :photo, :blog
 	before_filter :set_tag
 	attr_reader :content
 
@@ -9,7 +9,7 @@ class TagController < ApplicationController
   end
 
   def video
-		@content = Tag.video
+		@content = Tag.video(@tag)
   end
 
   def blog
@@ -17,15 +17,15 @@ class TagController < ApplicationController
 	end
 
   def photo
-		@content = Tag.photo
+		@content = Tag.photo(@tag)
   end
 
   def microtext
-		@content = Tag.microtext
+		@content = Tag.microtext(@tag)
   end
 
   def bookmark
-		@content = Tag.bookmark
+		@content = Tag.bookmark(@tag)
   end
 
   def timeline
@@ -43,8 +43,8 @@ class TagController < ApplicationController
 		end
 	
 		def set_tag
-			tag_default = "cancaonova"
-			@tag = params[:tag].nil? ? tag_default : params[:tag].concat("+#{tag_default}")
+#			tag_default = "cancaonova"
+			@tag = params[:tag]#.nil? ? tag_default : params[:tag] + "+#{tag_default}"
 		end
 
 	

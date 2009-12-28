@@ -3,24 +3,24 @@
 .columm
 	%h2
 		%a{:href => "/blog/tag/#{params[:tag]}"} Blogs
-	= render :partial => 'entries', :locals => { :feed => @content[:blogs] } 
+	= render :partial => 'entries', :locals => { :feed => @entries[:blogs] } 
 
 .columm
 	%h2 
 		%a{:href => "/bookmark/tag/#{params[:tag]}"} Bookmarks
-	= render :partial => 'entries', :locals => { :feed => @content[:bookmarks] }
+	= render :partial => 'entries', :locals => { :feed => @entries[:bookmarks] }
 
 .columm
 	%h2 
 		%a{:href => "/microtext/tag/#{params[:tag]}"} Microtexts
-	= render :partial => 'entries', :locals => { :feed => @content[:microtexts] }
+	= render :partial => 'entries', :locals => { :feed => @entries[:microtexts] }
 
 .columm
 	%h2 
 		%a{:href => "/video/tag/#{params[:tag]}"} Videos
-	= render :partial => 'entries', :locals => { :feed => @content[:videos] }
+	= render :partial => 'entries', :locals => { :feed => @entries[:videos] }
 
 	.columm
 	%h2 
 		%a{:href => "/photo/tag/#{params[:tag]}"} Photos
-	= render :partial => 'entries', :locals => { :feed => @content[:photos] }
+	= render :partial => 'entries', :locals => { :feed => @entries[:photos] }

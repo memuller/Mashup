@@ -73,12 +73,14 @@ RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
 		end
 
 		def self.photo tag
+			@is_photo = true
 			feed_url = [
 							set_feed( @url_feed[:photo], default_tag( tag ) ),			
 							set_feed( @url_feed[:photo], tilde_tag( tag ) ),			
 							set_feed( @url_feed[:photo], space_tilde_tag( tag ) ),
 							set_feed( @url_feed[:photo], space_tag( tag ) )						
 						]	
+			@is_photo = nil
 	#		url_video =	set_feed( @bookmark_feed, default_tag( tag ) )
 			fetch_and_parse_feed( feed_url )	
 		end
@@ -125,22 +127,28 @@ RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
 			feed.gsub( %r{##}, tag )
 		end
 
-		@to_merge = []
 		def self.fetch_and_parse_feed feed_urls				 
 
+			@to_merge = []
 			Feedzirra::Feed.fetch_and_parse(
 				feed_urls,		
 				:on_success => lambda {|feedurl, feeditem|
 RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 					feeditem.entries.each do |entry|
-							@to_merge.push(
-									[entry.id,
-									entry.author,
-									entry.content,
-									entry.published,
-									entry.url,
-									(entry.methods.include?( "links")) ? entry.links[1] : nil]
-								)
+						check_duplicate = 0
+						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 
+						
+						if check_duplicate == 0 						
+								@to_merge.push(
+										[entry.id,
+										entry.author,
+										entry.title,
+										entry.content,
+										entry.published,
+										entry.url,
+										(entry.methods.include?( "links")) ? entry.links[1] : nil]
+									)
+						end
 					end	
 				
 				},	
@@ -165,7 +173,7 @@ RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 	end
 /				
 			@to_merge.uniq!
-			@to_merge.sort{ |row1,row2| row1[3] <=> row2[3]}.reverse
+			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse
 			
 		end
 		
@@ -212,7 +220,11 @@ RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 	  def self.change_tag_default(tags, new_tag)
 	    result = remove_tag_default tags
 #	    result == nil ? quote_tags(new_tag) : result + quote_tags(new_tag)
-	    result+"+"+new_tag
+	    if @is_photo
+				result+","+new_tag
+			else
+				result+"+"+new_tag
+			end
 	  end
 
 	  def self.remove_tag_default(tags=nil)

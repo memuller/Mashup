@@ -1,11 +1,11 @@
 <h1>Mashup TimeLine</h1>
 
 <h2>&uacute;ltimos 30 minutos</h2>
-<%= render :partial => 'entries', :locals => { :feed => @mashup[:half_hour] } %>
+<%= render :partial => 'entries', :locals => { :feed => @entries[:half_hour] } %>
 
 <h3>&uacute;ltima hora</h3>
 <small>
-	<%= render :partial => 'entries', :locals => { :feed => @mashup[:hour] } %>
+	<%= render :partial => 'entries', :locals => { :feed => @entries[:hour] } %>
 </small>
 
 <h4>&uacute;ltimas 2 horas</h4>

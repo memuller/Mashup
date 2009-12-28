@@ -5,31 +5,32 @@ class TagController < ApplicationController
 	attr_reader :content
 
   def index
-		@content = Tag.all(@tag)
+		@entries = Tag.all(@tag)
+		@entries
   end
 
   def video
-		@content = Tag.video(@tag)
+		@entries = Tag.video(@tag)
   end
 
   def blog
-		@content = Tag.blog(@tag)
+		@entries = Tag.blog(@tag)
 	end
 
   def photo
-		@content = Tag.photo(@tag)
+		@entries = Tag.photo(@tag)
   end
 
   def microtext
-		@content = Tag.microtext(@tag)
+		@entries = Tag.microtext(@tag)
   end
 
   def bookmark
-		@content = Tag.bookmark(@tag)
+		@entries = Tag.bookmark(@tag)
   end
 
   def timeline
-		@content = Tag.timeline
+		@entries = Tag.timeline
   end
 
 	protected	

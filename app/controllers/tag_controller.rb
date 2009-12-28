@@ -45,7 +45,21 @@ class TagController < ApplicationController
 	
 		def set_tag
 #			tag_default = "cancaonova"
-			@tag = params[:tag]#.nil? ? tag_default : params[:tag] + "+#{tag_default}"
+			tag_scan = params[:tag].clone#.nil? ? tag_default : params[:tag] + "+#{tag_default}"
+			
+			%w(++ %20).each do |var|
+				tag_scan.gsub!("[#{var}]", '+')
+			end
+
+			tag_scan.gsub!(%r{&} , "+")
+			tag_scan.gsub!(/([^ a-zA-Z0-9_.-\\+]+)/n,nil.to_s)
+			tag_scan.gsub!(/([ ]+)/n,"+")
+			
+			if tag_scan != params[:tag]
+				redirect_to :action => params[:index], :tag => tag_scan
+			else
+				@tag = tag_scan
+			end
 		end
 
 	

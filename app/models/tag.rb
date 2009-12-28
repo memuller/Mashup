@@ -11,22 +11,6 @@ class Tag
 
 	@url_feed[:microtext] = "http://search.twitter.com/search.atom?rpp=10&page=1&tag=##"
 
-	def self.initialize tag = nil
-RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
-		@tag = tag
-		@feed_urls = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=,"+@tag,
-		 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=,"+@tag,
-								"http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=cancaonova+"+@tag,	
-								"http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[cancaonova,"+@tag+"]"	,
-								"http://search.twitter.com/search.atom?rpp=10&page=1&tag=cancaonova+"+@tag
-								]
-		@feed_urls_TEMP = ["http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=,"+@tag,
-			 						 "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=,"+@tag,
-									"http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=cancaonova+"+@tag,	
-									"http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[cancaonova,"+@tag+"]"	,
-									"http://search.twitter.com/search.atom?rpp=10&page=1&tag=cancaonova+"+@tag
-									]
-	end
 		
 	def self.all tag
 		{
@@ -68,7 +52,6 @@ RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
 							set_feed( @url_feed[:video], space_tag( tag ) )						
 						]	
 
-	#		url_video =	set_feed( @bookmark_feed, default_tag( tag ) )
 			fetch_and_parse_feed( url_video )	
 		end
 
@@ -81,7 +64,6 @@ RAILS_DEFAULT_LOGGER.debug "message tag = "+tag
 							set_feed( @url_feed[:photo], space_tag( tag ) )						
 						]	
 			@is_photo = nil
-	#		url_video =	set_feed( @bookmark_feed, default_tag( tag ) )
 			fetch_and_parse_feed( feed_url )	
 		end
 
@@ -234,12 +216,6 @@ RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 				%w(+cancaonova.com cancaonova.com+ cancaonova.com +cancaonova cancaonova+ cancaonova can%C3%A7%C3%A3o%20nova cancao_nova / %2F).each do |var|
 				  tags.to_s.gsub!("[#{var}]", nil.to_s)
 				end			
-
-				%w(++ %20).each do |var|
-					tags.to_s.gsub!("[#{var}]", '+')
-				end
-				tags.gsub!(%r{&} , "+")
-				tags.gsub!(/([^ a-zA-Z0-9_.-\\+]+)/n,nil.to_s)
 			end
 
 			tags.to_s

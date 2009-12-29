@@ -5,8 +5,7 @@ class TagController < ApplicationController
 	attr_reader :content
 
   def index
-		@entries = Tag.all(@tag)
-		@entries
+		@entries = Tag.all(@tag, params[:format])
   end
 
   def video
@@ -15,10 +14,6 @@ class TagController < ApplicationController
 
   def blog
 		@entries = Tag.blog(@tag)
-		respond_to do |format|
-      format.html
-      format.atom
-    end
 	end
 
   def photo

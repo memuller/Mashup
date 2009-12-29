@@ -12,69 +12,40 @@ class Tag
 	@url_feed[:microtext] = "http://search.twitter.com/search.atom?rpp=10&page=1&tag=##"
 
 		
-	def self.all tag
-		{
-			:blogs => blog( tag), 
-			:bookmarks => bookmark( tag),
-			:videos => video( tag),
-			:photos => photo( tag),
-			:microtexts => microtext( tag)
-		}
+	def self.all tag, atom = nil
+
+		unless atom.nil?
+			fetch_and_parse_feed( @url_feed, tag )[0...20]	
+		else
+			{
+				:blogs => blog( tag), 
+				:bookmarks => bookmark( tag),
+				:videos => video( tag),
+				:microtexts => microtext( tag),
+				:photos => photo( tag)
+			}
+		end
 	end
 
 	def self.blog tag
-		url = [
-						set_feed( @url_feed[:blog], default_tag( tag ) ),			
-						set_feed( @url_feed[:blog], tilde_tag( tag ) ),			
-						set_feed( @url_feed[:blog], space_tilde_tag( tag ) ),
-						set_feed( @url_feed[:blog], space_tag( tag ) )						
-					]	
-
-		fetch_and_parse_feed( url )	
+		fetch_and_parse_feed( @url_feed[:blog], tag )	
 	end
 	
 	def self.bookmark tag
-		url = [
-						set_feed( @url_feed[:bookmark], default_tag( tag ) ),			
-						set_feed( @url_feed[:bookmark], tilde_tag( tag ) ),			
-						set_feed( @url_feed[:bookmark], space_tilde_tag( tag ) ),
-						set_feed( @url_feed[:bookmark], space_tag( tag ) )						
-					]	
-
-		fetch_and_parse_feed( url )	
+		fetch_and_parse_feed( @url_feed[:bookmark], tag )	
 	end
 	
 		def self.video tag
-			url_video = [
-							set_feed( @url_feed[:video], default_tag( tag ) ),			
-							set_feed( @url_feed[:video], tilde_tag( tag ) ),			
-							set_feed( @url_feed[:video], space_tilde_tag( tag ) ),
-							set_feed( @url_feed[:video], space_tag( tag ) )						
-						]	
-
-			fetch_and_parse_feed( url_video )	
+			fetch_and_parse_feed( @url_feed[:video], tag )	
 		end
 
 		def self.photo tag
 			@is_photo = true
-			feed_url = [
-							set_feed( @url_feed[:photo], default_tag( tag ) ),			
-							set_feed( @url_feed[:photo], tilde_tag( tag ) ),			
-							set_feed( @url_feed[:photo], space_tilde_tag( tag ) ),
-							set_feed( @url_feed[:photo], space_tag( tag ) )						
-						]	
-			@is_photo = nil
-			fetch_and_parse_feed( feed_url )	
+			fetch_and_parse_feed( @url_feed[:photo], tag )	
 		end
 
 		def self.microtext tag
-			feed_url = [
-							set_feed( @url_feed[:microtext], default_tag( tag ) ),			
-							set_feed( @url_feed[:microtext], tilde_tag( tag ) ),			
-							set_feed( @url_feed[:microtext], space_tilde_tag( tag ) ),
-							set_feed( @url_feed[:microtext], space_tag( tag ) )						
-						]	
-			fetch_and_parse_feed( feed_url )	
+			fetch_and_parse_feed( @url_feed[:microtext], tag )	
 		end
 
 
@@ -109,8 +80,21 @@ class Tag
 			feed.gsub( %r{##}, tag )
 		end
 
-		def self.fetch_and_parse_feed feed_urls				 
-
+		def self.fetch_and_parse_feed feed_url, tag			 
+			feed_urls = []
+			if feed_url.class == Hash
+				feed_url.each do |url|
+					feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag ) ) <<	set_feed( url[1], space_tag( tag ) )						
+				end
+			else
+				feed_urls = [
+								set_feed( feed_url, default_tag( tag ) ),			
+								set_feed( feed_url, tilde_tag( tag ) ),			
+								set_feed( feed_url, space_tilde_tag( tag ) ),
+								set_feed( feed_url, space_tag( tag ) )						
+							]	
+			end
+						
 			@to_merge = []
 
 			Feedzirra::Feed.add_common_feed_entry_element("media:thumbnail", 
@@ -143,21 +127,6 @@ class Tag
 					puts "ERROR RETORNO	= #{url}"
 				}
 			)
-			
-/#
-.each do
-	
-	feed.entries.each do |entry|
-			@to_hash.push(
-				0	"iten_id" => entry.id,
-				1	"author" => entry.author,
-				2	"content" => entry.content,
-				3	"published" =>entry.published,
-				4	"url" => entry.url,
-				5	"links" => (entry.methods.include?( "links")) ? entry.links[1] : nil
-				)
-	end
-/				
 			@to_merge.uniq!
 			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse
 			

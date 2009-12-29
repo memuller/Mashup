@@ -112,10 +112,14 @@ class Tag
 		def self.fetch_and_parse_feed feed_urls				 
 
 			@to_merge = []
+
+			Feedzirra::Feed.add_common_feed_entry_element("media:thumbnail", 
+			:value => :url, :as => :thumbnail)
+			
+			
 			Feedzirra::Feed.fetch_and_parse(
 				feed_urls,		
 				:on_success => lambda {|feedurl, feeditem|
-RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 					feeditem.entries.each do |entry|
 						check_duplicate = 0
 						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 
@@ -125,10 +129,10 @@ RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 										[entry.id,
 										entry.author,
 										entry.title,
-										entry.content,
+										(entry.content.nil?) ? entry.summary : entry.content,
 										entry.published,
 										entry.url,
-										(entry.methods.include?( "links")) ? entry.links[1] : nil]
+										entry.thumbnail]
 									)
 						end
 					end	

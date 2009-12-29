@@ -1,3 +1,26 @@
 %h2 Videos
 
-= render :partial => 'entries', :locals => { :feed => @entries }
+%div
+	- unless  @entries.blank? 
+		- reset_cycle 
+		-  @entries.each do |entry|
+			%div{:class => cycle("even", "odd")}
+				= embed_video entry[5] 
+					
+				%p
+					%b
+						= auto_link entry[2]
+				%p
+					%small
+						= auto_link entry[3]
+				%small
+					= time_ago_in_words entry[4]
+					= entry[1]
+
+				= link_to truncate(entry[5], :length => 50,:ommision =>"..."), entry[5], :class => "origin"
+
+	- else
+		%small{:class => "no-entrie"}
+			Nenhuma atualiza&ccedil;&atilde;o!
+
+- feed = nil

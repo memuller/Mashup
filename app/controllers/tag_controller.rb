@@ -15,6 +15,10 @@ class TagController < ApplicationController
 
   def blog
 		@entries = Tag.blog(@tag)
+		respond_to do |format|
+      format.html
+      format.atom
+    end
 	end
 
   def photo

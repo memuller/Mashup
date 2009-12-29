@@ -6,6 +6,17 @@ class TagControllerTest < ActionController::TestCase
 #		flunk 'Not done testing yet.'
 	end
 
+  test "atom bookmark" do
+		get :bookmark, {:format => "atom", :tag => "phn"}
+    assert_response :success
+		assert_routing "/bookmark/tag/phn.atom", { :controller => 'tag', :action => 'bookmark', :tag => 'phn', :format => "atom"}
+  end
+
+  test "atom blog without TAG" do
+		get :blog, {:format => "atom"}
+    assert_response :success
+  end
+
   test "duplicate entrie microtext with phn" do
 		get :microtext, {'tag' => "phn"} 
 		assert_not_equal( assigns["entries"][0][0], assigns["entries"][1][0], "duplicate entries for PHN" )

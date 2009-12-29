@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem "pauldix-feedzirra", :lib => "feedzirra", :source => "http://gems.github.com"
   config.gem "cannikin-gattica", :lib => "gattica", :source => "http://gems.github.com"
 	config.gem "hash_extension", :source => "http://gemcutter.org"
+	config.gem "diacritics_fu", :source => "http://gemcutter.org"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

@@ -45,7 +45,12 @@ class TagController < ApplicationController
 	
 		def set_tag
 #			tag_default = "cancaonova"
-			tag_scan = params[:tag].clone#.nil? ? tag_default : params[:tag] + "+#{tag_default}"
+			unless params.include? "tag"
+				@tag = ""
+				return
+			end
+				
+			tag_scan = DiacriticsFu::escape( params[:tag].clone ) #.nil? ? tag_default : params[:tag] + "+#{tag_default}"
 			
 			%w(++ %20).each do |var|
 				tag_scan.gsub!("[#{var}]", '+')
@@ -54,7 +59,7 @@ class TagController < ApplicationController
 			tag_scan.gsub!(%r{&} , "+")
 			tag_scan.gsub!(/([^ a-zA-Z0-9_.-\\+]+)/n,nil.to_s)
 			tag_scan.gsub!(/([ ]+)/n,"+")
-			
+		
 			if tag_scan != params[:tag]
 				redirect_to :action => params[:index], :tag => tag_scan
 			else

@@ -1,0 +1,35 @@
+%h1 Mashup minuto a minuto
+	
+%h2 
+	entre agora e 	
+	= time_ago_in_words @entries.entries[0][0]
+= render :partial => 'entries', :locals => { :feed => @entries.entries[0][1] } 	
+
+
+%h3 
+	entre  	
+	= time_ago_in_words @entries.entries[0][0]
+	e							
+	= time_ago_in_words @entries.entries[1][0]	
+%small
+	= render :partial => 'entries', :locals => { :feed => @entries.entries[1][1] } 
+
+%h4 
+	entre  	
+	= time_ago_in_words @entries.entries[1][0]
+	e							
+	= time_ago_in_words @entries.entries[2][0]
+%small
+	%small
+		= render :partial => 'entries', :locals => { :feed => @entries.entries[2][1] } 
+
+%h5 
+	entre  	
+	= time_ago_in_words @entries.entries[2][0]
+	e							
+	= time_ago_in_words @entries.entries[3][0]
+%small
+	%small
+		%small
+			= render :partial => 'entries', :locals => { :feed => @entries.entries[3][1] } 
+

@@ -1,0 +1,201 @@
+pt-BR:
+  slogan: 'Cobertura online dos eventos da Can&ccedil;&atilde;o Nova'
+  form_tags_label: 'navege atrav&eacute;s das tags'
+  form_tags_button: 'navegar'
+  institutional_member: 'Seja&nbsp;s&oacute;cio'
+  institutional_news: 'Not&iacute;cias'
+  contact: 'fale com a equipe'
+  copyright: 'todos os direitos reservados'
+  about: 'sobre o Mashup'
+  api: 'API para desenvolvedores'
+  mobile: veja {{tags}} no Mashup Mobile
+  cooliris: veja {{tags}} no Mashup Cooliris
+  language_legend: 'mude o idioma'
+  language_english: 'english'
+  language_spanish: 'español'
+  language_portuguese: 'portugu&ecirc;s'
+  choice_layout_legend: 'Mude o tema'
+  choice_layout_optgroup: 'selecione um layout'
+  see_more: 'veja a lista no'
+  paginate_legend: 'p&aacute;gina'
+  paginate_before: 'anterior'
+  paginate_next: 'pr&oacute;ximo'
+  tagcloud_header: 'relacionadas'
+  by: 'por'
+  ago: 'atr&aacute;s'
+
+  cancel: 'Cancelar'
+  vote: 'Votar'
+  blacklisting:
+    messages:
+      one_vote_per_content: 'É possível votar somente uma vez em cada conteúdo.'
+      one_vote_per_day: 'É possível votar somente uma vez por dia.'
+      error: 'Erro ao processar o voto. Certifique-se que seu navegador tem JavaScript e Cookies habilitados.'
+      success: 'Voto efetuado com sucesso. Obrigado!'
+    form:
+      title: 'Você está utilizando a ferramenta de denúncia de conteúdo impróprio.'
+      subtitle: 'Selecione o motivo pelo qual considera o conteúdo inadequado:'
+      reason_prompt: 'Selecione um motivo para vizualizar sua descrição.'
+    reasons:
+      ConteudoEnganoso:
+        name: Conteúdo ou miniatura enganosa
+        description: 'Título ou miniatura (thumbnail) não corresponde ao conteúdo real.'
+      SPAM:
+        name: SPAM
+        description: 'Conteúdo é parte de campanhas de publicidade em massa.'
+      Sensual:
+        name: Nudez ou sensualidade
+        description: 'Possui cenas de nudez ou conteúdo claramente sensual.'
+      SexualExplicita:
+        name: Átividade Sexual
+        description: 'Apresenta atividade sexual explícita.'
+      Discriminatorio:
+        name: Discriminatório ou racista
+        description: 'Dissemina racismo e outros preconceitos contra um grupo.'
+      Difamatorio:
+        name: Calunioso ou profano
+        description: 'Usa de linguagens e símbolos ofensivos ou dissemina confusão e calúnia.'
+      DireitosAutorais:
+        name: Infringe direitos autorais ou legislação
+        description: 'Viola propriedade intelectual minha, de outro, ou infringe legislação vigente. Recomenda-se banir também o conteúdo no portal de origem.'
+ # formatos de data e hora
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%d de %B de %Y"
+    
+    day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
+    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+    order: [ :day, :month, :year ]
+  
+  time:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M hs"
+      short: "%d/%m, %H:%M hs"
+      long: "%A, %d de %B de %Y, %H:%M hs"
+    am: ''
+    pm: ''
+  
+  # date helper distanci em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: 'meio minuto'
+      less_than_x_seconds:
+        one: 'menos de 1 segundo'
+        other: 'menos de {{count}} segundos'
+      
+      x_seconds:
+        one: '1 segundo'
+        other: '{{count}} segundos'
+      
+      less_than_x_minutes:
+        one: 'menos de um minuto'
+        other: 'menos de {{count}} minutos'
+      
+      x_minutes:
+        one: '1 minuto'
+        other: '{{count}} minutos'
+      
+      about_x_hours:
+        one: 'aproximadamente 1 hora'
+        other: 'aproximadamente {{count}} horas'
+      
+      x_days:
+        one: '1 dia'
+        other: '{{count}} dias'
+      
+      about_x_months:
+        one: 'aproximadamente 1 mês'
+        other: 'aproximadamente {{count}} meses'
+      
+      x_months:
+        one: '1 mês'
+        other: '{{count}} meses'
+      
+      about_x_years:
+        one: 'aproximadamente 1 ano'
+        other: 'aproximadamente {{count}} anos'
+      
+      over_x_years:
+        one: 'mais de 1 ano'
+        other: 'mais de {{count}} anos'
+    prompts:
+      year: "Ano"
+      month: "Mês"
+      day: "Dia"
+      hour: "Hora"
+      minute: "Minuto"
+      second: "Segundos"
+ 
+  # numeros
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'R$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 1
+        delimiter: '.'
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+ 
+# Used in array.to_sentence.
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+    
+  # Active Record
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "Não foi possível gravar {{model}}: 1 erro"
+          other: "Não foi possível gravar {{model}}: {{count}} erros."
+        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+      messages:
+        inclusion: "não está incluído na lista"
+        exclusion: "não está disponível"
+        invalid: "não é válido"
+        confirmation: "não está de acordo com a confirmação"
+        accepted: "deve ser aceito"
+        empty: "não pode ficar vazio"
+        blank: "não pode ficar em branco"
+        too_long: "é muito longo (máximo: {{count}} caracteres)"
+        too_short: "é muito curto (mínimo: {{count}} caracteres)"
+        wrong_length: "não possui o tamanho esperado ({{count}} caracteres)"
+        taken: "já está em uso"
+        not_a_number: "não é um número"
+        greater_than: "deve ser maior do que {{count}}"
+        greater_than_or_equal_to: "deve ser maior ou igual a {{count}}"
+        equal_to: "deve ser igual a {{count}}"
+        less_than: "deve ser menor do que {{count}}"
+        less_than_or_equal_to: "deve ser menor ou igual a {{count}}"
+        odd: "deve ser ímpar"
+        even: "deve ser par"

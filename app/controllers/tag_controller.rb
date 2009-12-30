@@ -29,7 +29,7 @@ class TagController < ApplicationController
   end
 
   def timeline
-		@entries = Tag.timeline
+		@entries = Tag.timeline(@tag)
   end
 
 	protected	

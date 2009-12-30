@@ -50,28 +50,36 @@ class Tag
 
 
 
-	def self.timeline
-		feed_urls = @feed_urls[5]	
-		feed = fetch_and_parse_feed(feed_urls).entries		
+	def self.timeline tag
+		feed = fetch_and_parse_feed( @url_feed, tag )[0...20]			
 		
 		half_hour, hour, two_hour,four_hour, eight_hour = [], [], [], [], []
 
-		feed.each do |sort|			
-			if sort.published > 30.minutes.ago
+		interval_initial = feed.first[4].to_i
+		interval_final = feed.last[4].to_i
+		interval_2 = (interval_initial + interval_final) /2
+		interval_1 = (interval_initial + interval_2) /2
+		interval_3 = (interval_2 + interval_final) /2
+
+		feed.each do |sort|	
+			if sort[4] > Time.at(interval_1)
 				half_hour << sort
-			elsif sort.published > 1.hour.ago 
+			elsif sort[4] > Time.at(interval_2) 
 				hour << sort
-			elsif sort.published > 2.hour.ago 
+			elsif sort[4] > Time.at(interval_3)
 				two_hour << sort
-			elsif sort.published > 4.hour.ago 
-				four_hour << sort
 			else 
-				eight_hour << sort
+				four_hour << sort
 			end
 		end
-		{ :half_hour=> half_hour, :hour => hour, :two_hour => two_hour, :four_hour => four_hour, :eight_hour => eight_hour}
+		
+		{
+			Time.at(interval_1) => half_hour, 
+			Time.at(interval_2) => hour, 
+			Time.at(interval_3) => two_hour, 
+			Time.at(interval_final) => four_hour
+		}
 	end
-
 
 
 	private 

@@ -1,0 +1,16 @@
+- unless feed.blank? 
+	- feed.each_with_index do |entry,index|
+		- if index == 0
+			%h3 
+				= auto_link entry[2]
+			= auto_link ( entry[5]  ){|text| truncate(text, :length => 40)}
+			%span
+				= time_ago_in_words entry[4]
+				= auto_link( entry[1]  ){|text| truncate(text, :length => 40)}
+		- else
+			%p 
+				= auto_link entry[2]
+			= auto_link( entry[5]  ){|text| truncate(text, :length => 40)}
+			%span
+				= time_ago_in_words entry[4]
+				= auto_link( entry[1]  ){|text| truncate(text, :length => 40)}

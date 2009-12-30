@@ -1,0 +1,76 @@
+!!! Strict
+!!!
+%html
+	%head
+		%title Mashup Can&ccedil;&atilde;o Nova
+		= stylesheet_link_tag "version-2_1-fluid"
+		= javascript_include_tag :all, :cache => true
+		= auto_discovery_link_tag(:atom, :format => "atom")
+	
+	%body
+		#page	
+			#header
+				.size
+					.top
+						%h1
+							%a.mobi{:href=>"http://mashup.cancaonova.com/"}
+								%span MASHUP.cancaonova.com
+						%p.slogan
+							= t(:slogan)
+					%form#search{ :action=>"/", :method=>"get"}
+						%fieldset
+							%label{ :for=>"tag"}
+								= t(:form_tags_label)
+								%input#tag{ :name=>"tags", :size=>"20"}
+							%button
+								%span
+									= t(:form_tags_button)
+					.institutional
+						%a.cancaonova{ :href=>"http://cancaonova.com"}
+							= image_tag "http://www.cancaonova.com/i/logo_cancaonova.gif", :size=>"98x67", :alt=>"Logo Canção Nova", :title=>"cancaonova.com"
+						%a{ :href=>"http://euajudo.cancaonova.com"}
+							= t(:institutional_member)
+						%a{ :href=>"http://shopping.cancaonova.com"} Shopping
+						%a{ :href=>"http://noticias.cancaonova.com"}
+							= t(:institutional_news)
+						%a{ :href=>"http://blog.cancaonova.com"} Blogs
+						%a{ :href=>"http://webtvcn.com"} WEBtvCN
+			- if flash[:notice]
+				#notice
+					= flash[:notice]
+			#content
+				= yield	
+				
+				
+
+
+			#footer
+				.container	
+					%a.rss{ :title=>"RSS | Mashup Can&ccedil;&atilde;o Nova", :href=> ".atom" }
+						RSS Mashup
+						= " &mdash; adicionar tag" 
+					%a.mobi{ :href=>"http://mashup.cancaonova.mobi/add_tag"} 
+						= t(:mobile, :tags => @tags) 
+					= link_to t('cooliris', :tags => @tags), cooliris_url , :tags => @tags, :class => "cooliris"
+
+					%div
+						%a{ href="/"}
+							= t(:language_portuguese) 
+						= link_to t(:language_english), language_english_url, :tags => @tags_without_default
+						= link_to t(:language_spanish), language_spanish_url, :tags => @tags_without_default
+
+						%form#theme{ :action=>"/"}
+							%fieldset
+								%label
+									= I18n.t('choice_layout_legend')				    
+								%select#layout{ :name=>"layout"}
+									%optgroup{ :label=> I18n.t('choice_layout_optgroup') }
+										%option{ :value=>"Layout version 2.1 (fluid)", :selected=>cookies['style']=='Layout version 2.1 (fluid)' ? "selected" : nil} version 2.1 (fluid)
+										%option{ :value=>"Layout version 1", :selected=>cookies['style']=='Layout version 2.1 (fluid)' ? "selected" : nil} version 1
+
+					%p 
+						&copy; copyright Can&ccedil;&atilde;o Nova 
+						= t(:copyright)
+					= link_to t(:about),about_url
+					= link_to t(:api) , api_url
+				

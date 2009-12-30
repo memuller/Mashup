@@ -12,6 +12,11 @@ class TagControllerTest < ActionController::TestCase
 		assert_routing "/bookmark/tag/phn.atom", { :controller => 'tag', :action => 'bookmark', :tag => 'phn', :format => "atom"}
   end
 
+  test "minuto a minuto" do
+		get :timeline, {:tag => "phn"}
+    assert_response :success
+  end
+
   test "atom blog without TAG" do
 		get :blog, {:format => "atom"}
     assert_response :success

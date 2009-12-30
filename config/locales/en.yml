@@ -1,5 +1,25 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
-en:
-  hello: "Hello world"
+en: 
+  slogan: 'Online coverage of events in New Song'
+  form_tags_label: 'browse thought of tags'
+  form_tags_button: 'browser' 
+  institutional_member: 'Be&nbsp;a&nbsp;member'
+  institutional_news: 'News'
+  contact: 'talk with team'
+  copyright: ' all right reserved'
+  about: 'about the Mashup'
+  api: 'API for developers'
+  mobile: view {{tags}} in Mashup Mobile
+  cooliris: view {{tags}} in Mashup Cooliris
+  language_legend: 'choice the language'
+  language_english: 'english'
+  language_spanish: 'español'
+  language_portuguese: 'portugu&ecirc;s'
+  choice_layout_legend: 'change the theme'
+  choice_layout_optgroup: 'select a layout'
+  see_more: 'see the list in'
+  paginate_legend: 'page'
+  paginate_before: 'before'
+  paginate_next: 'next'
+  tagcloud_header: 'related'
+  by: 'by'        
+  ago: 'ago'

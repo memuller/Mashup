@@ -8,4 +8,22 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 	
+  before_filter :set_locale
+
+	def set_locale
+
+    if params[:locale]
+      I18n.locale = params[:locale]
+		else
+      I18n.locale = 'pt-BR' and params[:locale] = 'pt-BR'
+    end
+
+  rescue Exception => err
+    logger.error err
+    flash.now[:notice] = "#O idioma “{I18n.locale}” não está disponível"
+
+    I18n.load_path -= [locale_path]
+    I18n.locale = I18n.default_locale
+  end
+  
 end

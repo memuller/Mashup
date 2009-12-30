@@ -1,26 +1,56 @@
-%h1 Mashup
-
-.columm
-	%h2
-		%a{:href => "/blog/tag/#{params[:tag]}"} Blogs
-	= render :partial => 'entries', :locals => { :feed => @entries[:blogs] } 
-
-.columm
+.texts 
+	#microposts
+		%h2 
+			%a{:href => "/microtext/tag/#{params[:tag]}"} Microtexts
+		#microposts_content
+			= render :partial => 'texts', :locals => { :feed => @entries[:microtexts][0...5] }
+#videos
+	.border
+		.container
+			%h2 
+				%a{:href => "/video/tag/#{params[:tag]}"} Videos
+			- unless @entries[:videos].blank? 
+				.border
+				#videos_content	
+					%p
+						= @entries[:videos].first[2]
+						—
+						= time_ago_in_words @entries[:videos].first[4]
+						= @entries[:videos].first[1]
+					= embed_video @entries[:videos].first[5]				
+				.border
+				#videos_thumbnails				
+					- @entries[:videos][0...10].each do |entry|
+						%a{:href => entry[5], :id => id_video(entry[5]) , :title => entry[2] + " &mdash; " + time_ago_in_words( entry[4]) +" "+ entry[1]} 
+							= image_tag entry[6]
+#text2
+	#blogs
+		%h2
+			%a{:href => "/blog/tag/#{params[:tag]}"} Blogs		
+		#blogs_content
+			= render :partial => 'texts', :locals => { :feed => @entries[:blogs][0...3] }
+	#bookmarks
+		%h2 
+			%a{:href => "/bookmark/tag/#{params[:tag]}"} Bookmarks
+		#bookmarks_content
+			= render :partial => 'texts', :locals => { :feed => @entries[:bookmarks][0...3] }
+	#clear
+#photos
 	%h2 
-		%a{:href => "/bookmark/tag/#{params[:tag]}"} Bookmarks
-	= render :partial => 'entries', :locals => { :feed => @entries[:bookmarks] }
-
-.columm
-	%h2 
-		%a{:href => "/microtext/tag/#{params[:tag]}"} Microtexts
-	= render :partial => 'entries', :locals => { :feed => @entries[:microtexts] }
-
-.columm
-	%h2 
-		%a{:href => "/video/tag/#{params[:tag]}"} Videos
-	= render :partial => 'entries', :locals => { :feed => @entries[:videos] }
-
-	.columm
-	%h2 
-		%a{:href => "/photo/tag/#{params[:tag]}"} Photos
-	= render :partial => 'entries', :locals => { :feed => @entries[:photos] }
+		= link_to "Photos", :action => "photo", :tag => params[:tag]
+	- unless @entries[:photos].blank? 
+		#photos_content	
+			%a{:href => @entries[:photos].first[5]} 
+				= image_tag @entries[:photos].first[6]
+			%h3 
+				= @entries[:photos].first[2]
+						
+		#photos_thumbnails				
+			- @entries[:photos][0...9].each do |entry|
+				%a{:href => entry[5]} 
+					= image_tag entry[6]
+					= entry[2]
+					%span
+						= time_ago_in_words entry[4]
+						= entry[1]
+		#photos_nav

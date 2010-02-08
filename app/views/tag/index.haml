@@ -26,7 +26,16 @@
 						%a{:href => entry[5], :id => id_video(entry[5]) , :title => entry[2] + " &mdash; " + time_ago_in_words( entry[4]) +" "+ entry[1]} 
 							= image_tag entry[6]
 				#videos_nav
+					%span.folio
+						= t(:paginate_legend)
+						777
+					%a{:href=>"/" ,:class=>"before disable"}
+						= t(:paginate_before)
+					%a{:href=>"/" ,:class=>"next disable"}
+						= t(:paginate_next)
+					%span.ajax-loader
 					= link_to t(:see_more)+" videos",{ :controller => "tag", :tag => @tag, :action => "video"}, :class => "show"
+	.border
 #text2
 	#blogs
 		%h2
@@ -66,4 +75,12 @@
 						= time_ago_in_words entry[4]
 						= entry[1]
 		#photos_nav
+			%span.folio
+				= t(:paginate_legend)
+				777
+			%a{:href=>"/" ,:class=>"before disable"}
+				= t(:paginate_before)
+			%a{:href=>"/" ,:class=>"next disable"}
+				= t(:paginate_next)
+			%span.ajax-loader
 			= link_to t(:see_more)+" photos",{ :controller => "tag", :tag => @tag, :action => "photo"}, :class => "show"

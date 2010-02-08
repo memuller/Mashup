@@ -102,13 +102,14 @@ function up_link(obj){
 
 function show_video(id,title,contributed){
 	if (contributed == 'true'){ 
-	badge = "<div id='hidden_content_media_id#!ID!#providerYoutube_index_blacklisted' style='display: none;'></div><a class='negative_video' id='videos_content_type' href='#' onclick=\"new Ajax.Updater('hidden_content_media_id#!ID!#providerYoutube_index_blacklisted', '/blacklisted?media_id=#!ID!#&amp;provider=Youtube', {asynchronous:true, evalScripts:true, onComplete:function(request){RedBox.addHiddenContent('hidden_content_media_id#!ID!#providerYoutube_index_blacklisted'); }, onLoading:function(request){RedBox.loading();}}); return false;\"></a>"
-	badge = badge.replace(/#!ID!#/g, id);
+		badge = "<div id='hidden_content_media_id#!ID!#providerYoutube_index_blacklisted' style='display: none;'></div><a class='negative_video' id='videos_content_type' href='#' onclick=\"new Ajax.Updater('hidden_content_media_id#!ID!#providerYoutube_index_blacklisted', '/blacklisted?media_id=#!ID!#&amp;provider=Youtube', {asynchronous:true, evalScripts:true, onComplete:function(request){RedBox.addHiddenContent('hidden_content_media_id#!ID!#providerYoutube_index_blacklisted'); }, onLoading:function(request){RedBox.loading();}}); return false;\"></a>"
+		badge = badge.replace(/#!ID!#/g, id);
 	}else{
 		badge = "<img src='/images/icon-pomba.gif' alt='Vídeo Oficial' title='Vídeo Oficial' style='float:right'>"
 	}
 	
-	$("video_badge").update(badge);
+	if($("video_badge"))
+		$("video_badge").update(badge);
 	$("videos_content").update("<p>"+title+"</p><object width='640' height='385' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0' classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000'> <param value='true' name='allowFullScreen'/><param name='wmode' value='opaque'/> <param value='http://www.youtube.com/watch/v/"+id+"&autoplay=1&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1' name='src'/> <embed width='640' height='385' allowfullscreen='true' src='http://www.youtube.com/v/"+id+"&autoplay=1&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1' wmode='opaque' type='application/x-shockwave-flash'/> </object>");
 }
 

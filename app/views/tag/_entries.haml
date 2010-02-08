@@ -1,10 +1,12 @@
-%div
+.timeline
 	- unless feed.blank? 
 		- reset_cycle 
 		- feed.each do |entry|
 			%div{:class => cycle("even", "odd")}
 				- unless entry[6].nil? 
 					%img{:src => entry[6], :class => "avatar", :width => "48", :height => "48" }
+				- else
+					%img{:src => "http://www.artviper.net/screenshots/screener.php?w=70&amp;userID=17709aa3c85c360&amp;hash=5015222eafdaeddd4e2805645a99abb5&amp;url="+entry[5], :width=>"70", :height=>"52"}
 				%p
 					%b
 						= auto_link entry[2]
@@ -20,5 +22,3 @@
 	- else
 		%small{:class => "no-entrie"}
 			Nenhuma atualiza&ccedil;&atilde;o!
-
-- feed = nil

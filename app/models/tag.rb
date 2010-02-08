@@ -2,6 +2,8 @@ class Tag
 	@url_feed = Hash.new
 	@url_feed[:blog] = "http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=##"
 
+	@url_feed[:news] = "http://news.google.com.br/news?cf=all&output=rss&q=##"
+
 	@url_feed[:bookmark] = "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=##"
 
 	@url_feed[:video_tag] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=##"
@@ -19,6 +21,7 @@ class Tag
 		else
 			{
 				:blogs => blog( tag), 
+				:news => news( tag), 
 				:bookmarks => bookmark( tag),
 				:videos => video( tag),
 				:microtexts => microtext( tag),
@@ -29,6 +32,10 @@ class Tag
 
 	def self.blog tag
 		fetch_and_parse_feed( @url_feed[:blog], tag )	
+	end
+	
+	def self.news tag
+		fetch_and_parse_feed( @url_feed[:news], tag )	
 	end
 	
 	def self.bookmark tag
@@ -117,15 +124,18 @@ class Tag
 						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 
 						
 						if check_duplicate == 0 						
-								@to_merge.push(
-										[entry.id,
-										entry.author,
-										entry.title,
-										(entry.content.nil?) ? entry.summary : entry.content,
-										entry.published,
-										entry.url,
-										entry.thumbnail]
-									)
+									entry.thumbnail = entry.links[1] if feedurl.include?( set_feed(@url_feed[:microtext],"") )	
+									entry.url = CGI::unescape(entry.url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","")	if feedurl.include?( set_feed(@url_feed[:news],"") )
+
+									@to_merge.push(
+											[entry.id,
+											entry.author,
+											entry.title,
+											(entry.content.nil?) ? entry.summary : entry.content,
+											entry.published,
+											entry.url,
+											entry.thumbnail]
+										)
 						end
 					end	
 				
@@ -191,11 +201,12 @@ class Tag
 	  end
 
 	  def self.remove_tag_default(tags=nil)
+
 			unless tags.nil?
 				tags.gsub(/\s+/,'+')
 
 				%w(+cancaonova.com cancaonova.com+ cancaonova.com +cancaonova cancaonova+ cancaonova can%C3%A7%C3%A3o%20nova cancao_nova / %2F).each do |var|
-				  tags.to_s.gsub!("[#{var}]", nil.to_s)
+				  tags.to_s.gsub!("#{var}", nil.to_s)
 				end			
 			end
 

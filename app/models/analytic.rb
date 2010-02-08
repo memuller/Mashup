@@ -16,39 +16,29 @@ class Analytic
 		end
 
 		def self.all_time
-			@ga.get(
-								{ 
-									:start_date => '2008-10-01', 
-				          :end_date => DateTime.now.strftime("%Y-%m-%d"),
-				          :dimensions => ['pageTitle'],
-				          :metrics => ['pageviews'],
-				          :sort => ['-pageviews'] 
-								}
-							)
+			fetch_analytic( DateTime.now - 1.year)
 		end
 
 		def self.last_7_days
-			@ga.get(
-							{ 
-								:start_date => (DateTime.now - 1.week).strftime("%Y-%m-%d"), 
-	              :end_date => (DateTime.now).strftime("%Y-%m-%d"),
-	              :dimensions => ['pageTitle'],
-	              :metrics => ['pageviews'],
-	              :sort => ['-pageviews'] 
-							}
-						 )
+			fetch_analytic( DateTime.now - 1.week)
 		end
 
 		def self.last_day
-			@ga.get(
-							{ 
-								:start_date => (DateTime.now - 1.day).strftime("%Y-%m-%d"), 
-	              :end_date => (DateTime.now).strftime("%Y-%m-%d"),
-	              :dimensions => ['pageTitle'],
-	              :metrics => ['pageviews'],
-	              :sort => ['-pageviews'] 
-							}
-						 )
+			fetch_analytic( DateTime.now - 1.day)
 		end
-
+		
+		private
+		
+			def self.fetch_analytic start_date
+				@ga.get(
+								{ 
+									:start_date => start_date.strftime("%Y-%m-%d"), 
+		              :end_date => DateTime.now.strftime("%Y-%m-%d"),
+		              :dimensions => ['pageTitle'],
+		              :metrics => ['pageviews'],
+		              :sort => ['-pageviews'] 
+								}
+							 )
+				
+			end
 end

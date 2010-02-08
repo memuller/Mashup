@@ -4,7 +4,7 @@ require 'performance_test_help'
 class BlogTest < ActionController::PerformanceTest
 
   def test_homepage
-    get '/blog'
+    get '/'
   end
 
 end

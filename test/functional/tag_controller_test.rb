@@ -2,14 +2,34 @@ require 'test_helper'
 
 class TagControllerTest < ActionController::TestCase
 
-	test "add object flash video" do
-#		flunk 'Not done testing yet.'
-	end
+		test "add object flash video" do
+	#		flunk 'Not done testing yet.'
+		end
+
+		test "tag cloud" do
+	#		flunk 'Not done testing yet.'
+		end
+
+		test "version mobile" do
+			flunk 'Not done testing yet.'
+		end
+
+		test "twitter ajax update" do
+			flunk 'Not done testing yet.'
+		end
+
+		test "twitter pagination" do
+			flunk 'Not done testing yet.'
+		end
+
+		test "mrss format to cooliris" do
+			flunk 'Not done testing yet.'
+		end
 
   test "atom bookmark" do
 		get :bookmark, {:format => "atom", :tag => "phn"}
     assert_response :success
-		assert_routing "/bookmark/tag/phn.atom", { :controller => 'tag', :action => 'bookmark', :tag => 'phn', :format => "atom"}
+		assert_routing "/bookmark/phn.atom", { :controller => 'tag', :action => 'bookmark', :tag => 'phn', :format => "atom"}
   end
 
   test "minuto a minuto" do
@@ -32,6 +52,11 @@ class TagControllerTest < ActionController::TestCase
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao"},"not redirect tag without accent"
   end
 
+  test "redirect when change tag atom" do
+		get :index, {'tag' => "oração",'format' => 'atom'} 
+		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao", :format => "atom"},"not redirect tag without accent or to ATOM"
+  end
+
   test "only blog with tag" do
 		get :blog, {'tag' => "phn"} 
 		assert_not_equal( 0, assigns(:entries).size, "need some POST for PHN" )
@@ -46,6 +71,18 @@ class TagControllerTest < ActionController::TestCase
 
   test "only blog without tag" do
 		get :blog
+		assert_not_nil( assigns(:entries).size, "need return some POST for cancaonova" )		
+    assert_response :success
+  end
+		
+  test "only news with tag dunga" do
+		get :news, {'tag' => "dunga"} 
+		assert_not_equal( 0, assigns(:entries).size, "need some POST for DUNGA" )
+    assert_response :success
+  end
+
+  test "only news without tag" do
+		get :news
 		assert_not_nil( assigns(:entries).size, "need return some POST for cancaonova" )		
     assert_response :success
   end

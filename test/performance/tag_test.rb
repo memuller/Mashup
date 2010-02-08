@@ -3,8 +3,8 @@ require 'performance_test_help'
 
 class TagTest < ActionController::PerformanceTest
 
-  def test_home
-    get '/'
+  def test_blog
+    get '/tag/phn'
   end
 
   def test_blog

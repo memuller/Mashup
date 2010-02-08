@@ -1,0 +1,105 @@
+!!! Mobile
+!!!
+%html
+	%head
+		%title Mashup Can&ccedil;&atilde;o Nova mobile 
+		%style{:type => "text/css", :media => "screen"}
+			*{margin:0;padding:0;font: small "Verdana",sans-serif;text-decoration:none;}
+			a{ text-decoration:underline; color: #067FC4;}
+			a:hover{color:#2222F0;}
+			#header, #microposts,#videos,#photos,#footer,#tagcloud {padding:5px;}
+			#header h1{background:url(stylesheets/img-mobile/mashup_cancao_nova.jpg) 0 0 no-repeat;width:154px;height:80px;overflow:hidden; margin:0 auto;}
+			#header h1 span{display:none;}
+			#search fieldset{border:none; text-align:center;}
+			#search #tag{border:1px solid #f6891f;font-size:14px;width:50%;}
+			#search .button{font-size:x-small;font-weight:600;}
+			#microposts h2 a, #videos h2 a, #photos h2 a, #tagcloud h2, button{color:#ff5400; font-weight:500; font-size:14px; text-decoration:none;}
+			#microposts h3{background-color:#ececec; margin-top:10px; padding:5px;}
+			#videos p, #photos p{background-color:#f8f8f8; margin-top:10px;}
+			#videos p a h3, #photos p a h3,#footer .logo p{display:inline;color:#315382;}
+			#footer{text-align:center;background-color:#EFF9FF;}	
+				#footer .logo{margin:10px 0}	
+	%body
+		#header
+			%h1
+				%a{:href=>"/"}
+					%span MASHUP.cancaonova.mobi
+					%form#search{ :action=>"/", :method=>"get"}
+						%fieldset
+							%label{ :for=>"tag"}
+								= t(:form_tags_label)
+							%input#tag{ :name=>"tags", :size=>"20", :value =>@tag }
+							%input.button{:type=>"submit", :value => "IR"}
+
+		#text2
+			#blogs
+				%h2
+					= link_to "Blogs",{ :controller => "tag", :tag => @tag, :action => "blog"}		
+				#blogs_content
+					= render :partial => 'texts', :locals => { :feed => @entries[:blogs][0...3] }
+				= link_to t(:see_more)+" blogs",{ :controller => "tag", :tag => @tag, :action => "blog"}, :class => "show"	
+			#bookmarks
+				%h2 
+					%a{:href => "/bookmark/tag/#{params[:tag]}"} Bookmarks
+				#bookmarks_content
+					= render :partial => 'texts', :locals => { :feed => @entries[:bookmarks][0...3] }
+					= link_to t(:see_more)+" bookmarks",{ :controller => "tag", :tag => @tag, :action => "bookmark"}, :class => "show"
+			#news
+				%h2
+					%a{:href => "/news/tag/#{params[:tag]}"} News		
+				#news_content
+					= render :partial => 'texts', :locals => { :feed => @entries[:news][0...3] }
+				= link_to t(:see_more)+" not&iacute;cias",{ :controller => "tag", :tag => @tag, :action => "news"}, :class => "show"
+			#clear
+								
+	
+		#footer
+			%p.mashup	
+				%a.cancaonova{ :href=>"http://cancaonova.com"}
+					= image_tag "http://www.cancaonova.com/i/logo_cancaonova.gif", :size=>"98x67", :alt=>"Logo Canção Nova", :title=>"cancaonova.com"
+				%span.copy 
+					&copy; copyright Can&ccedil;&atilde;o Nova 
+					= t(:copyright)
+					%a{ :href => "http://mashup.cancaonova.com/", :title => "vers&atilde;o padr&atilde;o"} Mashup.cancaonova.com &bull; 
+					%a{ :href=>"mailto:multimedia@cancaonova.com"}
+						= I18n.t('contact')
+						Mashup
+			.logo
+				%a{ :href=>"http://euajudo.cancaonova.com"}
+					= t(:institutional_member)
+					 &bull;
+				%a{ :href=>"http://shopping.cancaonova.com"} Shopping &bull;
+				%a{ :href=>"http://noticias.cancaonova.com"}
+					= t(:institutional_news) 
+					&bull;
+				%a{ :href=>"http://mobile.cancaonova.com"} Mobile &bull;
+				%a{ :href=>"http://webtvcn.com"} WEBtvCN
+
+									
+	%script{:type => "text/javascript"}
+		var uservoiceJsHost = ("https:" == document.location.protocol) ? "https://uservoice.com" : "http://cdn.uservoice.com";
+		document.write(unescape("%3Cscript src='" + uservoiceJsHost + "/javascripts/widgets/tab.js' type='text/javascript'%3E%3C/script%3E"))
+		
+	%script{:type => "text/javascript"}
+		UserVoice.Tab.show({ 
+		/* required */
+		key: 'mashupcn',
+		host: 'mashupcn.uservoice.com', 
+		forum: '29815', 
+		/* optional */
+		alignment: 'right',
+		background_color:'#097EB3', 
+		text_color: 'white',
+		hover_color: '#06C',
+		= "lang: '"+params[:locale].gsub('-','_')+"'"
+		})	
+	
+	%script{:type => "text/javascript"}
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+	%script{:type => "text/javascript"}
+		try {
+		var pageTracker = _gat._getTracker("UA-6535463-2");
+		pageTracker._trackPageview();
+		} catch(err) {}

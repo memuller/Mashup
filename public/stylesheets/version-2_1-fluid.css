@@ -58,42 +58,52 @@ h3{font-size:18px}
 	
 .texts
  	,#blogs
+ 	,#news
 	,#bookmarks{width:270px;padding-left:20px;float:left;margin-bottom:36px;overflow:hidden;}
 
 	#text2{clear:both;margin-bottom:2em;}
 	#blogs
+		,#news
 		,#bookmarks{width:30%;}	
 
-#bookmarks 
-	,#blogs{padding-top:10px;}
+#bookmarks
+	,#blogs
+	,#news{padding-top:10px;}
 	#bookmarks h2 
-	,#blogs h2 {margin:0;}
+	,#blogs h2 
+	,#news h2 {margin:0;}
 	#bookmarks h3
 		,#bookmarks h3 span
 		,#microposts h3
 		,#microposts h3 span
 		,#blogs h3
-		,#blogs h3 span {font-size:12px;padding-left:25px;margin:14px 0 0 -14px;}
+		,#news h3
+		,#blogs h3 span
+		,#news h3 span {font-size:12px;padding-left:25px;margin:14px 0 0 -14px;}
 	#bookmarks h3 {height:42px;}
 	#bookmarks .fail
 	,#microposts .fail {color:#555;background:url(img-version-2.1/fail.jpg) 0 0 no-repeat;height:70px;font-size:10px;width:210px;text-align:center;margin:30px 0 10px;padding:25px 30px 0 25px;}
 	
 #bookmarks_content
 	,#microposts_content
-	,#blogs_content {overflow:hidden;}
+	,#blogs_content
+	,#news_content {overflow:hidden;}
 	#bookmarks_content a
 		,#microposts_content a
 		,#blogs_content a
+		,#news_content a
 		,#bookmarks a.show
 		,#microposts a.show
 		,#videos_nav .show
 		,#photos a.show
+		,#news a.show
 		,#blogs a.show{display:block;text-align:right;font-size:10px;color:#2A72A6;margin:5px 0;}
 			#bookmarks_content a:visited
 				,#microposts_content a:visited
 				,#photos_content a:visited
 				,#videos_content a:visited
 				,#blogs_content a:visited
+				,#news_content a:visited
 				,#tagcloud a:visited{color:#F79638}
 		#bookmarks a.show
 			,#microposts a.show
@@ -103,6 +113,8 @@ h3{font-size:18px}
 			,#bookmarks_content span a
 			,#blogs_content span
 			,#blogs_content span a
+			,#news_content span
+			,#news_content span a
 			,#microposts_content span a{color:#777;font-size:10px}
 
 			#bookmarks_content span
@@ -110,17 +122,21 @@ h3{font-size:18px}
 			,#microposts_content a{display:inline}
 		
 			#bookmarks_content span
-			,#blogs_content span{display:block;text-align:right}
+			,#blogs_content span
+			,#news_content span{display:block;text-align:right}
 
 			#bookmarks a.show
 				,#blogs a.show
+				,#news a.show
 				,#microposts a.show {margin-top:1em}
 
 	#bookmarks_content p
 	,#microposts_content p 
-	,#blogs_content p {color:#222;clear:both;margin:3em 0 0 14px;}
+	,#news_content p 
+	,#blogs_content p{color:#222;clear:both;margin:3em 0 0 14px;}
 	#bookmarks_content img
-	,#blogs_content img  {float:left;background-color:#fff;border:1px solid #bbb;margin:14px 10px;padding:3px;font-size:9px;overflow:hidden;}
+	,#blogs_content img 
+	,#news_content img  {float:left;background-color:#fff;border:1px solid #bbb;margin:14px 10px;padding:3px;font-size:9px;overflow:hidden;}
 
 
 #microposts {margin-top:11px;}
@@ -128,9 +144,11 @@ h3{font-size:18px}
 	#microposts h3
 		,#microposts h3 span {background:url(img-version-2.1/apost.jpg) 12px 0 no-repeat;}
 	#microposts h3 span
-		,#blogs h3 span {background-position:0 -405px;margin:0;}
+		,#blogs h3 span 
+		,#news h3 span {background-position:0 -405px;margin:0;}
 	#microposts_content span
-		,#blogs h3 span {color:#777;font-size:10px;padding:5px 0;}
+		,#blogs h3 span 
+		,#news h3 span {color:#777;font-size:10px;padding:5px 0;}
 
 #videos {float:right;width:660px;margin-bottom:20px;}
 	#videos .container {background-color:#F2EFE6;border:1px solid #bbb;min-height:400px;border-width:0 1px;padding:10px 5px;}
@@ -227,6 +245,7 @@ h3{font-size:18px}
 #bookmarks h2 
 	,#microposts h2 
 	,#photos h2 
+	,#news h2 
 	,#blogs h2 
 	,#videos h2 
 	, #tagcloud h2 {background-image:url(img-version-2.1/head_title-2.jpg);background-repeat:no-repeat;}
@@ -238,7 +257,7 @@ h3{font-size:18px}
 
 #blogs h2 {background-position:0 -138px;}
 
-#blogs h2.cn {background-position:0 -168px;}
+#news h2 {background-position:0 -168px;}
 
 #bookmarks h2 a,#microposts h2 a,#photos h2 a,#videos h2 a, #tagcloud h2{}
 
@@ -277,7 +296,18 @@ float:left;
 #display_error, #display_success{ width:550px; height:60px; margin:0 auto;}
 #display_error span, #display_success span{float:left; width:60px; height:60px; display:block; background:url(img-version-2.1/display.jpg) no-repeat; overflow:hidden; text-indent:-9999px; }
 #display_error h1, #display_success h1{float:left; padding-top:20px}
-#display_success span{ background-position:-59px 0;}
+#display_success span{ background-position:-59px 0}
 
 #notice {color:#f33}
-#clear{clear:both;}
+#clear,.clear{clear:both;}
+
+.timeline{border:1px solid #ddd;padding:.5em 0}
+	.timeline div{padding:1em .5em}
+	.odd{background-color:#eee}
+	.timeline .avatar{float:left;margin-right:.25em;border:1px solid #fff;padding:2px;}
+	.timeline .even .avatar{border-color:#eee;}
+	
+.columm{width:30%;float:left;margin:1%;}
+
+#last_up{height:300px;border:1px solid  gray;float:right;width:64%;}
+#info{width:30%;float:left;}

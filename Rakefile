@@ -8,3 +8,12 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+require 'metric_fu'
+
+
+MetricFu::Configuration.run do |config|
+        #define which metrics you want to use
+        config.metrics  = [:churn, :saikuro, :stats, :flog, :flay, :reek, :roodi]
+				config.graphs   = []
+end

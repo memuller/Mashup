@@ -16,6 +16,10 @@ class TagController < ApplicationController
 		@entries = Tag.blog(@tag)
 	end
 
+  def news
+		@entries = Tag.news(@tag)
+	end
+
   def photo
 		@entries = Tag.photo(@tag)
   end
@@ -60,7 +64,7 @@ class TagController < ApplicationController
 			tag_scan.gsub!(/([ ]+)/n,"+")
 		
 			if tag_scan != params[:tag]
-				redirect_to :action => params[:index], :tag => tag_scan
+				redirect_to :action => params[:index], :tag => tag_scan, :format => params[:format]
 			else
 				@tag = tag_scan
 			end

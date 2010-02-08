@@ -1,0 +1,55 @@
+<div id='content' class="about api">
+
+<h2>Feed API do Mashup para aplica&ccedil;&otilde;es de terceiros</h2>
+<p>	A api do Mashup possibilita que voc&ecirc; integre o conte&uacute;do do mashup em seu website ou aplicativo.</p>
+
+<h3>Localiza&ccedil;&atilde;o do feed API</h3>
+
+<p>A maneira mais f&aacute;cil de voc&eacute; acessar um feed &ecirc; atrav&eacute;s do icone localizado no rodap&eacute; da p&aacute;gina do mashup </p>
+
+<h3>Par&acirc;metros para consultar API</h3>
+<p>Para acesso ao feed de qualquer p&aacute;gina do mashup basta adicionar na url o parâmetro <em>format=rss</em>. Ex:</p> <ul><li>mashup.cancaonova.com/?format=rss</li>
+<li>mashup.cancaonova.com/PHN?format=rss</li></ul>
+<p>No segundo ex, PHN &eacute; uma tag que pode ser substituida por uma outra tag ou um conjunto de tags <br />	
+ex: mashup.cancaonova.com/  {tag[+tag+...+tag]} ?format=rss </p>
+
+<h3>Formato da resposta</h3>
+<p>A resposta de toda consulta atrav&eacute;s da API ser&aacute; nos formatos MediaRSS. Futuramente outros formatos estar&atilde;o dispon&iacute;veis. </p>
+<p>
+Exemplo de resposta no formato RSS 2.0
+<pre>&lt;rss version="2.0"&gt;
+	&lt;channel&gt;
+	&lt;title&gt;Mashup Canção Nova&lt;/title&gt;
+	&lt;link&gt;http://mashup.cancaonova.com&lt;/link&gt;
+	&lt;description&gt;Cobertura online dos eventos da Canção Nova&lt;/description&gt;
+	    &lt;item&gt;
+	        &lt;title&gt;Música: Brincar de Roda - Cantinho da Criança&lt;/title&gt;
+	        &lt;link&gt;http://www.youtube.com/watch?v=UxdJc720IJA&lt;/link&gt;
+	 		&lt;media:description&gt;Levante os braços para o céu e louve ao Senhor, bata palmas.. &lt;/media:description&gt;
+	 		&lt;media:thumbnail url="http://i.ytimg.com/vi/UxdJc720IJA/2.jpg" /&gt;
+	        &lt;media:content type="application/x-shockwave-flash"  url="http://www.youtube.com/v/UxdJc720IJA&amp;f=videos&amp;app=youtube_gdata" /&Gt;
+	    &lt;/item&gt;
+
+	    &lt;item&gt;
+	        &lt;title&gt;Show Transfigura&ccedil;&atilde;o - Dunga&lt;/title&gt;
+	        &lt;link&gt;http://www.flickr.com/photos/cancaonovabrasilia/3672268133/&lt;/link&gt;
+	 		&lt;media:description&gt;Show Transfirgura&ccedil;&atilde;o. &lt;/media:description&gt;
+	 		&lt;media:thumbnail url="http://farm3.static.flickr.com/2482/3672268133_8646dfe083_s.jpg" /&gt;
+	        &lt;media:content url="http://farm3.static.flickr.com/2482/3672268133_37191dd4c6_o.jpg" /&Gt;
+	    &lt;/item&gt;
+	&lt;/channel&gt;
+&lt;/rss&gt;</pre>
+</p>
+
+<h3>Futuras funcionalidades da API</h3>
+<ul> 
+	<li>Adicionar paginação na API<br />
+      ex: mashup.cancaonova.com/PAGE/2?format=rss</li>
+    <li>opção para retornar apenas video, foto e texto de conteúdo no feed<br />
+ex: mashup.cancaonova.com/VIDEO/page/2?format=rss</li>
+   <li>resposta em outros formatos</li>
+</ul>
+
+<p>Caso precise de algum recurso extra para utilizar a API do mashup, entre em contato com a equipe atrav&eacute;s do link no rodap&eacute;</p>
+</div>
+	

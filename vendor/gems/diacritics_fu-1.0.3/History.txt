@@ -1,0 +1,13 @@
+== 1.0.2 / 2008-12-10
+  * Added support for $KCODE "UTF8" with Rails >= 2.2.0 (thanks to Thomas Brian and John Devine for their bug report)
+
+== 1.0.1 / 2008-12-05
+  * Added support for Rails >= 2.2.0 (thanks Nicolas Fouché!)
+  * Refactored to check ActiveSupport version
+  * Added missing require activerecord to the lib
+
+== 1.0.0 / 2008-10-21
+  * Packaged as a gem.
+ 
+== 0.9.0 / 2008-05-13
+  * First public release on GitHub.

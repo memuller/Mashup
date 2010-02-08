@@ -2,17 +2,21 @@ ActionController::Routing::Routes.draw do |map|
 
 	map.about 			'/about',													:controller => "tag", :action => 'about'
 	map.api 				'/api', 													:controller => "tag", :action => 'api'
-	map.cooliris 	'/cooliris/:tags', 									:controller => "tag", :action => 'cooliris',	:tags => nil,		:requirements => { :tags => /.*/ }
+	map.cooliris 	'/cooliris/:tag', 									:controller => "tag", :action => 'cooliris',	:tag => nil,		:requirements => { :tag => /.*/ }
 
-  map.language_spanish '/es/:tags', 							:controller => "tag", :action => 'index',		:tags => nil, 	:locale => "es",		:requirements => { :tags => /.*/ }
-  map.language_english '/en/:tags', 							:controller => "tag", :action => 'index',		:tags => nil, 	:locale => "en",		:requirements => { :tags => /.*/ }
+  map.language_spanish_root '/es', 							:controller => "analytic", 	:locale => "es"
+  map.language_english_root '/en', 							:controller => "analytic", 	:locale => "en"
+
+  map.language_spanish '/es/:tag', 							:controller => "tag", :locale => "es"
+  map.language_english '/en/:tag', 							:controller => "tag",	:locale => "en"
 
 
-	map.tag '/tag/:tag.:format' , :controller => "tag" 
 
-	map.media_tag '/:action/tag/:tag.:format' , :controller => "tag"
+	map.media_tag '/:action/:tag.:format' , :controller => "tag"
 	
 	map.media '/blog' , :controller => "tag", :action =>  "blog" 
+
+	map.tag '/:tag.:format' , :controller => "tag" 
 
 	map.root :controller => 'analytic'
 

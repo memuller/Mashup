@@ -1,0 +1,190 @@
+Gattica is a Ruby library for talking to the Google Analytics API.
+
+= Installation
+Install the gattica gem using github as the source:
+
+  gem install cannikin-gattica -s http://gems.github.com
+
+When you want to require, you just use 'gattica' as the gem name:
+
+  require 'rubygems'
+  require 'gattica'
+
+= Introduction
+It's a good idea to familiarize yourself with the Google API docs: http://code.google.com/apis/analytics/docs/gdata/gdataDeveloperGuide.html
+  
+In particular there are some very specific combinations of Metrics and Dimensions that
+you are restricted to and those are explained in this document: http://code.google.com/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html
+
+See examples/example.rb for some code that should work automatically if you replace the email/password with your own
+
+There are generally three steps to getting info from the GA API:
+
+1. Authenticate
+2. Get a profile id
+3. Get the data you really want
+
+= Usage
+This library does all three. A typical transaction will look like this:
+
+ gs = Gattica.new({:email => 'johndoe@google.com', :password => 'password', :profile_id => 123456})
+ results = gs.get({ :start_date => '2008-01-01', 
+                    :end_date => '2008-02-01', 
+                    :dimensions => 'browser', 
+                    :metrics => 'pageviews', 
+                    :sort => '-pageviews'})
+
+So we instantiate a copy of Gattica and pass it a Google Account email address and password.
+The third parameter is the profile_id that we want to access data for.
+
+Then we call +get+ with the parameters we want to shape our data with. In this case we want
+total page views, broken down by browser, from Jan 1 2008 to Feb 1 2008, sorted by descending
+page views. If you wanted to sort pageviews ascending, just leave off the minus.
+
+If you don't know the profile_id you want to get data for, call +accounts+
+
+ gs = Gattica.new({:email => 'johndoe@google.com', :password => 'password'})
+ accounts = gs.accounts
+
+This returns all of the accounts and profiles that the user has access to. Note that if you
+use this method to get profiles, you need to manually set the profile before you can call +get+
+
+ gs.profile_id = 123456
+ results = gs.get({ :start_date => '2008-01-01', 
+                    :end_date => '2008-02-01', 
+                    :dimensions => 'browser', 
+                    :metrics => 'pageviews', 
+                    :sort => '-pageviews'})
+                    
+When you put in the names for the dimensions and metrics you want, refer to this doc for the 
+available names: http://code.google.com/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html
+  
+Note that you do *not* use the 'ga:' prefix when you tell Gattica which ones you want. Gattica
+adds that for you automatically.
+
+If you want to search on more than one dimension or metric, pass them in as an array (you can
+also pass in single values as arrays too, if you wish):
+                    
+  results = gs.get({ :start_date => '2008-01-01', 
+                     :end_date => '2008-02-01', 
+                     :dimensions => ['browser','browserVersion'], 
+                     :metrics => ['pageviews','visits'], 
+                     :sort => ['-pageviews']})
+                     
+== Filters
+Filters can be pretty complex as far as GA is concerned. You can filter on either dimensions or metrics
+or both. And then your filters can be ANDed together or they can ORed together. There are also rules,
+which are not immediately apparent, about what you can filter and how.
+
+By default filters passed to a +get+ are ANDed together. This means that all filters need to match for
+the result to be returned.
+
+  results = gs.get({:start_date => '2008-01-01', 
+                    :end_date => '2008-02-01', 
+                    :dimensions => ['browser','browserVersion'], 
+                    :metrics => ['pageviews','visits'], 
+                    :sort => ['-pageviews'],
+                    :filters => ['browser == Firefox','pageviews >= 10000']})
+  
+This says "return only results where the 'browser' dimension contains the word 'Firefox' and the
+'pageviews' metric is greater than or equal to 10,000.
+
+Filters can contain spaces around the operators, or not. These two lines are equivalent (I think
+the spaces make the filter more readable):
+
+  :filters => ['browser == Firefox','pageviews >= 10000']
+  
+  :filters => ['browser==Firefox','pageviews>=10000']
+  
+Once again, do _not_ include the +ga:+ prefix before the dimension/metric you're filtering against.
+Gattica will add this automatically.
+
+You will probably find that as you try different filters, GA will report that some of them aren't
+valid. I haven't found any documentation that says which filter combinations are valid in what 
+circumstances, so I suppose it's just trial and error at this point.
+
+For more on filtering syntax, see the Analytics API docs: http://code.google.com/apis/analytics/docs/gdata/gdataReference.html#filtering
+  
+= Output
+When Gattica was originally created it was intended to take the data returned and put it into
+Excel for someone else to crunch through the numbers. Thus, Gattica has great built-in support
+for CSV output. Once you have your data simply:
+
+  results.to_csv
+  
+A couple example rows of what that looks like:
+
+  "id","updated","title","browser","pageviews"
+  "http://www.google.com/analytics/feeds/data?ids=ga:12345&amp;ga:browser=Internet%20Explorer&amp;start-date=2009-01-01&amp;end-date=2009-01-31","2009-01-30T16:00:00-08:00","ga:browser=Internet Explorer","Internet Explorer","53303"
+  "http://www.google.com/analytics/feeds/data?ids=ga:12345&amp;ga:browser=Firefox&amp;start-date=2009-01-01&amp;end-date=2009-01-31","2009-01-30T16:00:00-08:00","ga:browser=Firefox","Firefox","20323"
+  
+Data is comma-separated and double-quote delimited. In most cases, people don't care
+about the id, updated, or title attributes of this data. They just want the dimensions and
+metrics. In that case, pass the symbol +:short+ to +to_csv+ and receive get back only the
+the good stuff:
+
+  results.to_csv(:short)
+  
+Which returns: 
+
+  "browser","pageviews"
+  "Internet Explorer","53303"
+  "Firefox","20323"
+
+You can also just output the results as a string and you'll get the standard inspect syntax:
+
+  results.to_s
+  
+Gives you:
+
+  { "end_date"=>#<Date: 4909725/2,0,2299161>, 
+    "start_date"=>#<Date: 4909665/2,0,2299161>, 
+    "points"=>[
+      { "title"=>"ga:browser=Internet Explorer", 
+        "dimensions"=>[{:browser=>"Internet Explorer"}],
+        "id"=>"http://www.google.com/analytics/feeds/data?ids=ga:12345&amp;ga:browser=Internet%20Explorer&amp;start-date=2009-01-01&amp;end-date=2009-01-31", 
+        "metrics"=>[{:pageviews=>53303}], 
+        "updated"=>#<DateTime: 212100120000001/86400000,-1/3,2299161>}]}
+
+== Notes on Authentication
+=== Authentication Token
+Google recommends not re-authenticating each time you do a request against the API. To accomplish
+this you should save the authorization token you receive from Google and use that for future 
+requests:
+
+  ga.token => 'DSasdf94...' (some huge long string)
+
+You can now initialize Gattica with this token for future requests:
+
+  ga = Gattica.new({:token => 'DSasdf94...'})
+
+(You enter the full token, of course). I'm not sure how long a token from the Google's ClientLogin
+system remains active, but if/when I do I'll add that to the docs here.
+
+=== Headers
+Google expects a special header in all HTTP requests called 'Authorization'. This contains your
+token:
+
+  Authorization = GoogleLogin auth=DSasdf94...
+
+This header is generated automatically. If you have your own headers you'd like to add, you can 
+pass them in when you initialize:
+
+  ga = Gattica.new({:token => 'DSasdf94...', :headers => {'My-Special-Header':'my_custom_value'}})
+
+And they'll be sent with every request you make.
+        
+= Limitations
+The GA API limits each call to 1000 results per "page." If you want more, you need to tell
+the API what number to begin at and it will return the next 1000. Gattica does not currently
+support this, but it's in the plan for the very next version.
+
+Currently all filters you supply are ANDed together before being sent to GA. Support for ORing
+is coming soon.
+
+= The Future
+A couple of things I have planned:
+
+1. Tests!
+2. The option to use a custom delimiter for output
+

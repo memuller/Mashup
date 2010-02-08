@@ -1,0 +1,42 @@
+== 0.4.0
+  * er1c added start_index and max_results
+  * er1c added paging for all results
+  * er1c added get_to_csv to "stream" saving results to a file IO
+  * thieso2 fix DataPoint when GA-Path includec colons
+  * jeremyf Added ability to parse addition query strings
+  * nedski Added support for proxy via env var
+
+== 0.3.4
+  * rumble updated the regex used to pull apart the filters so it didn't get confused when there a filename, for example, started with a /
+
+== 0.3.2
+  * er1c updated to use standard Ruby CSV library
+
+== 0.3.0
+  * Support for filters (filters are all AND'ed together, no OR yet)
+
+== 0.2.1 
+  * More robust error checking on HTTP calls
+  * Added to_xml to get raw XML output from Google
+  
+== 0.2.0 / 2009-04-27
+  * Changed initialization format: pass a hash of options rather than individual email, password and profile_id
+  * Can initialize with a valid token and use that instead of requiring email/password each time
+  * Can initialize with your own logger object instead of having to use the default (useful if you're using with Rails, initialize with RAILS_DEFAULT_LOGGER)
+  * Show error if token is invalid or expired (Google returns a 401 on any HTTP call)
+  * Started tests
+
+== 0.1.4 / 2009-04-22
+  * Another attempt at getting the gem to build on github
+
+== 0.1.3 / 2009-04-22
+  * Getting gem to build on github
+
+== 0.1.2 / 2009-04-22
+  * Updated readme and examples, better documentation throughout
+
+== 0.1.1 / 2009-04-22
+  * When outputting as CSV, surround each piece of data with double quotes (appears pretty common for various properties (like Browser name) to contain commas
+
+== 0.1.0 / 2009-03-26
+  * Basic functionality working good. Can't use filters yet.

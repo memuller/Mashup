@@ -1,0 +1,34 @@
+Quick start
+===========
+
+DiacriticsFu::escape("éphémère")
+=> "ephemere"
+
+DiacriticsFu::escape("räksmörgås")
+=> "raksmorgas"
+
+What?
+=====
+
+A small library to remove accents from a string. Relies on ActiveSupport.
+
+Created because I needed a simple way to remove most diacritics from French sentences, while generating slugs (url) for a CMS (either Mephisto or ComatoseCMS).
+
+Nb: this approach is not the fastest way to achieve this. It's good enough for me though.
+
+Author
+======
+
+Thibaut Barrère (http://blog.logeek.fr)
+
+Testing
+=======
+
+You can run the spec against the latest available ActiveSupport using "rake spec".
+
+To run the tests against all installed ActiveSupport versions, use "rake spec_multi"
+
+License
+=======
+
+MIT

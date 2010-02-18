@@ -2,7 +2,7 @@ class Tag
 	@url_feed = Hash.new
 	@url_feed[:blog] = "http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=##"
 
-	@url_feed[:news] = "http://news.google.com.br/news?cf=all&output=rss&q=##"
+	@url_feed[:news] = "http://news.google.com.br/news?cf=all&output=rss&key=ABQIAAAAV2ZuWpscPVQQ0E7JDdhdORRSXSF-Y4fmqhRslvTYf3GZ0LIPaRSj8X7I8YW0NB_Ilr1kbU9ielxouw&q=##"
 
 	@url_feed[:bookmark] = "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=##"
 
@@ -39,21 +39,21 @@ class Tag
 	end
 	
 	def self.bookmark tag
-		fetch_and_parse_feed( @url_feed[:bookmark], tag )	
+		returno = fetch_and_parse_feed( @url_feed[:bookmark], tag )	
 	end
 	
-		def self.video tag
-			fetch_and_parse_feed( @url_feed[:video], tag )	
-		end
+	def self.video tag
+		fetch_and_parse_feed( @url_feed[:video], tag )	
+	end
 
-		def self.photo tag
-			@is_photo = true
-			fetch_and_parse_feed( @url_feed[:photo], tag )	
-		end
+	def self.photo tag
+		@is_photo = true
+		fetch_and_parse_feed( @url_feed[:photo], tag )	
+	end
 
-		def self.microtext tag
-			fetch_and_parse_feed( @url_feed[:microtext], tag )	
-		end
+	def self.microtext tag
+		fetch_and_parse_feed( @url_feed[:microtext], tag )	
+	end
 
 
 
@@ -99,14 +99,16 @@ class Tag
 			feed_urls = []
 			if feed_url.class == Hash
 				feed_url.each do |url|
-					feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag ) ) <<	set_feed( url[1], space_tag( tag ) )						
+					quotes = url[0] == :video
+					feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag , quotes) ) <<	set_feed( url[1], space_tag( tag , quotes) )						
 				end
 			else
+				quotes = feed_url.include?( @url_feed[:video] )	
 				feed_urls = [
 								set_feed( feed_url, default_tag( tag ) ),			
-								set_feed( feed_url, tilde_tag( tag ) ),			
-								set_feed( feed_url, space_tilde_tag( tag ) ),
-								set_feed( feed_url, space_tag( tag ) )						
+								set_feed( feed_url, tilde_tag( tag ) )	,		
+								set_feed( feed_url, space_tilde_tag( tag, quotes) ),
+								set_feed( feed_url, space_tag( tag , quotes ) )						
 							]	
 			end
 						
@@ -141,8 +143,7 @@ class Tag
 				
 				},	
 				:on_failure => lambda {|url, response_code, response_header, response_body|
-#					puts response_body + 
-					puts "ERROR RETORNO	= #{url}"
+					RAILS_DEFAULT_LOGGER.error { "ERROR RETORNO	= #{url}" + response_body  }
 				}
 			)
 			@to_merge.uniq!
@@ -166,33 +167,24 @@ class Tag
 
 
 
-	  def self.default_tag(tags=nil)
+	  def self.default_tag(tags)
 	    change_tag_default(tags, "cancaonova")
 	  end
 
-	  def self.tilde_tag(tags=nil)
-	    change_tag_default(tags, "cançãonova")
+	  def self.space_tag(tags, quote = false)
+	    change_tag_default(tags, quote_tags("cancao%20nova",quote))
 	  end
 
-	  def self.space_tag(tags=nil)
-	    change_tag_default(tags, quote_tags("cancao%20nova"))
+	  def self.tilde_tag(tags)
+	    change_tag_default(tags, CGI::escape("cançãonova"))
 	  end
 
-	  def self.space_tilde_tag(tags=nil)
-	    change_tag_default(tags, quote_tags("canção%20nova"))
-	  end
-
-	  def self.comma_tag(tags=nil)
-	    change_tag_default(tags, quote_tags("cancao,nova"))
-	  end
-
-	  def self.comma_tilde_tag(tags=nil)
-	    change_tag_default(tags, quote_tags("canção,nova"))
+	  def self.space_tilde_tag(tags, quote = false)
+	    change_tag_default(tags, quote_tags(CGI::escape("canção%20nova"), quote))
 	  end
 
 	  def self.change_tag_default(tags, new_tag)
 	    result = remove_tag_default tags
-#	    result == nil ? quote_tags(new_tag) : result + quote_tags(new_tag)
 	    if @is_photo
 				result+","+new_tag
 			else
@@ -217,8 +209,9 @@ class Tag
 			tags.gsub('/','').gsub('%2F','')
 		end
 
-		def self.quote_tags tags
-				"%22#{tags}%22"
+		def self.quote_tags tags, quote = false
+				tags = "%22#{tags}%22" unless quote
+				tags
 		end
 
 end

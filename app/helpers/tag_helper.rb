@@ -9,7 +9,16 @@ module TagHelper
 			"			
 	end
 
-	def id_video url_video
-		url_video.gsub(/.+v=/,nil.to_s).gsub(/&.+/,nil.to_s)
+	def id_video url
+		url.gsub(/.+v=/,nil.to_s).gsub(/&.+/,nil.to_s)
 	end
+
+	def id_photo url
+		url.gsub('http://','').gsub(/farm[0-9]\./,'').gsub('static.flickr.com/','').gsub('_s.jpg','')
+	end
+
+	def medium_photo_url url
+		url.gsub('_s.jpg','')+'.jpg'
+	end
+
 end

@@ -308,6 +308,7 @@ float:left;
 	.timeline .even .avatar{border-color:#eee;}
 	
 .columm{width:30%;float:left;margin:1%;}
-
+	#content .columm a
+		,.columm a:visited{color:#069}
 #last_up{height:300px;border:1px solid  gray;float:right;width:64%;}
 #info{width:30%;float:left;}

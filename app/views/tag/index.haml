@@ -62,13 +62,13 @@
 	- unless @entries[:photos].blank? 
 		#photos_content	
 			%a{:href => @entries[:photos].first[5]} 
-				= image_tag @entries[:photos].first[6]
+				= image_tag medium_photo_url( @entries[:photos].first[6])
 			%h3 
 				= @entries[:photos].first[2]
 						
 		#photos_thumbnails				
 			- @entries[:photos][0...9].each do |entry|
-				%a{:href => entry[5]} 
+				%a{:href => entry[5]+"?title=#{entry[2]}&amp;photo="+id_photo(entry[6]), :id => "photo="+id_photo(entry[6])} 
 					= image_tag entry[6]
 					= entry[2]
 					%span

@@ -1,8 +1,8 @@
 class TagController < ApplicationController
 	
-	caches_page :index, :video, :photo, :blog
+	attr_reader :entries
 	before_filter :set_tag
-	attr_reader :content
+	caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline  
 
   def index
 		@entries = Tag.all(@tag, params[:format])
@@ -38,37 +38,20 @@ class TagController < ApplicationController
 
 	protected	
 
-		def expire
-				flash[:notice] = "cache EXPIRED"
-				expire_page :action => "index"
-				expire_page :action => "video"
-				expire_page :action => "photo"
-				redirect_to :action => "index"		
-		end
-	
 		def set_tag
-#			tag_default = "cancaonova"
 			unless params.include? "tag"
 				@tag = ""
 				return
 			end
-				
-			tag_scan = DiacriticsFu::escape( params[:tag].clone ) #.nil? ? tag_default : params[:tag] + "+#{tag_default}"
-			
-			%w(++ %20).each do |var|
-				tag_scan.gsub!("[#{var}]", '+')
+
+			@tag = DiacriticsFu::escape( params[:tag] )
+
+			%w("[++]" "[%20]" \s %r{&}).each do |var|
+				@tag.gsub!(var, '+')
 			end
 
-			tag_scan.gsub!(%r{&} , "+")
-			tag_scan.gsub!(/([^ a-zA-Z0-9_.-\\+]+)/n,nil.to_s)
-			tag_scan.gsub!(/([ ]+)/n,"+")
-		
-			if tag_scan != params[:tag]
-				redirect_to :action => params[:index], :tag => tag_scan, :format => params[:format]
-			else
-				@tag = tag_scan
-			end
+			@tag.gsub!(/([^ a-zA-Z0-9_.-\\+]+)/n,nil.to_s)
+			redirect_to :action => params[:index], :tag => @tag, :format => params[:format] if @tag != params[:tag]	
 		end
 
-	
 end

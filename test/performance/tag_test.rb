@@ -3,8 +3,8 @@ require 'performance_test_help'
 
 class TagTest < ActionController::PerformanceTest
 
-  def test_blog
-    get '/tag/phn'
+  def test_index
+    get '/cancaonova'
   end
 
   def test_blog
@@ -27,8 +27,8 @@ class TagTest < ActionController::PerformanceTest
     get '/microtext'
   end
 
-  def test_mashup
-    get '/mashup'
+  def test_news
+    get '/news'
   end
 
 end

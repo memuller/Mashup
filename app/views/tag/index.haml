@@ -68,7 +68,7 @@
 						
 		#photos_thumbnails				
 			- @entries[:photos][0...9].each do |entry|
-				%a{:href => entry[5]+"?title=#{entry[2]}&amp;photo="+id_photo(entry[6]), :id => "photo="+id_photo(entry[6])} 
+				%a{:href => entry[5]+"?photo="+id_photo(entry[6]), :id => "photo="+id_photo(entry[6]), :title => entry[2] } 
 					= image_tag entry[6]
 					= entry[2]
 					%span

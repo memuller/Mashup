@@ -9,16 +9,10 @@ class TagControllerTest < ActionController::TestCase
 		test "tag cloud" do
 		end
 
-		test "version mobile" do
-		end
-
 		test "twitter ajax update" do
 		end
 
 		test "twitter pagination" do
-		end
-
-		test "mrss format to cooliris" do
 		end
 
 
@@ -52,20 +46,17 @@ class TagControllerTest < ActionController::TestCase
 
 	test "was item atom blog" do
 		get :blog, {:format => "atom", :tag => "phn"}
-		itens = css_select("div.even")
-		assert_not_nil( itens, "ATOM need some blog for PHN" )
+		assert_xml_select "entry", 1..20, "ATOM need some blog for PHN" 
 	end
 
 	test "atom blog without result" do
 		get :blog, {:format => "atom", :tag => "qwerasdfpoi"}
-		entries = css_select("entry")
-		assert_not_nil( entries, "blog need have ZERO itens for qwerasdfpoi" )
+				assert_xml_select "entry", 0, "blog need have ZERO itens for qwerasdfpoi" 
 	end
 	
   test "was item in atom blog without TAG" do
 		get :blog, {:format => "atom"}
-		entries = css_select("entry")
-		assert_not_nil( entries, "ATOM need some blog for PHN" )
+		assert_xml_select "entry", 1..20, "ATOM need some blog for PHN" 
   end
 
   test "request blog with tag" do
@@ -76,7 +67,7 @@ class TagControllerTest < ActionController::TestCase
   test "was item in blog with tag dunga" do
 		get :blog, {'tag' => "phn"} 
 		entries = css_select("div.even")
-		assert_not_nil( entries, "need some blog for PHN" )
+		assert_not_equal( entries.size, 0, "need some blog for PHN" )
   end
 
   test "only blog without tag" do
@@ -102,20 +93,17 @@ class TagControllerTest < ActionController::TestCase
 
 	test "was item atom news" do
 		get :news, {:format => "atom", :tag => "phn"}
-		itens = css_select("div.even")
-		assert_not_nil( itens, "ATOM need some news for PHN" )
+		assert_xml_select "entry", 1..20, "ATOM need some news for PHN" 
 	end
 
 	test "atom news without result" do
 		get :news, {:format => "atom", :tag => "qwerasdfpoi"}
-		entries = css_select("entry")
-		assert_nil( entries, "news need have none itens for qwerasdfpoi" )
+		assert_xml_select "entry", 0, "news need have ZERO itens for qwerasdfpoi" 
 	end
 
   test "was item in atom news without TAG" do
 		get :news, {:format => "atom"}
-		entries = css_select("entry")
-		assert_not_nil( entries, "ATOM need some news for PHN" )
+		assert_xml_select "entry", 1..20, "ATOM need some news for PHN" 
   end
 
   test "request news with tag" do
@@ -126,7 +114,7 @@ class TagControllerTest < ActionController::TestCase
   test "was item in news with tag PHN" do
 		get :news, {'tag' => "phn"} 
 		entries = css_select("div.even")
-		assert_not_nil( entries, "need some news for PHN" )
+		assert_not_equal( entries.size, 0, "need some news for PHN" )
   end
 
   test "only news without tag" do
@@ -153,19 +141,19 @@ class TagControllerTest < ActionController::TestCase
 	test "was item atom bookmark for PHN" do
 		get :bookmark, {:format => "atom", :tag => "phn"}
 		entries = css_select("entry")
-		assert_not_nil( entries, "ATOM need some news for PHN" )
+		assert_not_equal( entries.size, 0, "ATOM need some news for PHN" )
 	end
 
 	test "atom bookmark without result" do
 		get :bookmark, {:format => "atom", :tag => "qwerasdfpoi"}
 		entries = css_select("entry")
-		assert_nil( entries, "news need have none itens blog for qwerasdfpoi" )
+		assert_nil( entries[0], "news need have none itens blog for qwerasdfpoi" )
 	end
 
   test "was item in atom bookmark without TAG" do
 		get :bookmark, {:format => "atom"}
 		entries = css_select("entry")
-		assert_not_nil( entries.size, "ATOM need some news" )
+		assert_not_equal( entries.size, 0, "ATOM need some news" )
   end
 
   test "request bookmark with tag" do
@@ -176,7 +164,7 @@ class TagControllerTest < ActionController::TestCase
   test "was item in bookmark with tag dunga" do
 		get :bookmark, {'tag' => "dunga"} 
 		entries = css_select("div.even")
-		assert_not_nil( entries.size, "need some bookmark for PHN" )
+		assert_not_equal( entries.size, 0, "need some bookmark for PHN" )
   end
 
   test "only bookmark without tag" do
@@ -203,17 +191,17 @@ class TagControllerTest < ActionController::TestCase
 
 	test "item atom microtext for PHN" do
 		get :microtext, {:format => "atom", :tag => "phn"}
-		assert_select "entry", 1..10, "ATOM need some microtext for PHN"
+		assert_xml_select "entry", 1..20
 	end
 
 	test "atom microtext ZERO itens" do
 		get :microtext, {:format => "atom", :tag => "qwerasdfpoi"}
-		assert_select "entry", 0, "need Zero microtext for qwerasdfpoi"
+		assert_xml_select "entry", 0, "need Zero microtext for qwerasdfpoi"
 	end
 
   test "itens in atom microtext DEFAULT TAG" do
 		get :microtext, {:format => "atom"}
-		assert_select "entry", 1..10, "need some microtext for PHN"
+		assert_xml_select "entry", 1..20
   end
 
   test "request microtext with tag" do
@@ -223,7 +211,7 @@ class TagControllerTest < ActionController::TestCase
 
   test "item in microtext with tag PHN" do
 		get :microtext, {'tag' => "phn"} 
-		assert_select "div.timeline div", 1..10, "need some microtext for PHN"
+		assert_select "div.timeline div", 1..20
   end
 
   test "microtext default tag" do
@@ -244,54 +232,67 @@ class TagControllerTest < ActionController::TestCase
   test "video DUNGA" do
 		get :video, {'tag' => "dunga"} 
 		assert_not_equal( 0, assigns(:entries).size, "need some VIDEO for DUNGA" )
-		assert_template 'tag/video'    
-    assert_response :success
   end
 
-	test "atom video" do
+	test "atom video valide" do
 		get :video, {:format => "atom", :tag => "phn"}
 		assert_valid_feed
+	end
+	
+	test "atom video" do
+		get :video, {:format => "atom", :tag => "phn"}
 		assert_not_equal( 0, assigns(:entries).size, "ATOM need some video for PHN" )
-		assert_routing "/video/phn.atom", { :controller => 'tag', :action => 'video', :tag => 'phn', :format => "atom"}
-	  assert_response :success
 	end
 
 	test "atom video without result" do
 		get :video, {:format => "atom", :tag => "qwerasdfpoi"}
-		assert_valid_feed
 		assert_equal( 0, assigns(:entries).size, "ATOM must have zero videos for qwerasdfpoi" )
-		assert_routing "/video/qwerasdfpoi.atom", { :controller => 'tag', :action => 'video', :tag => 'qwerasdfpoi', :format => "atom"}
-	  assert_response :success
 	end
 
 
 ## photo
 
-  test "photo DUNGA" do
+	test "photo spiritual" do
+		get :photo, {'tag' => "spiritual"} 
+		assert_no_tag :tag => "div", :descendant => {:tag => "small",:attributes => { :class => "no-entrie" }} 
+	end
+
+	test "photo DUNGA" do
 		get :photo, {'tag' => "dunga"} 
 		assert_no_tag :tag => "div", :descendant => {:tag => "small",:attributes => { :class => "no-entrie" }} 
-		assert_template 'tag/photo'    
-    assert_response :success
-  end
+	end
 
 	test "atom photo" do
 		get :photo, {:format => "atom", :tag => "phn"}
-		assert_valid_feed
 		assert_not_equal( 0, assigns(:entries).size, "ATOM need some photo for PHN" )
-		assert_routing "/photo/phn.atom", { :controller => 'tag', :action => 'photo', :tag => 'phn', :format => "atom"}
-	  assert_response :success
 	end
 
 	test "atom photo without result" do
 		get :photo, {:format => "atom", :tag => "qwerasdfpoi"}
-		assert_valid_feed
 		assert_equal( 0, assigns(:entries).size, "ATOM must have zero photo for qwerasdfpoi" )
-		assert_routing "/photo/qwerasdfpoi.atom", { :controller => 'tag', :action => 'photo', :tag => 'qwerasdfpoi', :format => "atom"}
-	  assert_response :success
 	end
 
 
 ## index
+
+	test "version mobile" do
+		get :index, {:format => "xhtmlmp", :tag => "phn"}
+	end
+
+	test "mrss phn valid" do
+		get :index, {:format => "mrss", :tag => "phn"}
+		assert_valid_feed
+	end
+
+	test "mrss phn with results" do
+		get :index, {:format => "mrss", :tag => "phn"}
+		assert_not_equal( 0, assigns(:entries).size, "MRSS need some item for PHN" )
+	end
+
+	test "title" do
+		get :index, {:tag => "jonas"}
+		assert_select 'title', "jonas\n    &mdash;\n    Mashup Can&ccedil;&atilde;o Nova"
+	end
 
   test "redirect when change tag" do
 		get :index, {'tag' => "oração"} 
@@ -303,21 +304,31 @@ class TagControllerTest < ActionController::TestCase
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao", :format => "atom"},"not redirect tag without accent or to ATOM"
   end
 
-	test "atom index" do
+	test "atom index with result" do
+		get :index, {:format => "atom", :tag => "phn"}
+		assert_not_equal( 0, assigns(:entries).size, "ATOM need some item for PHN" )
+	end
+	
+	test "atom index valide" do
 		get :index, {:format => "atom", :tag => "phn"}
 		assert_valid_feed
-		assert_not_equal( 0, assigns(:entries).size, "ATOM need some item for PHN" )
+	end
+	
+	test "atom index routing" do
+		get :index, {:format => "atom", :tag => "phn"}
 		assert_routing "/phn.atom", { :controller => 'tag', :action => 'index', :tag => 'phn', :format => "atom"}
+	end
+	
+	test "atom index success" do
+		get :index, {:format => "atom", :tag => "phn"}
 	  assert_response :success
 	end
 
 	test "index atom without result" do
 		get :index, {:format => "atom", :tag => "qwerasdfpoi"}
-		assert_valid_feed
 		assert_equal( 0, assigns(:entries).size, "index ATOM must have zero for qwerasdfpoi" )
-		assert_routing "/qwerasdfpoi.atom", { :controller => 'tag', :action => 'index', :tag => 'qwerasdfpoi', :format => "atom"}
-	  assert_response :success
 	end
+	
   test "all media content" do
 		get(:index, {"tag" => "phn"})
     assert_response :success

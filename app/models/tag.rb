@@ -6,18 +6,22 @@ class Tag
 
 	@url_feed[:bookmark] = "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=##"
 
-	@url_feed[:video_tag] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=##"
-	@url_feed[:video] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&q=##"
+	@url_feed[:video] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=##"
+	@url_feed[:video_query] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&q=##"
 
 	@url_feed[:photo] = "http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[##]"
 
 	@url_feed[:microtext] = "http://search.twitter.com/search.atom?rpp=10&page=1&tag=##"
+	@url_feed[:microtext_query] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
 
 		
-	def self.all tag, atom = nil
+	def self.all tag, type = nil
 
-		unless atom.nil?
+		if type == "atom"
 			fetch_and_parse_feed( @url_feed, tag )[0...20]	
+		elsif type == "mrss"
+			midias = {:video => @url_feed[:video],:video_query => @url_feed[:video_query], :photo => @url_feed[:photo]}
+			fetch_and_parse_feed( midias, tag )[0...20]	
 		else
 			{
 				:blogs => blog( tag), 
@@ -31,28 +35,27 @@ class Tag
 	end
 
 	def self.blog tag
-		fetch_and_parse_feed( @url_feed[:blog], tag )	
+		fetch_and_parse_feed( @url_feed[:blog], tag )[0...10]	
 	end
 	
 	def self.news tag
-		fetch_and_parse_feed( @url_feed[:news], tag )	
+		fetch_and_parse_feed( @url_feed[:news], tag )[0...10]		
 	end
 	
 	def self.bookmark tag
-		returno = fetch_and_parse_feed( @url_feed[:bookmark], tag )	
+		returno = fetch_and_parse_feed( @url_feed[:bookmark], tag )[0...10]		
 	end
 	
 	def self.video tag
-		fetch_and_parse_feed( @url_feed[:video], tag )	
+		fetch_and_parse_feed( {:video => @url_feed[:video], :video_query => @url_feed[:video_query]}, tag )[0...10]		
 	end
 
 	def self.photo tag
-		@is_photo = true
-		fetch_and_parse_feed( @url_feed[:photo], tag )	
+		fetch_and_parse_feed( @url_feed[:photo], tag )[0...10]		
 	end
 
 	def self.microtext tag
-		fetch_and_parse_feed( @url_feed[:microtext], tag )	
+		fetch_and_parse_feed( {:microtext => @url_feed[:microtext], :microtext_query => @url_feed[:microtext_query]}, tag )[0...10]		
 	end
 
 
@@ -99,11 +102,13 @@ class Tag
 			feed_urls = []
 			if feed_url.class == Hash
 				feed_url.each do |url|
-					quotes = url[0] == :video
+					quotes = url[0].to_s.include? "video"
+					@is_photo = url[0].to_s.include? "photo"
 					feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag , quotes) ) <<	set_feed( url[1], space_tag( tag , quotes) )						
 				end
 			else
 				quotes = feed_url.include?( @url_feed[:video] )	
+				@is_photo = feed_url.include? "photo"
 				feed_urls = [
 								set_feed( feed_url, default_tag( tag ) ),			
 								set_feed( feed_url, tilde_tag( tag ) )	,		

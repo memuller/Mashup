@@ -2,7 +2,10 @@
 !!!
 %html
 	%head
-		%title Mashup Can&ccedil;&atilde;o Nova
+		%title<
+			= @tag
+			= "&mdash;" unless @tag.empty?
+			Mashup Can&ccedil;&atilde;o Nova
 		= stylesheet_link_tag "version-2_1-fluid"
 		= javascript_include_tag :defaults, :cache => true
 		= auto_discovery_link_tag(:atom, :format => "atom")
@@ -47,7 +50,7 @@
 					%a.rss{ :title=>"RSS | Mashup Can&ccedil;&atilde;o Nova", :href=> @tag + ".atom" }
 						RSS Mashup
 						= " &mdash; "+ @tag 
-					%a.mobi{ :href=>"http://mashup.cancaonova.mobi/add_tag"} 
+					%a.mobi{ :href=>"http://mashup.cancaonova.mobi/"+@tag} 
 						= t(:mobile, :tags => @tags) 
 					= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
 

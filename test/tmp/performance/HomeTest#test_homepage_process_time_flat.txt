@@ -1,0 +1,6254 @@
+Thread ID: 29931070
+Total: 47.108638
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922580
+Total: 47.063789
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29880130
+Total: 46.848893
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919750
+Total: 46.504114
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927250
+Total: 46.539458
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29884800
+Total: 46.873116
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910270
+Total: 46.456579
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907440
+Total: 46.441738
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29875320
+Total: 46.825305
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929090
+Total: 46.547033
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27962240
+Total: 21.344418
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909280
+Total: 20.897960
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948900
+Total: 21.091519
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933760
+Total: 4.894000
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905460
+Total: 46.976237
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29902630
+Total: 46.961980
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936590
+Total: 46.576748
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29976210
+Total: 4.986703
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27751830
+Total: 5.160802
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29962060
+Total: 21.151790
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961070
+Total: 46.685420
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935600
+Total: 4.901971
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27749850
+Total: 5.149973
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943100
+Total: 21.063776
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913810
+Total: 47.020054
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939280
+Total: 4.924090
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910980
+Total: 46.458945
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29882680
+Total: 46.861566
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27957290
+Total: 21.319787
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27747870
+Total: 5.139628
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29952440
+Total: 46.321589
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934470
+Total: 46.570452
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925980
+Total: 47.082513
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950460
+Total: 4.979974
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936310
+Total: 46.575598
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922160
+Total: 46.516655
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947630
+Total: 4.966578
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939140
+Total: 21.043408
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924990
+Total: 47.077247
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910840
+Total: 47.004558
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940980
+Total: 46.595212
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926830
+Total: 47.087251
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29954140
+Total: 21.115742
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29882400
+Total: 46.860516
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961640
+Total: 46.687635
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919190
+Total: 46.501537
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913530
+Total: 20.920019
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27973990
+Total: 21.402709
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915370
+Total: 47.026851
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901220
+Total: 46.410972
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27975830
+Total: 21.412128
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937020
+Total: 21.034176
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29891740
+Total: 46.906575
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956830
+Total: 46.666704
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942680
+Total: 21.061205
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913390
+Total: 46.471956
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938860
+Total: 4.921025
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921880
+Total: 47.060641
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941690
+Total: 4.938408
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909570
+Total: 46.453093
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946360
+Total: 46.619604
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939710
+Total: 21.045859
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936880
+Total: 46.577876
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29962350
+Total: 21.153243
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917070
+Total: 46.489169
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29874620
+Total: 46.821512
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956690
+Total: 21.128841
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950040
+Total: 46.310084
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921740
+Total: 46.514443
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27971870
+Total: 21.390628
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933060
+Total: 21.014028
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944380
+Total: 21.069400
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901930
+Total: 46.414449
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926410
+Total: 47.084959
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951880
+Total: 46.319192
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917920
+Total: 47.040167
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29889620
+Total: 46.896538
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943390
+Total: 46.605641
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29899950
+Total: 46.947940
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911270
+Total: 46.459995
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950890
+Total: 46.640402
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945230
+Total: 4.954444
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931080
+Total: 21.005798
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27966070
+Total: 21.363289
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29887640
+Total: 46.886433
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955560
+Total: 21.123104
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29966880
+Total: 46.710838
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949900
+Total: 4.977151
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29975370
+Total: 4.984429
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947070
+Total: 46.623876
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932920
+Total: 4.889725
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29972540
+Total: 46.714798
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27959420
+Total: 21.329981
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925280
+Total: 20.977731
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911130
+Total: 47.005624
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950750
+Total: 46.313832
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922450
+Total: 46.517796
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941270
+Total: 21.054161
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29893160
+Total: 46.913712
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29878020
+Total: 46.839303
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29960090
+Total: 21.142472
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945940
+Total: 21.075971
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917640
+Total: 46.492861
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926130
+Total: 46.534018
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922310
+Total: 47.062726
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27972440
+Total: 21.394425
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918490
+Total: 20.943595
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958110
+Total: 21.133453
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926980
+Total: 46.538410
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29895850
+Total: 46.927711
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29963770
+Total: 46.698398
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29965610
+Total: 46.705171
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937310
+Total: 21.035339
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909010
+Total: 20.896296
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916510
+Total: 20.933303
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27977960
+Total: 21.422708
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949480
+Total: 4.975174
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27971310
+Total: 21.388001
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946650
+Total: 21.079817
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943820
+Total: 46.607687
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29873070
+Total: 46.814680
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924010
+Total: 46.524489
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29962640
+Total: 21.154336
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920190
+Total: 47.053158
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928680
+Total: 47.095229
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925850
+Total: 46.532771
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27963670
+Total: 21.350455
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29895570
+Total: 46.926572
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935190
+Total: 21.024086
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906890
+Total: 46.439216
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27976830
+Total: 21.416863
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29883260
+Total: 46.865228
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29959670
+Total: 46.679834
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931370
+Total: 46.557748
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917220
+Total: 47.036570
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938870
+Total: 46.585926
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944530
+Total: 46.610831
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27959710
+Total: 21.331547
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949200
+Total: 21.092615
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29872790
+Total: 46.813525
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922740
+Total: 47.065311
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27958720
+Total: 21.326694
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29973680
+Total: 46.722553
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931230
+Total: 47.109999
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942550
+Total: 4.942218
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910430
+Total: 47.001909
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927410
+Total: 20.986982
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913260
+Total: 47.017280
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29895290
+Total: 46.925064
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917930
+Total: 46.493944
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27972730
+Total: 21.395510
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29962220
+Total: 46.690963
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919770
+Total: 47.051122
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905620
+Total: 46.432232
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938590
+Total: 46.584349
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27960420
+Total: 21.334439
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29881990
+Total: 46.858425
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935760
+Total: 21.026803
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921610
+Total: 20.958805
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907460
+Total: 46.987166
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958400
+Total: 21.134711
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940430
+Total: 46.592846
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29977220
+Total: 46.735169
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948920
+Total: 4.972926
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913970
+Total: 46.474588
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953590
+Total: 46.653084
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29882840
+Total: 46.863178
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29902650
+Total: 46.417899
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929960
+Total: 21.000097
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915810
+Total: 46.484405
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937460
+Total: 4.912533
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931800
+Total: 21.009401
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29899680
+Total: 46.328679
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953450
+Total: 21.112210
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907180
+Total: 20.887812
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29975100
+Total: 21.174860
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931660
+Total: 47.112429
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27746900
+Total: 5.134393
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948640
+Total: 21.090119
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29902370
+Total: 46.416815
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953310
+Total: 46.651948
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961800
+Total: 46.688814
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29878740
+Total: 46.842688
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915530
+Total: 46.483415
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29892890
+Total: 46.912657
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956990
+Total: 21.130425
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942840
+Total: 21.062062
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925860
+Total: 20.980342
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29880580
+Total: 46.851288
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905060
+Total: 46.429757
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924870
+Total: 46.528684
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922040
+Total: 47.061501
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29960670
+Total: 21.145113
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29971990
+Total: 21.160494
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27747610
+Total: 5.137797
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909730
+Total: 46.997712
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917230
+Total: 46.490450
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939870
+Total: 21.047263
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29897420
+Total: 46.934601
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27972030
+Total: 21.391602
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933220
+Total: 46.566154
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29904920
+Total: 46.973464
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29902090
+Total: 46.415322
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29899260
+Total: 46.943888
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935060
+Total: 46.572420
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29892610
+Total: 46.911089
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29878460
+Total: 46.841616
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29957700
+Total: 21.131532
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943550
+Total: 4.946930
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929400
+Total: 47.099279
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922750
+Total: 20.965123
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29880300
+Total: 46.849743
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924590
+Total: 20.974436
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907610
+Total: 46.442747
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29972700
+Total: 46.715823
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29887800
+Total: 46.887264
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27750160
+Total: 5.151177
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932090
+Total: 46.560678
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29875490
+Total: 46.826183
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933930
+Total: 4.894894
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29902800
+Total: 46.962812
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29899970
+Total: 46.403892
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907470
+Total: 20.889001
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29890490
+Total: 46.901518
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27963260
+Total: 21.348388
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29954590
+Total: 21.118446
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934780
+Total: 21.022240
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918650
+Total: 47.043944
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27954630
+Total: 21.180729
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944120
+Total: 46.608876
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 28172540
+Total: 13.239099
+
+ %self     total     self     wait    child    calls  name
+  0.04      0.00     0.00     0.00     0.00        1  <Class::Dir>#[]
+
+
+Thread ID: 29940300
+Total: 21.049347
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920490
+Total: 47.054189
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906340
+Total: 46.980850
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931810
+Total: 46.559682
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927990
+Total: 20.989360
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27963970
+Total: 21.351537
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922330
+Total: 20.962796
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27958310
+Total: 21.324388
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947800
+Total: 4.967610
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933650
+Total: 47.123508
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941150
+Total: 4.935894
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949640
+Total: 46.635038
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920350
+Total: 46.507604
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945820
+Total: 4.957197
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942000
+Total: 46.599401
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939170
+Total: 46.586971
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908040
+Total: 46.445266
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941010
+Total: 21.052939
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918370
+Total: 47.042736
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29957000
+Total: 46.667549
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29900400
+Total: 46.950310
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956010
+Total: 21.125800
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939030
+Total: 4.922085
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924880
+Total: 20.975507
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950350
+Total: 21.099315
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936200
+Total: 4.905843
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907900
+Total: 46.989804
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940870
+Total: 4.934008
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27970200
+Total: 21.382620
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29973840
+Total: 46.723450
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917240
+Total: 20.936821
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27746630
+Total: 5.132828
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928560
+Total: 46.545812
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947380
+Total: 21.083253
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27969210
+Total: 21.377735
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29890780
+Total: 46.903619
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958700
+Total: 21.135830
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930400
+Total: 21.002608
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927570
+Total: 47.089318
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953040
+Total: 46.650667
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910590
+Total: 47.002931
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921910
+Total: 46.515270
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918090
+Total: 47.041015
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943560
+Total: 46.606481
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926580
+Total: 46.536258
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919930
+Total: 46.505104
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905780
+Total: 46.433567
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29885970
+Total: 46.877547
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911440
+Total: 46.461377
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951060
+Total: 46.641572
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27957750
+Total: 21.322227
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27745500
+Total: 5.126542
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910450
+Total: 46.457425
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29882150
+Total: 46.859294
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27956760
+Total: 21.317643
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29966060
+Total: 46.707448
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905640
+Total: 46.977509
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27749180
+Total: 5.146191
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29883000
+Total: 46.864052
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935780
+Total: 4.903466
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932950
+Total: 47.118947
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29876350
+Total: 46.831034
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915970
+Total: 20.930848
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937620
+Total: 21.036414
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906490
+Total: 46.437040
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29878190
+Total: 46.840135
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931960
+Total: 47.113571
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29872530
+Total: 46.811952
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29976250
+Total: 46.732947
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29888520
+Total: 46.890852
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27978270
+Total: 21.424301
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29880880
+Total: 46.852385
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29960120
+Total: 46.682313
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29900690
+Total: 46.951362
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908190
+Total: 46.990853
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29959130
+Total: 21.137958
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924180
+Total: 20.972260
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949650
+Total: 4.976214
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29878900
+Total: 46.843875
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29873240
+Total: 46.815990
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29897720
+Total: 46.935884
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906210
+Total: 46.435901
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27961010
+Total: 21.337276
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27966670
+Total: 21.365690
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915550
+Total: 20.928430
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27960020
+Total: 21.332588
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29963660
+Total: 21.158524
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29886260
+Total: 46.879525
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940030
+Total: 21.048099
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906070
+Total: 46.979681
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931540
+Total: 46.558565
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27972190
+Total: 21.392504
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29957860
+Total: 46.671074
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943710
+Total: 4.948362
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914420
+Total: 20.922745
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911590
+Total: 20.909707
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29976680
+Total: 46.734073
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29962530
+Total: 46.692017
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934230
+Total: 4.896209
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944560
+Total: 21.070725
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27966390
+Total: 21.364646
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936070
+Total: 46.574761
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918100
+Total: 46.495537
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926590
+Total: 47.085807
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909610
+Total: 20.899047
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949230
+Total: 46.632998
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27972900
+Total: 21.396786
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29976540
+Total: 21.179020
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947250
+Total: 46.624783
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955740
+Total: 21.124125
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935930
+Total: 21.028295
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907630
+Total: 46.988146
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29959420
+Total: 21.139434
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945270
+Total: 46.614135
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916970
+Total: 20.935741
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914140
+Total: 46.475729
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953760
+Total: 46.654087
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939610
+Total: 4.925625
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911310
+Total: 47.006929
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27748200
+Total: 5.140768
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915980
+Total: 46.485407
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27967950
+Total: 21.372649
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903670
+Total: 46.966572
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29898010
+Total: 46.937003
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923480
+Total: 47.068495
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922490
+Total: 20.963636
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908340
+Total: 46.446309
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27958470
+Total: 21.325218
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27981110
+Total: 21.429574
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914000
+Total: 47.021085
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925320
+Total: 47.078336
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27957480
+Total: 21.320614
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958290
+Total: 46.673589
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27956490
+Total: 21.316092
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945980
+Total: 4.958688
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961970
+Total: 46.689711
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947820
+Total: 46.627766
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933670
+Total: 46.568262
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27748910
+Total: 5.145168
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916690
+Total: 20.934174
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939330
+Total: 46.587940
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946830
+Total: 21.080675
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929850
+Total: 47.102706
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941170
+Total: 46.596222
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951500
+Total: 46.643513
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29962820
+Total: 21.155348
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29974140
+Total: 46.724714
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27967670
+Total: 21.370381
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903390
+Total: 46.965536
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27964840
+Total: 21.356331
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936360
+Total: 47.128885
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933530
+Total: 21.016394
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29891080
+Total: 46.904681
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29973150
+Total: 46.717937
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930700
+Total: 21.003723
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29904240
+Total: 46.970170
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911740
+Total: 47.009375
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923060
+Total: 20.966282
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917400
+Total: 46.491289
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914570
+Total: 46.477927
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961690
+Total: 21.149686
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947540
+Total: 46.626652
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926740
+Total: 46.537175
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29966360
+Total: 46.708728
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949380
+Total: 21.094097
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906930
+Total: 20.886635
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929570
+Total: 47.100116
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942730
+Total: 4.943634
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914430
+Total: 47.023786
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27964560
+Total: 21.355254
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922920
+Total: 46.519143
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934240
+Total: 46.569492
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920090
+Total: 46.505949
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29959710
+Total: 21.140548
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931410
+Total: 47.110831
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27967390
+Total: 21.369335
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29975700
+Total: 4.985318
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933250
+Total: 4.891624
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29972870
+Total: 46.716700
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29954900
+Total: 46.657107
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29963390
+Total: 46.696434
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27750330
+Total: 5.152699
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946410
+Total: 4.960839
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948250
+Total: 4.969773
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919950
+Total: 47.051954
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958580
+Total: 46.674663
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941600
+Total: 21.055221
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27963430
+Total: 21.349240
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935940
+Total: 4.904356
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27970930
+Total: 21.385908
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945280
+Total: 21.072998
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27967110
+Total: 21.367771
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918820
+Total: 47.045186
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930140
+Total: 21.000998
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29975420
+Total: 21.176068
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906510
+Total: 46.982335
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 109440
+Total: 47.234231
+
+ %self     total     self     wait    child    calls  name
+  4.27     16.66     2.02     0.00    14.64     9023  Hpricot::Traverse#search
+  3.92      6.40     1.85     0.00     4.55    65076  Hpricot::Elem::Trav#traverse_some_element(d1)
+  3.88      7.32     1.83     0.00     5.49    34555  <Class::Rational>#reduce
+  3.78      2.65     1.79     0.00     0.86    34555  Integer#gcd
+  3.53      2.80     1.67     0.00     1.13    64962  Hpricot::Elem::Trav#traverse_some_element(d2)
+  3.49      2.11     1.65     0.00     0.46    49123  Rational#initialize
+  3.44      5.82     1.62     0.00     4.19    41541  Hpricot::Node#if_output
+  2.78      3.06     1.32     0.00     1.74     9023  <Class::Hpricot::Elements>#filter
+  2.22     19.25     1.05     0.00    18.21    25498  Array#each
+  2.01      0.95     0.95     0.00     0.00   319761  #<Class:0x21f9cb0>#children
+  1.96      1.40     0.92     0.00     0.47    27057  Date::Format::Bag#method_missing
+  1.85      8.52     0.87     0.00     7.65     9023  Hpricot::Traverse#traverse_element
+  1.58      7.77     0.74     0.00     7.02    12647  Hpricot::Elem#output(d1)
+  1.57      1.89     0.74     0.00     1.14    14566  Hash#each
+  1.33     11.61     0.63     0.00    10.99    23506  Array#each(d1)
+  1.33      8.07     0.63     0.00     7.44    34555  Object#Rational
+  1.25      0.59     0.59     0.00     0.00   185678  Kernel#kind_of?
+  1.23      0.58     0.58     0.00     0.00   162502  String#+
+  1.22      0.58     0.58     0.00     0.00   185999  #<Class:0x21f9cb0>#name
+  1.22      2.91     0.58     0.00     2.33    57640  Class#new(d2)
+  1.15      0.98     0.54     0.00     0.44    36077  Hpricot::Node#html_quote
+  1.14      0.62     0.54     0.08     0.00     1023  <Class::Thread>#start
+  1.14      3.63     0.54     0.00     3.10    16434  Array#each(d3)
+  1.12      0.76     0.53     0.00     0.23    95363  Hash#[]
+  1.11      3.48     0.52     0.00     2.95    10827  Hpricot::Elem#output(d2)
+  1.09      0.83     0.51     0.00     0.31    36100  Hpricot::Elem#empty?
+  1.03      0.48     0.48     0.00     0.00   155562  Array#[]
+  0.99      0.47     0.47     0.00     0.00   140897  Hash#include?
+  0.99      4.45     0.47     0.00     3.99    12720  Rational#/
+  0.96      2.72     0.46     0.00     2.26    25278  Hpricot::Elem#attributes_as_html
+  0.93      7.79     0.44     0.00     7.35    28870  Array#each(d2)
+  0.93      3.19     0.44     0.00     2.75    49123  <Class::Rational>#new!
+  0.89      1.47     0.42     0.00     1.05     5403  Array#collect(d1)
+  0.83      3.07     0.39     0.00     2.68    12711  Rational#/(d1)
+  0.81      0.38     0.38     0.00     0.00    14497  Regexp#match
+  0.78      0.37     0.37     0.00     0.00   123316  Fixnum#>
+  0.74      0.86     0.35     0.01     0.51     1807  <Class::Date>#s3e
+  0.72      0.37     0.34     0.00     0.03    60053  String#gsub
+  0.71      0.43     0.34     0.00     0.10    32472  Array#each(d4)
+  0.71      0.33     0.33     0.00     0.00   105612  Hash#default
+  0.69      0.51     0.33     0.00     0.19    37875  Array#<=>
+  0.68      0.32     0.32     0.00     0.00    96387  String#==
+  0.65      0.31     0.31     0.00     0.00    97561  Fixnum#<
+  0.65      0.31     0.31     0.00     0.00    18080  Array#flatten
+  0.63      9.28     0.30     0.00     8.98     9023  Hpricot::Container::Trav#get_elements_by_tag_name
+  0.60      0.29     0.29     0.00     0.00    40511  Hash#[]=
+  0.59      0.28     0.28     0.00     0.00    84875  Fixnum#==
+  0.57      0.50     0.27     0.00     0.23     1827  <Class::Date>#jd_to_civil
+  0.57      2.38     0.27     0.00     2.11     7272  Rational#+
+  0.56      7.26     0.26     0.00     7.00     9023  Hpricot::Elem::Trav#traverse_some_element
+  0.54      0.26     0.26     0.00     0.00    27031  Regexp#to_s
+  0.50      0.38     0.24     0.00     0.15     1824  Hash#reject
+  0.50      0.24     0.24     0.00     0.00    58514  String#<<
+  0.48      0.27     0.23     0.00     0.04    63286  Fixnum#%
+  0.47      0.22     0.22     0.00     0.00    75825  Fixnum#<=>
+  0.46      0.22     0.22     0.00     0.00    19964  Array#join
+  0.46      0.32     0.22     0.00     0.11    27115  Hash#values_at
+  0.46      0.22     0.22     0.00     0.00    18057  String#sub!
+  0.45      4.54     0.21     0.00     4.33     1807  <Class::Date>#_parse
+  0.45      1.89     0.21     0.00     1.67     1807  <Class::Date>#_parse_time
+  0.44      0.36     0.21     0.00     0.15     7204  Hpricot::Traverse#filter[]
+  0.44      0.42     0.21     0.00     0.21     1826  <Class::Date>#civil_to_jd
+  0.42      0.91     0.20     0.00     0.71    16260  Hpricot::Text#output
+  0.42      2.21     0.20     0.00     2.01     1807  <Class::Date>#complete_frags
+  0.42      0.20     0.20     0.00     0.00    63560  Fixnum#abs
+  0.41      0.20     0.20     0.00     0.00    63553  Fixnum#div
+  0.41      0.19     0.19     0.00     0.00    61928  <Class::Object>#allocate
+  0.41      0.31     0.19     0.00     0.12     1807  Array#select
+  0.39      0.18     0.18     0.00     0.00    59965  Fixnum#*
+  0.39      0.18     0.18     0.00     0.00    45240  Symbol#to_s
+  0.38      0.18     0.18     0.00     0.00    45115  Regexp#===
+  0.38      0.18     0.18     0.00     0.00    59667  Hpricot::Leaf::Trav#traverse_some_element
+  0.37      0.30     0.18     0.00     0.13     1801  <Class::Date>#zone_to_diff
+  0.37      0.64     0.18     0.00     0.46     5418  Hpricot::Traverse#inner_html
+  0.34      0.48     0.16     0.00     0.32    14515  Array#map
+  0.32     13.71     0.15     0.00    13.56     1801  <Class::DateTime>#new_by_frags
+  0.31      0.15     0.15     0.00     0.00     1593  String#slice!
+  0.31      1.07     0.14     0.00     0.92    39794  Fixnum#+
+  0.30     36.86     0.14     0.00    36.71     1801  Gattica::DataPoint#initialize
+  0.30      0.14     0.14     0.00     0.00    46915  #<Class:0x21f9cb0>#raw_attributes
+  0.29      0.15     0.14     0.02     0.00     1023  OpenSSL::SSL::SSLSocket#sysread
+  0.29      1.30     0.14     0.00     1.17     3660  Rational#-
+  0.29      0.39     0.13     0.00     0.25     7204  Hpricot::Attributes#[]
+  0.28      0.94     0.13     0.00     0.81     1809  Enumerable#sort_by
+  0.27      0.13     0.13     0.00     0.00    37998  String#empty?
+  0.27      1.26     0.13     0.00     1.14     1807  Kernel#catch
+  0.27      0.19     0.13     0.00     0.06     9036  Array#-
+  0.26      0.12     0.12     0.00     0.00    41654  Array#size
+  0.26      0.13     0.12     0.00     0.01    40505  Fixnum#-
+  0.24      4.40     0.11     0.00     4.29     1804  <Class::Date>#valid_time?
+  0.23      0.11     0.11     0.00     0.00    32907  String#to_s
+  0.23      0.11     0.11     0.00     0.00    36100  #<Class:0x21f9cb0>#etag
+  0.23      1.30     0.11     0.00     1.19     1027  Object#timeout
+  0.23      0.20     0.11     0.00     0.09     7204  <Module::Hpricot>#uxs
+  0.23      0.49     0.11     0.00     0.38    14434  String#match
+  0.23      0.18     0.11     0.00     0.07        3  <Module::Hpricot>#scan
+  0.22      0.14     0.10     0.00     0.04    10821  Hpricot::Traverse#elem?
+  0.22      2.51     0.10     0.00     2.41    10894  Integer#to_r
+  0.22      8.25     0.10     0.00     8.15     1804  Hpricot::Elem#output
+  0.22      0.10     0.10     0.00     0.00    27075  Array#<<
+  0.22      1.95     0.10     0.00     1.85    14471  Enumerable#map
+  0.21      0.10     0.10     0.00     0.00    27066  String#intern
+  0.21      0.10     0.10     0.00     0.00    30730  Kernel#hash
+  0.21      0.10     0.10     0.00     0.00    30924  Kernel#nil?
+  0.21      0.10     0.10     0.00     0.00    23452  <Class::Array>#[]
+  0.20      0.09     0.09     0.00     0.00    25462  Module#===
+  0.19      0.13     0.09     0.00     0.04     9023  Array#uniq
+  0.19      1.19     0.09     0.00     1.10     1027  <Module::Timeout>#timeout
+  0.19      0.09     0.09     0.00     0.00    27057  String#chomp!
+  0.18      0.09     0.09     0.00     0.00    22777  Kernel#respond_to?
+  0.18      0.16     0.08     0.00     0.07     9023  Hpricot::Traverse#clean_path
+  0.17      1.02     0.08     0.00     0.94     1814  <Class::Date>#valid_civil?
+  0.17      0.08     0.08     0.00     0.00    19987  Array#compact
+  0.17      0.08     0.08     0.00     0.00    14429  MatchData#to_a
+  0.16      0.20     0.08     0.12     0.00     1023  Thread#kill
+  0.16      0.08     0.08     0.00     0.00    23560  Array#empty?
+  0.15      0.12     0.07     0.00     0.05     7306  Fixnum#/
+  0.15      0.07     0.07     0.00     0.00     9116  String#split
+  0.15      0.07     0.07     0.00     0.00    18042  String#to_i
+  0.15      0.22     0.07     0.00     0.15     7204  Hpricot::Elem#attributes
+  0.15     11.63     0.07     0.00    11.56     5418  Hpricot::Traverse#at
+  0.15      0.09     0.07     0.00     0.02     3654  <Class::Date>#julian?
+  0.15      1.08     0.07     0.00     1.01      511  Net::BufferedIO#read
+  0.15      0.07     0.07     0.00     0.00    21693  NilClass#nil?
+  0.14      0.07     0.07     0.00     0.00    16441  String#downcase
+  0.14      0.07     0.07     0.00     0.00    18083  Array#+
+  0.14      0.06     0.06     0.00     0.00    12677  String#[]
+  0.13      4.21     0.06     0.00     4.15     1810  <Class::Date>#time_to_day_fraction
+  0.12      0.09     0.06     0.00     0.03     9454  Kernel#===
+  0.12      0.09     0.06     0.00     0.03     9024  Array#delete
+  0.12      0.50     0.06     0.00     0.44     7246  Kernel#send(d2)
+  0.12      0.06     0.06     0.00     0.00    18266  Float#floor
+  0.11      0.08     0.05     0.00     0.03     5412  Range#===
+  0.11      0.05     0.05     0.00     0.00    16260  Hpricot::Text#content
+  0.11      0.18     0.05     0.00     0.13     1825  Rational#coerce
+  0.11      0.05     0.05     0.00     0.00     7204  Hpricot::Attributes#initialize
+  0.10      0.05     0.05     0.00     0.00    10872  String#gsub!
+  0.10      0.05     0.05     0.00     0.00    12674  <Class::#<Class:0x21f9cb0>>#allocate
+  0.10      0.05     0.05     0.00     0.00    11170  NilClass#to_s
+  0.09      0.93     0.04     0.00     0.88     1807  <Class::Date>#_parse_iso
+  0.09      0.04     0.04     0.00     0.00    11255  Bignum#%
+  0.09      0.73     0.04     0.00     0.69     5413  Enumerable#find_all
+  0.09      3.31     0.04     0.00     3.26     1825  <Class::Date>#jd_to_ajd
+  0.08      0.06     0.04     0.00     0.02     1023  Class#inherited
+  0.08      0.04     0.04     0.00     0.00     9028  Module#method_defined?
+  0.08      0.04     0.04     0.00     0.00    10872  String#size
+  0.08      0.06     0.04     0.00     0.02     5755  Comparable#>
+  0.08      0.04     0.04     0.00     0.00    10960  Float#/
+  0.08      0.06     0.04     0.00     0.02     5429  Enumerable#all?
+  0.07      0.04     0.04     0.00     0.00    10821  Array#[]=
+  0.07      0.03     0.03     0.00     0.00     9057  Array#last
+  0.07      0.05     0.03     0.00     0.02     1807  <Class::Date>#rewrite_frags
+  0.07      0.05     0.03     0.00     0.02     1801  Fixnum#**
+  0.07     18.28     0.03     0.00    18.25     1801  <Class::DateTime>#parse
+  0.07      0.18     0.03     0.00     0.15     1593  Net::BufferedIO#rbuf_consume
+  0.06      4.43     0.03     0.00     4.40     1801  <Class::Date>#valid_time_frags?
+  0.06      0.03     0.03     0.00     0.00     7307  Float#coerce
+  0.05      0.03     0.03     0.00     0.00     7308  Float#*
+  0.05      0.03     0.03     0.00     0.00     5582  Bignum#div
+  0.05      0.02     0.02     0.00     0.00     5490  Bignum#coerce
+  0.05      0.09     0.02     0.00     0.06     1807  <Class::Date>#_parse_eu
+  0.05      0.02     0.02     0.00     0.00     5901  Bignum#<=>
+  0.05      0.03     0.02     0.00     0.01     1807  <Class::Date>#_parse_us
+  0.05      0.04     0.02     0.00     0.02     1807  <Class::Date>#_parse_day
+  0.05     36.90     0.02     0.00    36.88     1886  Class#new(d1)
+  0.04      0.02     0.02     0.00     0.00     5514  Array#first
+  0.04      0.02     0.02     0.00     0.00     1808  String#scan
+  0.04      0.02     0.02     0.00     0.00     5439  <Class::#<Class:0x21f9828>>#allocate
+  0.04      0.04     0.02     0.00     0.02     1823  Kernel#dup
+  0.04      8.27     0.02     0.00     8.25     1804  Hpricot::Traverse#to_s
+  0.04      0.02     0.02     0.00     0.00     5406  Array#compact!
+  0.04      0.02     0.02     0.00     0.00     5568  Bignum#abs
+  0.04      0.04     0.02     0.00     0.02     1840  Class#new!
+  0.04      0.40     0.02     0.00     0.38     1807  Date::Format::Bag#to_hash
+  0.04     36.90     0.02     0.00    36.89       20  Array#collect
+  0.04      1.28     0.02     0.00     1.26     1807  <Class::Date>#valid_date_frags?
+  0.04      0.02     0.02     0.00     0.00     4791  Kernel#==
+  0.04      0.02     0.02     0.00     0.00     4121  String#to_sym
+  0.03      0.02     0.02     0.00     0.00     3801  Bignum#*
+  0.03     45.15     0.02     0.00    45.14     1690  Class#new
+  0.03      0.02     0.02     0.00     0.00     1862  Hash#initialize_copy
+  0.03      0.02     0.02     0.00     0.00     3639  Bignum#-
+  0.03      0.02     0.02     0.00     0.00     1840  Date#initialize
+  0.03      0.02     0.02     0.00     0.00     1807  Kernel#throw
+  0.03      0.01     0.01     0.00     0.00     1807  Date::Format::Bag#initialize
+  0.03      0.01     0.01     0.00     0.00     3654  Fixnum#<=
+  0.03      1.63     0.01     0.00     1.62        3  Net::HTTPResponse#read_chunked
+  0.03      0.03     0.01     0.00     0.02     1813  Enumerable#min
+  0.03      0.55     0.01     0.00     0.54      318  Net::BufferedIO#readuntil
+  0.02      1.31     0.01     0.00     1.30     1023  Net::BufferedIO#rbuf_fill
+  0.02      0.07     0.01     0.00     0.06     1023  Class#initialize
+  0.02      0.01     0.01     0.00     0.00     1801  Fixnum#power!
+  0.02      0.01     0.01     0.00     0.00     1022  Net::BufferedIO#LOG
+  0.02      0.01     0.01     0.00     0.00     1956  String#include?
+  0.02      0.01     0.01     0.00     0.00     1843  Array#==
+  0.02      0.01     0.01     0.00     0.00     1877  <Class::Hash>#allocate
+  0.02      0.01     0.01     0.00     0.00     1814  String#initialize_copy
+  0.02      0.01     0.01     0.00     0.00     1838  Bignum#+
+  0.02      0.01     0.01     0.00     0.01        6  YAML::Syck::Parser#load
+  0.02      0.01     0.01     0.00     0.00     1028  Class#inheritable_attributes
+  0.01      0.01     0.01     0.00     0.00     1814  <Class::String>#allocate
+  0.01      0.01     0.01     0.00     0.00     1822  Fixnum#>=
+  0.01      0.01     0.01     0.00     0.00     1030  Kernel#instance_variable_set
+  0.01      0.01     0.01     0.00     0.00     1801  NilClass#to_i
+  0.01      0.01     0.01     0.00     0.00     1079  <Object::YAML::Syck::Resolver>#node_import
+  0.01      0.01     0.01     0.00     0.00     1086  Fixnum#to_s
+  0.01      0.01     0.01     0.00     0.00     1023  <Class::Thread>#critical
+  0.01      0.01     0.01     0.01     0.00        4  OpenSSL::SSL::SSLSocket#connect
+
+
+Thread ID: 29917830
+Total: 20.940577
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912170
+Total: 46.465023
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29976270
+Total: 21.178172
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947970
+Total: 4.968506
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933820
+Total: 21.017464
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928160
+Total: 20.990650
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953630
+Total: 21.113611
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29879060
+Total: 46.844731
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924340
+Total: 20.973120
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29977120
+Total: 4.987875
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27970650
+Total: 21.384704
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903540
+Total: 46.422873
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914860
+Total: 46.479031
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912030
+Total: 47.010529
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936510
+Total: 4.906951
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29894060
+Total: 46.918102
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925190
+Total: 46.529875
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918540
+Total: 46.498151
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915710
+Total: 20.929345
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901560
+Total: 46.956273
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923210
+Total: 47.067415
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29889250
+Total: 46.894223
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940190
+Total: 4.930201
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911890
+Total: 46.463865
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29883590
+Total: 46.866325
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950520
+Total: 21.100256
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29973160
+Total: 21.165850
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938210
+Total: 46.582407
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958020
+Total: 47.198867
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908920
+Total: 46.449933
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29962690
+Total: 46.693001
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27970370
+Total: 21.383442
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29959860
+Total: 46.680678
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945710
+Total: 46.616165
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917410
+Total: 20.938205
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903260
+Total: 46.421805
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29964530
+Total: 46.700670
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29893780
+Total: 46.917051
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947550
+Total: 21.084612
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933400
+Total: 46.567038
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919250
+Total: 20.947842
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941890
+Total: 4.939255
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927740
+Total: 47.090170
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909770
+Total: 20.900230
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29881470
+Total: 46.855964
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949390
+Total: 46.633866
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27968390
+Total: 21.375275
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29904110
+Total: 46.426929
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901280
+Total: 46.955080
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955050
+Total: 21.120484
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922930
+Total: 47.066165
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908780
+Total: 46.994271
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932270
+Total: 46.561663
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939770
+Total: 4.927173
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905810
+Total: 46.978365
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27749350
+Total: 5.147377
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29973730
+Total: 21.168544
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916140
+Total: 47.030734
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29873690
+Total: 46.816891
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927460
+Total: 46.540559
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29975570
+Total: 46.730919
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27954950
+Total: 21.309037
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943450
+Total: 21.064820
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937790
+Total: 21.037771
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923640
+Total: 46.522586
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932130
+Total: 47.115053
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903830
+Total: 46.967555
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29902840
+Total: 46.419273
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29888690
+Total: 46.891648
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928310
+Total: 47.092888
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925480
+Total: 46.530892
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908500
+Total: 46.447449
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949960
+Total: 46.636058
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29893360
+Total: 46.915101
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918830
+Total: 46.499206
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29900860
+Total: 46.952771
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951800
+Total: 46.644631
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937650
+Total: 4.914081
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29881050
+Total: 46.853726
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29963120
+Total: 46.695278
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920670
+Total: 46.508656
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29974440
+Total: 46.725785
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29973450
+Total: 46.719004
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27964150
+Total: 21.352710
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936660
+Total: 21.031981
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908360
+Total: 46.992158
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29972460
+Total: 21.162688
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27977310
+Total: 21.419476
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29952650
+Total: 21.108744
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938500
+Total: 21.041155
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910200
+Total: 20.902372
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29896050
+Total: 46.929065
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27750910
+Total: 5.155697
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29886570
+Total: 46.880590
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27976320
+Total: 21.414426
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923360
+Total: 46.521443
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909210
+Total: 46.450981
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956330
+Total: 21.126938
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928030
+Total: 47.091827
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 18639160
+Total: 47.210577
+
+ %self     total     self     wait    child    calls  name
+  0.04     47.16     0.02    47.14     0.00      168  Kernel#sleep
+  0.01      0.01     0.01     0.00     0.00      227  Mutex#synchronize
+  0.01      0.01     0.01     0.00     0.01      168  Rufus::Scheduler::CronJobQueue#trigger_matching_jobs
+
+
+Thread ID: 27975330
+Total: 21.409857
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29904400
+Total: 46.427963
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955340
+Total: 21.121561
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927040
+Total: 20.984636
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928880
+Total: 20.994352
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914730
+Total: 47.024843
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29894920
+Total: 46.922768
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29876950
+Total: 46.833758
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921240
+Total: 20.956747
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27750630
+Total: 5.153627
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27977030
+Total: 21.417699
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27959060
+Total: 21.327759
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948550
+Total: 4.971032
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940060
+Total: 46.590943
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27976040
+Total: 21.412956
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911760
+Total: 20.910615
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29975860
+Total: 46.731770
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919260
+Total: 47.047616
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29873980
+Total: 46.818534
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27957080
+Total: 21.318787
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29960720
+Total: 46.683537
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955060
+Total: 46.658129
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951240
+Total: 46.642385
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905960
+Total: 46.434404
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945580
+Total: 21.074106
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29888980
+Total: 46.893140
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936100
+Total: 21.029155
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907800
+Total: 46.443604
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933270
+Total: 21.014879
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958740
+Total: 46.675654
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27745680
+Total: 5.127494
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941760
+Total: 21.056573
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932280
+Total: 21.011980
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918130
+Total: 20.941694
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911480
+Total: 47.007834
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945440
+Total: 46.615009
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914310
+Total: 46.476577
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29900160
+Total: 46.948771
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910490
+Total: 20.903446
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907660
+Total: 20.890312
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27751200
+Total: 5.156827
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29954780
+Total: 21.119298
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29898180
+Total: 46.938519
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923650
+Total: 47.069884
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27968120
+Total: 21.373664
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928320
+Total: 20.991605
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914170
+Total: 47.022110
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925490
+Total: 47.079673
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29964120
+Total: 46.699589
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930160
+Total: 47.103812
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27747240
+Total: 5.135640
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932000
+Total: 21.010254
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903700
+Total: 46.424428
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936670
+Total: 4.908250
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947990
+Total: 21.087129
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930020
+Total: 46.551216
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901720
+Total: 46.957327
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29904550
+Total: 46.971354
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29957330
+Total: 46.668732
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29883750
+Total: 46.867845
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946010
+Total: 46.617294
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945020
+Total: 21.071568
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942190
+Total: 4.940992
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27961190
+Total: 21.338400
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949690
+Total: 46.307937
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917570
+Total: 20.939066
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29900590
+Total: 46.407768
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926060
+Total: 20.981562
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951530
+Total: 46.317242
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27973360
+Total: 21.399303
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944880
+Total: 4.951995
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916580
+Total: 47.033192
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950540
+Total: 46.639303
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29975020
+Total: 46.728923
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946720
+Total: 4.961935
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29972190
+Total: 21.161498
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929740
+Total: 46.549976
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938230
+Total: 21.039955
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949550
+Total: 21.095026
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942900
+Total: 4.944545
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914600
+Total: 20.923972
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29957900
+Total: 21.132612
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926770
+Total: 20.983560
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29894650
+Total: 46.921711
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928610
+Total: 20.993242
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939930
+Total: 4.928337
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911630
+Total: 46.462294
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29896490
+Total: 46.931175
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27974920
+Total: 21.407604
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920970
+Total: 20.955586
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29974740
+Total: 21.173007
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903990
+Total: 46.968445
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943610
+Total: 21.065874
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939790
+Total: 46.589913
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950120
+Total: 46.637112
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29972760
+Total: 21.163762
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930310
+Total: 46.552267
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955780
+Total: 46.661558
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27977610
+Total: 21.420672
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912340
+Total: 20.913202
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951960
+Total: 46.645719
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906680
+Total: 46.438366
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29974600
+Total: 46.726797
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950970
+Total: 46.314683
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908520
+Total: 46.993066
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933990
+Total: 21.018781
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27964310
+Total: 21.353644
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941490
+Total: 4.937009
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29886730
+Total: 46.881785
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912200
+Total: 47.011862
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909370
+Total: 46.995454
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920690
+Total: 47.055523
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29974460
+Total: 21.171787
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946160
+Total: 4.959564
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915030
+Total: 46.480485
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948000
+Total: 46.628726
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955500
+Total: 46.660408
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913050
+Total: 46.469800
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29898900
+Total: 46.942046
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924370
+Total: 47.073398
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914890
+Total: 47.025837
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934700
+Total: 46.571239
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29874280
+Total: 46.819597
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29885600
+Total: 46.875716
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29879940
+Total: 46.847121
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919560
+Total: 47.048746
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27955540
+Total: 21.312735
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938380
+Total: 4.917397
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932720
+Total: 46.563886
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29962860
+Total: 46.693854
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934560
+Total: 4.897323
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29974180
+Total: 21.170416
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29964700
+Total: 46.701748
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961870
+Total: 21.150777
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947720
+Total: 21.085485
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932580
+Total: 4.886967
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27965730
+Total: 21.361158
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912770
+Total: 46.468751
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29884470
+Total: 46.870903
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909940
+Total: 20.901109
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921260
+Total: 46.512515
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942910
+Total: 46.603618
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27961910
+Total: 21.342002
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27958090
+Total: 21.323285
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29879660
+Total: 46.845988
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29963570
+Total: 46.697595
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937110
+Total: 46.579343
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27973090
+Total: 21.397588
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27955120
+Total: 21.310456
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927630
+Total: 46.541448
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910650
+Total: 20.904753
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27965450
+Total: 21.360057
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29898340
+Total: 46.939338
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29884190
+Total: 46.869877
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29952110
+Total: 21.106349
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923810
+Total: 46.523672
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29976590
+Total: 46.327044
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948290
+Total: 21.088195
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29877540
+Total: 46.837231
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29900180
+Total: 46.405301
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953950
+Total: 46.654894
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27961630
+Total: 21.340862
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29893530
+Total: 46.915912
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933150
+Total: 47.120365
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919000
+Total: 47.046075
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27748390
+Total: 5.141789
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937820
+Total: 4.915277
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923670
+Total: 20.969728
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934990
+Total: 21.023248
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903860
+Total: 46.425456
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901030
+Total: 46.953601
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27975640
+Total: 21.410903
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938670
+Total: 4.919048
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961310
+Total: 46.686584
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944330
+Total: 46.609865
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27973660
+Total: 21.400368
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920700
+Total: 20.953917
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915040
+Total: 20.926341
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29900890
+Total: 46.408927
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939520
+Total: 46.588775
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908390
+Total: 20.892960
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29894240
+Total: 46.919413
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919710
+Total: 20.950256
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916880
+Total: 47.034376
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928200
+Total: 46.543922
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927210
+Total: 20.986115
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932870
+Total: 21.013064
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901740
+Total: 46.413454
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29963010
+Total: 21.156198
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29892260
+Total: 46.909190
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29889430
+Total: 46.895609
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929050
+Total: 20.995393
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942210
+Total: 21.059226
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27754620
+Total: 5.166316
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27969700
+Total: 21.379956
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29877120
+Total: 46.834688
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29959190
+Total: 46.677594
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956360
+Total: 46.664668
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912920
+Total: 47.015190
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921410
+Total: 47.058054
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946880
+Total: 4.963395
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944050
+Total: 21.068317
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940230
+Total: 46.592009
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923250
+Total: 20.967665
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948720
+Total: 46.630775
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927920
+Total: 46.542752
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29896790
+Total: 46.932293
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29976030
+Total: 21.177180
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933580
+Total: 4.892748
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919430
+Total: 20.948723
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930750
+Total: 47.107570
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943910
+Total: 4.949378
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955230
+Total: 46.659055
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29898630
+Total: 46.940888
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924100
+Total: 47.072259
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29960890
+Total: 21.146191
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932590
+Total: 47.117846
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923110
+Total: 46.519990
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913630
+Total: 46.473527
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918300
+Total: 46.496470
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29887170
+Total: 46.884246
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912640
+Total: 47.013975
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935280
+Total: 4.900887
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27749530
+Total: 5.148302
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29973910
+Total: 21.169582
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930470
+Total: 46.553255
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29902170
+Total: 46.959884
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29955940
+Total: 46.662517
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950280
+Total: 46.638094
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27751370
+Total: 5.157920
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932310
+Total: 47.115891
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29952120
+Total: 46.646561
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937970
+Total: 21.038664
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923820
+Total: 47.070736
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920000
+Total: 20.951365
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29903020
+Total: 46.420128
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925660
+Total: 46.531891
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908680
+Total: 46.448246
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947310
+Total: 4.965494
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919010
+Total: 46.500662
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941650
+Total: 46.598295
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29885050
+Total: 46.874618
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29881230
+Total: 46.854618
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920850
+Total: 46.509988
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940660
+Total: 21.050637
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926510
+Total: 20.982431
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912360
+Total: 46.466490
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27955840
+Total: 21.313863
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956650
+Total: 46.665723
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942500
+Total: 46.601102
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29965140
+Total: 46.704050
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936840
+Total: 21.033285
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935850
+Total: 46.573496
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961320
+Total: 21.148528
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933020
+Total: 46.565023
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913210
+Total: 20.917695
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29952830
+Total: 21.109595
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924530
+Total: 46.526820
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29883920
+Total: 46.868678
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29960330
+Total: 47.204844
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940520
+Total: 4.931749
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27961360
+Total: 21.339305
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29976320
+Total: 46.326166
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941370
+Total: 46.597075
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29904580
+Total: 46.428898
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29975330
+Total: 46.729927
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921560
+Total: 46.513532
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917740
+Total: 47.039222
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951700
+Total: 21.104235
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29965850
+Total: 46.706547
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29899770
+Total: 46.946597
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27966880
+Total: 21.366936
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930900
+Total: 21.004986
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911090
+Total: 20.907193
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945050
+Total: 4.953528
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29887460
+Total: 46.885308
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27965890
+Total: 21.362453
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27971550
+Total: 21.389571
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29881800
+Total: 46.857110
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27960230
+Total: 21.333604
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910100
+Total: 46.455292
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924250
+Total: 46.525762
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938400
+Total: 46.583407
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29966700
+Total: 46.709799
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29884630
+Total: 46.872236
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932740
+Total: 4.888495
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928920
+Total: 47.096818
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937410
+Total: 46.580186
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27962070
+Total: 21.343496
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919440
+Total: 46.503072
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925100
+Total: 20.976864
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901470
+Total: 46.412432
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29876000
+Total: 46.828780
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29890150
+Total: 46.899257
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29960900
+Total: 46.684573
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29952410
+Total: 46.647723
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29959910
+Total: 21.141651
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29891990
+Total: 46.908182
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934440
+Total: 21.021192
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916470
+Total: 46.488003
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958920
+Total: 21.137008
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27969430
+Total: 21.378579
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27975090
+Total: 21.408423
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29974910
+Total: 21.174010
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943780
+Total: 21.066724
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29900340
+Total: 46.406180
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913500
+Total: 47.018978
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27977780
+Total: 21.421870
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916330
+Total: 47.031687
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29974770
+Total: 46.727723
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27971130
+Total: 21.387176
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29889870
+Total: 46.898132
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912510
+Total: 20.914507
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925670
+Total: 47.080511
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928500
+Total: 47.094377
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931330
+Total: 21.007318
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930340
+Total: 47.105068
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29906710
+Total: 46.983195
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909540
+Total: 46.996846
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27973820
+Total: 21.401894
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27976650
+Total: 21.415480
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29886900
+Total: 46.882621
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29959490
+Total: 46.678663
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29891570
+Total: 46.905749
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921710
+Total: 47.059249
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924540
+Total: 47.074805
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901900
+Total: 46.958246
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29904730
+Total: 46.972613
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909400
+Total: 46.452224
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946190
+Total: 46.618754
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29960340
+Total: 21.143758
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29892420
+Total: 46.910197
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29885770
+Total: 46.876721
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956520
+Total: 21.127998
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29874450
+Total: 46.820666
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29877280
+Total: 46.835562
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27746290
+Total: 5.130595
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910250
+Total: 47.000518
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27974530
+Total: 21.405478
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29952700
+Total: 46.648858
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913080
+Total: 47.016456
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949870
+Total: 21.096788
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27965050
+Total: 21.357748
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943220
+Total: 46.604659
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29895110
+Total: 46.924226
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29923410
+Total: 20.968534
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29939400
+Total: 21.044811
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930910
+Total: 46.555447
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29875160
+Total: 46.823951
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27959250
+Total: 21.329152
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948740
+Total: 4.972082
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29902470
+Total: 46.960951
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27746010
+Total: 5.129333
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915630
+Total: 47.028356
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909970
+Total: 46.999354
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27974250
+Total: 21.404265
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929780
+Total: 20.998897
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917470
+Total: 47.038142
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945770
+Total: 21.075132
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931620
+Total: 21.008377
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29941950
+Total: 21.057446
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29956100
+Total: 46.663334
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29958930
+Total: 46.676473
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27955290
+Total: 21.311415
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905160
+Total: 46.975026
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29899500
+Total: 46.945563
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29910820
+Total: 20.905610
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946620
+Total: 46.621247
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29909830
+Total: 46.454261
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29874880
+Total: 46.822909
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920160
+Total: 20.952747
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29908840
+Total: 20.895409
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29972940
+Total: 21.164860
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29938980
+Total: 21.042551
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953130
+Total: 21.111146
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907850
+Total: 20.891195
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29875730
+Total: 46.827607
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29971950
+Total: 46.712434
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946480
+Total: 21.078796
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929500
+Total: 20.997820
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915350
+Total: 20.927444
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27956000
+Total: 21.315206
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951150
+Total: 21.101553
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942660
+Total: 46.602076
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924690
+Total: 46.527803
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916200
+Total: 46.486276
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913370
+Total: 20.919117
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950160
+Total: 4.978667
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937850
+Total: 46.581349
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940680
+Total: 46.594086
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29901060
+Total: 46.410146
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915210
+Total: 46.481316
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29957660
+Total: 46.669857
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27970010
+Total: 21.381104
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29894410
+Total: 46.920255
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29953840
+Total: 21.114483
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29942520
+Total: 21.060252
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29931200
+Total: 46.556628
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29925540
+Total: 20.979269
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29896250
+Total: 46.929964
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29899080
+Total: 46.943054
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29913230
+Total: 46.471131
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949030
+Total: 46.632000
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951860
+Total: 21.105092
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929220
+Total: 47.097884
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946200
+Total: 21.077690
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949880
+Total: 46.309227
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29915920
+Total: 47.029431
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918750
+Total: 20.945175
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29947050
+Total: 4.964283
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944220
+Total: 4.950883
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29951720
+Total: 46.318263
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926250
+Total: 47.083603
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29954550
+Total: 46.656040
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29943230
+Total: 4.945815
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29964880
+Total: 46.702597
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29896960
+Total: 46.933702
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945070
+Total: 46.613093
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27963080
+Total: 21.347225
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29876160
+Total: 46.830169
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29890310
+Total: 46.900695
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29946910
+Total: 46.622446
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29961060
+Total: 21.147215
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907290
+Total: 46.985756
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921440
+Total: 20.957899
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29954410
+Total: 21.116856
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29914790
+Total: 20.924822
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29888330
+Total: 46.889865
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29905310
+Total: 46.431177
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950590
+Total: 46.312360
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29972240
+Total: 46.713708
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907150
+Total: 46.440683
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29935450
+Total: 21.025720
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29877860
+Total: 46.838291
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930640
+Total: 46.554177
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29944790
+Total: 46.612051
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29922150
+Total: 20.961443
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27751540
+Total: 5.158800
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29932480
+Total: 46.562555
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29907010
+Total: 46.984700
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29918330
+Total: 20.942736
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912670
+Total: 20.915397
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29948470
+Total: 46.629583
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29937150
+Total: 4.911246
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29888050
+Total: 46.888730
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29930500
+Total: 47.105913
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29933330
+Total: 47.121214
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927670
+Total: 20.988281
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29916350
+Total: 20.931965
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27748570
+Total: 5.142791
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921020
+Total: 46.510887
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912530
+Total: 46.467312
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940830
+Total: 21.052099
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29934180
+Total: 21.019624
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29945500
+Total: 4.956076
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29876590
+Total: 46.832715
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29950170
+Total: 21.097883
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27960680
+Total: 21.336189
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29924700
+Total: 47.075678
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29921870
+Total: 20.960365
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29919040
+Total: 20.946347
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29920880
+Total: 47.056365
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29963330
+Total: 21.157435
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27962520
+Total: 21.346051
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29912390
+Total: 47.012704
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27747440
+Total: 5.136942
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29949180
+Total: 4.974115
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29940690
+Total: 4.933015
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29917060
+Total: 47.035708
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29928380
+Total: 46.544939
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29911400
+Total: 20.908306
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27746450
+Total: 5.131951
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29936870
+Total: 4.909175
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27969030
+Total: 21.376372
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29952860
+Total: 46.649795
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29927390
+Total: 47.088335
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29926400
+Total: 46.535247
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 27965210
+Total: 21.358602
+
+ %self     total     self     wait    child    calls  name
+
+
+Thread ID: 29929230
+Total: 20.996306
+
+ %self     total     self     wait    child    calls  name
+
+

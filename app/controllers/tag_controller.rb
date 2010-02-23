@@ -36,6 +36,10 @@ class TagController < ApplicationController
 		@entries = Tag.timeline(@tag)
   end
 
+  def cooliris
+		@tag = "cancaonova" if @tag.empty? 
+  end
+
 	protected	
 
 		def set_tag
@@ -51,7 +55,9 @@ class TagController < ApplicationController
 			end
 
 			@tag.gsub!(/([^ a-zA-Z0-9_.-\\+]+)/n,nil.to_s)
-			redirect_to :action => params[:index], :tag => @tag, :format => params[:format] if @tag != params[:tag]	
+			if @tag != params[:tag]
+				redirect_to :action => params[:index], :tag => @tag, :format => params[:format] 	
+			end
 		end
 
 end

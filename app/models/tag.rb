@@ -8,7 +8,8 @@ class Tag
 
 	@url_feed[:video] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=##"
 	@url_feed[:video_query] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&q=##"
-
+		# http://br.video.yahoo.com/rss/video/search?p=cancaonova
+		# http://pipes.yahoo.com/pipes/pipe.run?_id=sA_Kq5ku3RGWYeJBl7okhQ&_render=rss&tag=cancaonova
 	@url_feed[:photo] = "http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[##]"
 
 	@url_feed[:microtext] = "http://search.twitter.com/search.atom?rpp=10&page=1&tag=##"
@@ -17,7 +18,7 @@ class Tag
 		
 	def self.all tag, type = nil
 
-		if type == "atom"
+		if type == "rss"
 			fetch_and_parse_feed( @url_feed, tag )[0...20]	
 		elsif type == "mrss"
 			midias = {:video => @url_feed[:video],:video_query => @url_feed[:video_query], :photo => @url_feed[:photo]}
@@ -46,19 +47,23 @@ class Tag
 		returno = fetch_and_parse_feed( @url_feed[:bookmark], tag )[0...10]		
 	end
 	
-	def self.video tag
-		fetch_and_parse_feed( {:video => @url_feed[:video], :video_query => @url_feed[:video_query]}, tag )[0...10]		
-	end
-
 	def self.photo tag
 		fetch_and_parse_feed( @url_feed[:photo], tag )[0...10]		
 	end
 
-	def self.microtext tag
-		fetch_and_parse_feed( {:microtext => @url_feed[:microtext], :microtext_query => @url_feed[:microtext_query]}, tag )[0...10]		
+	def self.video tag
+		fetch_and_parse_feed( {
+											:video => @url_feed[:video], 
+											:video_query => @url_feed[:video_query]
+											}	, tag )[0...10]		
 	end
 
-
+	def self.microtext tag
+		fetch_and_parse_feed( {
+										:microtext => @url_feed[:microtext], 
+										:microtext_query => @url_feed[:microtext_query]
+										}, tag )[0...10]		
+	end
 
 	def self.timeline tag
 		feed = fetch_and_parse_feed( @url_feed, tag )[0...20]			
@@ -102,7 +107,7 @@ class Tag
 			feed_urls = []
 			if feed_url.class == Hash
 				feed_url.each do |url|
-					quotes = url[0].to_s.include? "video"
+					quotes = url[0].to_s == "video"
 					@is_photo = url[0].to_s.include? "photo"
 					feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag , quotes) ) <<	set_feed( url[1], space_tag( tag , quotes) )						
 				end
@@ -120,8 +125,7 @@ class Tag
 			@to_merge = []
 
 			Feedzirra::Feed.add_common_feed_entry_element("media:thumbnail", 
-			:value => :url, :as => :thumbnail)
-			
+			:value => :url, :as => :thumbnail)		
 			
 			Feedzirra::Feed.fetch_and_parse(
 				feed_urls,		
@@ -152,25 +156,19 @@ class Tag
 				}
 			)
 			@to_merge.uniq!
-			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse
-			
+			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse			
 		end
-		
 		
 		def self.merge_feed feed_list, feed_hash
 			return_feed = []
 			feed_list.each do |feed|
 				return_feed = return_feed | feed_list[feed.first].entries	
 			end
-			
 		end
 
 		def self.to_param
 			params[:page] = "1" if params[:page].nil?
 		end
-
-
-
 
 	  def self.default_tag(tags)
 	    change_tag_default(tags, "cancaonova")

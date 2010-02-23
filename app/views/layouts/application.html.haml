@@ -1,5 +1,4 @@
 !!! Strict
-!!!
 %html
 	%head
 		%title<
@@ -8,7 +7,7 @@
 			Mashup Can&ccedil;&atilde;o Nova
 		= stylesheet_link_tag "version-2_1-fluid"
 		= javascript_include_tag :defaults, :cache => true
-		= auto_discovery_link_tag(:atom, :format => "atom")
+		= auto_discovery_link_tag(:atom, :format => "rss", :tag => (@tag.empty?)? "cancaonova" : @tag)
 	
 	%body
 		#page	
@@ -46,10 +45,8 @@
 				= yield	
 				
 			#footer
-				.container	
-					%a.rss{ :title=>"RSS | Mashup Can&ccedil;&atilde;o Nova", :href=> @tag + ".atom" }
-						RSS Mashup
-						= " &mdash; "+ @tag 
+				.container
+					= link_to "rss #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
 					%a.mobi{ :href=>"http://mashup.cancaonova.mobi/"+@tag} 
 						= t(:mobile, :tags => @tags) 
 					= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
@@ -57,8 +54,8 @@
 					%div
 						%a{ href="/"}
 							= t(:language_portuguese) 
-						= link_to t(:language_english), language_english_root_url
-						= link_to t(:language_spanish), language_spanish_root_url
+						= link_to t(:language_english), language_path(:locale => "en", :tag => @tag)
+						= link_to t(:language_spanish), language_path(:locale => "es", :tag => @tag)
 
 						%form#theme{ :action=>"/"}
 							%fieldset

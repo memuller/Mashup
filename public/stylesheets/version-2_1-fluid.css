@@ -80,7 +80,7 @@ h3{font-size:18px}
 		,#news h3
 		,#blogs h3 span
 		,#news h3 span {font-size:12px;padding-left:25px;margin:14px 0 0 -14px;}
-	#bookmarks h3 {height:42px;}
+	#bookmarks h3 {height:42px;overflow:hidden;}
 	#bookmarks .fail
 	,#microposts .fail {color:#555;background:url(img-version-2.1/fail.jpg) 0 0 no-repeat;height:70px;font-size:10px;width:210px;text-align:center;margin:30px 0 10px;padding:25px 30px 0 25px;}
 	

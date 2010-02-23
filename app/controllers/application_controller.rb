@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 	
-  before_filter :set_locale
+  before_filter :set_format_mobi, :set_locale, :redirect_plug4life_to_mashup
 
 	def set_locale
 
@@ -25,5 +25,15 @@ class ApplicationController < ActionController::Base
     I18n.load_path -= [locale_path]
     I18n.locale = I18n.default_locale
   end
-  
+
+	def set_format_mobi
+		params[:format] = 'xhtml' if self.request.domain == 'cancaonova.mobi'
+	end
+	  
+  def redirect_plug4life_to_mashup
+    if self.request.domain == 'plug4life.com' 
+      redirect_to 'http://mashup.cancaonova.com/', :status=>:moved_permanently
+    end
+  end
+
 end

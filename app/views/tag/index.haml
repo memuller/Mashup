@@ -4,7 +4,7 @@
 			%a{:href => "/microtext/tag/#{params[:tag]}"} Microtexts
 		#microposts_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:microtexts][0...5] }
-			= link_to t(:see_more)+" microtexts",{ :controller => "tag", :tag => @tag, :action => "microtext"}, :class => "show"
+			= link_to t(:see_more)+" microtexts", media_path( :tag => @tag, :action => "microtext"), :class => "show"
 			
 #videos
 	.border
@@ -34,7 +34,8 @@
 					%a{:href=>"/" ,:class=>"next disable"}
 						= t(:paginate_next)
 					%span.ajax-loader
-					= link_to t(:see_more)+" videos",{ :controller => "tag", :tag => @tag, :action => "video"}, :class => "show"
+					= link_to t(:see_more)+" videos", media_path( :tag => @tag, :action => "video"), :class => "show"
+					
 	.border
 #text2
 	#blogs
@@ -42,19 +43,19 @@
 			= link_to "Blogs",{ :controller => "tag", :tag => @tag, :action => "blog"}		
 		#blogs_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:blogs][0...3] }
-		= link_to t(:see_more)+" blogs",{ :controller => "tag", :tag => @tag, :action => "blog"}, :class => "show"	
+		= link_to t(:see_more)+" blogs", media_path( :tag => @tag, :action => "blog"), :class => "show"
 	#bookmarks
 		%h2 
 			%a{:href => "/bookmark/tag/#{params[:tag]}"} Bookmarks
 		#bookmarks_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:bookmarks][0...3] }
-			= link_to t(:see_more)+" bookmarks",{ :controller => "tag", :tag => @tag, :action => "bookmark"}, :class => "show"
+			= link_to t(:see_more)+" bookmarks", media_path( :tag => @tag, :action => "bookmark"), :class => "show"
 	#news
 		%h2
 			%a{:href => "/news/tag/#{params[:tag]}"} News		
 		#news_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:news][0...3] }
-		= link_to t(:see_more)+" not&iacute;cias",{ :controller => "tag", :tag => @tag, :action => "news"}, :class => "show"
+		= link_to t(:see_more)+" not&iacute;cias", media_path( :tag => @tag, :action => "news"), :class => "show"
 	#clear
 #photos
 	%h2 
@@ -83,4 +84,4 @@
 			%a{:href=>"/" ,:class=>"next disable"}
 				= t(:paginate_next)
 			%span.ajax-loader
-			= link_to t(:see_more)+" photos",{ :controller => "tag", :tag => @tag, :action => "photo"}, :class => "show"
+			= link_to t(:see_more)+" photos", media_path( :tag => @tag, :action => "photo"), :class => "show"

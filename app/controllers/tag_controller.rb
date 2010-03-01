@@ -24,8 +24,8 @@ class TagController < ApplicationController
 		@entries = Tag.photo(@tag)
   end
 
-  def microtext
-		@entries = Tag.microtext(@tag)
+  def microblog
+		@entries = Tag.microblog(@tag)
   end
 
   def bookmark
@@ -37,7 +37,7 @@ class TagController < ApplicationController
   end
 
   def cooliris
-		@tag = "cancaonova" if @tag.empty? 
+		@tag = Tag.default_tag("").gsub("+","") if @tag.empty? 
   end
 
 	protected	

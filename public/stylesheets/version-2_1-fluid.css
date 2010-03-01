@@ -204,14 +204,20 @@ h3{font-size:18px}
 		#footer a:hover{color:#fff}
 		#footer .container{background:url(img-version-2.1/logo-footer.jpg) 100% 50% no-repeat;line-height:2.5em}
 		#footer a.mobi{margin-right:2em;padding:18px 0 0 28px ;background:url(img-version-2.1/mobile.gif) 0 0 no-repeat}
-		#footer a.cooliris{background:url(img-version-2.1/cooliris.gif) 0 0 no-repeat;padding:16px 0  0 32px;}
+		#footer a.cooliris{background:url(img-version-2.1/cooliris.gif) 0 0 no-repeat;padding:16px 0  0 32px;text-align:left;}
 		#footer .rss{padding:2px 0 0 16px;background:url(img-version-2.1/feed-icon.png) 0 0 no-repeat}		
 		#footer form
 		,#footer fieldset{display:inline}
 		#footer form {color:#fff;font-size:10px;padding-left:22px}
 		.cooliris{text-align:center}
-		#content p.cooliris{width:70%;margin:auto}
+		#footer .info{clear:both;display:block;margin-top:2em;}
 		.advertise {display:none}
+		.syndication
+			,.other_views
+			,.options{width:30%;float:left;}
+			.syndication a
+				,.other_views a
+				,.options a{display:block;margin-bottom:2em;}
 
 #cooliris_enabled_button{display:block;text-align:center;margin:1em}
 		

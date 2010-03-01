@@ -1,0 +1,21 @@
+#text2
+	#microblogs
+		%h2
+			= link_to "Microblog",{ :controller => "tag", :tag => @tag, :action => "microblog"}		
+		#microblogs_content
+			= render :partial => 'texts', :locals => { :feed => @entries[:microblogs][0...3] }
+		= link_to t(:see_more)+" microblog",{ :controller => "tag", :tag => @tag, :action => "microblog"}, :class => "show"	
+						
+#videos
+	%h2
+		= link_to "Video",{ :controller => "tag", :tag => @tag, :action => "video"}		
+	#videos_content
+		= render :partial => 'media', :locals => { :feed => @entries[:videos][0...3] }
+	= link_to t(:see_more)+" video",{ :controller => "tag", :tag => @tag, :action => "video"}, :class => "show"	
+
+#photos
+	%h2
+		= link_to "Photo",{ :controller => "tag", :tag => @tag, :action => "photo"}		
+	#photos_content
+		= render :partial => 'media', :locals => { :feed => @entries[:photos][0...3] }
+	= link_to t(:see_more)+" photo",{ :controller => "tag", :tag => @tag, :action => "photo"}, :class => "show"	

@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
 	def set_format_mobi
-		params[:format] = 'xhtml' if self.request.domain == 'cancaonova.mobi'
+		request.format = :xhtml if self.request.domain == 'cancaonova.mobi'
 	end
 	  
   def redirect_plug4life_to_mashup

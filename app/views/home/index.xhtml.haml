@@ -1,0 +1,22 @@
+#body
+	%div
+		#info
+			MASHUP CAN&Ccedil;&Atilde;O NOVA
+			Permite a comunica&ccedil;&atilde;o instant&acirc;nea, colabora&ccedil;&atilde;o e contribui&ccedil;&atilde;o
+		#last_up
+			%p updates
+		.clear	
+	.columm
+		%h2 Popular hoje
+		- reset_cycle 
+		= render :partial => 'list_tags', :locals => { :tags => @data[:last_day]} 
+	.columm
+		%h3 Popular h&aacute; semanas
+		= render :partial => 'list_tags', :locals => { :tags => @data[:last_7_days]} 
+	.columm
+		- reset_cycle 
+		%h4 Campe&otilde;es de acesso
+		= render :partial => 'list_tags',  :locals => { :tags => @data[:all_time]}
+	
+	#clear
+

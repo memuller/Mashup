@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.language '/:locale', :controller => "home", :tag => nil, :requirements => {:locale => /es|en|pt-BR/} 
   map.language '/:locale/:tag', :controller => "tag", :requirements => {:locale => /es|en|pt-BR/}
 
-	map.media '/:action/:tag.:format' , :tag => nil, :controller => "tag", :requirements => {:action => /blog|news|video|photo|microtext|bookmark|timeline|cooliris/}
+	map.media '/:action/:tag.:format' , :tag => nil, 	:controller => "tag", :requirements => {:action => /blog|news|video|photo|microblog|bookmark|timeline|cooliris/}
 	map.tag '/:tag.:format' , :controller => "tag" 
 
 	map.root :controller => 'home'

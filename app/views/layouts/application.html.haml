@@ -46,12 +46,25 @@
 				
 			#footer
 				.container
-					= link_to "rss #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
-					%a.mobi{ :href=>"http://mashup.cancaonova.mobi/"+@tag} 
-						= t(:mobile, :tags => @tags) 
-					= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
+					.syndication
+						= link_to "rss #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
+						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=pt_BR"}
+							Acompanhe o mashup via newsletter
 
-					%div
+						%form{:style => "border:1px solid #ccc;padding:3px;text-align:center;", :action => "http://feedburner.google.com/fb/a/mailverify", :method => "post", :target => "popupwindow", :onsubmit => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"}
+							%label{:for => "email"}
+								assine o newsletter
+								%input{ :type=>"text", :size => "35", :name=>"email", :id => "email"}
+							%input{ :type=>"hidden", :value=>"MashupCancaoNova", :name=>"uri"}
+							%input{ :type=>"hidden", :name=>"loc", :value=>"pt_BR"}
+							%input{ :type=>"submit", :value=>"Assinar"}
+					.other_views
+						= link_to "timeline " + @tag, {:controller => "tag", :action => "timeline" , :tag => @tag}
+						%a.mobi{ :href=>"http://mashup.cancaonova.mobi/"+@tag} 
+							= t(:mobile, :tags => @tag) 
+						= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
+
+					.options
 						%a{ href="/"}
 							= t(:language_portuguese) 
 						= link_to t(:language_english), language_path(:locale => "en", :tag => @tag)
@@ -66,11 +79,12 @@
 										%option{ :value=>"Layout version 2.1 (fluid)", :selected=>cookies['style']=='Layout version 2.1 (fluid)' ? "selected" : nil} version 2.1 (fluid)
 										%option{ :value=>"Layout version 1", :selected=>cookies['style']=='Layout version 2.1 (fluid)' ? "selected" : nil} version 1
 
-					%p 
-						&copy; copyright Can&ccedil;&atilde;o Nova 
-						= t(:copyright)
-					= link_to t(:about),about_url
-					= link_to t(:api) , api_url
+					.info
+						%p 
+							&copy; copyright Can&ccedil;&atilde;o Nova 
+							= t(:copyright)
+						= link_to t(:about),about_url
+						= link_to t(:api) , api_url
 										
 		%script{:type => "text/javascript"}
 			var uservoiceJsHost = ("https:" == document.location.protocol) ? "https://uservoice.com" : "http://cdn.uservoice.com";

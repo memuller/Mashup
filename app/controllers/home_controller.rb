@@ -4,7 +4,8 @@ class HomeController < ApplicationController
 	
   def index
 			@tag = (params[:tag].nil?) ? "" : params[:tag] 
-			@data = Home.index
+			@data = Home.all
+			@spotlight = Tag.all("cancaonova","mrss")
   end
 
 end

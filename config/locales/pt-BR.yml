@@ -8,8 +8,8 @@ pt-BR:
   copyright: 'todos os direitos reservados'
   about: 'sobre o Mashup'
   api: 'API para desenvolvedores'
-  mobile: veja {{tags}} no Mashup Mobile
-  cooliris: veja {{tags}} no Mashup Cooliris
+  mobile: veja o {{tags}} no Mashup Mobile
+  cooliris: veja o {{tags}} no Cooliris
   language_legend: 'mude o idioma'
   language_english: 'english'
   language_spanish: 'español'

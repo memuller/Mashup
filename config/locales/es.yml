@@ -9,7 +9,7 @@ es:
   about: 'sobre Mashup'
   api: 'API para desenvolvedores'
   mobile: ver {{tags}} en Mashup Mobile
-  cooliris: ver {{tags}} en Mashup Cooliris
+  cooliris: ver {{tags}} en Cooliris
   language_legend: 'cambiar el idioma'
   language_english: 'english'
   language_spanish: 'español'

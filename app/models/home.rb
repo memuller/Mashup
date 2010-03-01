@@ -1,6 +1,6 @@
 class Home
 	
-	def self.index
+	def self.all
 		initialize
 		{
 			:all_time => all_time,

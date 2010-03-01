@@ -12,8 +12,8 @@ class Tag
 		# http://pipes.yahoo.com/pipes/pipe.run?_id=sA_Kq5ku3RGWYeJBl7okhQ&_render=rss&tag=cancaonova
 	@url_feed[:photo] = "http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[##]"
 
-	@url_feed[:microtext] = "http://search.twitter.com/search.atom?rpp=10&page=1&tag=##"
-	@url_feed[:microtext_query] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
+	@url_feed[:microblog] = "http://search.twitter.com/search.atom?rpp=10&page=1&tag=##"
+	@url_feed[:microblog_query] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
 
 		
 	def self.all tag, type = nil
@@ -25,12 +25,12 @@ class Tag
 			fetch_and_parse_feed( midias, tag )[0...20]	
 		else
 			{
-				:blogs => blog( tag), 
-				:news => news( tag), 
-				:bookmarks => bookmark( tag),
-				:videos => video( tag),
-				:microtexts => microtext( tag),
-				:photos => photo( tag)
+				:blogs => blog( tag)[0...5]	, 
+				:news => news( tag)[0...5]	, 
+				:bookmarks => bookmark( tag)[0...5]	,
+				:videos => video( tag)[0...10],
+				:microblogs => microblog( tag)[0...10],
+				:photos => photo( tag)[0...10]	
 			}
 		end
 	end
@@ -58,10 +58,10 @@ class Tag
 											}	, tag )[0...10]		
 	end
 
-	def self.microtext tag
+	def self.microblog tag
 		fetch_and_parse_feed( {
-										:microtext => @url_feed[:microtext], 
-										:microtext_query => @url_feed[:microtext_query]
+										:microblog => @url_feed[:microblog], 
+										:microblog_query => @url_feed[:microblog_query]
 										}, tag )[0...10]		
 	end
 
@@ -135,7 +135,7 @@ class Tag
 						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 
 						
 						if check_duplicate == 0 						
-									entry.thumbnail = entry.links[1] if feedurl.include?( set_feed(@url_feed[:microtext],"") )	
+									entry.thumbnail = entry.links[1] if feedurl.include?( set_feed(@url_feed[:microblog],"") )	
 									entry.url = CGI::unescape(entry.url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","")	if feedurl.include?( set_feed(@url_feed[:news],"") )
 
 									@to_merge.push(
@@ -164,10 +164,6 @@ class Tag
 			feed_list.each do |feed|
 				return_feed = return_feed | feed_list[feed.first].entries	
 			end
-		end
-
-		def self.to_param
-			params[:page] = "1" if params[:page].nil?
 		end
 
 	  def self.default_tag(tags)

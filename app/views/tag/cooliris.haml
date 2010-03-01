@@ -1,0 +1,48 @@
+.cooliris
+	%object{ :id=>"o", :classid=>"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000", :width=>"760", :height=>"450"}
+		%param{ :name=>"movie", :value=>"http://apps.cooliris.com/embed/cooliris.swf?style=light"}
+		%param{ :name=>"allowFullScreen", :value=>"true"}
+		%param{ :name=>"allowScriptAccess", :value=>"always"}
+		%param{ :name=>"flashvars", :value=>"feed=http://10.0.1.186:3000/#{@tag}.mrss&style=light"}
+		%embed{ :type=>"application/x-shockwave-flash", :src=>"http://apps.cooliris.com/embed/cooliris.swf", :width=>"760", :height=>"450", :allowFullScreen=>"true", :allowScriptAccess=>"always", :flashvars=>"feed=http://10.0.1.186:3000/#{@tag}.mrss&style=light"}
+
+%p.cooliris Atrav&eacute;s do Cooliris o mashup disponibiliza outra op&ccedil;&atilde;o para visualizar as fotos e v&iacute;deos da Can&ccedil;&atilde;o Nova.
+
+%p.cooliris E tamb&eacute;m proporciona aos donos de sites ou blogs a possibilidade de inserir o conte&uacute;do do Mashup Can&ccedil;&atilde;o Nova em suas p&aacute;ginas e posts, utilizando o recurso EMBED do Cooliris.
+
+%p.cooliris Basta acessar essa p&aacute;gina com a tag desejada e clicar no botão embed nas op&ccedil;&otilde;es do cooliris
+
+%h3 MRSS
+%p
+	Media RSS (MRSS) &eacute; uma extens&atilde;o do RSS utilizado para acompanhar conte&uacute;o multim&iacute;dia (&aacute;udio, v&iacute;deo, imagem) em feeds RSS.
+%p 
+	Outras aplica&ccedil;&otilde;es que suportam MRSS
+	%ul
+		%li
+			%a{:href => "http://userbase.kde.org/Akregator"} Akregator
+		%li
+			%a{:href => "http://flock.com/"} Flock
+		%li
+			%a{:href => "http://getmiro.com/"} Miro Internet television application
+		%li
+			%a{:href => "http://zinc.tv/"} Zinc
+		%li
+			%a{:href => "http://getsongbird.com/"} Songbird
+
+%p
+	Para acessar o mrss da Can&ccedil;&atilde;o Nova basta adicionar a a extens&atilde;o &quote;.mrss&quote; ap&oacute;s a url.
+%p
+	ex: 
+	%a{:href=>"/#{@tag}.mrss"} 
+		mashup.cancaonova.com/
+		=@tag
+		.mrss
+%script{:type => "text/javascript"}
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+%script{:type => "text/javascript"}
+	try {
+	var pageTracker = _gat._getTracker("UA-6535463-1");
+	pageTracker._trackPageview();
+	} catch(err) {}

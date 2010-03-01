@@ -1,0 +1,68 @@
+!!! Mobile
+%html
+	%head
+		%title Mashup Canção Nova mobile 
+		%style{:type => "text/css", :media => "screen"}
+			:plain
+				*{margin:0;padding:0;font: small "Verdana",sans-serif;text-decoration:none;}
+				a{ text-decoration:underline; color: #067FC4;}
+				a:hover{color:#2222F0;}
+				#header, #microposts,#videos,#photos,#footer,#tagcloud {padding:5px;}
+				#header h1{background:url(stylesheets/img-mobile/mashup_cancao_nova.jpg) 0 0 no-repeat;width:154px;height:80px;overflow:hidden; margin:0 auto;}
+				#header h1 span{display:none;}
+				#search fieldset{border:none; text-align:center;}
+				#search #tag{border:1px solid #f6891f;font-size:14px;width:50%;}
+				#search .button{font-size:x-small;font-weight:600;}
+				#microblogs h2 a, #videos h2 a, #photos h2 a, #tagcloud h2, button{color:#ff5400; font-weight:500; font-size:14px; text-decoration:none;}
+				#microblogs h3, #microblogs_content p{background-color:#ececec; margin-top:10px; padding:5px;}
+				#videos p, #photos p{background-color:#f8f8f8; margin-top:10px;}
+				#videos p a h3, #photos p a h3,#footer .logo p{display:inline;color:#315382;}
+				#footer {text-align:center; background-color:#EFF9FF;}	
+				#footer .logo{margin:10px 0}	
+	%body
+		#header
+			%h1
+				%a{:href=>"/"}
+					%span MASHUP.cancaonova.mobi
+			%form#search{ :action=>"/", :method=>"get"}
+				%fieldset
+					%label{ :for=>"tag"}
+						= t(:form_tags_label)
+					%input#tag{ :name=>"tags", :size=>"20", :value =>@tag }
+					%input.button{:type=>"submit", :value => "IR"}
+
+		= yield	
+		
+		#footer
+			%p.mashup	
+				%a.cancaonova{ :href=>"http://cancaonova.com"}
+					= image_tag "http://www.cancaonova.com/i/logo_cancaonova.gif", :size=>"98x67", :alt=>"Logo Canção Nova", :title=>"cancaonova.com"
+				%span.copy 
+					%p 
+						© copyright Canção Nova 
+						= t(:copyright)
+					%a{ :href => "http://mashup.cancaonova.com/", :title => "versão padrão"} Mashup.cancaonova.com ● 
+					%a{ :href=>"mailto:multimedia@cancaonova.com"}
+						= I18n.t('contact')
+						Mashup
+			.logo
+				%a{ :href=>"http://euajudo.cancaonova.com"}
+					= t(:institutional_member)
+					●
+				%a{ :href=>"http://shopping.cancaonova.com"} Shopping ●
+				%a{ :href=>"http://noticias.cancaonova.com"}
+					= t(:institutional_news) 
+					●
+				%a{ :href=>"http://mobile.cancaonova.com"} Mobile ●
+				%a{ :href=>"http://webtvcn.com"} WEBtvCN
+
+
+	%script{:type => "text/javascript"}
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+	%script{:type => "text/javascript"}
+		try {
+		var pageTracker = _gat._getTracker("UA-6535463-2");
+		pageTracker._trackPageview();
+		} catch(err) {}

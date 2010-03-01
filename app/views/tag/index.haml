@@ -1,10 +1,10 @@
 .texts 
 	#microposts
 		%h2 
-			%a{:href => "/microtext/tag/#{params[:tag]}"} Microtexts
+			%a{:href => "/microblog/tag/#{params[:tag]}"} Microtexts
 		#microposts_content
-			= render :partial => 'texts', :locals => { :feed => @entries[:microtexts][0...5] }
-			= link_to t(:see_more)+" microtexts", media_path( :tag => @tag, :action => "microtext"), :class => "show"
+			= render :partial => 'texts', :locals => { :feed => @entries[:microblogs][0...5] }
+			= link_to t(:see_more)+" microblogs", media_path( :tag => @tag, :action => "microblog"), :class => "show"
 			
 #videos
 	.border
@@ -74,7 +74,8 @@
 					= entry[2]
 					%span
 						= time_ago_in_words entry[4]
-						= entry[1]
+						= t(:by)
+						= author_photo(entry[1])
 		#photos_nav
 			%span.folio
 				= t(:paginate_legend)

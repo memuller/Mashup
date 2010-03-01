@@ -1,0 +1,79 @@
+<div class='texts'>
+  <div id='microposts'>
+    <h2>
+      <a href='/microtext/tag/blank'>Microtexts</a>
+    </h2>
+    <div id='microposts_content'>
+      
+      <a href="/microtext/blank" class="show">veja mais microtexts</a>
+    </div>
+  </div>
+</div>
+<div id='videos'>
+  <div class='border'>
+    <div class='container'>
+      <h2>
+        <a href='/video/tag/blank'>Videos</a>
+      </h2>
+    </div>
+  </div>
+  <div class='border'></div>
+</div>
+<div id='text2'>
+  <div id='blogs'>
+    <h2>
+      <a href="/blog/blank">Blogs</a>
+    </h2>
+    <div id='blogs_content'>
+      <h3>
+        TRUE FTA channels 2/11/09
+      </h3>
+      <a href="http://www.fta-gods.com/forums/f260/true-fta-channels-2-11-09-a-17375.html">http://www.fta-gods.com/forums/f260/t...</a>
+      <span>
+        10 dias
+        rajuB4U
+      </span>
+      <p>
+        Homily: Watching Avatar as a 21st Century Catholic « Catholicism Anew
+      </p>
+      <a href="http://blog.cancaonova.com/catholicismanew/2009/12/27/watching-avatar-as-a-21st-century-catholic/">http://blog.cancaonova.com/catholicis...</a>
+      <span>
+        aproximadamente 1 mês
+        catholicismanew
+      </span>
+      <p>
+        Com sal e açúcar...: Ó o tamanho da encrenca que eu arrumei...
+      </p>
+      <a href="http://semsalnemacucar.blogspot.com/2009/11/o-o-tamanho-da-encrenca-que-eu-arrumei.html">http://semsalnemacucar.blogspot.com/2...</a>
+      <span>
+        3 meses
+        Luciana
+      </span>
+    </div>
+    <a href="/blog/blank" class="show">veja mais blogs</a>
+  </div>
+  <div id='bookmarks'>
+    <h2>
+      <a href='/bookmark/tag/blank'>Bookmarks</a>
+    </h2>
+    <div id='bookmarks_content'>
+      
+      <a href="/bookmark/blank" class="show">veja mais bookmarks</a>
+    </div>
+  </div>
+  <div id='news'>
+    <h2>
+      <a href='/news/tag/blank'>News</a>
+    </h2>
+    <div id='news_content'>
+      
+    </div>
+    <a href="/news/blank" class="show">veja mais not&iacute;cias</a>
+  </div>
+  <div id='clear'></div>
+</div>
+<div id='photos'>
+  <h2>
+    <a href="/photo/blank">Photos</a>
+  </h2>
+</div>

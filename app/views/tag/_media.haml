@@ -1,0 +1,16 @@
+- unless feed.blank? 
+	- feed.each_with_index do |entry,index|
+		%p	
+			= link_to image_tag( entry[6]), entry[5]
+		
+		- if index == 0
+			%h3 
+				= link_to entry[2], entry[5]
+		- else
+			%p 
+				= link_to entry[2], entry[5]
+
+		%span
+			= time_ago_in_words entry[4]
+			= t(:by)
+			= auto_link(  author_photo(entry[1])  ){|text| truncate(text, :length => 40)}

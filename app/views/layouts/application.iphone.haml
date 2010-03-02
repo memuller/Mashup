@@ -1,0 +1,30 @@
+!!! Mobile
+%html
+	%head
+		%title Mashup Canção Nova mobile 
+		= stylesheet_link_tag "/jqtouch/jqtouch.min.css", "/jqtouch/themes/apple/theme.min.css"
+		= javascript_include_tag "/jqtouch/jquery.1.3.2.min.js", "/jqtouch/jqtouch.min.js", "mobile"
+
+	%body
+		
+		= yield	
+
+		#about
+			.info
+				%p Mashup &eacute; um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.
+
+				%p O Mashup da Canção Nova tem o objetivo de reunir o conteúdo multimídia referente a Canção Nova que existe em diversos sites.
+				
+				%p Oferecendo ao público um único endereço na internet para acompanhar o que acontece na Canção Nova, com acesso as diversas mídias fornecida pelos maiores sites da internet.
+				
+				%a{ :href => "#", :class =>"whiteButton goback"} Close
+
+		%script{:type => "text/javascript"}
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+		%script{:type => "text/javascript"}
+			try {
+			var pageTracker = _gat._getTracker("UA-6535463-2");
+			pageTracker._trackPageview();
+			} catch(err) {}

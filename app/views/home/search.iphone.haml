@@ -1,0 +1,11 @@
+#body
+	.toolbar
+		%h1	Microblog
+		%a.back{ :href=>"#"} Back
+		%a{:class => "button slideup", :id => "infoButton", :href =>"#about"} About
+
+	%form{ :method=>"POST", :name=>"a-search", :action=>"/", :class=>"form"}
+		%ul
+			%li
+				%input{ :id=>"authors", :name=>"authors", :type=>"text", :placeholder=>"enter author"}
+		%a{ :href=>"#", :class=>"submit button"} Search

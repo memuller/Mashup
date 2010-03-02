@@ -1,0 +1,16 @@
+%ul.tags
+	- n = 0
+	- m = 0
+	- while n < 10
+		- entrie = tags.points[m]
+		- if entrie.nil?
+			- m = m+1
+			- next
+		- tag = clean_tag entrie.title
+		- if tag.empty? 
+			- m = m+1
+			- next
+		- m = m+1
+		- n = n+1
+		%li
+			= link_to tag, tag_path( tag ) , :format => "iphone"

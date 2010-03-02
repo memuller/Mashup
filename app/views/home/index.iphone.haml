@@ -1,31 +1,62 @@
 #body
+	.toolbar
+		%h1	Mashup CN
+		%a{:class => "button slideup", :id => "infoButton", :href =>"#about"} About
+
+	%ul 
+		%li.arrow 
+			= link_to "Microblog", {:controller => "tag" , :action => "microblog", :format => "iphone", :tag => "cancaonova"}
+		%li.arrow 
+			%a{:href => "#"} Bookmark
+		%li.arrow
+			%a{:href => "#"}Blog
+		%li.arrow 
+			%a{:href => "#"}Noticias
+		%li.arrow 
+			%a{:href => "#"}Video
+		%li.arrow 
+			%a{:href => "#"}Photos
+
 	%ul
 		%li.arrow 
-			Microblog
-			%small.counter 3 
+			%a{:href=> "#tag_today"} Tags popular do dia
 		%li.arrow 
-			Bookmark
-			%small.counter 1 
+			%a{:href=> "#tag_week"} Tags popular da semana
 		%li.arrow
-			Blog
-			%small.counter 5 
-		%li.arrow 
-			Noticias
-			%small.counter 2 
-		%li.arrow 
-			Video
-			%small.counter 5 
-		%li.arrow 
-			Photos
-			%small.counter 5 
+			%a{:href=> "#tag_king"} Tags campe&otilde;es de acesso
+
+	%ul
+		%li.arrow
+			%a{:href=> "#search"} Pesquisar por tags
 	
-	%ul
-		%li.arrow 
-			Tags popular hoje
-			%small.counter 3 
-		%li.arrow 
-			Popular h&aacute; semanas
-			%small.counter 1 
-		%li.arrow
-			Campe&otilde;es de acesso
-			%small.counter 5 
+#tag_today
+	.toolbar
+		%h1	Tag do dia
+		%a.back{ :href=>"#"} Mashup CN
+		%a{:class => "button slideup", :id => "infoButton", :href =>"#about"} About
+	= render :partial => 'list_tags', :locals => { :tags => @data[:last_day]} 
+
+#tag_week
+	.toolbar
+		%h1	Tag da semana
+		%a.back{ :href=>"#"} Mashup CN
+		%a{:class => "button slideup", :id => "infoButton", :href =>"#about"} About
+	= render :partial => 'list_tags', :locals => { :tags => @data[:last_7_days]} 
+
+#tag_king
+	.toolbar
+		%h1	Tag campeã 
+		%a.back{ :href=>"#"} Mashup CN
+		%a{:class => "button slideup", :id => "infoButton", :href =>"#about"} About
+	= render :partial => 'list_tags', :locals => { :tags => @data[:all_time]} 
+
+#search
+	.toolbar
+		%h1	Pesquisar  
+		%a.back{ :href=>"#"} Mashup CN
+
+	%ul.rounded
+		%form{ :method=>"get", :name=>"a-search", :action=>"/", :class=>"form"}
+			%li
+				%input{ :id=>"tag", :name=>"tag", :type=>"text", :placeholder=>"busque uma tag"}
+	%a{:class => "submit whiteButton blueButton", :href =>"#"} Buscar

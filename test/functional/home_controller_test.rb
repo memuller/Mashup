@@ -53,11 +53,18 @@ class HomeControllerTest < ActionController::TestCase
 		assert_template "home/index.xhtml.haml"
   end
 
-	# test rss link_to
+# iphone
 
-		test "should link to rss with default tag" do
-			get :index 
-			assert_select 'div#footer a.rss[href=?]' , "/cancaonova.rss"
-		end
+	test "should render iphone template" do
+		get :index , :format => "iphone"
+		assert_template "home/index.iphone.haml"
+	end
+
+# test rss link_to
+
+	test "should link to rss with default tag" do
+		get :index 
+		assert_select 'div#footer a.rss[href=?]' , "/cancaonova.rss"
+	end
 
 end

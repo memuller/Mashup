@@ -9,6 +9,8 @@ ActionController::Routing::Routes.draw do |map|
 	map.media '/:action/:tag.:format' , :tag => nil, 	:controller => "tag", :requirements => {:action => /blog|news|video|photo|microblog|bookmark|timeline|cooliris/}
 	map.tag '/:tag.:format' , :controller => "tag" 
 
+  map.search '/:controller/:action.:format', :controller => "home", :tag => nil, :requirements => {:action => /search/} 
+
 	map.root :controller => 'home'
 
 end

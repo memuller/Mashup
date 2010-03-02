@@ -306,11 +306,6 @@ class TagControllerTest < ActionController::TestCase
 		assert_select 'div#footer a[href=?]' , "/en/phn"
   end
 
-  test "should fail in language not translate" do
-		get :index, 'locale' => "en", :tag => "phn"
-		assert_select 'div#footer a[href=?]' , "/99/phn"
-  end
-
 	test "title" do
 		get :index, :tag => "jonas"
 		assert_select 'title', "jonas\n    &mdash;\n    Mashup Can&ccedil;&atilde;o Nova"
@@ -379,5 +374,16 @@ class TagControllerTest < ActionController::TestCase
 		assert_select 'div#footer a.rss[href=?]' , "/blog/phn.rss"
 	end
 
+# iphone
+
+	test "should render timeline template to iphone" do
+		get :timeline , :format => "iphone"
+		assert_template "tag/timeline.iphone.haml"
+	end
+
+	test "should render microblog template to iphone" do
+		get :microblog , :format => "iphone"
+		assert_template "tag/microblog.iphone.haml"
+	end
 
 end

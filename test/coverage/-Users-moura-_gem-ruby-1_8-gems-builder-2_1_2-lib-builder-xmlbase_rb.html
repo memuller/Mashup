@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-builder-2_1_2-lib-builder-xmlbase_rb.html">/Users/moura/.gem/ruby/1.8/gems/builder-2.1.2/lib/builder/xmlbase.rb</a></td>
             <td class='right_align'><tt>139</tt></td>
             <td class='right_align'><tt>82</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>94.24%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>55.40%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:94px"></div>
-            <div class="uncovered" style="width:6px"></div>
+            <div class="covered" style="width:55px"></div>
+            <div class="uncovered" style="width:45px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.24%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>24.39%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:90px"></div>
-            <div class="uncovered" style="width:10px"></div>
+            <div class="covered" style="width:24px"></div>
+            <div class="uncovered" style="width:76px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -188,19 +188,19 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line23">23</a>       @indent = indent</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line24">24</a>       @level  = initial</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line25">25</a>     end</pre></td>
           </tr>
         
@@ -278,91 +278,91 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line38">38</a>       text = nil</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line39">39</a>       attrs = nil</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line40">40</a>       sym = &quot;#{sym}:#{args.shift}&quot; if args.first.kind_of?(Symbol)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line41">41</a>       args.each do |arg|</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line42">42</a>         case arg</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line43">43</a>         when Hash</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line44">44</a>           attrs ||= {}</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line45">45</a>           attrs.merge!(arg)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line46">46</a>         else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line47">47</a>           text ||= ''</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line48">48</a>           text &lt;&lt; arg.to_s</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line49">49</a>         end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line50">50</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line51">51</a>       if block</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line52">52</a>         unless text.nil?</pre></td>
           </tr>
         
@@ -380,121 +380,121 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line55">55</a>         _indent</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line56">56</a>         _start_tag(sym, attrs)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line57">57</a>         _newline</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line58">58</a>         _nested_structures(block)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line59">59</a>         _indent</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line60">60</a>         _end_tag(sym)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line61">61</a>         _newline</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line62">62</a>       elsif text.nil?</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line63">63</a>         _indent</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line64">64</a>         _start_tag(sym, attrs, true)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line65">65</a>         _newline</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line66">66</a>       else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line67">67</a>         _indent</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line68">68</a>         _start_tag(sym, attrs)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line69">69</a>         text! text</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line70">70</a>         _end_tag(sym)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line71">71</a>         _newline</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line72">72</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line73">73</a>       @target</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line74">74</a>     end</pre></td>
           </tr>
         
@@ -536,13 +536,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line81">81</a>       _text(_escape(text))</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line82">82</a>     end</pre></td>
           </tr>
         
@@ -740,13 +740,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line115">115</a>       text.to_xs</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line116">116</a>     end</pre></td>
           </tr>
         
@@ -764,13 +764,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="inferred">
             <td><pre><a name="line119">119</a>       _escape(text).gsub(%r{&quot;}, '&amp;quot;')  # &quot; WART</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="inferred">
             <td><pre><a name="line120">120</a>     end</pre></td>
           </tr>
         
@@ -788,19 +788,19 @@
         
           
           
-          <tr class="marked">
+          <tr class="inferred">
             <td><pre><a name="line123">123</a>       return if @indent == 0</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line124">124</a>       text! &quot;\n&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line125">125</a>     end</pre></td>
           </tr>
         
@@ -818,19 +818,19 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line128">128</a>       return if @indent == 0 || @level == 0</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line129">129</a>       text!(&quot; &quot; * (@level * @indent))</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line130">130</a>     end</pre></td>
           </tr>
         
@@ -848,50 +848,50 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line133">133</a>       @level += 1</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line134">134</a>       block.call(self)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line135">135</a>     ensure</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line136">136</a>       @level -= 1</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line137">137</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line138">138</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line139">139</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:55 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:24 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

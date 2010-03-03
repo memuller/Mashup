@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-actionpack-2_3_5-lib-action_view-helpers-atom_feed_helper_rb.html">/Users/moura/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/helpers/atom_feed_helper.rb</a></td>
             <td class='right_align'><tt>198</tt></td>
             <td class='right_align'><tt>78</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>92.93%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>64.65%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:93px"></div>
-            <div class="uncovered" style="width:7px"></div>
+            <div class="covered" style="width:65px"></div>
+            <div class="uncovered" style="width:35px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>82.05%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>21.79%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:82px"></div>
-            <div class="uncovered" style="width:18px"></div>
+            <div class="covered" style="width:22px"></div>
+            <div class="uncovered" style="width:78px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -620,7 +620,7 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line95">95</a>         if options[:schema_date]</pre></td>
           </tr>
         
@@ -632,43 +632,43 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line97">97</a>         else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line98">98</a>           options[:schema_date] = &quot;2005&quot; # The Atom spec copyright date</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line99">99</a>         end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line100">100</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line101">101</a>         xml = options.delete(:xml) || eval(&quot;xml&quot;, block.binding)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line102">102</a>         xml.instruct!</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line103">103</a>         if options[:instruct]</pre></td>
           </tr>
         
@@ -722,73 +722,73 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line112">112</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line113">113</a>         feed_opts = {&quot;xml:lang&quot; =&gt; options[:language] || &quot;en-US&quot;, &quot;xmlns&quot; =&gt; 'http://www.w3.org/2005/Atom'}</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line114">114</a>         feed_opts.merge!(options).reject!{|k,v| !k.to_s.match(/^xml/)}</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line115">115</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line116">116</a>         xml.feed(feed_opts) do</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line117">117</a>           xml.id(options[:id] || &quot;tag:#{request.host},#{options[:schema_date]}:#{request.request_uri.split(&quot;.&quot;)[0]}&quot;)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line118">118</a>           xml.link(:rel =&gt; 'alternate', :type =&gt; 'text/html', :href =&gt; options[:root_url] || (request.protocol + request.host_with_port))</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line119">119</a>           xml.link(:rel =&gt; 'self', :type =&gt; 'application/atom+xml', :href =&gt; options[:url] || request.url)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line120">120</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line121">121</a>           yield AtomFeedBuilder.new(xml, self, options)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line122">122</a>         end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line123">123</a>       end</pre></td>
           </tr>
         
@@ -824,13 +824,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="inferred">
             <td><pre><a name="line129">129</a>           @xml = xml</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="inferred">
             <td><pre><a name="line130">130</a>         end</pre></td>
           </tr>
         
@@ -872,7 +872,7 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line137">137</a>             if xhtml_block?(method, arguments)</pre></td>
           </tr>
         
@@ -908,25 +908,25 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line143">143</a>             else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line144">144</a>               @xml.__send__(method, *arguments, &amp;block)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line145">145</a>             end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line146">146</a>           end</pre></td>
           </tr>
         
@@ -962,37 +962,37 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line152">152</a>             if XHTML_TAG_NAMES.include?(method.to_s)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line153">153</a>               last = arguments.last</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line154">154</a>               last.is_a?(Hash) &amp;&amp; last[:type].to_s == 'xhtml'</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line155">155</a>             end</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line156">156</a>           end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line157">157</a>       end</pre></td>
           </tr>
         
@@ -1016,13 +1016,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line161">161</a>           @xml, @view, @feed_options = xml, view, feed_options</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line162">162</a>         end</pre></td>
           </tr>
         
@@ -1046,13 +1046,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line166">166</a>           @xml.updated((date_or_time || Time.now.utc).xmlschema)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line167">167</a>         end</pre></td>
           </tr>
         
@@ -1118,134 +1118,134 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line178">178</a>           @xml.entry do</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line179">179</a>             @xml.id(options[:id] || &quot;tag:#{@view.request.host},#{@feed_options[:schema_date]}:#{record.class}/#{record.id}&quot;)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line180">180</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line181">181</a>             if options[:published] || (record.respond_to?(:created_at) &amp;&amp; record.created_at)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line182">182</a>               @xml.published((options[:published] || record.created_at).xmlschema)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line183">183</a>             end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line184">184</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line185">185</a>             if options[:updated] || (record.respond_to?(:updated_at) &amp;&amp; record.updated_at)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line186">186</a>               @xml.updated((options[:updated] || record.updated_at).xmlschema)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line187">187</a>             end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line188">188</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line189">189</a>             @xml.link(:rel =&gt; 'alternate', :type =&gt; 'text/html', :href =&gt; options[:url] || @view.polymorphic_url(record))</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line190">190</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line191">191</a>             yield AtomBuilder.new(@xml)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line192">192</a>           end</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line193">193</a>         end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line194">194</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line195">195</a> </pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line196">196</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line197">197</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line198">198</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:47 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:12 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

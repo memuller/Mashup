@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-activesupport-2_3_5-lib-active_support-multibyte-unicode_database_rb.html">/Users/moura/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/multibyte/unicode_database.rb</a></td>
             <td class='right_align'><tt>71</tt></td>
             <td class='right_align'><tt>50</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>92.96%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>64.79%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:93px"></div>
-            <div class="uncovered" style="width:7px"></div>
+            <div class="covered" style="width:65px"></div>
+            <div class="uncovered" style="width:35px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>58.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:90px"></div>
-            <div class="uncovered" style="width:10px"></div>
+            <div class="covered" style="width:58px"></div>
+            <div class="uncovered" style="width:42px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -212,13 +212,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="inferred">
             <td><pre><a name="line27">27</a>           def #{attr_name}  # def codepoints</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="inferred">
             <td><pre><a name="line28">28</a>             load            #   load</pre></td>
           </tr>
         
@@ -266,13 +266,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line36">36</a>         begin</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line37">37</a>           @codepoints, @composition_exclusion, @composition_map, @boundary, @cp1252 = File.open(self.class.filename, 'rb') { |f| Marshal.load f.read }</pre></td>
           </tr>
         
@@ -296,31 +296,31 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line41">41</a> </pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line42">42</a>         # Redefine the === method so we can write shorter rules for grapheme cluster breaks</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line43">43</a>         @boundary.each do |k,_|</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line44">44</a>           @boundary[k].instance_eval do</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line45">45</a>             def ===(other)</pre></td>
           </tr>
         
@@ -338,49 +338,49 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line48">48</a>           end if @boundary[k].kind_of?(Array)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line49">49</a>         end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line50">50</a> </pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line51">51</a>         # define attr_reader methods for the instance variables</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line52">52</a>         class &lt;&lt; self</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line53">53</a>           attr_reader(*ATTRIBUTES)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line54">54</a>         end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line55">55</a>       end</pre></td>
           </tr>
         
@@ -404,13 +404,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line59">59</a>         File.dirname(__FILE__) + '/../values/'</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line60">60</a>       end</pre></td>
           </tr>
         
@@ -434,19 +434,19 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line64">64</a>         File.expand_path File.join(dirname, &quot;unicode_tables.dat&quot;)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line65">65</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line66">66</a>     end</pre></td>
           </tr>
         
@@ -483,7 +483,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:55 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:24 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

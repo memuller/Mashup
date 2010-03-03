@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-activesupport-2_3_5-lib-active_support-multibyte-chars_rb.html">/Users/moura/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/multibyte/chars.rb</a></td>
             <td class='right_align'><tt>707</tt></td>
             <td class='right_align'><tt>430</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>59.83%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>55.16%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:60px"></div>
-            <div class="uncovered" style="width:40px"></div>
+            <div class="covered" style="width:55px"></div>
+            <div class="uncovered" style="width:45px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>37.21%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>30.23%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:37px"></div>
-            <div class="uncovered" style="width:63px"></div>
+            <div class="covered" style="width:30px"></div>
+            <div class="uncovered" style="width:70px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -698,13 +698,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line108">108</a>         super || @wrapped_string.respond_to?(method, include_private) || false</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line109">109</a>       end</pre></td>
           </tr>
         
@@ -1040,13 +1040,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line165">165</a>         @wrapped_string.split(*args).map { |i| i.mb_chars }</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line166">166</a>       end</pre></td>
           </tr>
         
@@ -2480,31 +2480,31 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line405">405</a>         # See http://www.unicode.org/reports/tr15, Table 1</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line406">406</a>         codepoints = self.class.u_unpack(@wrapped_string)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line407">407</a>         chars(case form</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line408">408</a>           when :d</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line409">409</a>             self.class.reorder_characters(self.class.decompose_codepoints(:canonical, codepoints))</pre></td>
           </tr>
         
@@ -2558,13 +2558,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line418">418</a>         end.pack('U*'))</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line419">419</a>       end</pre></td>
           </tr>
         
@@ -3296,31 +3296,31 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line541">541</a>           length = codepoints.length- 1</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line542">542</a>           pos = 0</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line543">543</a>           while pos &lt; length do</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line544">544</a>             cp1, cp2 = UCD.codepoints[codepoints[pos]], UCD.codepoints[codepoints[pos+1]]</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line545">545</a>             if (cp1.combining_class &gt; cp2.combining_class) &amp;&amp; (cp2.combining_class &gt; 0)</pre></td>
           </tr>
         
@@ -3338,37 +3338,37 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line548">548</a>             else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line549">549</a>               pos += 1</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line550">550</a>             end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line551">551</a>           end</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line552">552</a>           codepoints</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line553">553</a>         end</pre></td>
           </tr>
         
@@ -3392,19 +3392,19 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line557">557</a>           codepoints.inject([]) do |decomposed, cp|</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line558">558</a>             # if it's a hangul syllable starter character</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line559">559</a>             if HANGUL_SBASE &lt;= cp and cp &lt; HANGUL_SLAST</pre></td>
           </tr>
         
@@ -3452,49 +3452,49 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line567">567</a>             # if the codepoint is decomposable in with the current decomposition type</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line568">568</a>             elsif (ncp = UCD.codepoints[cp].decomp_mapping) and (!UCD.codepoints[cp].decomp_type || type == :compatability)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line569">569</a>               decomposed.concat decompose_codepoints(type, ncp.dup)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line570">570</a>             else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line571">571</a>               decomposed &lt;&lt; cp</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line572">572</a>             end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line573">573</a>           end</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line574">574</a>         end</pre></td>
           </tr>
         
@@ -4299,7 +4299,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:55 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:23 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

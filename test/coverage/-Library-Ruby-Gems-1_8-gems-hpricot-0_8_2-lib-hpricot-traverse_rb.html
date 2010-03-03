@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Library-Ruby-Gems-1_8-gems-hpricot-0_8_2-lib-hpricot-traverse_rb.html">/Library/Ruby/Gems/1.8/gems/hpricot-0.8.2/lib/hpricot/traverse.rb</a></td>
             <td class='right_align'><tt>839</tt></td>
             <td class='right_align'><tt>594</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>41.60%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>52.44%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:42px"></div>
-            <div class="uncovered" style="width:58px"></div>
+            <div class="covered" style="width:52px"></div>
+            <div class="uncovered" style="width:48px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>18.86%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>33.84%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:19px"></div>
-            <div class="uncovered" style="width:81px"></div>
+            <div class="covered" style="width:34px"></div>
+            <div class="uncovered" style="width:66px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -272,13 +272,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line37">37</a>       output(&quot;&quot;)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line38">38</a>     end</pre></td>
           </tr>
         
@@ -1064,7 +1064,7 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line169">169</a>       if inner or blk</pre></td>
           </tr>
         
@@ -1118,19 +1118,19 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line178">178</a>       else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line179">179</a>         if respond_to?(:children) and children</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line180">180</a>           children.map { |x| x.output(&quot;&quot;) }.join</pre></td>
           </tr>
         
@@ -1274,13 +1274,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line204">204</a>       path.gsub(/^\s+|\s+$/, '')</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line205">205</a>     end</pre></td>
           </tr>
         
@@ -1580,7 +1580,7 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line255">255</a>       if Range === expr</pre></td>
           </tr>
         
@@ -1598,73 +1598,73 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line258">258</a>       last = nil</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line259">259</a>       nodes = [self]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line260">260</a>       done = []</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line261">261</a>       expr = expr.to_s</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line262">262</a>       hist = []</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line263">263</a>       until expr.empty?</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line264">264</a>           expr = clean_path(expr)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line265">265</a>           expr.gsub!(%r!^//!, '')</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line266">266</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line267">267</a>           case expr</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line268">268</a>           when %r!^/?\.\.!</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line269">269</a>               last = expr = $'</pre></td>
           </tr>
         
@@ -1676,13 +1676,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line271">271</a>           when %r!^[&gt;/]\s*!</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line272">272</a>               last = expr = $'</pre></td>
           </tr>
         
@@ -1694,13 +1694,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line274">274</a>           when %r!^\+!</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line275">275</a>               last = expr = $'</pre></td>
           </tr>
         
@@ -1736,13 +1736,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line281">281</a>           when %r!^~!</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line282">282</a>               last = expr = $'</pre></td>
           </tr>
         
@@ -1778,13 +1778,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line288">288</a>           when %r!^[|,]!</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line289">289</a>               last = expr = &quot; #$'&quot;</pre></td>
           </tr>
         
@@ -1808,67 +1808,67 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line293">293</a>           else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line294">294</a>               m = expr.match(%r!^([#.]?)([a-z0-9\\*_-]*)!i).to_a</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line295">295</a>               after = $'</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line296">296</a>               mt = after[%r!:[a-z0-9\\*_-]+!i, 0]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line297">297</a>               oop = false</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line298">298</a>               if mt and not (mt == &quot;:not&quot; or Traverse.method_defined? &quot;filter[#{mt}]&quot;)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line299">299</a>                 after = $' </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line300">300</a>                 m[2] += mt</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line301">301</a>                 expr = after</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line302">302</a>               end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line303">303</a>               if m[1] == '#'</pre></td>
           </tr>
         
@@ -1892,37 +1892,37 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line307">307</a>               else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line308">308</a>                   m[2] = &quot;*&quot; if after =~ /^\(\)/ || m[2] == &quot;&quot; || m[1] == &quot;.&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line309">309</a>                   ret = []</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line310">310</a>                   nodes.each do |node|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line311">311</a>                       case m[2]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line312">312</a>                       when '*'</pre></td>
           </tr>
         
@@ -1934,103 +1934,103 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line314">314</a>                       else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line315">315</a>                           if node.respond_to? :get_elements_by_tag_name</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line316">316</a>                             ret += [*node.get_elements_by_tag_name(m[2])] - [*(node unless last)]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line317">317</a>                           end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line318">318</a>                       end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line319">319</a>                   end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line320">320</a>                   nodes = ret</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line321">321</a>               end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line322">322</a>               last = nil</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line323">323</a>           end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line324">324</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line325">325</a>           hist &lt;&lt; expr</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line326">326</a>           break if hist[-1] == hist[-2]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line327">327</a>           nodes, expr = Elements.filter(nodes, expr)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line328">328</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line329">329</a>       nodes = done + nodes.flatten.uniq</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line330">330</a>       if blk</pre></td>
           </tr>
         
@@ -2048,25 +2048,25 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line333">333</a>       else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line334">334</a>           Elements[*nodes]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line335">335</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line336">336</a>     end</pre></td>
           </tr>
         
@@ -2102,13 +2102,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line342">342</a>       search(expr).first</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line343">343</a>     end</pre></td>
           </tr>
         
@@ -2300,7 +2300,7 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line375">375</a>       if names.empty?</pre></td>
           </tr>
         
@@ -2312,43 +2312,43 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line377">377</a>       else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line378">378</a>         name_set = {}</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line379">379</a>         names.each {|n| name_set[n] = true }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line380">380</a>         traverse_some_element(name_set, &amp;block)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line381">381</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line382">382</a>       nil</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line383">383</a>     end</pre></td>
           </tr>
         
@@ -3242,43 +3242,43 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line532">532</a>       list = Elements[]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line533">533</a>       a.delete(&quot;*&quot;)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line534">534</a>       traverse_element(*a.map { |tag| [tag, &quot;{http://www.w3.org/1999/xhtml}#{tag}&quot;] }.flatten) do |e|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line535">535</a>         list &lt;&lt; e if e.elem?</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line536">536</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line537">537</a>       list</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line538">538</a>     end</pre></td>
           </tr>
         
@@ -4016,19 +4016,19 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line661">661</a>       children.each {|c| c.traverse_some_element(name_set, &amp;block) } if children</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line662">662</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line663">663</a>   end</pre></td>
           </tr>
         
@@ -4052,25 +4052,25 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line667">667</a>       yield self if name_set.include? self.name</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line668">668</a>       children.each {|c| c.traverse_some_element(name_set, &amp;block) } if children</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line669">669</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line670">670</a>   end</pre></td>
           </tr>
         
@@ -4094,7 +4094,7 @@
         
           
           
-          <tr class="inferred">
+          <tr class="marked">
             <td><pre><a name="line674">674</a>     end</pre></td>
           </tr>
         
@@ -5091,7 +5091,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:40 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:03 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

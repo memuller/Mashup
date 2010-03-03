@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-actionpack-2_3_5-lib-action_controller-assertions-response_assertions_rb.html">/Users/moura/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/assertions/response_assertions.rb</a></td>
             <td class='right_align'><tt>160</tt></td>
             <td class='right_align'><tt>99</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>53.12%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>54.37%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:53px"></div>
-            <div class="uncovered" style="width:47px"></div>
+            <div class="covered" style="width:54px"></div>
+            <div class="uncovered" style="width:46px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>25.25%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>31.31%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:25px"></div>
-            <div class="uncovered" style="width:75px"></div>
+            <div class="covered" style="width:31px"></div>
+            <div class="uncovered" style="width:69px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -428,25 +428,25 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line63">63</a> </pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line64">64</a>           # Support partial arguments for hash redirections</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line65">65</a>           if options.is_a?(Hash) &amp;&amp; @response.redirected_to.is_a?(Hash)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line66">66</a>             if options.all? {|(key, value)| @response.redirected_to[key] == value}</pre></td>
           </tr>
         
@@ -488,31 +488,31 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line73">73</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line74">74</a>           redirected_to_after_normalisation = normalize_argument_to_redirection(@response.redirected_to)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line75">75</a>           options_after_normalisation       = normalize_argument_to_redirection(options)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line76">76</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line77">77</a>           if redirected_to_after_normalisation != options_after_normalisation</pre></td>
           </tr>
         
@@ -650,55 +650,55 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line100">100</a>         clean_backtrace do</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line101">101</a>           case options</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line102">102</a>            when NilClass, String, Symbol</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line103">103</a>             rendered = @response.rendered[:template].to_s</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line104">104</a>             msg = build_message(message,</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line105">105</a>                     &quot;expecting &lt;?&gt; but rendering with &lt;?&gt;&quot;,</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line106">106</a>                     options, rendered)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line107">107</a>             assert_block(msg) do</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line108">108</a>               if options.nil?</pre></td>
           </tr>
         
@@ -710,25 +710,25 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line110">110</a>               else</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line111">111</a>                 rendered.to_s.match(options.to_s)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line112">112</a>               end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line113">113</a>             end</pre></td>
           </tr>
         
@@ -878,7 +878,7 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line138">138</a>       end</pre></td>
           </tr>
         
@@ -932,19 +932,19 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line147">147</a>           after_routing = @controller.url_for(fragment)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line148">148</a>           if after_routing =~ %r{^\w+://.*}</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line149">149</a>             after_routing</pre></td>
           </tr>
         
@@ -1017,7 +1017,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:44 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:08 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

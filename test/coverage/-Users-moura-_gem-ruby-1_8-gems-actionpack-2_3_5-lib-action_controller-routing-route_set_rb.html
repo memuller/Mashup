@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-actionpack-2_3_5-lib-action_controller-routing-route_set_rb.html">/Users/moura/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb</a></td>
             <td class='right_align'><tt>502</tt></td>
             <td class='right_align'><tt>353</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>82.87%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>81.47%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:83px"></div>
-            <div class="uncovered" style="width:17px"></div>
+            <div class="covered" style="width:81px"></div>
+            <div class="uncovered" style="width:19px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.77%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>74.79%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:77px"></div>
-            <div class="uncovered" style="width:23px"></div>
+            <div class="covered" style="width:75px"></div>
+            <div class="uncovered" style="width:25px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -1526,13 +1526,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line246">246</a>         routes.empty?</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line247">247</a>       end</pre></td>
           </tr>
         
@@ -2294,31 +2294,31 @@
         
           
           
-          <tr class="inferred">
+          <tr class="marked">
             <td><pre><a name="line374">374</a>           old_parts = recall[:controller].split('/')</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line375">375</a>           new_parts = options[:controller].split('/')</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line376">376</a>           parts = old_parts[0..-(new_parts.length + 1)] + new_parts</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line377">377</a>           options[:controller] = parts.join('/')</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line378">378</a>         end</pre></td>
           </tr>
         
@@ -2696,25 +2696,25 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line441">441</a>         params = recognize_path(request.path, extract_request_environment(request))</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line442">442</a>         request.path_parameters = params.with_indifferent_access</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line443">443</a>         &quot;#{params[:controller].to_s.camelize}Controller&quot;.constantize</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line444">444</a>       end</pre></td>
           </tr>
         
@@ -3038,38 +3038,38 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line498">498</a>         { :method =&gt; request.method }</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line499">499</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line500">500</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line501">501</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line502">502</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:46 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:11 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

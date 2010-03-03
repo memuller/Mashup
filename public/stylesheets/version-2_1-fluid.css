@@ -320,7 +320,7 @@ float:left;
 	#content .columm p{padding:.5em .25em; }
 		
 #last_up{height:300px;float:right;width:64%;}
-	#last_up h3{margin:0;font-size:.8em;line-height:1em;text-align:right;color:#999;}
+	#last_up h3{margin:0 2.5em 0 0;font-size:.8em;line-height:1em;text-align:right;color:#999;}
 .mask{overflow:hidden;position:relative;width:100%;height:260px;margin:auto;}	
 	.mask .trans
 		,.mask .trans_left{

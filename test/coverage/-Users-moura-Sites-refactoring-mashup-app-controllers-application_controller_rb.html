@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-Sites-refactoring-mashup-app-controllers-application_controller_rb.html">/Users/moura/Sites/refactoring/mashup/app/controllers/application_controller.rb</a></td>
             <td class='right_align'><tt>39</tt></td>
             <td class='right_align'><tt>25</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.92%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>82.05%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:77px"></div>
-            <div class="uncovered" style="width:23px"></div>
+            <div class="covered" style="width:82px"></div>
+            <div class="uncovered" style="width:18px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>72.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>80.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:72px"></div>
-            <div class="uncovered" style="width:28px"></div>
+            <div class="covered" style="width:80px"></div>
+            <div class="uncovered" style="width:20px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -231,7 +231,7 @@
           
           
           <tr class="marked">
-            <td><pre><a name="line30">30</a> 		params[:format] = 'xhtml' if self.request.domain == 'cancaonova.mobi'</pre></td>
+            <td><pre><a name="line30">30</a> 		request.format = :xhtml if self.request.domain == 'cancaonova.mobi'</pre></td>
           </tr>
         
           
@@ -260,13 +260,13 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line35">35</a>       redirect_to 'http://mashup.cancaonova.com/', :status=&gt;:moved_permanently</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line36">36</a>     end</pre></td>
           </tr>
         
@@ -291,7 +291,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:58 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:28 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

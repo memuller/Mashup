@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-builder-2_1_2-lib-builder-xmlmarkup_rb.html">/Users/moura/.gem/ruby/1.8/gems/builder-2.1.2/lib/builder/xmlmarkup.rb</a></td>
             <td class='right_align'><tt>328</tt></td>
             <td class='right_align'><tt>100</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.16%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>74.09%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:91px"></div>
-            <div class="uncovered" style="width:9px"></div>
+            <div class="covered" style="width:74px"></div>
+            <div class="uncovered" style="width:26px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>71.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>17.00%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:71px"></div>
-            <div class="uncovered" style="width:29px"></div>
+            <div class="covered" style="width:17px"></div>
+            <div class="uncovered" style="width:83px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -1166,31 +1166,31 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line186">186</a>       indent = options[:indent] || 0</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line187">187</a>       margin = options[:margin] || 0</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line188">188</a>       super(indent, margin)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line189">189</a>       @target = options[:target] || &quot;&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line190">190</a>     end</pre></td>
           </tr>
         
@@ -1214,13 +1214,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line194">194</a>       @target</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line195">195</a>     end</pre></td>
           </tr>
         
@@ -1484,73 +1484,73 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line239">239</a>       _ensure_no_block block_given?</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line240">240</a>       if directive_tag == :xml</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line241">241</a>         a = { :version=&gt;&quot;1.0&quot;, :encoding=&gt;&quot;UTF-8&quot; }</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line242">242</a>         attrs = a.merge attrs</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line243">243</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line244">244</a>       _special(</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line245">245</a>       &quot;&lt;?#{directive_tag}&quot;,</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line246">246</a>       &quot;?&gt;&quot;,</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line247">247</a>       nil,</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line248">248</a>       attrs,</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line249">249</a>       [:version, :encoding, :standalone])</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line250">250</a>     end</pre></td>
           </tr>
         
@@ -1676,13 +1676,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line271">271</a>       @target &lt;&lt; text</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line272">272</a>     end</pre></td>
           </tr>
         
@@ -1706,43 +1706,43 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line276">276</a>       _indent</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line277">277</a>       @target &lt;&lt; open</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line278">278</a>       @target &lt;&lt; data if data</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line279">279</a>       _insert_attributes(attrs, order) if attrs</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line280">280</a>       @target &lt;&lt; close</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line281">281</a>       _newline</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line282">282</a>     end</pre></td>
           </tr>
         
@@ -1772,31 +1772,31 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line287">287</a>       @target &lt;&lt; &quot;&lt;#{sym}&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line288">288</a>       _insert_attributes(attrs)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line289">289</a>       @target &lt;&lt; &quot;/&quot; if end_too</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line290">290</a>       @target &lt;&lt; &quot;&gt;&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line291">291</a>     end</pre></td>
           </tr>
         
@@ -1820,13 +1820,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line295">295</a>       @target &lt;&lt; &quot;&lt;/#{sym}&gt;&quot;</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line296">296</a>     end</pre></td>
           </tr>
         
@@ -1850,55 +1850,55 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line300">300</a>       return if attrs.nil?</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line301">301</a>       order.each do |k|</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line302">302</a>         v = attrs[k]</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line303">303</a>         @target &lt;&lt; %{ #{k}=&quot;#{_attr_value(v)}&quot;} if v # &quot; WART</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line304">304</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line305">305</a>       attrs.each do |k, v|</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line306">306</a>         @target &lt;&lt; %{ #{k}=&quot;#{_attr_value(v)}&quot;} unless order.member?(k) # &quot; WART</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line307">307</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line308">308</a>     end</pre></td>
           </tr>
         
@@ -1916,13 +1916,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line311">311</a>       case value</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line312">312</a>       when Symbol</pre></td>
           </tr>
         
@@ -1934,25 +1934,25 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line314">314</a>       else</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line315">315</a>         _escape_quote(value.to_s)</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line316">316</a>       end</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line317">317</a>     end</pre></td>
           </tr>
         
@@ -1970,7 +1970,7 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line320">320</a>       if got_block</pre></td>
           </tr>
         
@@ -1994,38 +1994,38 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line324">324</a>     end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line325">325</a> </pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line326">326</a>   end</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line327">327</a> </pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line328">328</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:55 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:25 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

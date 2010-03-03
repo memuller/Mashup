@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-activesupport-2_3_5-lib-active_support-core_ext-date_time-calculations_rb.html">/Users/moura/.gem/ruby/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/date_time/calculations.rb</a></td>
             <td class='right_align'><tt>126</tt></td>
             <td class='right_align'><tt>82</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>61.11%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>73.81%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:61px"></div>
-            <div class="uncovered" style="width:39px"></div>
+            <div class="covered" style="width:74px"></div>
+            <div class="uncovered" style="width:26px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>40.24%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>59.76%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:40px"></div>
-            <div class="uncovered" style="width:60px"></div>
+            <div class="covered" style="width:60px"></div>
+            <div class="uncovered" style="width:40px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -332,67 +332,67 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line47">47</a>           ::DateTime.civil(</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line48">48</a>             options[:year]  || self.year,</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line49">49</a>             options[:month] || self.month,</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line50">50</a>             options[:day]   || self.day,</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line51">51</a>             options[:hour]  || self.hour,</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line52">52</a>             options[:min]   || (options[:hour] ? 0 : self.min),</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line53">53</a>             options[:sec]   || ((options[:hour] || options[:min]) ? 0 : self.sec),</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line54">54</a>             options[:offset]  || self.offset,</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line55">55</a>             options[:start]  || self.start</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line56">56</a>           )</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line57">57</a>         end</pre></td>
           </tr>
         
@@ -434,31 +434,31 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line64">64</a>           d = to_date.advance(options)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line65">65</a>           datetime_advanced_by_date = change(:year =&gt; d.year, :month =&gt; d.month, :day =&gt; d.day)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line66">66</a>           seconds_to_advance = (options[:seconds] || 0) + (options[:minutes] || 0) * 60 + (options[:hours] || 0) * 3600</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line67">67</a>           seconds_to_advance == 0 ? datetime_advanced_by_date : datetime_advanced_by_date.since(seconds_to_advance)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line68">68</a>         end</pre></td>
           </tr>
         
@@ -813,7 +813,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:52 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:20 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

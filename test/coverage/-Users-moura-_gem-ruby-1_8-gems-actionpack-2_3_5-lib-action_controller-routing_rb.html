@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-actionpack-2_3_5-lib-action_controller-routing_rb.html">/Users/moura/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_controller/routing.rb</a></td>
             <td class='right_align'><tt>388</tt></td>
             <td class='right_align'><tt>80</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>85.82%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>95.62%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:86px"></div>
-            <div class="uncovered" style="width:14px"></div>
+            <div class="covered" style="width:96px"></div>
+            <div class="uncovered" style="width:4px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>45.00%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>78.75%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:45px"></div>
-            <div class="uncovered" style="width:55px"></div>
+            <div class="covered" style="width:79px"></div>
+            <div class="uncovered" style="width:21px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -1868,97 +1868,97 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line303">303</a>         # do the hokey-pokey of path normalization...</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line304">304</a>         paths = paths.collect do |path|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line305">305</a>           path = path.</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line306">306</a>             gsub(&quot;//&quot;, &quot;/&quot;).           # replace double / chars with a single</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line307">307</a>             gsub(&quot;\\\\&quot;, &quot;\\&quot;).        # replace double \ chars with a single</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line308">308</a>             gsub(%r{(.)[\\/]$}, '\1')  # drop final / or \ if path ends with it</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line309">309</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line310">310</a>           # eliminate .. paths where possible</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line311">311</a>           re = %r{[^/\\]+[/\\]\.\.[/\\]}</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line312">312</a>           path.gsub!(re, &quot;&quot;) while path.match(re)</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line313">313</a>           path</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line314">314</a>         end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line315">315</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line316">316</a>         # start with longest path, first</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line317">317</a>         paths = paths.uniq.sort_by { |path| - path.length }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line318">318</a>       end</pre></td>
           </tr>
         
@@ -1982,133 +1982,133 @@
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line322">322</a>         unless @possible_controllers</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line323">323</a>           @possible_controllers = []</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line324">324</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line325">325</a>           paths = controller_paths.select { |path| File.directory?(path) &amp;&amp; path != &quot;.&quot; }</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line326">326</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line327">327</a>           seen_paths = Hash.new {|h, k| h[k] = true; false}</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line328">328</a>           normalize_paths(paths).each do |load_path|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line329">329</a>             Dir[&quot;#{load_path}/**/*_controller.rb&quot;].collect do |path|</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line330">330</a>               next if seen_paths[path.gsub(%r{^\.[/\\]}, &quot;&quot;)]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line331">331</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line332">332</a>               controller_name = path[(load_path.length + 1)..-1]</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line333">333</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line334">334</a>               controller_name.gsub!(/_controller\.rb\Z/, '')</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line335">335</a>               @possible_controllers &lt;&lt; controller_name</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line336">336</a>             end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line337">337</a>           end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line338">338</a> </pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line339">339</a>           # remove duplicates</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line340">340</a>           @possible_controllers.uniq!</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line341">341</a>         end</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="marked">
             <td><pre><a name="line342">342</a>         @possible_controllers</pre></td>
           </tr>
         
           
           
-          <tr class="uncovered">
+          <tr class="inferred">
             <td><pre><a name="line343">343</a>       end</pre></td>
           </tr>
         
@@ -2385,7 +2385,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:46 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:11 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

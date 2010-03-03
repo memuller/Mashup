@@ -30,15 +30,15 @@
             <td class="left_align"><a href="-Users-moura-_gem-ruby-1_8-gems-actionpack-2_3_5-lib-action_view-helpers-date_helper_rb.html">/Users/moura/.gem/ruby/1.8/gems/actionpack-2.3.5/lib/action_view/helpers/date_helper.rb</a></td>
             <td class='right_align'><tt>988</tt></td>
             <td class='right_align'><tt>382</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>69.84%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>68.02%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:70px"></div>
-            <div class="uncovered" style="width:30px"></div>
+            <div class="covered" style="width:68px"></div>
+            <div class="uncovered" style="width:32px"></div>
           </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>31.94%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>27.75%</tt></div>
           <div class="percent_graph">
-            <div class="covered" style="width:32px"></div>
-            <div class="uncovered" style="width:68px"></div>
+            <div class="covered" style="width:28px"></div>
+            <div class="uncovered" style="width:72px"></div>
           </div></td>
           </tr>
         </tbody>
@@ -428,49 +428,49 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line63">63</a>         from_time = from_time.to_time if from_time.respond_to?(:to_time)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line64">64</a>         to_time = to_time.to_time if to_time.respond_to?(:to_time)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line65">65</a>         distance_in_minutes = (((to_time - from_time).abs)/60).round</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line66">66</a>         distance_in_seconds = ((to_time - from_time).abs).round</pre></td>
           </tr>
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line67">67</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line68">68</a>         I18n.with_options :locale =&gt; options[:locale], :scope =&gt; :'datetime.distance_in_words' do |locale|</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line69">69</a>           case distance_in_minutes</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line70">70</a>             when 0..1</pre></td>
           </tr>
         
@@ -548,49 +548,49 @@
         
           
           
-          <tr class="inferred">
+          <tr class="uncovered">
             <td><pre><a name="line83">83</a> </pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line84">84</a>             when 2..44           then locale.t :x_minutes,      :count =&gt; distance_in_minutes</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line85">85</a>             when 45..89          then locale.t :about_x_hours,  :count =&gt; 1</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line86">86</a>             when 90..1439        then locale.t :about_x_hours,  :count =&gt; (distance_in_minutes.to_f / 60.0).round</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line87">87</a>             when 1440..2529      then locale.t :x_days,         :count =&gt; 1</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line88">88</a>             when 2530..43199     then locale.t :x_days,         :count =&gt; (distance_in_minutes.to_f / 1440.0).round</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line89">89</a>             when 43200..86399    then locale.t :about_x_months, :count =&gt; 1</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line90">90</a>             when 86400..525599   then locale.t :x_months,       :count =&gt; (distance_in_minutes.to_f / 43200.0).round</pre></td>
           </tr>
         
@@ -740,13 +740,13 @@
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line115">115</a>         distance_of_time_in_words(from_time, Time.now, include_seconds)</pre></td>
           </tr>
         
           
           
-          <tr class="marked">
+          <tr class="uncovered">
             <td><pre><a name="line116">116</a>       end</pre></td>
           </tr>
         
@@ -5985,7 +5985,7 @@
       </tbody>
     </table>
 
-    <p>Generated on Fri Feb 26 09:39:47 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Wed Mar 03 16:18:12 -0300 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

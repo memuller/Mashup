@@ -42,6 +42,6 @@ ol.tags{padding:0;border:1px solid #55A7FF;margin-top:0;}
 		.columm h3{margin-top:0.625em;background-color:#55A7FF;}
 		.columm h4{margin-top:1.05em;background-color:#AAD3FF;}
 		.columm h2 a{color:#fff;display:block;}
-		
+		.columm small{color:gray;font-size:.8em;display:block;margin-bottom:.5em;}
 #body{width:50em;margin:auto}
 #body .clear{clear:both;}

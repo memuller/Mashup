@@ -385,5 +385,5 @@ class TagControllerTest < ActionController::TestCase
 		get :microblog , :format => "iphone"
 		assert_template "tag/microblog.iphone.haml"
 	end
-
+	
 end

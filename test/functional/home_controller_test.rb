@@ -53,6 +53,11 @@ class HomeControllerTest < ActionController::TestCase
 		assert_template "home/index.xhtml.haml"
   end
 
+  test "should list 10 itens in last updates" do
+		get :index
+		assert_select "div#spotlight > div",  1..10 
+  end
+
 # iphone
 
 	test "should render iphone template" do

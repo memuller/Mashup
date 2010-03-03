@@ -1,4 +1,4 @@
-!!! Strict
+!!! Strict 
 %html
 	%head
 		%title<
@@ -6,9 +6,8 @@
 			= "&mdash;" unless @tag.empty?
 			Mashup Can&ccedil;&atilde;o Nova
 		= stylesheet_link_tag "version-2_1-fluid"
-		= javascript_include_tag :defaults, :cache => true
+		= #javascript_include_tag :defaults, :cache => true
 		= auto_discovery_link_tag(:atom, :format => "rss", :tag => (@tag.empty?)? "cancaonova" : @tag)
-	
 	%body
 		#page	
 			#header

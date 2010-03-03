@@ -12,9 +12,9 @@
 			- next
 		- m = m+1
 		- n = n+1
-		%li{:class => cycle("even", "odd")}
+		%li{:class => cycle("odd", "even")}
 			%p 
 				= link_to tag, tag_path( tag )
-			%small	
-				pageviews 
-				= entrie.metrics[0][:pageviews]
+				%small	
+					visitas 
+					= entrie.metrics[0][:pageviews]

@@ -3,23 +3,71 @@
 		#info
 			%p Mashup &eacute; um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.
 
-			%p O Mashup da Canção Nova tem o objetivo de reunir o conteúdo multimídia referente a Canção Nova que existe em diversos sites.
+			%p O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.
 		
-			%p Oferecendo ao público um único endereço na internet para acompanhar o que acontece na Canção Nova, com acesso as diversas mídias fornecida pelos maiores sites da internet.
+			%p Oferecendo ao público um único endereço na internet para acompanhar eventos e shows.
 		#last_up
-			%p updates
+			%h3 ultimas atualizações
+				
+			.mask
+				.trans
+				.trans_left
+				
+				#spotlight
+					- @spotlight.each_with_index do |entry,id|
+						%div{:id=> "spot_#{id+1}"}
+							- unless entry[6].nil? 
+								%img{:src => entry[6], :class => "avatar", :width => "48", :height => "48" }
+							- else
+								%img{:src => "http://www.artviper.net/screenshots/screener.php?w=70&amp;userID=17709aa3c85c360&amp;hash=5015222eafdaeddd4e2805645a99abb5&amp;url="+entry[5], :width=>"70", :height=>"52"}
+							%p
+								%b
+									= auto_link entry[2]
+							%p
+								%small
+									= auto_link entry[3]
+
+							= link_to truncate(entry[5], :length => 50,:ommision =>"..."), entry[5], :class => "origin"
+			%p#nav.buttons
+				- @spotlight.each_with_index do |entry,index|
+					%a{:href => "#spot_#{index+1}"} &bull;
+
 		.clear	
-	.columm
-		%h2 Popular hoje
-		- reset_cycle 
-		= render :partial => 'list_tags', :locals => { :tags => @data[:last_day]} 
-	.columm
-		%h3 Popular h&aacute; semanas
-		= render :partial => 'list_tags', :locals => { :tags => @data[:last_7_days]} 
-	.columm
-		- reset_cycle 
-		%h4 Campe&otilde;es de acesso
-		= render :partial => 'list_tags',  :locals => { :tags => @data[:all_time]}
+	#popular
+		.columm
+			%h2.today
+				%span
+				Popular hoje
+				
+			- reset_cycle 
+			= render :partial => 'list_tags', :locals => { :tags => @data[:last_day]} 
+		.columm
+			%h2.week 
+				%span
+				Popular da semana
+			= render :partial => 'list_tags', :locals => { :tags => @data[:last_7_days]} 
+		.columm
+			- reset_cycle 
+			%h2.top10 
+				%span
+				Top 10
+			= render :partial => 'list_tags',  :locals => { :tags => @data[:all_time]}
 	
 	#clear
 
+
+= javascript_include_tag "mootools-1.2.4-core-yc.js","_class.noobSlide.packed.js"
+
+%script{:type => "text/javascript"}
+	var nS4 = new noobSlide({
+	box: $('spotlight'),
+	items: $$('#spotlight div'),
+	size: 480,
+	handles: $$('#nav a'),
+	autoPlay: true,
+	onWalk: function(currentItem,currentHandle){
+	this.handles.removeClass('active');
+	currentHandle.addClass('active');
+	currentHandle.addEvent('click',function(event){event.stop();});	
+	}
+	});

@@ -130,6 +130,11 @@ h3{font-size:18px}
 				,#news a.show
 				,#microposts a.show {margin-top:1em}
 
+				#bookmarks_content span a
+				,#blogs_content span a
+				,#news_content span a
+				,#microposts_content span a{display:block;margin:0;color:#2A72A6;}
+
 	#bookmarks_content p
 	,#microposts_content p 
 	,#news_content p 
@@ -271,6 +276,13 @@ h3{font-size:18px}
 
 #microposts_content,#photos_content a.show {text-align:right;}
 
+#microposts_content img{
+		border: 1px solid #ddd; 
+		margin: 1px 5px; 
+		padding: 1px; 
+		float: right; 
+		width: 24px; 
+		height: 24px;}
 #footer a:hover,#text_content_type p,#text_content_type a,#text_content_type span,#text_content_type h3 {color:#fff;}
 
 /*Bloco adicionado para a negativação de conteudo*/
@@ -319,7 +331,12 @@ float:left;
 	.columm small{color:gray;font-size:.9em;float:right;}
 	#content .columm p{padding:.5em .25em; }
 		
-#last_up{height:300px;float:right;width:64%;}
+#last_up{height:300px;float:right;
+	position:relative;
+	width:480px;
+	overflow:hidden;
+}
+
 	#last_up h3{margin:0 2.5em 0 0;font-size:.8em;line-height:1em;text-align:right;color:#999;}
 .mask{overflow:hidden;position:relative;width:100%;height:260px;margin:auto;}	
 	.mask .trans
@@ -330,16 +347,16 @@ float:left;
 			background:url(/stylesheets/img-version-2.1/trans-left.png) repeat-y 0 0;
 			right:auto;
 			left:-5px;
-			width:15px;
 		}
 		#spotlight{
 			position:absolute;
+			padding: 0 25px;
 		}
 		#spotlight div{
 			width:480px;
 			height:240px;
 			float:left;
-			background:#eee;
+			background:#f7f7f7;
 			margin:0;
 			padding:10px 0;
 		}
@@ -348,12 +365,14 @@ float:left;
 		}
 		#spotlight p{
 			text-indent:16px;
+			padding: 2.5em 75px .5em 25px;
+			text-align: center;
+			font-size: 1em; 
+			line-height: 1.5em;
 		}
 		#spotlight img{
-			width:200px;
-			width:150px;
 			float:left;
-			margin:0 10px 10px 15px;
+			margin:0 10px 10px 30px;
 		}
 		#spotlight .info{
 			background:#fff !important;
@@ -361,20 +380,34 @@ float:left;
 			cursor:default
 		}		
 		
-		#last_up{
-			position:relative;
-			width:480px;
-			overflow:hidden;
+		#spotlight .author{
+			text-align:left			
 		}
 		
-		#last_up #nav{margin:auto;text-align:center;}
-			#last_up #nav a{color:#ccc;padding:0;font-size:4em;margin:0 .2em;text-decoration:none;line-height:.9em;}
+		#spotlight p a{color:#2A72A6}
+		#spotlight .author a{
+			display:block;
+			color:#2A72A6;		
+		}
+
+		#spotlight .author img{
+			margin:0 0 0 10px;
+			border:1px solid #ccc;
+			padding:2px;
+			background-color:#fff;	
+		}
+			
+		#last_up #nav{margin:0 60px}
+			#last_up #nav a{color:#ccc;padding:0;font-size:4em;margin:0 .05em;text-decoration:none;line-height:.9em;}
 			#last_up #nav .active
 				,#last_up #nav a.active:hover{color:#069;cursor:default}
 			#last_up #nav a:hover{color:#f79638}
-		
+
+			#last_up #nav .more_updates{font-size: 1em; text-decoration: underline;  color: rgb(0, 102, 153);line-height:3em;float:right;}
+			#last_up .more_updates{position: absolute; margin-top: -30px; right: 25px;color: rgb(0, 102, 153)}
 #info{width:45%;float:left;margin:2em 0 2em 2em;color:#069;}
 	#info p{margin-bottom:1em;font-size:1em;}
+		#info a{color:#069;font-size:1em;}
 
 #popular{margin-top:2em;clear:both;}
 #popular .today

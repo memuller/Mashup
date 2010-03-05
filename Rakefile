@@ -29,7 +29,7 @@ end
 MetricFu::Configuration.run do |config|
 				config.rcov[:rcov_opts] << "-Itest --rails"  
         #define which metrics you want to use
-        config.metrics  = [:churn, :saikuro, :stats, :flog, :flay, :reek, :roodi, :rcov]
+        config.metrics  = [:churn, :saikuro, :stats, :flog, :flay, :reek, :roodi]
 				config.graphs   = []
 end
 

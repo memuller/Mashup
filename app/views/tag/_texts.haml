@@ -7,8 +7,10 @@
 			%p 
 				= auto_link entry[2]
 
-		= auto_link( entry[5]  ){|text| truncate(text, :length => 40)}
 		%span
+			= image_tag_avatar( entry)
 			= time_ago_in_words entry[4]
 			= t(:by)
 			= auto_link(  author_photo(entry[1])  ){|text| truncate(text, :length => 40)}
+			= auto_link( entry[5]  ){|text| truncate(text, :length => 50)}
+			

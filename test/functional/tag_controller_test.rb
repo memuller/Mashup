@@ -21,6 +21,9 @@ class TagControllerTest < ActionController::TestCase
 		test "newsletter" do
 		end
 	
+		test "cache do index" do
+		end
+	
 ## timeline
 
 	test "request timeline with tag phn" do
@@ -385,5 +388,18 @@ class TagControllerTest < ActionController::TestCase
 		get :microblog , :format => "iphone"
 		assert_template "tag/microblog.iphone.haml"
 	end
+
+# institutional
+
+test "should get about" do
+	get :about 
+	assert_response :success
+end
+
+test "should get api" do
+	get :api 
+	assert_response :success
+end
+
 	
 end

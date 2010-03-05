@@ -86,3 +86,19 @@
 				= t(:paginate_next)
 			%span.ajax-loader
 			= link_to t(:see_more)+" photos", media_path( :tag => @tag, :action => "photo"), :class => "show"
+			
+#tagcloud
+	%h2
+		%span 
+			Tags 
+			= t(:tagcloud_header)
+
+	- if @entries.tagcloud.nil? #empty?
+		%p.fail
+			%span
+			Nenhuma tag(s) encontrada
+	- else
+		- @mashup.tagcloud.sort[0...40].each do |tagcloud|
+			%a{ :href=>"/#{tagcloud.downcase}"}
+				= tagcloud.downcase
+				&nbsp;

@@ -10,6 +10,9 @@ class HomeControllerTest < ActionController::TestCase
 	
 	test "rjs updates" do
 	end
+
+	test "cache do index" do
+	end
 	
   test "home" do
 		get :index

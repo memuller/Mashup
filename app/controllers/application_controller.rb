@@ -8,32 +8,36 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 	
-  before_filter :set_format_mobi, :set_locale, :redirect_plug4life_to_mashup
+  before_filter :set_format_mobi, :set_locale, :redirect_plug4life_to_mashup, :set_tag!
 
-	def set_locale
+	private
+	
+		def set_tag!
+			unless params.include? "tag"
+				@tag = ""
+			else
+				@tag = params[:tag]
+			end			
+		end
 
-    if params[:locale]
-      I18n.locale = params[:locale]
-		else
-      I18n.locale = 'pt-BR' and params[:locale] = 'pt-BR'
-    end
+		def set_locale
 
-  rescue Exception => err
-    logger.error err
-    flash.now[:notice] = "#O idioma “{I18n.locale}” não está disponível"
+	    if params[:locale]
+	      I18n.locale = params[:locale]
+			else
+	      params[:locale] = 'pt-BR'
+	    end
 
-    I18n.load_path -= [locale_path]
-    I18n.locale = I18n.default_locale
-  end
+	  end
 
-	def set_format_mobi
-		request.format = :xhtml if self.request.domain == 'cancaonova.mobi'
-	end
+		def set_format_mobi
+			request.format = :xhtml if self.request.domain == 'cancaonova.mobi'
+		end
 	  
-  def redirect_plug4life_to_mashup
-    if self.request.domain == 'plug4life.com' 
-      redirect_to 'http://mashup.cancaonova.com/', :status=>:moved_permanently
-    end
-  end
+	  def redirect_plug4life_to_mashup
+	    if self.request.domain == 'plug4life.com' 
+	      redirect_to 'http://mashup.cancaonova.com/', :status=>:moved_permanently
+	    end
+	  end
 
 end

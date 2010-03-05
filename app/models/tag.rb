@@ -8,6 +8,7 @@ class Tag
 
 	@url_feed[:video] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=##"
 	@url_feed[:video_query] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&q=##"
+		# feed://www.dailymotion.com/rss/search/%22canção+nova%22
 		# http://br.video.yahoo.com/rss/video/search?p=cancaonova
 		# http://pipes.yahoo.com/pipes/pipe.run?_id=sA_Kq5ku3RGWYeJBl7okhQ&_render=rss&tag=cancaonova
 	@url_feed[:photo] = "http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[##]"
@@ -52,19 +53,31 @@ class Tag
 	end
 
 	def self.video tag
+#		get_feed "video", tag
 		fetch_and_parse_feed( {
 											:video => @url_feed[:video], 
 											:video_query => @url_feed[:video_query]
 											}	, tag )[0...10]		
+
 	end
 
 	def self.microblog tag
+#		get_feed "microblog", tag
 		fetch_and_parse_feed( {
 										:microblog => @url_feed[:microblog], 
 										:microblog_query => @url_feed[:microblog_query]
 										}, tag )[0...10]		
+
 	end
 
+	def self.get_feed type, tag
+		fetch_and_parse_feed( {
+										type => @url_feed[type], 
+										"#{type}_query" => @url_feed["#{type}_query"]
+										}, tag )[0...10]		
+	end
+
+	#TODO refactoring method, too long
 	def self.timeline tag
 		feed = fetch_and_parse_feed( @url_feed, tag )[0...20]			
 		
@@ -103,6 +116,7 @@ class Tag
 			feed.gsub( %r{##}, tag )
 		end
 
+		#TODO refactoring method, too long
 		def self.fetch_and_parse_feed feed_url, tag			 
 			feed_urls = []
 			if feed_url.class == Hash

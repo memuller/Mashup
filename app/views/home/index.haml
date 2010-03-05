@@ -5,9 +5,13 @@
 
 			%p O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.
 		
-			%p Oferecendo ao público um único endereço na internet para acompanhar eventos e shows.
+			%p Oferecendo ao público um único endereço na internet para acompanhar o que sai sobre a Canção Nova.
+			
+			Leia mais
+			= link_to t(:about),about_url
+			Canção Nova
 		#last_up
-			%h3 ultimas atualizações
+			%h3 &uacute;ltimas atualizações
 				
 			.mask
 				.trans
@@ -15,22 +19,23 @@
 				
 				#spotlight
 					- @spotlight.each_with_index do |entry,id|
-						%div{:id=> "spot_#{id+1}"}
-							- unless entry[6].nil? 
-								%img{:src => entry[6], :class => "avatar", :width => "48", :height => "48" }
-							- else
-								%img{:src => "http://www.artviper.net/screenshots/screener.php?w=70&amp;userID=17709aa3c85c360&amp;hash=5015222eafdaeddd4e2805645a99abb5&amp;url="+entry[5], :width=>"70", :height=>"52"}
+						%div{:id=> "spot_#{id+1}", :class => what_service?(  entry[5]) }
+							= image_tag_thumbnail( entry )
 							%p
 								%b
 									= auto_link entry[2]
-							%p
-								%small
-									= auto_link entry[3]
-
-							= link_to truncate(entry[5], :length => 50,:ommision =>"..."), entry[5], :class => "origin"
+							- unless twitter? entry[5]
+								%p
+									%small
+										= auto_link entry[3]
+							%p.author
+								= image_tag_avatar( entry)
+								= author_photo( entry[1] ){|text| truncate(text, :length => 40)}
+								= link_to truncate(entry[5], :length => 50,:ommision =>"..."), entry[5], :class => "origin"
 			%p#nav.buttons
 				- @spotlight.each_with_index do |entry,index|
-					%a{:href => "#spot_#{index+1}"} &bull;
+					%a{:href => "##{index}"} &bull;
+			%a{:href => "cancaonova", :class => "more_updates" } mais atualizações
 
 		.clear	
 	#popular

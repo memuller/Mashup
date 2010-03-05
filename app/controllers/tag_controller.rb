@@ -1,7 +1,7 @@
 class TagController < ApplicationController
 	
 	attr_reader :entries
-	before_filter :set_tag
+	before_filter :clear_tag
 	caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline  
 
   def index
@@ -40,15 +40,20 @@ class TagController < ApplicationController
 		@tag = Tag.default_tag("").gsub("+","") if @tag.empty? 
   end
 
+  def about
+    render :file => "#{RAILS_ROOT}/public/sobre-o-mashup.htm", :content_type => 'text/html', :layout => true
+  end
+
+  def api
+    render :file => "#{RAILS_ROOT}/public/api-mashup.htm"		, :content_type => 'text/html', :layout => true
+  end
+
 	protected	
-
-		def set_tag
-			unless params.include? "tag"
-				@tag = ""
-				return
-			end
-
-			@tag = DiacriticsFu::escape( params[:tag] )
+	
+		def clear_tag
+			return if @tag.empty?
+	
+			@tag = DiacriticsFu::escape( @tag )
 
 			%w("[++]" "[%20]" \s %r{&}).each do |var|
 				@tag.gsub!(var, '+')

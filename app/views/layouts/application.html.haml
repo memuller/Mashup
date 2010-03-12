@@ -48,16 +48,9 @@
 				.container
 					.syndication
 						= link_to "rss #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
-						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=pt_BR"}
+						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=pt_BR", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true", :class=>"newsletter"}
 							Acompanhe o mashup via newsletter
 
-						%form{:style => "border:1px solid #ccc;padding:3px;text-align:center;", :action => "http://feedburner.google.com/fb/a/mailverify", :method => "post", :target => "popupwindow", :onsubmit => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"}
-							%label{:for => "email"}
-								assine o newsletter
-								%input{ :type=>"text", :size => "35", :name=>"email", :id => "email"}
-							%input{ :type=>"hidden", :value=>"MashupCancaoNova", :name=>"uri"}
-							%input{ :type=>"hidden", :name=>"loc", :value=>"pt_BR"}
-							%input{ :type=>"submit", :value=>"Assinar"}
 					.other_views
 						= link_to "timeline " + @tag, {:controller => "tag", :action => "timeline" , :tag => @tag}
 						%a.mobi{ :href=>"http://mashup.cancaonova.mobi/"+@tag} 

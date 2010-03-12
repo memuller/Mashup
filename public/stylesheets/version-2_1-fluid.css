@@ -210,7 +210,8 @@ h3{font-size:18px}
 		#footer .container{background:url(img-version-2.1/logo-footer.jpg) 100% 50% no-repeat;line-height:2.5em}
 		#footer a.mobi{margin-right:2em;padding:18px 0 0 28px ;background:url(img-version-2.1/mobile.gif) 0 0 no-repeat}
 		#footer a.cooliris{background:url(img-version-2.1/cooliris.gif) 0 0 no-repeat;padding:16px 0  0 32px;text-align:left;}
-		#footer .rss{padding:2px 0 0 16px;background:url(img-version-2.1/feed-icon.png) 0 0 no-repeat}		
+		#footer .rss{margin:0 0 1em;padding:2px 0 0 16px;background:url(img-version-2.1/feed-icon.png) 0 0 no-repeat}		
+		#footer .newsletter{margin:0 0 1em;}
 		#footer form
 		,#footer fieldset{display:inline}
 		#footer form {color:#fff;font-size:10px;padding-left:22px}

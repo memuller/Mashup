@@ -25,16 +25,14 @@ module TagHelper
 	end
 
 	def author_photo name_author = ""				
-		#if name_author.to_s.include? "nobody@flickr.com"
-	#		name_author.gsub!("nobody@flickr.com (","")
-	#		name_author.gsub!(")","")
-	#	end 
-
 		if name_author.to_s.match(/\(.+\)/)
 			real_author = name_author.match(/\(.+\)/)[0]
 			name_author = real_author.gsub!( /(\(|\))/  , "")
 		end 
 		name_author
-		
+	end
+	
+	def auto_link_truncate text
+		auto_link( text ){|_text| truncate(_text, :length => 40)}
 	end
 end

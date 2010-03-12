@@ -8,6 +8,7 @@ class Tag
 
 	@url_feed[:video] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=##"
 	@url_feed[:video_query] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&q=##"
+		# feed://www.webtvcn.com/feed
 		# feed://www.dailymotion.com/rss/search/%22canção+nova%22
 		# http://br.video.yahoo.com/rss/video/search?p=cancaonova
 		# http://pipes.yahoo.com/pipes/pipe.run?_id=sA_Kq5ku3RGWYeJBl7okhQ&_render=rss&tag=cancaonova
@@ -119,7 +120,7 @@ class Tag
 		#TODO refactoring method, too long
 		def self.fetch_and_parse_feed feed_url, tag			 
 			feed_urls = []
-			if feed_url.class == Hash
+			if feed_url.is_a? Hash
 				feed_url.each do |url|
 					quotes = url[0].to_s == "video"
 					@is_photo = url[0].to_s.include? "photo"
@@ -148,10 +149,11 @@ class Tag
 						check_duplicate = 0
 						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 
 						
-						if check_duplicate == 0 						
-									entry.thumbnail = entry.links[1] if feedurl.include?( set_feed(@url_feed[:microblog],"") )	
-									entry.url = CGI::unescape(entry.url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","")	if feedurl.include?( set_feed(@url_feed[:news],"") )
-
+						if check_duplicate == 0 
+									type = media_type(feedurl)
+									entry.thumbnail = entry.links[1] if type == "microblog"	
+									entry.url = remove_redirect_url( entry.url) if type == "news" or type == "blog"
+									
 									@to_merge.push(
 											[entry.id,
 											entry.author,
@@ -159,18 +161,40 @@ class Tag
 											(entry.content.nil?) ? entry.summary : entry.content,
 											entry.published,
 											entry.url,
-											entry.thumbnail]
+											entry.thumbnail,
+											type ]
 										)
 						end
 					end	
 				
 				},	
 				:on_failure => lambda {|url, response_code, response_header, response_body|
-					RAILS_DEFAULT_LOGGER.error { "ERROR RETORNO	= #{url}" + response_body  }
+					RAILS_DEFAULT_LOGGER.error { "Url feed	= #{url} | code = #{response_code} | header = #{response_header}" }
 				}
 			)
 			@to_merge.uniq!
 			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse			
+		end
+
+		def remove_redirect_url url
+				url = CGI::unescape(url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","").gsub("http://www.cancaonova.com/rd/rd_dt.php?id=59057&url=","")	
+				url = CGI::unescape(url)
+		end
+		
+		def self.media_type url
+			if url.include? "twitter.com"
+				"microblog"
+			elsif url.include? "news.google"
+				"news"
+			elsif url.include? "blogsearch.google"
+				"blog"
+			elsif url.include? "flickr.com"
+				"photo"
+			elsif url.include? "youtube.com"
+				"video"
+			elsif url.include? "delicious.com"
+				"bookmark"
+			end		
 		end
 		
 		def self.merge_feed feed_list, feed_hash

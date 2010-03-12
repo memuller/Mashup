@@ -2,21 +2,27 @@
 module ApplicationHelper
 
 	def image_tag_avatar img 
-			image_tag( img[6], :class => "avatar", :width => "48", :height => "48" ) if twitter?( img[0]) && img[6].nil? == false		
+			image_tag( img[6], :class => "avatar", :width => "48", :height => "48" ) if microblog?( img[7]) && img[6].nil? != true		
 	end
 
-	def twitter? item
-		item.include? "twitter.com" unless item.nil?
+	def microblog? item
+		item == "microblog"
+	end
+
+	def blog? item
+		item == "blog"
 	end
 
 	def news? item
-		item.include? "twitter.com" unless item.nil?
+		item == "news"
 	end
 	
-	def what_service? url
-		if twitter? url 
-			"microblog"
-		end
+	def photo? item
+		item == "photo"
+	end
+	
+	def video? item
+		item == "video"
 	end
 	
 end

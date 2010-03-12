@@ -19,15 +19,14 @@
 				
 				#spotlight
 					- @spotlight.each_with_index do |entry,id|
-						%div{:id=> "spot_#{id+1}", :class => what_service?(  entry[5]) }
+						%div{:id=> "spot_#{id+1}", :class => entry[7] }
 							= image_tag_thumbnail( entry )
 							%p
-								%b
-									= auto_link entry[2]
-							- unless twitter? entry[5]
-								%p
-									%small
-										= auto_link entry[3]
+								- unless photo? entry[7]
+									%b
+										= auto_link truncate(entry[2],:length =>140, :ommision => "...")
+								- if photo? entry[7]
+									= photo_scraping entry[3]
 							%p.author
 								= image_tag_avatar( entry)
 								= author_photo( entry[1] ){|text| truncate(text, :length => 40)}

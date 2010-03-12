@@ -292,11 +292,15 @@ class TagControllerTest < ActionController::TestCase
 		assert_response :success
 	end
 
-	test "mrss phn valid" do
-		get :index, :format => "mrss", :tag => "phn"
+	test "should mrss index success" do
+		get :index, :format => "mrss", :tag => "cancaonova"
 		# assert_valid_feed # can't validate, because not insert OPTIONAL element of mrss
 		assert_response :success
-		assert_not_equal( 0, assigns(:entries).size, "MRSS need some item for PHN" )
+	end
+
+	test "should mrss index have entries" do
+		get :index, :format => "mrss", :tag => "cancaonova"
+		assert_xml_select "entry", 1..20
 	end
 
   test "should link to tag phn in spanish" do
@@ -309,37 +313,37 @@ class TagControllerTest < ActionController::TestCase
 		assert_select 'div#footer a[href=?]' , "/en/phn"
   end
 
-	test "title" do
+	test "should have jonas in title window" do
 		get :index, :tag => "jonas"
 		assert_select 'title', "jonas\n    &mdash;\n    Mashup Can&ccedil;&atilde;o Nova"
 	end
 
-  test "redirect when change tag" do
+  test "should redirect after correct tag" do
 		get :index, 'tag' => "oração"
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao"},"not redirect tag without accent"
   end
 
-  test "redirect when change tag rss" do
+  test "should redirect after correct tag rss" do
 		get :index, 'tag' => "oração",'format' => 'rss'
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao", :format => "rss"},"not redirect tag without accent or to ATOM"
   end
 
-	test "rss index with result" do
+	test "should have entries in rss index" do
 		get :index, :format => "rss", :tag => "phn"
-		assert_not_equal( 0, assigns(:entries).size, "ATOM need some item for PHN" )
+		assert_xml_select "entry", 1..20
 	end
 	
-	test "rss index valide" do
+	test "should be a valide rss for index" do
 		get :index, :format => "rss", :tag => "phn"
 		assert_valid_feed
 	end
 	
-	test "rss index routing" do
+	test "should have format in url to rss index" do
 		get :index, :format => "rss", :tag => "phn"
 		assert_routing "/phn.rss", { :controller => 'tag', :action => 'index', :tag => 'phn', :format => "rss"}
 	end
 	
-	test "rss index success" do
+	test "should get index rss success" do
 		get :index, :format => "rss", :tag => "phn"
 	  assert_response :success
 	end

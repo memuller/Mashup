@@ -1,6 +1,7 @@
 - unless feed.blank? 
 	- feed.each_with_index do |entry,index|
 		- if index == 0
+			= image_tag( "http://www.artviper.net/screenshots/screener.php?w=70&amp;userID=17709aa3c85c360&amp;hash=5015222eafdaeddd4e2805645a99abb5&amp;url=#{entry[5]}", :width=> "70", :height=>"52", :alt=> entry[2]) unless microblog? entry[7]
 			%h3 
 				= auto_link entry[2]
 		- else
@@ -11,6 +12,5 @@
 			= image_tag_avatar( entry)
 			= time_ago_in_words entry[4]
 			= t(:by)
-			= auto_link(  author_photo(entry[1])  ){|text| truncate(text, :length => 40)}
-			= auto_link( entry[5]  ){|text| truncate(text, :length => 50)}
-			
+			= auto_link_truncate( author_photo(entry[1]) )
+			= auto_link_truncate( entry[5] )

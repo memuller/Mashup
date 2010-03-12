@@ -358,18 +358,34 @@ float:left;
 			float:left;
 			background:#f7f7f7;
 			margin:0;
-			padding:10px 0;
+			padding:22px 0 0;
 		}
 		#spotlight h3, #spotlight p, #spotlight ul{
 			padding:5px 10px;
 		}
 		#spotlight p{
 			text-indent:16px;
-			padding: 2.5em 75px .5em 25px;
+			padding: 1.5em 75px .5em 25px;
 			text-align: center;
 			font-size: 1em; 
 			line-height: 1.5em;
+			background-color:#fff;
 		}
+		#spotlight div.bookmark
+			,#spotlight div.microblog
+			,#spotlight div.blog
+			,#spotlight div.news
+			,#spotlight div.video
+			,#spotlight div.photo{
+				background:transparent url(img-version-2.1/head_title-2.jpg) no-repeat scroll 11% -270%
+			}
+			#spotlight div.microblog{background-position:32px -32px;}
+			#spotlight div.blog{background-position:32px -145px;}
+			#spotlight div.news{background-position:32px -175px;}
+			#spotlight div.video{background-position:32px -200px;}
+			#spotlight div.photo{background-position:32px -225px;}
+			
+			
 		#spotlight img{
 			float:left;
 			margin:0 10px 10px 30px;
@@ -381,7 +397,8 @@ float:left;
 		}		
 		
 		#spotlight .author{
-			text-align:left			
+			text-align:left	;
+			padding-bottom:50px;		
 		}
 		
 		#spotlight p a{color:#2A72A6}
@@ -390,13 +407,17 @@ float:left;
 			color:#2A72A6;		
 		}
 
-		#spotlight .author img{
+		#spotlight .author img
+		,#spotlight .screenshot
+		,#spotlight .avatar{
 			margin:0 0 0 10px;
 			border:1px solid #ccc;
 			padding:2px;
 			background-color:#fff;	
 		}
-			
+		
+		#spotlight .screenshot
+		,#spotlight .avatar{margin:1.5em 0 0 2em;}
 		#last_up #nav{margin:0 60px}
 			#last_up #nav a{color:#ccc;padding:0;font-size:4em;margin:0 .05em;text-decoration:none;line-height:.9em;}
 			#last_up #nav .active

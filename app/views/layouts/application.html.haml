@@ -52,7 +52,7 @@
 							Acompanhe o mashup via newsletter
 
 					.other_views
-						= link_to "timeline " + @tag, {:controller => "tag", :action => "timeline" , :tag => @tag}
+						= link_to "timeline " + @tag, {:controller => "tag", :action => "timeline" , :tag => @tag},  :class => "timeline"
 						%a.mobi{ :href=>"http://mashup.cancaonova.mobi/"+@tag} 
 							= t(:mobile, :tags => @tag) 
 						= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"

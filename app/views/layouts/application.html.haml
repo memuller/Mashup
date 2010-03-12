@@ -47,7 +47,7 @@
 			#footer
 				.container
 					.syndication
-						= link_to "rss #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
+						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
 						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=pt_BR", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true", :class=>"newsletter"}
 							Acompanhe o mashup via newsletter
 

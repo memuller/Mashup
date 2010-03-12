@@ -37,7 +37,7 @@ class TagController < ApplicationController
   end
 
   def cooliris
-		@tag = Tag.default_tag("").gsub("+","") if @tag.empty? 
+		@tag = Tag.default_tag("").gsub("+","").gsub(",","") if @tag.empty? 
   end
 
   def about

@@ -58,7 +58,7 @@
 						= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
 
 					.options
-						%a{ href="/"}
+						%a{ :href =>"/"}
 							= t(:language_portuguese) 
 						= link_to t(:language_english), language_path(:locale => "en", :tag => @tag)
 						= link_to t(:language_spanish), language_path(:locale => "es", :tag => @tag)

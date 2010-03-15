@@ -2,7 +2,7 @@ class Tag
 	@url_feed = Hash.new
 	@url_feed[:blog] = "http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=##"
 
-	@url_feed[:news] = "http://news.google.com.br/news?cf=all&output=rss&key=ABQIAAAAV2ZuWpscPVQQ0E7JDdhdORRSXSF-Y4fmqhRslvTYf3GZ0LIPaRSj8X7I8YW0NB_Ilr1kbU9ielxouw&q=##"
+	@url_feed[:news] = "http://news.google.com.br/news?cf=all&output=rss&q=##"
 
 	@url_feed[:bookmark] = "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=##"
 

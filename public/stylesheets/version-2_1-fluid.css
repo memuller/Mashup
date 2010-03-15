@@ -263,7 +263,7 @@ h3{font-size:18px}
 	, #tagcloud h2 {background-image:url(img-version-2.1/head_title-2.jpg);background-repeat:no-repeat;}
 #microposts h2 {background-position:0 -28px;}
 
-#photos h2 {background-position:10px -84px;}
+#photos h2 {background-position:10px -84px;width:90%;}
 
 #videos h2 {background-position:0 -56px;}
 

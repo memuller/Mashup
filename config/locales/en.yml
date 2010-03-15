@@ -23,3 +23,8 @@ en:
   tagcloud_header: 'related'
   by: 'by'        
   ago: 'ago'
+  home_about: <p>Mashup is a website or a web application that uses content from more than one source to create a new service. </p><p>The Mashup from Canção Nova search for multimedia content about Canção Nova in the most popular sites and groups in one place. </p><p>Providing to public a single place to monitor what comes out about the Canção Nova. Read more {{about}} Canção Nova</p>
+  label_updates: last updates
+  more_updates: more updates
+
+	

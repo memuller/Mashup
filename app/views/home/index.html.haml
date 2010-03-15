@@ -1,17 +1,10 @@
 #body
 	%div
 		#info
-			%p Mashup &eacute; um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.
-
-			%p O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.
-		
-			%p Oferecendo ao público um único endereço na internet para acompanhar o que sai sobre a Canção Nova.
-			
-			Leia mais
-			= link_to t(:about),about_url
-			Canção Nova
+			= t(:home_about, :about => link_to( t(:about),about_url) )
 		#last_up
-			%h3 &uacute;ltimas atualizações
+			%h3 
+				= t(:label_updates)
 				
 			.mask
 				.trans
@@ -34,7 +27,8 @@
 			%p#nav.buttons
 				- @spotlight.each_with_index do |entry,index|
 					%a{:href => "#spot_#{index}", :onclick => "return false;"} &bull;
-			%a{:href => "cancaonova", :class => "more_updates" } mais atualizações
+			%a{:href => "cancaonova", :class => "more_updates" } 
+				= t(:more_updates)
 
 		.clear	
 	#popular

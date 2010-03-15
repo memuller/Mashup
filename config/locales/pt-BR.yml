@@ -23,41 +23,10 @@ pt-BR:
   tagcloud_header: 'relacionadas'
   by: 'por'
   ago: 'atr&aacute;s'
+  home_about: <p>Mashup é um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.</p> <p>O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.</p> <p>Oferecendo ao público um único endereço na internet para acompanhar o que sai sobre a Canção Nova.</p> <p>Leia mais {{about}} Canção Nova
+  label_updates: '&uacute;ltimas atualiza&ccedil;&otilde;es'
+  more_updates: 'mais atualiza&ccedil;&otilde;es'
 
-  cancel: 'Cancelar'
-  vote: 'Votar'
-  blacklisting:
-    messages:
-      one_vote_per_content: 'É possível votar somente uma vez em cada conteúdo.'
-      one_vote_per_day: 'É possível votar somente uma vez por dia.'
-      error: 'Erro ao processar o voto. Certifique-se que seu navegador tem JavaScript e Cookies habilitados.'
-      success: 'Voto efetuado com sucesso. Obrigado!'
-    form:
-      title: 'Você está utilizando a ferramenta de denúncia de conteúdo impróprio.'
-      subtitle: 'Selecione o motivo pelo qual considera o conteúdo inadequado:'
-      reason_prompt: 'Selecione um motivo para vizualizar sua descrição.'
-    reasons:
-      ConteudoEnganoso:
-        name: Conteúdo ou miniatura enganosa
-        description: 'Título ou miniatura (thumbnail) não corresponde ao conteúdo real.'
-      SPAM:
-        name: SPAM
-        description: 'Conteúdo é parte de campanhas de publicidade em massa.'
-      Sensual:
-        name: Nudez ou sensualidade
-        description: 'Possui cenas de nudez ou conteúdo claramente sensual.'
-      SexualExplicita:
-        name: Átividade Sexual
-        description: 'Apresenta atividade sexual explícita.'
-      Discriminatorio:
-        name: Discriminatório ou racista
-        description: 'Dissemina racismo e outros preconceitos contra um grupo.'
-      Difamatorio:
-        name: Calunioso ou profano
-        description: 'Usa de linguagens e símbolos ofensivos ou dissemina confusão e calúnia.'
-      DireitosAutorais:
-        name: Infringe direitos autorais ou legislação
-        description: 'Viola propriedade intelectual minha, de outro, ou infringe legislação vigente. Recomenda-se banir também o conteúdo no portal de origem.'
  # formatos de data e hora
   date:
     formats:
@@ -164,38 +133,3 @@ pt-BR:
           gb: "GB"
           tb: "TB"
  
-# Used in array.to_sentence.
-  support:
-    array:
-      words_connector: ", "
-      two_words_connector: " e "
-      last_word_connector: " e "
-    
-  # Active Record
-  activerecord:
-    errors:
-      template:
-        header:
-          one: "Não foi possível gravar {{model}}: 1 erro"
-          other: "Não foi possível gravar {{model}}: {{count}} erros."
-        body: "Por favor, verifique o(s) seguinte(s) campo(s):"
-      messages:
-        inclusion: "não está incluído na lista"
-        exclusion: "não está disponível"
-        invalid: "não é válido"
-        confirmation: "não está de acordo com a confirmação"
-        accepted: "deve ser aceito"
-        empty: "não pode ficar vazio"
-        blank: "não pode ficar em branco"
-        too_long: "é muito longo (máximo: {{count}} caracteres)"
-        too_short: "é muito curto (mínimo: {{count}} caracteres)"
-        wrong_length: "não possui o tamanho esperado ({{count}} caracteres)"
-        taken: "já está em uso"
-        not_a_number: "não é um número"
-        greater_than: "deve ser maior do que {{count}}"
-        greater_than_or_equal_to: "deve ser maior ou igual a {{count}}"
-        equal_to: "deve ser igual a {{count}}"
-        less_than: "deve ser menor do que {{count}}"
-        less_than_or_equal_to: "deve ser menor ou igual a {{count}}"
-        odd: "deve ser ímpar"
-        even: "deve ser par"

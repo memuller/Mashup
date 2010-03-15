@@ -94,7 +94,7 @@
 			background_color:'#097EB3', 
 			text_color: 'white',
 			hover_color: '#06C',
-			= "lang: '"+params[:locale].gsub('-','_')+"'"
+			= "lang: '"+I18n.locale.gsub('-','_')+"'"
 			})
 
 		%script{:type => "text/javascript"}

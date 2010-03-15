@@ -33,7 +33,7 @@
 								= link_to truncate(entry[5], :length => 50,:ommision =>"..."), entry[5], :class => "origin"
 			%p#nav.buttons
 				- @spotlight.each_with_index do |entry,index|
-					%a{:href => "##{index}"} &bull;
+					%a{:href => "#spot_#{index}", :onclick => "return false;"} &bull;
 			%a{:href => "cancaonova", :class => "more_updates" } mais atualizações
 
 		.clear	

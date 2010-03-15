@@ -14,9 +14,9 @@ class Tag
 		# http://pipes.yahoo.com/pipes/pipe.run?_id=sA_Kq5ku3RGWYeJBl7okhQ&_render=rss&tag=cancaonova
 	@url_feed[:photo] = "http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[##]"
 
-	@url_feed[:microblog] = "http://search.twitter.com/search.atom?rpp=10&page=1&tag=##"
-	@url_feed[:microblog_query] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
-
+	@url_feed[:microblog] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
+#	@url_feed[:microblog_query] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
+#http://search.twitter.com/search.atom?q=&ands=&phrase=&ors=cancaonova+cançãonova&nots=&tag=&lang=all&from=&to=&ref=&near=&within=15&units=mi&since=&until=&rpp=10
 		
 	def self.all tag, type = nil
 
@@ -65,8 +65,7 @@ class Tag
 	def self.microblog tag
 #		get_feed "microblog", tag
 		fetch_and_parse_feed( {
-										:microblog => @url_feed[:microblog], 
-										:microblog_query => @url_feed[:microblog_query]
+										:microblog => @url_feed[:microblog]
 										}, tag )[0...10]		
 
 	end
@@ -114,7 +113,7 @@ class Tag
 	private 
 
 		def self.set_feed feed, tag
-			feed.gsub( %r{##}, tag )
+			feed.gsub( %r{##}, tag ) unless feed.nil?
 		end
 
 		#TODO refactoring method, too long
@@ -124,17 +123,29 @@ class Tag
 				feed_url.each do |url|
 					quotes = url[0].to_s == "video"
 					@is_photo = url[0].to_s.include? "photo"
-					feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag , quotes) ) <<	set_feed( url[1], space_tag( tag , quotes) )						
+					if @is_photo or  url[0].to_s.include? "bookmark"
+						feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag , quotes) ) <<	set_feed( url[1], space_tag( tag , quotes) )						
+					elsif url[0].to_s.include? "microblog"
+						feed_urls << set_feed( url[1], or_microblog( tag ) )
+					elsif
+						feed_urls << set_feed( url[1], add_cn_tags( tag , quotes) )								
+					end
 				end
 			else
 				quotes = feed_url.include?( @url_feed[:video] )	
-				@is_photo = feed_url.include? "photo"
-				feed_urls = [
-								set_feed( feed_url, default_tag( tag ) ),			
-								set_feed( feed_url, tilde_tag( tag ) )	,		
-								set_feed( feed_url, space_tilde_tag( tag, quotes) ),
-								set_feed( feed_url, space_tag( tag , quotes ) )						
-							]	
+				@is_photo = feed_url.include? "flickr.com"
+				if @is_photo or  feed_url.to_s.include? "delicious.com"
+					feed_urls = [
+									set_feed( feed_url, default_tag( tag ) ),			
+									set_feed( feed_url, tilde_tag( tag ) )	,		
+									set_feed( feed_url, space_tilde_tag( tag, quotes) ),
+									set_feed( feed_url, space_tag( tag , quotes ) )						
+								]	
+				elsif feed_url.to_s.include? "twitter.com"
+					feed_urls = set_feed( feed_url, or_microblog( tag ) )
+				elsif
+					feed_urls = set_feed( feed_url, add_cn_tags( tag , quotes) )								
+				end
 			end
 						
 			@to_merge = []
@@ -145,10 +156,10 @@ class Tag
 			Feedzirra::Feed.fetch_and_parse(
 				feed_urls,		
 				:on_success => lambda {|feedurl, feeditem|
+				
 					feeditem.entries.each do |entry|
 						check_duplicate = 0
-						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 
-						
+						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 				
 						if check_duplicate == 0 
 									type = media_type(feedurl)
 									entry.thumbnail = entry.links[1] if type == "microblog"	
@@ -176,7 +187,7 @@ class Tag
 			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse			
 		end
 
-		def remove_redirect_url url
+		def self.remove_redirect_url url		
 				url = CGI::unescape(url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","").gsub("http://www.cancaonova.com/rd/rd_dt.php?id=59057&url=","")	
 				url = CGI::unescape(url)
 		end
@@ -203,6 +214,18 @@ class Tag
 				return_feed = return_feed | feed_list[feed.first].entries	
 			end
 		end
+		
+		def self.or_microblog tag
+	    result = remove_tag_default tag
+			quote = false			
+			tag + "&ors=cancaonova+#{CGI::escape("cançãonova")}+#{quote_tags("cancao%20nova",quote)}+#{quote_tags(CGI::escape("canção%20nova"), quote)}"
+			
+		end
+			
+	  def self.add_cn_tags(tags, quote)
+	    result = remove_tag_default tags
+			result + "+(cancaonova|#{CGI::escape("cançãonova")}|#{quote_tags("cancao%20nova",quote)}|#{quote_tags(CGI::escape("canção%20nova"), quote)})"
+	  end
 
 	  def self.default_tag(tags)
 	    change_tag_default(tags, "cancaonova")

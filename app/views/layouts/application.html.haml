@@ -48,7 +48,7 @@
 				.container
 					.syndication
 						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
-						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=pt_BR", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
+						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=pt_BR", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=pt_BR', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
 							Acompanhe o mashup via newsletter
 
 					.other_views

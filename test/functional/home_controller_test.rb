@@ -61,6 +61,11 @@ class HomeControllerTest < ActionController::TestCase
 		assert_select "div#spotlight > div",  1..10 
   end
 
+	test "should render page even no analytic data" do
+		get :index
+		assert_select "div#popular li", 0
+	end
+
 # iphone
 
 	test "should render iphone template" do

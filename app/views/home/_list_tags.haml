@@ -5,11 +5,18 @@
 		- entrie = tags.points[m]
 		- if entrie.nil?
 			- m = m+1
-			- next
+			- if m < tags.points.size
+				- next
+			- else
+				- return
 		- tag = clean_tag entrie.title
 		- if tag.empty? 
 			- m = m+1
-			- next
+			- if m < tags.points.size
+				- next
+			- else
+				- return
+			
 		- m = m+1
 		- n = n+1
 		%li{:class => cycle("odd", "even")}

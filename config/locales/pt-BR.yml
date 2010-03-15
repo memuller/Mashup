@@ -10,6 +10,7 @@ pt-BR:
   api: 'API para desenvolvedores'
   mobile: veja o {{tags}} no Mashup Mobile
   cooliris: veja o {{tags}} no Cooliris
+  newsletter: Acompanhe o mashup via newsletter
   language_legend: 'mude o idioma'
   language_english: 'english'
   language_spanish: 'español'

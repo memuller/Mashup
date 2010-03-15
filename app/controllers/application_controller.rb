@@ -21,7 +21,6 @@ class ApplicationController < ActionController::Base
 		end
 
 		def set_locale
-debugger
 	    if params[:locale]
 				redirect_to "http://mashup.#{self.request.domain}/#{params[:locale]}#{self.request.path}"	unless self.request.path.match(/\/(en|es)/) unless params[:locale] == I18n.default_locale				
 	      I18n.locale = params[:locale]

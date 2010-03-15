@@ -24,6 +24,11 @@ class HomeControllerTest < ActionController::TestCase
 		assert_not_nil assigns(:data)
   end
 
+  test "should redirect to url in english" do
+		get :index, {'locale' => "en"} 
+		assert_redirected_to "/en"
+  end
+
   test "should have slogan in english" do
 		get :index, {'locale' => "en"} 
 		assert_select 'p.slogan', "Online coverage of events in New Song"

@@ -10,7 +10,8 @@ en:
   api: 'API for developers'
   mobile: view {{tags}} in Mashup Mobile
   cooliris: view {{tags}} in Cooliris
-  language_legend: 'choice the language'
+  newsletter: Follow Mashup by newsletter
+  language_legend: choice the language
   language_english: 'english'
   language_spanish: 'español'
   language_portuguese: 'portugu&ecirc;s'

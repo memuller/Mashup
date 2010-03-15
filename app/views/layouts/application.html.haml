@@ -49,7 +49,7 @@
 					.syndication
 						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
 						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
-							Acompanhe o mashup via newsletter
+							= t(:newsletter)
 
 					.other_views
 						= link_to "timeline " + @tag, {:controller => "tag", :action => "timeline" , :tag => @tag},  :class => "timeline"

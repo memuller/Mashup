@@ -12,9 +12,6 @@ body{line-height:1;text-align:center}
 *{font:11px helvetica,Verdana}
 body *{text-align:left} 
 ol,ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before, blockquote:after,q:before,q:after{content:'';content:none}
-/* remember to define focus styles!*/
 :focus{outline:0}
 /* remember to highlight inserts somehow!*/
 ins{text-decoration:none}

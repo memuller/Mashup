@@ -298,9 +298,9 @@ class TagControllerTest < ActionController::TestCase
 		assert_response :success
 	end
 
-	test "should mrss index have entries" do
+	test "should mrss index have item" do
 		get :index, :format => "mrss", :tag => "cancaonova"
-		assert_xml_select "entry", 1..20
+		assert_xml_select "item", 1..20
 	end
 
   test "should link to tag phn in spanish" do

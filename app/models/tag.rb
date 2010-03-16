@@ -19,7 +19,6 @@ class Tag
 #http://search.twitter.com/search.atom?q=&ands=&phrase=&ors=cancaonova+cançãonova&nots=&tag=&lang=all&from=&to=&ref=&near=&within=15&units=mi&since=&until=&rpp=10
 		
 	def self.all tag, type = nil
-
 		if type == "rss"
 			fetch_and_parse_feed( @url_feed, tag )[0...20]	
 		elsif type == "mrss"
@@ -54,7 +53,6 @@ class Tag
 	end
 
 	def self.video tag
-#		get_feed "video", tag
 		fetch_and_parse_feed( {
 											:video => @url_feed[:video], 
 											:video_query => @url_feed[:video_query]
@@ -63,7 +61,6 @@ class Tag
 	end
 
 	def self.microblog tag
-#		get_feed "microblog", tag
 		fetch_and_parse_feed( {
 										:microblog => @url_feed[:microblog]
 										}, tag )[0...10]		
@@ -112,10 +109,6 @@ class Tag
 
 	private 
 
-		def self.set_feed feed, tag
-			feed.gsub( %r{##}, tag ) unless feed.nil?
-		end
-
 		#TODO refactoring method, too long
 		def self.fetch_and_parse_feed feed_url, tag			 
 			feed_urls = []
@@ -156,7 +149,6 @@ class Tag
 			Feedzirra::Feed.fetch_and_parse(
 				feed_urls,		
 				:on_success => lambda {|feedurl, feeditem|
-				
 					feeditem.entries.each do |entry|
 						check_duplicate = 0
 						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 				
@@ -187,8 +179,12 @@ class Tag
 			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse			
 		end
 
+		def self.set_feed feed, tag
+			feed.gsub( %r{##}, tag ) unless feed.nil?
+		end
+
 		def self.remove_redirect_url url		
-				url = CGI::unescape(url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","").gsub("http://www.cancaonova.com/rd/rd_dt.php?id=59057&url=","")	
+				url = CGI::unescape(url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","").gsub(/http:\/\/www.cancaonova.com\/rd\/rd_dt.php\?id=[0-9]*\&url=/,"")	
 				url = CGI::unescape(url)
 		end
 		
@@ -218,13 +214,12 @@ class Tag
 		def self.or_microblog tag
 	    result = remove_tag_default tag
 			quote = false			
-			tag + "&ors=cancaonova+#{CGI::escape("cançãonova")}+#{quote_tags("cancao%20nova",quote)}+#{quote_tags(CGI::escape("canção%20nova"), quote)}"
-			
+			tag + "&ors=cancaonova+#{CGI::escape("cançãonova")}+#{quote_tags("cancao%20nova",quote)}+#{quote_tags(CGI::escape("canção%20nova"), quote)}"	
 		end
 			
 	  def self.add_cn_tags(tags, quote)
 	    result = remove_tag_default tags
-			result + "+(cancaonova|#{CGI::escape("cançãonova")}|#{quote_tags("cancao%20nova",quote)}|#{quote_tags(CGI::escape("canção%20nova"), quote)})"
+			result + "+cancaonova" #"+(cancaonova|#{CGI::escape("cançãonova")}|#{quote_tags("cancao%20nova",quote)}|#{quote_tags(CGI::escape("canção%20nova"), quote)})"
 	  end
 
 	  def self.default_tag(tags)
@@ -245,23 +240,17 @@ class Tag
 
 	  def self.change_tag_default(tags, new_tag)
 	    result = remove_tag_default tags
-	    if @is_photo
-				result+","+new_tag
-			else
-				result+"+"+new_tag
-			end
+	    separator = @is_photo ? "," : "+"
+			result + separator + new_tag
 	  end
 
 	  def self.remove_tag_default(tags=nil)
-
 			unless tags.nil?
 				tags.gsub(/\s+/,'+')
-
 				%w(+cancaonova.com cancaonova.com+ cancaonova.com +cancaonova cancaonova+ cancaonova can%C3%A7%C3%A3o%20nova cancao_nova / %2F).each do |var|
 				  tags.to_s.gsub!("#{var}", nil.to_s)
 				end			
 			end
-
 			tags.to_s
 	  end
 

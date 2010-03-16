@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	
-	caches_page :index
+	caches_page :index, :expires_in => 5.minutes
 	
   def index
 			@data = Home.all

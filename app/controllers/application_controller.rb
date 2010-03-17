@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 	
-  before_filter :set_format_mobi, :set_locale, :redirect_plug4life_to_mashup, :set_tag!
+  before_filter :check_format, :set_format_mobi, :set_locale, :redirect_plug4life_to_mashup, :set_tag!
 
 	private
 	
@@ -19,6 +19,12 @@ class ApplicationController < ActionController::Base
 				@tag = params[:tag]
 			end			
 		end
+
+		def check_format
+	    if params[:format]
+				redirect_to "http://mashup.#{self.request.domain}#{self.request.path}.#{params[:format]}"	unless self.request.path.match(/\.([a-z]{3,5})/)				
+	    end
+	  end
 
 		def set_locale
 	    if params[:locale]

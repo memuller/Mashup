@@ -189,19 +189,14 @@ class Tag
 		end
 		
 		def self.media_type url
-			if url.include? "twitter.com"
-				"microblog"
-			elsif url.include? "news.google"
-				"news"
-			elsif url.include? "blogsearch.google"
-				"blog"
-			elsif url.include? "flickr.com"
-				"photo"
-			elsif url.include? "youtube.com"
-				"video"
-			elsif url.include? "delicious.com"
-				"bookmark"
-			end		
+			case url.match(/([a-z]*\.[a-z]*).com/)[1]
+				when "search.twitter" then "microblog"
+				when "news.google" then "news"
+				when "blogsearch.google" then "blog"
+				when "www.flickr" then "photo"
+				when "gdata.youtube" then "video"
+				when "feeds.delicious" then "bookmark"
+			end
 		end
 		
 		def self.merge_feed feed_list, feed_hash

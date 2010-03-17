@@ -41,13 +41,17 @@ class TagController < ApplicationController
   end
 
   def about
-    render :file => "#{RAILS_ROOT}/public/sobre-o-mashup.htm", :content_type => 'text/html', :layout => true
+		render_public "sobre-o-mashup"
   end
 
   def api
-    render :file => "#{RAILS_ROOT}/public/api-mashup.htm"		, :content_type => 'text/html', :layout => true
+		render_public "api-mashup"
   end
 
+	def render_public file_name
+    render :file => "#{RAILS_ROOT}/public/#{file_name}.htm"		, :content_type => 'text/html', :layout => true		
+	end
+	
 	protected	
 	
 		def clear_tag

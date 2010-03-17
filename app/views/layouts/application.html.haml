@@ -48,7 +48,7 @@
 				.container
 					.syndication
 						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
-						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
+						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{I18n.locale.gsub("-","_")}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
 							= t(:newsletter)
 
 					.other_views
@@ -58,6 +58,7 @@
 						= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
 
 					.options
+						= I18n.t('language_legend')
 						%a{ :href =>"/"}
 							= t(:language_portuguese) 
 						= link_to t(:language_english), language_path(:locale => "en", :tag => @tag)
@@ -103,6 +104,6 @@
 
 		%script{:type => "text/javascript"}
 			try {
-			var pageTracker = _gat._getTracker("UA-6535463-2");
+			var pageTracker = _gat._getTracker("UA-6535463-1");
 			pageTracker._trackPageview();
 			} catch(err) {}

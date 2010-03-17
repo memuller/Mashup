@@ -36,6 +36,11 @@ class TagControllerTest < ActionController::TestCase
 	  assert_response :success
 	end
 
+	test "should timeline.rss redirect to index.rss" do
+		get :timeline, :tag => "phn", :format => rss
+		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "phn"}
+	end
+
 
 ## blog
 
@@ -321,6 +326,11 @@ class TagControllerTest < ActionController::TestCase
   test "should redirect after correct tag" do
 		get :index, 'tag' => "oração"
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao"},"not redirect tag without accent"
+  end
+
+  test "should correct tag with dotcomma" do
+		get :index, 'tag' => "palavra;"
+		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "palavra"}
   end
 
   test "should redirect after correct tag rss" do

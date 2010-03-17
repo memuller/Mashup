@@ -17,23 +17,25 @@ class Tag
 	@url_feed[:microblog] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
 #	@url_feed[:microblog_query] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
 #http://search.twitter.com/search.atom?q=&ands=&phrase=&ors=cancaonova+cançãonova&nots=&tag=&lang=all&from=&to=&ref=&near=&within=15&units=mi&since=&until=&rpp=10
-		
-	def self.all tag, type = nil
-		if type == "rss"
+	
+	def self.all_rss tag
 			fetch_and_parse_feed( @url_feed, tag )[0...20]	
-		elsif type == "mrss"
-			midias = {:video => @url_feed[:video],:video_query => @url_feed[:video_query], :photo => @url_feed[:photo]}
-			fetch_and_parse_feed( midias, tag )[0...20]	
-		else
-			{
-				:blogs => blog( tag)[0...5]	, 
-				:news => news( tag)[0...5]	, 
-				:bookmarks => bookmark( tag)[0...5]	,
-				:videos => video( tag)[0...10],
-				:microblogs => microblog( tag)[0...10],
-				:photos => photo( tag)[0...10]	
-			}
-		end
+	end
+	
+	def self.all_mrss tag
+				midias = {:video => @url_feed[:video],:video_query => @url_feed[:video_query], :photo => @url_feed[:photo]}
+				fetch_and_parse_feed( midias, tag )[0...20]	
+	end
+			
+	def self.all tag
+		{
+			:blogs => blog( tag)[0...5]	, 
+			:news => news( tag)[0...5]	, 
+			:bookmarks => bookmark( tag)[0...5]	,
+			:videos => video( tag)[0...10],
+			:microblogs => microblog( tag)[0...10],
+			:photos => photo( tag)[0...10]	
+		}
 	end
 
 	def self.blog tag

@@ -5,7 +5,11 @@ class TagController < ApplicationController
 	caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline  
 
   def index
-		@entries = Tag.all(@tag, params[:format])
+		respond_to do |format|
+		    format.rss	{ @entries = Tag.all_rss(@tag) }
+		    format.mrss	{ @entries = Tag.all_mrss(@tag) }		
+		    format.html	{ @entries = Tag.all(@tag) }
+		  end
   end
 
   def video
@@ -33,7 +37,10 @@ class TagController < ApplicationController
   end
 
   def timeline
-		@entries = Tag.timeline(@tag)
+		respond_to do |format|
+		    format.rss	{ redirect_to :controller => "tag", :tag=> params[:tag], :format => "rss" }
+		    format.html	{ @entries = Tag.timeline(@tag) }
+		  end
   end
 
   def cooliris

@@ -36,9 +36,9 @@ class TagControllerTest < ActionController::TestCase
 	  assert_response :success
 	end
 
-	test "should timeline.rss redirect to index.rss" do
-		get :timeline, :tag => "phn", :format => rss
-		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "phn"}
+	test "should timeline rss redirect to index rss" do
+		get :timeline, :tag => "phn", :format => "rss"
+		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "phn", :format => "rss"}
 	end
 
 
@@ -104,18 +104,13 @@ class TagControllerTest < ActionController::TestCase
 	  assert_response :success
 	end
 
-	test "was item rss news" do
-		get :news, :format => "rss", :tag => "phn"
-		assert_xml_select "entry", 1..20, "ATOM need some news for PHN" 
-	end
-
 	test "rss news without result" do
 		get :news, :format => "rss", :tag => "qwerasdfpoi"
 		assert_xml_select "entry", 0, "news need have ZERO itens for qwerasdfpoi" 
 	end
 
   test "was item in rss news without TAG" do
-		get :news, :format => "rss",:tag => "phn"
+		get :news, :format => "rss",:tag => "cancaonova"
 		assert_xml_select "entry", 1..20, "ATOM need some news for PHN" 
   end
 
@@ -308,6 +303,11 @@ class TagControllerTest < ActionController::TestCase
 		assert_xml_select "item", 1..20
 	end
 
+	test "should mrss render withou error" do
+		get :index, :format => "mrss", :tag => "mobile_record_at_04:40pm_"
+		assert_response :success
+	end
+
   test "should link to tag phn in spanish" do
 		get :index, 'locale' => "es", :tag => "phn"
 		assert_select 'div#footer a[href=?]' , "/es/phn"
@@ -324,17 +324,17 @@ class TagControllerTest < ActionController::TestCase
 	end
 
   test "should redirect after correct tag" do
-		get :index, 'tag' => "oração"
+		get :index, :tag => "oração"
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao"},"not redirect tag without accent"
   end
 
   test "should correct tag with dotcomma" do
-		get :index, 'tag' => "palavra;"
+		get :index, :tag => "palavra;"
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "palavra"}
   end
 
   test "should redirect after correct tag rss" do
-		get :index, 'tag' => "oração",'format' => 'rss'
+		get :index, :tag => "oração",:format => 'rss'
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao", :format => "rss"},"not redirect tag without accent or to ATOM"
   end
 

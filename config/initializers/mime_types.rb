@@ -6,6 +6,6 @@
 
 Mime::Type.register "application/rss+xml", :mrss
 
-Mime::Type.register "text/html", :xhtmlmp #mobile
+Mime::Type.register "text/html", :xhtml #mobile
 
 Mime::Type.register_alias "text/html", :iphone

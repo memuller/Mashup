@@ -6,9 +6,10 @@ class TagController < ApplicationController
 
   def index
 		respond_to do |format|
-		    format.rss	{ @entries = Tag.all_rss(@tag) }
-		    format.mrss	{ @entries = Tag.all_mrss(@tag) }		
-		    format.html	{ @entries = Tag.all(@tag) }
+	    	format.html		{ @entries = Tag.all(@tag) }
+				format.xhtml 	{ @entries = Tag.all(@tag) }
+		    format.rss		{ @entries = Tag.all_rss(@tag) }
+		    format.mrss		{ @entries = Tag.all_mrss(@tag) }		
 		  end
   end
 
@@ -38,8 +39,9 @@ class TagController < ApplicationController
 
   def timeline
 		respond_to do |format|
-		    format.rss	{ redirect_to :controller => "tag", :tag=> params[:tag], :format => "rss" }
-		    format.html	{ @entries = Tag.timeline(@tag) }
+		    format.html		{ @entries = Tag.timeline(@tag) }
+				format.xhtml	{ @entries = Tag.timeline(@tag) }
+		    format.rss		{ redirect_to :controller => "tag", :tag=> params[:tag], :format => "rss" }
 		  end
   end
 
@@ -70,10 +72,12 @@ class TagController < ApplicationController
 				@tag.gsub!(var, '+')
 			end
 
-			@tag.gsub!(/([^ a-zA-Z0-9_.-\\+]+)/n,nil.to_s)
+			@tag.gsub!(/([^ a-zA-Z0-9_\.-\\+]+)/n,nil.to_s)
+			@tag.gsub!(/\W/,nil.to_s)
 			if @tag != params[:tag]
 				redirect_to :action => params[:index], :tag => @tag, :format => params[:format] 	
 			end
 		end
 
 end
+

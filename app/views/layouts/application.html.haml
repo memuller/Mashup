@@ -7,7 +7,6 @@
 			Mashup Can&ccedil;&atilde;o Nova
 		%meta{ "http-equiv"=>"Content-type", :content=>"text/html; charset=utf-8"} 
 		= stylesheet_link_tag "version-2_1-fluid"
-		= #javascript_include_tag :defaults, :cache => true
 		= auto_discovery_link_tag(:atom, :format => "rss", :tag => (@tag.empty?)? "cancaonova" : @tag)
 	%body
 		#page	
@@ -23,7 +22,7 @@
 							%fieldset
 								%label{ :for=>"tag"}
 									= t(:form_tags_label)
-								%input#tag{ :name=>"tags", :size=>"20", :value =>@tag }
+								%input#tag{ :name=>"tag", :size=>"20", :value =>@tag }
 								%button
 									%span
 										= t(:form_tags_button)

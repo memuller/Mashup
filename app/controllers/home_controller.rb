@@ -1,10 +1,23 @@
 class HomeController < ApplicationController
 	
-	caches_page :index, :expires_in => 5.minutes
+	skip_before_filter :check_format
+	caches_page :index
 	
-  def index
-			@data = Home.all
-			@spotlight = Tag.all_rss("cancaonova")[0...10]
+  def index	
+		respond_to do |format|
+	    	format.html	{ 
+					@data = Home.all
+					@spotlight = Tag.all_rss("cancaonova")[0...10]
+				}
+	    	format.xhtml	{ 
+					@data = Home.all
+					@spotlight = Tag.all_rss("cancaonova")[0...10]
+				}
+		    format.rss	{ 
+					@tag = "cancaonova" if @tag.empty? 
+					redirect_to :controller => "tag", :tag=> @tag, :format => "rss" 
+				}
+		  end		
   end
 		
 end

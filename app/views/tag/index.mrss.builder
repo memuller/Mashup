@@ -10,7 +10,7 @@ xml.rss "version" => "2.0",
         xml.title       "MRSS Mashup Cancanova"
  	      xml.link        url_for(:format => "mrss", :only_path => false) 
 				xml.atom :link, :href => url_for(:format => "mrss", :only_path => false), :rel=> "self" 
- 				updated = 			@entries.any? ? Time.now : @entries[0][4] 
+				updated = 			@entries.any? ? @entries[0][4] : Time.now  
         xml.pubDate     CGI.rfc1123_date(updated)
         xml.description "MRSS Mashup Cancanova"
 				xml.icon				"/favicon.ico"

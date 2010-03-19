@@ -21,20 +21,21 @@ class ApplicationController < ActionController::Base
 		end
 
 		def check_format
-	    if params[:format]
+	    if params.has_key? "format"
 				redirect_to "http://mashup.#{self.request.domain}#{self.request.path}.#{params[:format]}"	unless self.request.path.match(/\.([a-z]{3,5})/)				
 	    end
 	  end
 
 		def set_locale
-	    if params[:locale]
+      session[:locale] = nil
+	    if params.has_key? "locale"
 				redirect_to "http://mashup.#{self.request.domain}/#{params[:locale]}#{self.request.path}"	unless self.request.path.match(/\/(en|es)/) unless params[:locale] == I18n.default_locale				
 	      I18n.locale = params[:locale]
 	    end
 	  end
 
-		def set_format_mobi
-			request.format = :xhtml if self.request.domain == 'cancaonova.mobi'
+		def set_format_mobi	
+			params[:format] = "xhtml" if self.request.domain == 'cancaonova.mobi'
 		end
 	  
 	  def redirect_plug4life_to_mashup

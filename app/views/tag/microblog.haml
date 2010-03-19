@@ -1,2 +1,5 @@
 %h2 Microposts
 = render :partial => 'entries', :locals => { :feed => @entries }
+
+= javascript_include_tag :defaults, :cache => true
+

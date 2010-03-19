@@ -73,7 +73,7 @@ class TagController < ApplicationController
 			end
 
 			@tag.gsub!(/([^ a-zA-Z0-9_\.-\\+]+)/n,nil.to_s)
-#			@tag.gsub!(/\W/,nil.to_s)
+			@tag.gsub!(/[^\w+\.]/,nil.to_s)
 			if @tag != params[:tag]
 				redirect_to :action => params[:index], :tag => @tag, :format => params[:format] 	
 			end

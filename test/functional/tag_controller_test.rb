@@ -119,12 +119,6 @@ class TagControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "was item in news with tag PHN" do
-		get :news, 'tag' => "phn"
-		entries = css_select("div.even")
-		assert_not_equal( entries.size, 0, "need some news for PHN" )
-  end
-
   test "only news without tag" do
 		get :news
     assert_response :success
@@ -304,7 +298,7 @@ class TagControllerTest < ActionController::TestCase
 	end
 
 	test "should mrss render withou error" do
-		get :index, :format => "mrss", :tag => "mobile_record_at_04:40pm_"
+		get :index, :format => "mrss", :tag => "mobile_record_at_0440pm_"
 		assert_response :success
 	end
 
@@ -358,21 +352,26 @@ class TagControllerTest < ActionController::TestCase
 	  assert_response :success
 	end
 
-	test "index rss without result" do
+	test "should show index rss without result" do
 		get :index, :format => "rss", :tag => "qwerasdfpoi"
 		assert_equal( 0, assigns(:entries).size, "index ATOM must have zero for qwerasdfpoi" )
 	end
 	
-  test "all media content" do
-		get :index, "tag" => "phn"
+  test "should return all media content" do
+		get :index, :tag => "phn"
     assert_response :success
+  end
+
+  test "should remove non caracter string but leave the plus" do
+		get :index, :tag => "acampamento+casais;"
+		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "acampamento+casais"}
   end
 
 
 # test rss link_to
 
-	test "link to rss" do
-		get :index , "tag" => "cancaonova"
+	test "should link to rss" do
+		get :index , :tag => "cancaonova"
 		assert_select 'div#footer a.rss[href=?]' , "/cancaonova.rss"
 	end
 

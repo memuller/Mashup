@@ -303,7 +303,7 @@ class TagControllerTest < ActionController::TestCase
 	end
 
   test "should link to tag phn in spanish" do
-		get :index, 'locale' => "es", :tag => "phn"
+		get :index, :locale => "es", :tag => "phn"
 		assert_select 'div#footer a[href=?]' , "/es/phn"
   end
 
@@ -365,6 +365,11 @@ class TagControllerTest < ActionController::TestCase
   test "should remove non caracter string but leave the plus" do
 		get :index, :tag => "acampamento+casais;"
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "acampamento+casais"}
+  end
+
+  test "should redirect how tag a stranger extension" do
+		get :index, :tag => "cancaonova", :format => "com"
+		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "cancaonova+com"}
   end
 
 

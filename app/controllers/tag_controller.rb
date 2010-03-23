@@ -6,10 +6,13 @@ class TagController < ApplicationController
 
   def index
 		respond_to do |format|
-	    	format.html		{ @entries = Tag.all(@tag) }
 				format.xhtml 	{ @entries = Tag.all(@tag) }
 		    format.rss		{ @entries = Tag.all_rss(@tag) }
 		    format.mrss		{ @entries = Tag.all_mrss(@tag) }		
+	    	format.any		{ 
+												params[:format] = "html"
+												@entries = Tag.all(@tag) 
+											}
 		  end
   end
 

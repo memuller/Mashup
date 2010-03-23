@@ -61,8 +61,10 @@ class ApplicationController < ActionController::Base
 				params[:format] = "xhtml"
 				request.headers['HTTP_ACCEPT'] = "application/xhtml+xml"
 			else
-				params[:format] = "html"
-				request.headers['HTTP_ACCEPT'] = "text/html"
+				unless params.has_key? "format"
+					params[:format] = "html" 
+					request.headers['HTTP_ACCEPT'] = "text/html"
+				end
 			end
 		end
 	  

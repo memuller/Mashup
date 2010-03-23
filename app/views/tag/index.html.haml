@@ -15,10 +15,11 @@
 				.border
 				#videos_content	
 					%p
-						= @entries[:videos].first[2]
-						—
-						= time_ago_in_words @entries[:videos].first[4]
-						= @entries[:videos].first[1]
+						- unless self.request.query_parameters.has_key? "video"
+							= @entries[:videos].first[2]
+							—
+							= time_ago_in_words @entries[:videos].first[4]
+							= @entries[:videos].first[1]
 					= embed_video @entries[:videos].first[5]				
 				.border
 				#videos_thumbnails				

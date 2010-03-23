@@ -1,11 +1,12 @@
 module TagHelper
 	
-	def embed_video url_video
+	def embed_video url_video		
+		url_video = "http://www.youtube.com/watch?v="+params[:video] if self.request.query_parameters.has_key? "video" 
 		"<object width='640' height='385' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0' classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000'>
         <param value='true' name='allowFullScreen'/><param name='wmode' value='opaque'>
-        <param value='#{ url_player_video url_video }&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1' name='src'/>
-        <embed width='640' height='385' wmode='opaque' allowfullscreen='true' src='#{ url_player_video url_video  }&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1' type='application/x-shockwave-flash'/></object>
-			"			
+        <param value='#{ url_player_video url_video }&rel=0&color1=0x3a3a3a&color2=0x999999&hl=#{ I18n.locale.downcase }&feature=player_embedded&fs=1' name='src'/>
+        <embed width='640' height='385' wmode='opaque' allowfullscreen='true' src='#{ url_player_video url_video  }&rel=0&color1=0x3a3a3a&color2=0x999999&hl=#{ I18n.locale.downcase }&feature=player_embedded&fs=1' type='application/x-shockwave-flash'/></object>
+			"		
 	end
 
 	def id_video url

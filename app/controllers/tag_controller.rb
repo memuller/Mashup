@@ -50,6 +50,11 @@ class TagController < ApplicationController
 
   def cooliris
 		@tag = Tag.default_tag("").gsub("+","").gsub(",","") if @tag.empty? 
+		respond_to do |format|
+		    format.html		{ @entries = Tag.timeline(@tag) }
+				format.xhtml	{ @entries = Tag.timeline(@tag) }
+		    format.rss		{ redirect_to :controller => "tag", :tag=> params[:tag], :format => "rss" }
+		  end
   end
 
   def about

@@ -57,7 +57,8 @@
 						= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
 
 					.options
-						= I18n.t('language_legend')
+						%span
+							= I18n.t('language_legend')
 						%a{ :href =>"/"}
 							= t(:language_portuguese) 
 						= link_to t(:language_english), language_path(:locale => "en", :tag => @tag)

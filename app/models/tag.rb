@@ -186,7 +186,7 @@ class Tag
 		end
 
 		def self.remove_redirect_url url		
-				url = CGI::unescape(url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","").gsub(/http:\/\/www.cancaonova.com\/rd\/rd_dt.php\?id=[0-9]*\&url=/,"")	
+				url = CGI::unescape(url).gsub("http://news.google.com/news/url?fd=R&sa=T&url=","").gsub(/http:\/\/www.cancaonova.com\/rd\/rd_dt.php\?id=[0-9]*\&url=/,"").gsub(/http:\/\/www.cancaonova.com\/rd\/rd_pr.php\?id=[0-9]*\&url=/,"")	
 				url = CGI::unescape(url)
 		end
 		

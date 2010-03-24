@@ -203,6 +203,7 @@ h3{font-size:18px}
 #footer{color:#999;margin:1.25em 0 0;padding:.625em;background-color:#f79638}
 	#footer p{width:11.875em;text-align:center;display:inline;font-size:10px;padding-left:1.25em;color:#fff}
 	#footer a{margin:0 0 0 2.5em;font-size:.625em;color:#fff;font-weight:900;}
+		#footer .addthis_toolbox a{margin:0 .5em 0 0;} 
 		#footer a:hover{color:#fff}
 		#footer .container{background:url(img-version-2.1/logo-footer.jpg) 100% 50% no-repeat;line-height:2.5em}
 		#footer a.mobi{margin-right:2em;padding:18px 0 0 28px ;background:url(img-version-2.1/mobile.gif) 0 0 no-repeat}

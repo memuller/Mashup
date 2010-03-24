@@ -11,6 +11,7 @@ en:
   mobile: view {{tags}} in Mashup Mobile
   cooliris: view {{tags}} in Cooliris
   newsletter: Follow Mashup by newsletter
+  share: Share
   language_legend: choice the language
   language_english: 'english'
   language_spanish: 'español'

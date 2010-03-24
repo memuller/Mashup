@@ -281,9 +281,14 @@ class TagControllerTest < ActionController::TestCase
 
 ## index
 
-	test "version mobile" do
+	test "should sucess responde version mobile" do
 		get :index, :format => "xhtml", :tag => "phn"
 		assert_response :success
+	end
+
+	test "should show video id in player" do
+		get :index, {:tag => "phn"},{ :video => "Goo-7QmH7KY"}
+		assert_select 'div#videos_content object embed[src=?]', "http://www.youtube.com/v/Goo-7QmH7KY&rel=0&color1=0x3a3a3a&color2=0x999999&hl=es&feature=player_embedded&fs=1"
 	end
 
 	test "should mrss index success" do

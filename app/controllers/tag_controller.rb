@@ -1,7 +1,7 @@
 class TagController < ApplicationController
 	
 	attr_reader :entries
-	before_filter :clear_tag, :redirect_rss_to_feedburner
+	before_filter :remove_tag_static, :clear_tag, :redirect_rss_to_feedburner
 	caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline  
 
   def index
@@ -95,6 +95,8 @@ class TagController < ApplicationController
 			end
 		end
 
-
+		def remove_tag_static
+			redirect_to request.path.gsub!("/tag/","/") if request.path.include? "/tag/"
+		end
 end
 

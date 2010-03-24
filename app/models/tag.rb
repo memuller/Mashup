@@ -79,6 +79,7 @@ class Tag
 	#TODO refactoring method, too long
 	def self.timeline tag
 		feed = fetch_and_parse_feed( @url_feed, tag )[0...20]			
+		return {} if feed.empty?
 		
 		half_hour, hour, two_hour,four_hour, eight_hour = [], [], [], [], []
 

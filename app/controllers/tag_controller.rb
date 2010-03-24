@@ -88,7 +88,7 @@ class TagController < ApplicationController
 		end
 
 		def redirect_rss_to_feedburner
-			if params[:format] == "rss"    
+			if params[:format] == "rss" and params[:action] == "index"   
 				if params[:tag].nil? or params[:tag] == "cancaonova"
 						redirect_to 'http://feeds.feedburner.com/mashupcancaonova', :status=>:moved_permanently unless request.headers['User-Agent'].match(/FeedBurner/)
 				end	

@@ -1,7 +1,7 @@
 .texts 
 	#microposts
 		%h2 
-			%a{:href => "/microblog/tag/#{params[:tag]}"} Microtexts
+			= link_to "MicroBlog", media_path( :tag => @tag, :action => "microblog")
 		#microposts_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:microblogs][0...5] }
 			= link_to t(:see_more)+" microblogs", media_path( :tag => @tag, :action => "microblog"), :class => "show"
@@ -10,7 +10,7 @@
 	.border
 		.container
 			%h2 
-				%a{:href => "/video/tag/#{params[:tag]}"} Videos
+				= link_to "Videos", media_path( :tag => @tag, :action => "video")
 			- unless @entries[:videos].blank? 
 				.border
 				#videos_content	
@@ -41,26 +41,26 @@
 #text2
 	#blogs
 		%h2
-			= link_to "Blogs",{ :controller => "tag", :tag => @tag, :action => "blog"}		
+			= link_to "Blogs", media_path( :tag => @tag, :action => "blog")		
 		#blogs_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:blogs][0...3] }
 		= link_to t(:see_more)+" blogs", media_path( :tag => @tag, :action => "blog"), :class => "show"
 	#bookmarks
 		%h2 
-			%a{:href => "/bookmark/tag/#{params[:tag]}"} Bookmarks
+			= link_to "Bookmarks", media_path( :tag => @tag, :action => "bookmark")
 		#bookmarks_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:bookmarks][0...3] }
 			= link_to t(:see_more)+" bookmarks", media_path( :tag => @tag, :action => "bookmark"), :class => "show"
 	#news
 		%h2
-			%a{:href => "/news/tag/#{params[:tag]}"} News		
+			= link_to "News", media_path( :tag => @tag, :action => "news")
 		#news_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:news][0...3] }
 		= link_to t(:see_more)+" not&iacute;cias", media_path( :tag => @tag, :action => "news"), :class => "show"
 	#clear
 #photos
 	%h2 
-		= link_to "Photos", :action => "photo", :tag => params[:tag]
+		= link_to "Photos", media_path( :tag => @tag, :action => "photo")
 	- unless @entries[:photos].blank? 
 		#photos_content	
 			%a{:href => @entries[:photos].first[5]} 

@@ -1,7 +1,7 @@
 class TagController < ApplicationController
 	
 	attr_reader :entries
-	before_filter :clear_tag
+	before_filter :clear_tag, :redirect_rss_to_feedburner
 	caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline  
 
   def index
@@ -86,6 +86,15 @@ class TagController < ApplicationController
 				redirect_to :action => params[:index], :tag => @tag, :format => (params[:format] != "html") ? params[:format] : nil	
 			end
 		end
+
+		def redirect_rss_to_feedburner
+			if params[:format] == "rss"    
+				if params[:tag].nil? or params[:tag] == "cancaonova"
+						redirect_to 'http://feeds.feedburner.com/mashupcancaonova', :status=>:moved_permanently unless request.headers['User-Agent'].match(/FeedBurner/)
+				end	
+			end
+		end
+
 
 end
 

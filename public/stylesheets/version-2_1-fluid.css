@@ -421,14 +421,14 @@ div.timeline{border:1px solid #ddd;padding:.5em 0}
 		
 		#spotlight .screenshot
 		,#spotlight .avatar{margin:1.5em 0 0 2em;}
-		#last_up #nav{margin:0 60px}
+		#last_up #nav{margin:0 40px}
 			#last_up #nav a{color:#ccc;padding:0;font-size:4em;margin:0 .05em;text-decoration:none;line-height:.9em;}
 			#last_up #nav .active
 				,#last_up #nav a.active:hover{color:#069;cursor:default}
 			#last_up #nav a:hover{color:#f79638}
 
 			#last_up #nav .more_updates{font-size: 1em; text-decoration: underline;  color: rgb(0, 102, 153);line-height:3em;float:right;}
-			#last_up .more_updates{position: absolute; margin-top: -30px; right: 25px;color: rgb(0, 102, 153)}
+			#last_up .more_updates{position: absolute; margin-top: -33px; right: 0;color: rgb(0, 102, 153)}
 #info{width:45%;float:left;margin:2em 0 2em 2em;color:#069;}
 	#info p{margin-bottom:1em;font-size:1em;}
 		#info a{color:#069;font-size:1em;}

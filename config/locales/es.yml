@@ -23,11 +23,11 @@ es:
   paginate_before: 'anterior'
   paginate_next: 'siguiente'
   tagcloud_header: 'relacionadas'
-  by: 'por'
+  by: por
   ago: 'atr&aacute;s'
   home_about: <p>Mashup es un sitio web o una aplicación web que usa contenido de más de una fuente para crear un nuevo servicio.</p> <p> Mashup La búsqueda Canção Nova en más sitios de contenido multimedia en la Canção Nova y grupos en un solo lugar.</p><p> Ofrecer a la población con un único dirección de Internet para controlar lo que sale de la Canção Nova.</p> <p>Lea más {{about}} Canção Nova
   label_updates: últimas atualizações
-  more_updates: mais atualizações
+  more_updates: ver más acerca de Cancion Nueva
 
   number:
     # Used in number_with_delimiter()

@@ -49,7 +49,7 @@ class TagController < ApplicationController
   end
 
   def cooliris
-		@tag = Tag.default_tag("").gsub("+","").gsub(",","") if @tag.empty? 
+#		@tag = Tag.default_tag("").gsub("+","").gsub(",","") if @tag.empty? 
 		respond_to do |format|
 		    format.html		{ @entries = Tag.timeline(@tag) }
 				format.xhtml	{ @entries = Tag.timeline(@tag) }

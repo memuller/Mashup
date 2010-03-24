@@ -7,7 +7,7 @@
 			Mashup Can&ccedil;&atilde;o Nova
 		%meta{ "http-equiv"=>"Content-type", :content=>"text/html; charset=utf-8"} 
 		= stylesheet_link_tag "version-2_1-fluid"
-		= auto_discovery_link_tag(:atom, :format => "rss", :tag => (@tag.empty?)? "cancaonova" : @tag)
+		= auto_discovery_link_tag(:atom, :format => "rss", :tag => tag_nil?)
 	%body
 		#page	
 			#header
@@ -54,7 +54,7 @@
 							%a.addthis_button_myspace
 							%a.addthis_button_google
 							%a.addthis_button_twitter
-						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
+						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => tag_nil?, :format => "rss"}, :class => "rss"
 						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{I18n.locale.gsub("-","_")}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
 							= t(:newsletter)
 

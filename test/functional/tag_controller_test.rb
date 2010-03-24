@@ -274,9 +274,9 @@ class TagControllerTest < ActionController::TestCase
 
 ## cooliris
 
-	test "version cooliris" do
+	test "should version cooliris set var tag" do
 		get :cooliris
-		assert_equal "cancaonova", assigns(:tag)
+		assert_select 'object#o embed[width=?]', "760"# "feed=http://mashup.cancaonova.com/cancaonova.mrss&style=light"
 	end
 
 ## index

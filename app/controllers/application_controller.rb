@@ -32,8 +32,10 @@ class ApplicationController < ActionController::Base
 		
 		def check_format			
 	    if params.has_key? "format"
-				redirect_to "#{self.request.path}.#{params[:format]}"	unless self.request.path.match(/\.([a-z]{3,5})/)
-				redirect_to "#{request.path.gsub(".", "+")}" unless params[:format].match(/html|xhtml|rss|mrss|iphone/)
+				redirect_path = self.request.path
+				redirect_path = "#{redirect_path}.#{params[:format]}"	unless redirect_path.match(/\.([a-z]{3,5})/)
+				redirect_path = redirect_path.gsub(".", "+") unless params[:format].match(/html|xhtml|rss|mrss|iphone/)
+				redirect_to "#{request.path.gsub(".", "+")}" if self.request.path != redirect_path
 	    end
 	  end
 

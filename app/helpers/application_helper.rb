@@ -25,4 +25,7 @@ module ApplicationHelper
 		item == "video"
 	end
 	
+	def tag_nil?
+		 (@tag.empty?)? "cancaonova" : @tag
+	end
 end

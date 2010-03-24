@@ -27,7 +27,7 @@ pt-BR:
   ago: 'atr&aacute;s'
   home_about: <p>Mashup é um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.</p> <p>O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.</p> <p>Oferecendo ao público um único endereço na internet para acompanhar o que sai sobre a Canção Nova.</p> <p>Leia mais {{about}} Canção Nova
   label_updates: '&uacute;ltimas atualiza&ccedil;&otilde;es'
-  more_updates: 'mais atualiza&ccedil;&otilde;es'
+  more_updates: 'veja mais sobre a Can&ccedil;&atilde;o Nova'
 
  # formatos de data e hora
   date:

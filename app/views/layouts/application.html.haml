@@ -46,18 +46,17 @@
 			#footer
 				.container
 					.syndication
+						.addthis_toolbox.addthis_default_style
+							%a{ :href => "http://www.addthis.com/bookmark.php?v=250&amp;username=mashupcn", :class =>"addthis_button_compact"} 
+								= t(:share)
+							%span{ :class=>"addthis_separator"} |
+							%a.addthis_button_facebook
+							%a.addthis_button_myspace
+							%a.addthis_button_google
+							%a.addthis_button_twitter
 						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => (@tag.empty?)? "cancaonova" : @tag, :format => "rss"}, :class => "rss"
 						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{I18n.locale.gsub("-","_")}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
 							= t(:newsletter)
-
-							.addthis_toolbox.addthis_default_style
-								%a{ :href => "http://www.addthis.com/bookmark.php?v=250&amp;username=mashupcn", :class =>"addthis_button_compact"} 
-									= t(:share)
-								%span{ :class=>"addthis_separator"} |
-								%a.addthis_button_facebook
-								%a.addthis_button_myspace
-								%a.addthis_button_google
-								%a.addthis_button_twitter
 
 					.other_views
 						= link_to "timeline " + @tag, {:controller => "tag", :action => "timeline" , :tag => @tag},  :class => "timeline"

@@ -202,17 +202,19 @@ h3{font-size:18px}
 	
 #footer{color:#999;margin:1.25em 0 0;padding:.625em;background-color:#f79638}
 	#footer p{width:11.875em;text-align:center;display:inline;font-size:10px;padding-left:1.25em;color:#fff}
-	#footer a{margin:0 0 0 2.5em;font-size:.625em;color:#fff;font-weight:900;}
+	#footer a{margin:0 0 1em 2.5em;font-size:.625em;color:#fff;font-weight:900;}
 		#footer .addthis_toolbox a{margin:0 .5em 0 0;} 
+		#footer .addthis_toolbox{margin:0 0 1.2em -3px;}
 		#footer a:hover{color:#fff}
 		#footer .container{background:url(img-version-2.1/logo-footer.jpg) 100% 50% no-repeat;line-height:2.5em}
 		#footer a.mobi{margin-right:2em;padding:18px 0 0 28px ;background:url(img-version-2.1/mobile.gif) 0 0 no-repeat}
 		#footer a.cooliris{background:url(img-version-2.1/cooliris.gif) 0 0 no-repeat;padding:16px 0  0 32px;text-align:left;}
 		#footer .rss
-		,	#footer .newsletter{line-height:13px;margin:0 0 1em;padding:2px 0 0 16px;background:url(img-version-2.1/feed-icon.png) 0 0 no-repeat}		
+		,	#footer .newsletter{line-height:13px;margin:0 0 2em;padding:2px 0 0 20px;background:url(img-version-2.1/feed-icon.png) 0 0 no-repeat}		
 		#footer .newsletter{;background-image:url(img-version-2.1/newsletter.png)}
+		#footer .addthis_toolbox .newsletter{background:none;}
 		#footer fieldset{display:inline}
-		#footer form {color:#fff;font-size:.7em;margin-top:1em;}
+		#footer form {color:#fff;font-size:.7em;margin-top:2em;}
 		.cooliris{text-align:center}
 		#footer .info{clear:both;display:block;padding-top:1em;}
 		.advertise {display:none}

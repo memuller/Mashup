@@ -1,6 +1,6 @@
 document.observe("dom:loaded", function() {
 	Event.observe('search','submit',function(event){
-		tag = escape($F('tag').gsub(' ','+'))
+		tag = encodeURIComponent($F('tag').gsub(' ','+'))
 		document.location='/'+tag;
 		Event.stop(event)
 	})

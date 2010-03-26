@@ -26,12 +26,17 @@ class TagControllerTest < ActionController::TestCase
 	
 ## timeline
 
-	test "request timeline with tag phn" do
+	test "should access timeline with tag phn" do
 		get :timeline, :tag => "phn"
 	  assert_response :success
 	end
 
-	test "request timeline without tag" do
+	test "should acess timeline without result" do
+		get :timeline, :tag => "qwerqwer"
+	  assert_response :success
+	end
+
+	test "should access timeline without tag" do
 		get :timeline
 	  assert_response :success
 	end
@@ -48,6 +53,17 @@ class TagControllerTest < ActionController::TestCase
 		get :blog, :format => "rss", :tag => "phn"
 		assert_valid_feed
 	end
+
+	test "should redirect url with text tag static" do
+		get :blog, :tag => "tag/phn"
+	  assert_response :success
+	end
+
+	test "should redirect blog with cedil" do
+		get :blog, :tag => "oração"
+		assert_redirected_to options = {:controller => "tag", :action => "blog", :tag => "oracao"}
+	end
+
 	test "routing rss blog" do
 		get :blog, :format => "rss", :tag => "phn"
 		assert_routing "/blog/phn.rss", { :controller => 'tag', :action => 'blog', :tag => 'phn', :format => "rss"}
@@ -280,6 +296,11 @@ class TagControllerTest < ActionController::TestCase
 	end
 
 ## index
+
+	test "should redirect blog without dot" do
+		get :index, :tag => "oracao."
+		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao"}
+	end
 
 	test "should sucess responde version mobile" do
 		get :index, :format => "xhtml", :tag => "phn"

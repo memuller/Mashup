@@ -75,13 +75,12 @@ class TagController < ApplicationController
 			return if @tag.empty?
 	
 			@tag = DiacriticsFu::escape( @tag )
-
-			%w("[++]" "[%20]" \s %r{&}).each do |var|
+			%w("[++]" "[%20]" "/\./" \s %r{&}).each do |var|
 				@tag.gsub!(var, '+')
 			end
 
 			@tag.gsub!(/([^ a-zA-Z0-9_\.-\\+]+)/n,nil.to_s)
-			@tag.gsub!(/[^\w+\.]/,nil.to_s)
+			@tag.gsub!(/[^\w\+]|[\+]$/,nil.to_s)
 			if @tag != params[:tag]
 				redirect_to :action => params[:index], :tag => @tag, :format => (params[:format] != "html") ? params[:format] : nil	
 			end

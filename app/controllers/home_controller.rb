@@ -4,14 +4,18 @@ class HomeController < ApplicationController
 	caches_page :index
 	
   def index	
-		respond_to do |format|
+		respond_to do |format|			
 	    	format.xhtml{ 
 					@data = Home.all
 					@spotlight = Tag.all_rss("cancaonova")[0...10]
 				}
 		    format.rss	{ 
 					@tag = "cancaonova" if @tag.empty? 
-					redirect_to :controller => "tag", :tag=> @tag, :format => "rss" 
+					redirect_to :controller => "tag", :tag=> @tag, :format => params[:format] 
+				}
+		    format.mrss	{ 
+					@tag = "cancaonova" if @tag.empty? 
+					redirect_to :controller => "tag", :tag=> @tag, :format => params[:format] 
 				}
 	    	format.any	{ 
 					params[:format] = "html"

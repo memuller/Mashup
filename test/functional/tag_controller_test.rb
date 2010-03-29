@@ -307,11 +307,6 @@ class TagControllerTest < ActionController::TestCase
 		assert_response :success
 	end
 
-	test "should show video id in player" do
-		get :index, {:tag => "phn"},{ :video => "Goo-7QmH7KY"}
-		assert_select 'div#videos_content object embed[src=?]', "http://www.youtube.com/v/Goo-7QmH7KY&rel=0&color1=0x3a3a3a&color2=0x999999&hl=es&feature=player_embedded&fs=1"
-	end
-
 	test "should mrss index success" do
 		get :index, :format => "mrss", :tag => "cancaonova"
 		# assert_valid_feed # can't validate, because not insert OPTIONAL element of mrss

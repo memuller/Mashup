@@ -373,6 +373,7 @@ div.timeline{border:1px solid #ddd;padding:.5em 0}
 			font-size: 1em; 
 			line-height: 1.5em;
 			background-color:#fff;
+			height:7em;
 		}
 		#spotlight div.bookmark
 			,#spotlight div.microblog

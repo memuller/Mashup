@@ -74,12 +74,12 @@ class TagController < ApplicationController
 		def clear_tag
 			return if @tag.empty?
 			@tag = DiacriticsFu::escape( @tag )
-			Array.[](/[++]/, /[%20]/, /\./, /\s/, /%r{&}/).each do |var|
+			Array.[](/\+\+/, /%20/, /\./, /\s/, /%r{&}/).each do |var|
 				@tag.gsub!(var, '+')
 			end
 
-#			@tag.gsub!(/[^\w|\d|\+]|([^\.-\\]+)/n,"+")#nil.to_s)
-			@tag.gsub!(/[^\w\+]|([^ a-zA-Z0-9_\.-\\+]+)/n,"+")#nil.to_s)
+#			@tag.gsub!(/[^\w\d\+]|([^\.-\\]+)/n,"+")#nil.to_s)
+			@tag.gsub!(/([^ a-zA-Z0-9_\.-\\+]+)/n,"+")#nil.to_s)
 			@tag.gsub!(/[\+]$/,nil.to_s)
 			@tag.downcase!
 			if @tag != params[:tag]

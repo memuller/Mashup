@@ -64,7 +64,7 @@
 							= t(:mobile, :tags => @tag) 
 						= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
 
-					.options
+					.options{:style => "display:none"}
 						%span
 							= I18n.t('language_legend')
 						%a{ :href =>"/"}

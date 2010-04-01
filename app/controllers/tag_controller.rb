@@ -73,16 +73,16 @@ class TagController < ApplicationController
 	
 		def clear_tag
 			return if @tag.empty?
-	
 			@tag = DiacriticsFu::escape( @tag )
-			%w("[++]" "[%20]" "/\./" \s %r{&}).each do |var|
+			Array.[](/[++]/, /[%20]/, /\./, /\s/, /%r{&}/).each do |var|
 				@tag.gsub!(var, '+')
 			end
 
-			@tag.gsub!(/([^ a-zA-Z0-9_\.-\\+]+)/n,nil.to_s)
-			@tag.gsub!(/[^\w\+]|[\+]$/,nil.to_s)
+			@tag.gsub!(/[^\w\+]|([^ a-zA-Z0-9_\.-\\+]+)/n,"+")#nil.to_s)
+			@tag.gsub!(/[\+]$/,nil.to_s)
+			@tag.downcase!
 			if @tag != params[:tag]
-				redirect_to :action => params[:index], :tag => @tag, :format => (params[:format] != "html") ? params[:format] : nil	
+					redirect_to :action => params[:action], :tag => @tag, :format =>( (params[:format] != "html") ? params[:format] : nil), :locale => (I18n.locale != I18n.default_locale) ? I18n.locale	: nil					
 			end
 		end
 
@@ -95,7 +95,9 @@ class TagController < ApplicationController
 		end
 
 		def remove_tag_static
-			redirect_to request.path.gsub!("/tag/","/") if request.path.include? "/tag/"
+			if request.path.include? "/tag/" or request.path.include? "/tag%2F"
+				redirect_to request.path.gsub(/\/tag\//,"/").gsub(/\/tag%2F/,"/") 
+			end
 		end
 end
 

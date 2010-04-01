@@ -4,7 +4,7 @@
 			= t(:home_about, :about => link_to( t(:about),about_url) )
 		#last_up
 			%h3 
-				= t(:label_updates)
+				= link_to t(:label_updates), tag_path("cancaonova")
 				
 			.mask
 				.trans
@@ -27,8 +27,7 @@
 			%p#nav.buttons
 				- @spotlight.each_with_index do |entry,index|
 					%a{:href => "#spot_#{index}", :onclick => "return false;"} &bull;
-			%a{:href => "cancaonova", :class => "more_updates" } 
-				= t(:more_updates)
+			= link_to t(:more_updates), tag_path("cancaonova"), :class => "more_updates" 
 
 		.clear	
 	#popular

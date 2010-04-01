@@ -23,38 +23,36 @@ class ApplicationController < ActionController::Base
 		def set_tag_url
 	    if self.request.query_parameters.has_key? "tag"
 				locale = request.query_parameters.tag
-				request.query_string.gsub!(/tag=[a-z]+&/,"")
-				request.query_string.gsub!(/&tag=[a-z]+/,"")
-				request.query_string.gsub!(/\?tag=[a-z]+/,"")
-				redirect_to "#{(params.has_key? "locale" and !self.request.query_parameters.has_key? "locale") ? "/"+params[:locale] : ""}/#{request.query_parameters.tag}?#{request.query_string}"				
+				remove_query_string! Array.[](/tag=[\w]+/, /tag=[\w]+&/, /&tag=[\w]+/, /\?tag=[\w]+/)
+				_locale = "/"+I18n.locale unless I18n.locale == I18n.default_locale
+#				redirect_to "#{_locale}/#{request.query_parameters.tag}?#{request.query_string}"				
+				redirect_to :action => params[:action], :tag => @tag, :format =>( (params[:format] != "html") ? params[:format] : nil), :locale => (I18n.locale != I18n.default_locale) ? I18n.locale	: nil					
 			end
 		end
 		
 		def check_format			
 	    if params.has_key? "format"
 				redirect_path = self.request.path
-				redirect_path = "#{redirect_path}.#{params[:format]}"	unless redirect_path.match(/\.([a-z]{3,5})/)
+				redirect_path = "#{redirect_path}.#{params[:format]}"	unless redirect_path.match(/\.([a-z]{3,6})/)
 				redirect_path = redirect_path.gsub(".", "+") unless params[:format].match(/html|xhtml|rss|mrss|iphone/)
-				redirect_to "#{request.path.gsub(".", "+")}" if self.request.path != redirect_path
+				redirect_to redirect_path if self.request.path != redirect_path
 	    end
 	  end
 
-		def set_locale
+		def set_locale			
       session[:locale] = nil
       cookies.delete :locale
 	    if params.has_key? "locale"
 	      I18n.locale = params[:locale]
 	    end
 	  end
-
+		
 		def set_locale_url
 	    if self.request.query_parameters.has_key? "locale"
-				locale = request.query_parameters.locale
-				request.query_string.gsub!(/locale=[a-z]{2,4}&/,"")
-				request.query_string.gsub!(/&locale=[a-z]{2,4}/,"")
-				request.query_string.gsub!(/\?locale=[a-z]{2,4}/,"")
-				request.query_string.gsub!(/locale=[a-z]{2,4}/,"")
-				redirect_to "/#{locale}#{self.request.path}?#{request.query_string}"	unless self.request.path.match(/\/(en|es)/) unless locale == I18n.default_locale				
+				locale = request.query_parameters.locale				
+				remove_query_string! Array.[](/locale=[a-z]{2,4}&/, /&locale=[a-z]{2,4}/, /\?locale=[a-z]{2,4}/, /locale=[a-z]{2,4}/)			
+#				redirect_to "/#{locale}#{self.request.path}?#{request.query_string}"	unless self.request.path.match(/\/(en|es)/) 	unless locale == I18n.default_locale
+				redirect_to :action => params[:action], :tag => @tag, :format =>( (params[:format] != "html") ? params[:format] : nil), :locale => (I18n.locale != I18n.default_locale) ? I18n.locale	: nil					
 			end
 		end
 		
@@ -76,4 +74,10 @@ class ApplicationController < ActionController::Base
 	    end
 	  end
 
+		def remove_query_string! remove
+			remove.each do |var|
+				self.request.query_string.gsub!(var, '')
+			end			
+		end
+		
 end

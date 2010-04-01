@@ -32,11 +32,8 @@
 %p
 	Para acessar o mrss da Can&ccedil;&atilde;o Nova basta adicionar a a extens&atilde;o &quote;.mrss&quote; ap&oacute;s a url.
 %p
-	ex: 
-	%a{:href=>"/#{@tag}.mrss"} 
-		mashup.cancaonova.com/
-		=@tag
-		.mrss
+	ex:
+	= link_to :controller => "tag", :action => "index", :tag => tag_nil?, :format => "mrss"
 
 = javascript_include_tag :defaults, :cache => true
 

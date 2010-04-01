@@ -77,6 +77,8 @@ class Tag
 	end
 
 	#TODO refactoring method, too long
+	# => alterar para a mediana, segundo quartil, e terceiro quartil
+	#
 	def self.timeline tag
 		feed = fetch_and_parse_feed( @url_feed, tag )[0...20]			
 		return {} if feed.empty?
@@ -139,7 +141,7 @@ class Tag
 								]	
 				elsif feed_url.to_s.include? "twitter.com"
 					feed_urls = set_feed( feed_url, or_microblog( tag ) )
-				elsif
+				else
 					feed_urls = set_feed( feed_url, add_cn_tags( tag , quotes) )								
 				end
 			end

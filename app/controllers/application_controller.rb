@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
       session[:locale] = nil
       cookies.delete :locale
 	    if params.has_key? "locale"
-	      I18n.locale = params[:locale]
+#	      I18n.locale = params[:locale]
 	    end
 	  end
 		

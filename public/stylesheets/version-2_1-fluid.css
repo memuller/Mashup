@@ -23,6 +23,7 @@ table{border-collapse:collapse;border-spacing:0}
 
 h2{font-size:14px}
 h3{font-size:18px}
+a{color:#007CC3;}
 
 #header {height:115px;border-bottom:2px solid #000;background:#f7f7f7 url(img-version-2.1/bg-head.jpg) 0 100% repeat-x;position:relative;min-width:960px;}
 	#header div.top {padding-top:15px;width:700px;float:left;margin-right:10px;}
@@ -51,7 +52,8 @@ h3{font-size:18px}
 	#content h2 a {overflow:hidden;height:28px;line-height:230px;display:block;}
 	#content .first {font-size:16px;}
 	#content p {font-size:12px;margin:0 14px 0 0;}
-	#content a {font-size:12px;color:#4A071C;}
+	#content a {font-size:12px;color:#007CC3;}
+	#content a:visited {font-size:12px;color:#F79638;}
 	
 .texts
  	,#blogs
@@ -370,10 +372,12 @@ div.box div{
 		overflow:auto;
 		width:200px;
 		}
-		.bookmark div.box div
+div.box div small{color:#777;font-size:.8em;display:block;clear:both;text-align:right;}
+	.bookmark div.box div,
+	#page.blog div.box div
 		,.video div.box div{height:120px;}
 
-		div.box div img{float:left;margin:0 .5em .5em 0;}
+		div.box div img{float:left;margin:0 .5em .5em 0;background-color:#eee;padding:2px;border:1px solid #ccc;}
 	.odd{background-color:#eee}
 	div.box .avatar{float:left;margin-right:.25em;border:1px solid #fff;padding:2px;}
 	div.box div.even .avatar{border-color:#eee;}

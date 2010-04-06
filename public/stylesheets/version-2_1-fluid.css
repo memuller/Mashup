@@ -367,15 +367,17 @@ div.box div{
 		padding:1em .5em;
 		border:1px solid #ddd;
 		float:left;
-		height:250px;
+		height:15em;
 		margin:.5em;
 		overflow:auto;
-		width:200px;
+		width:12.5em;
 		}
 div.box div small{color:#777;font-size:.8em;display:block;clear:both;text-align:right;}
-	.bookmark div.box div,
-	#page.blog div.box div
-		,.video div.box div{height:120px;}
+	.bookmark div.box div
+	,.blog div.box div
+	,.news div.box div
+	,.photo div.box div{height:8.5em;}
+	.microblog div.box div{height:11em;}
 
 		div.box div img{float:left;margin:0 .5em .5em 0;background-color:#eee;padding:2px;border:1px solid #ccc;}
 	.odd{background-color:#eee}

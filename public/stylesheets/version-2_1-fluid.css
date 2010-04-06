@@ -24,7 +24,7 @@ table{border-collapse:collapse;border-spacing:0}
 h2{font-size:14px}
 h3{font-size:18px}
 
-#header {height:115px;border-bottom:2px solid #000;background:#2A72A6 url(img-version-2.1/bg-head.jpg) 0 100% repeat-x;position:relative;min-width:960px;}
+#header {height:115px;border-bottom:2px solid #000;background:#f7f7f7 url(img-version-2.1/bg-head.jpg) 0 100% repeat-x;position:relative;min-width:960px;}
 	#header div.top {padding-top:15px;width:700px;float:left;margin-right:10px;}
 	#header h1 {font-size:24px;color:#fff;width:308px;height:78px;background:url(img-version-2.1/mashup-cancaonova.jpg) 0 0 no-repeat;}
 	#header h1 a {display:block;height:100%;}
@@ -200,7 +200,7 @@ h3{font-size:18px}
 	#photos_thumbnails a.on
 	,#photos_thumbnails a:hover {border-color:#999}
 	
-#footer{color:#999;margin:1.25em 0 0;padding:.625em;background-color:#f79638}
+#footer{color:#999;margin:1.25em 0 0;padding:.625em;background-color:#f79638;clear:both;}
 	#footer p{width:11.875em;text-align:center;display:inline;font-size:10px;padding-left:1.25em;color:#fff}
 	#footer a{margin:0 0 1em 2.5em;font-size:.625em;color:#fff;font-weight:900;}
 		#footer .addthis_toolbox a{margin:0 .5em 0 0;} 
@@ -286,6 +286,8 @@ h3{font-size:18px}
 		float: right; 
 		width: 24px; 
 		height: 24px;}
+		
+
 #footer a:hover,#text_content_type p,#text_content_type a,#text_content_type span,#text_content_type h3 {color:#fff;}
 
 /*Bloco adicionado para a negativação de conteudo*/
@@ -322,11 +324,59 @@ float:left;
 #notice {color:#f33}
 #clear,.clear{clear:both;}
 
-div.timeline{border:1px solid #ddd;padding:.5em 0}
-	.timeline div{padding:1em .5em}
+#page.microblog	
+		,#page.blog
+		,#page.photo
+		,#page.news
+		,#page.bookmark
+		,#page.timeline
+		,#page.video {background-color:#f7f7f7;}		
+
+		#page.timeline #content h2
+			,#page.timeline #content h3
+			,#page.timeline #content h4
+			,#page.timeline #content h5
+			,#page.timeline #content h6{clear:both;}
+		
+		#page.microblog	h2
+				,#page.blog	h2
+				,#page.photo	h2
+				,#page.news	h2
+				,#page.bookmark	h2
+				,#page.video h2{color: #444; font-size: 1.5em; margin: 0 .33em;
+					background:url(img-version-2.1/head_title-gray.jpg) no-repeat 0 0;
+					}		
+					#page.microblog	h2{background-position: 0 -30px}
+					#page.blog	h2{background-position: 0 -140px}
+					#page.photo	h2{background-position: 0 -225px}
+					#page.news	h2{background-position: 0 -170px}
+					#page.video	h2{background-position: 0 -200px}
+
+				#page.microblog	h2 span
+						,#page.blog	h2 span
+						,#page.photo	h2 span
+						,#page.news	h2 span
+						,#page.bookmark	h2 span
+						,#page.video h2 span{visibility:hidden;}
+						
+								.origin{display:block; margin:.5em 0}
+div.box div{
+		background-color:#fff;
+		padding:1em .5em;
+		border:1px solid #ddd;
+		float:left;
+		height:250px;
+		margin:.5em;
+		overflow:auto;
+		width:200px;
+		}
+		.bookmark div.box div
+		,.video div.box div{height:120px;}
+
+		div.box div img{float:left;margin:0 .5em .5em 0;}
 	.odd{background-color:#eee}
-	.timeline .avatar{float:left;margin-right:.25em;border:1px solid #fff;padding:2px;}
-	.timeline .even .avatar{border-color:#eee;}
+	div.box .avatar{float:left;margin-right:.25em;border:1px solid #fff;padding:2px;}
+	div.box div.even .avatar{border-color:#eee;}
 	
 .columm{width:30%;float:left;margin:1%;}
 	#content .columm a
@@ -423,7 +473,7 @@ div.timeline{border:1px solid #ddd;padding:.5em 0}
 		#spotlight .screenshot
 		,#spotlight .avatar{margin:1.5em 0 0 2em;}
 		#last_up #nav{margin:0 40px}
-			#last_up #nav a{color:#ccc;padding:0;font-size:4em;margin:0 .05em;text-decoration:none;line-height:.9em;}
+			#last_up #nav a{color:#ccc;padding:0;font-size:3.8em;margin:0 .05em;text-decoration:none;line-height:.9em;}
 			#last_up #nav .active
 				,#last_up #nav a.active:hover{color:#069;cursor:default}
 			#last_up #nav a:hover{color:#f79638}
@@ -444,3 +494,35 @@ div.timeline{border:1px solid #ddd;padding:.5em 0}
 		,#popular .top10 span{position:absolute;width:290px;height:20px; background: #fff url(/stylesheets/img-version-2.1/head_title-popular.jpg) no-repeat 0 -7px;}
 		#popular .week span{background-position:0 -35px;}
 		#popular .top10 span {background-position:0 -66px;}	
+		
+		#sb-title-inner,#sb-info-inner,#sb-loading-inner,div.sb-message{font-family:"HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:200;color:#fff;}
+		#sb-container{position:fixed;margin:0;padding:0;top:0;left:0;z-index:999;text-align:left;visibility:hidden;display:none;}
+		#sb-overlay{position:relative;height:100%;width:100%;}
+		#sb-wrapper{position:absolute;visibility:hidden;width:100px;}
+		#sb-wrapper-inner{position:relative;border:1px solid #303030;overflow:hidden;height:100px;}
+		#sb-body{position:relative;height:100%;}
+		#sb-body-inner{position:absolute;height:100%;width:100%;}
+		#sb-player.html{height:100%;overflow:auto;}
+		#sb-body img{border:none;}
+		#sb-loading{position:relative;height:100%;}
+		#sb-loading-inner{position:absolute;font-size:14px;line-height:24px;height:24px;top:50%;margin-top:-12px;width:100%;text-align:center;}
+		#sb-loading-inner span{background:url("shadowbox/loading.gif") no-repeat;padding-left:34px;display:inline-block;}
+		#sb-body,#sb-loading{background-color:#060606;}
+		#sb-title,#sb-info{position:relative;margin:0;padding:0;overflow:hidden;}
+		#sb-title,#sb-title-inner{height:26px;line-height:26px;}
+		#sb-title-inner{font-size:16px;}
+		#sb-info,#sb-info-inner{height:20px;line-height:20px;}
+		#sb-info-inner{font-size:12px;}
+		#sb-nav{float:right;height:16px;padding:2px 0;width:45%;}
+		#sb-nav a{display:block;float:right;height:16px;width:16px;margin-left:3px;cursor:pointer;background-repeat:no-repeat;}
+		#sb-nav-close{background-image:url("shadowbox/close.png");}
+		#sb-nav-next{background-image:url("shadowbox/next.png");}
+		#sb-nav-previous{background-image:url("shadowbox/previous.png");}
+		#sb-nav-play{background-image:url("shadowbox/play.png");}
+		#sb-nav-pause{background-image:url("shadowbox/pause.png");}
+		#sb-counter{float:left;width:45%;}
+		#sb-counter a{padding:0 4px 0 0;text-decoration:none;cursor:pointer;color:#fff;}
+		#sb-counter a.sb-counter-current{text-decoration:underline;}
+		div.sb-message{font-size:12px;padding:10px;text-align:center;}
+		div.sb-message a:link,div.sb-message a:visited{color:#fff;text-decoration:underline;}
+		

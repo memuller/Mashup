@@ -1,4 +1,6 @@
 document.observe("dom:loaded", function() {
+	Shadowbox.init();
+	
 	Event.observe('search','submit',function(event){
 		tag = encodeURIComponent($F('tag').gsub(' ','+'))
 		document.location='/'+tag;

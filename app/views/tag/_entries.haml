@@ -1,4 +1,9 @@
-.timeline
+- unless title.nil?
+	%h2 
+		%span
+			= title
+
+.box
 	- unless feed.blank? 
 		- reset_cycle 
 		- feed.each do |entry|
@@ -10,15 +15,14 @@
 				%p
 					%b
 						= auto_link entry[2]
-				%p
-					%small
-						= auto_link entry[3]
 				%small
 					= time_ago_in_words entry[4]
 					= entry[1]
 
-				= link_to truncate(entry[5], :length => 50,:ommision =>"..."), entry[5], :class => "origin"
+				= link_to truncate(entry[5], :length => 35,:ommision =>"..."), entry[5], :class => "origin", :rel=>"shadowbox", :title => entry[2]
 
 	- else
 		%small{:class => "no-entrie"}
 			Nenhuma atualiza&ccedil;&atilde;o!
+
+= javascript_include_tag "prototype", "application", "shadowbox", :cache => true

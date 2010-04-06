@@ -1,0 +1,40 @@
+!!!  
+%html
+	%head
+		%title<
+			= @tag
+			= "&mdash;" unless @tag.empty?
+			Mashup Can&ccedil;&atilde;o Nova
+		%meta{ "http-equiv"=>"Content-type", :content=>"text/html; charset=utf-8"} 
+		= stylesheet_link_tag "version-2_1-fluid"
+		= auto_discovery_link_tag(:atom, :format => "rss", :tag => tag_nil?)
+	%body
+		#page	
+			#header
+				.size
+					.top
+						%h1
+							%a.mobi{:href=>"http://mashup.cancaonova.com/"}
+								%span MASHUP.cancaonova.com
+						%p.slogan
+							= t(:slogan)
+						%form#search{ :action=>"/", :method=>"get"}
+							%fieldset
+								%label{ :for=>"tag"}
+									= t(:form_tags_label)
+								%input#tag{ :name=>"tag", :size=>"20", :value =>@tag }
+								%button
+									%span
+										= t(:form_tags_button)
+					.institutional
+						%a.cancaonova{ :href=>"http://cancaonova.com"}
+							= image_tag "http://www.cancaonova.com/i/logo_cancaonova.gif", :size=>"98x67", :alt=>"Logo Canção Nova", :title=>"cancaonova.com"
+						%a{ :href=>"http://euajudo.cancaonova.com"}
+							= t(:institutional_member)
+						%a{ :href=>"http://shopping.cancaonova.com"} Shopping
+						%a{ :href=>"http://noticias.cancaonova.com"}
+							= t(:institutional_news)
+						%a{ :href=>"http://blog.cancaonova.com"} Blogs
+						%a{ :href=>"http://webtvcn.com"} WEBtvCN
+		-debugger				
+		%iframe{ :frameborder => "0", :noresize=>"noresize",  :src => params[:url] , :style => "position: absolute;  background: transparent;   width: 100%; height:100%; top: 0; padding: 32px 0; z-index: 1;"}

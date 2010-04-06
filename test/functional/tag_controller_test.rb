@@ -56,7 +56,7 @@ class TagControllerTest < ActionController::TestCase
 
 	test "should redirect url with text tag static" do
 		get :blog, :tag => "tag/phn"
-	  assert_response :success
+		assert_redirected_to options = {:controller => "tag", :action => "blog", :tag => "phn"}
 	end
 
 	test "should redirect blog with cedil" do
@@ -192,7 +192,7 @@ class TagControllerTest < ActionController::TestCase
 
 ## microblog
 
-	test "valid rss microblog" do
+	test "should be valid rss microblog" do
 		get :microblog, :format => "rss", :tag => "phn"
 		assert_valid_feed
 	end
@@ -218,13 +218,9 @@ class TagControllerTest < ActionController::TestCase
 		assert_xml_select "entry", 1..20
   end
 
-  test "request microblog with tag" do
+  test "should success request microblog for phn and have some itens" do
 		get :microblog, 'tag' => "phn"
     assert_response :success
-  end
-
-  test "item in microblog with tag PHN" do
-		get :microblog, 'tag' => "phn" 
 		assert_select "div.timeline div", 1..20
   end
 
@@ -248,13 +244,9 @@ class TagControllerTest < ActionController::TestCase
 		assert_not_equal( 0, assigns(:entries).size, "need some VIDEO for DUNGA" )
   end
 
-	test "rss video valide" do
+	test "should rss video valide and have some iten phn" do
 		get :video, :format => "rss", :tag => "phn"
 		assert_valid_feed
-	end
-	
-	test "rss video" do
-		get :video, :format => "rss", :tag => "phn"
 		assert_not_equal( 0, assigns(:entries).size, "ATOM need some video for PHN" )
 	end
 
@@ -307,15 +299,12 @@ class TagControllerTest < ActionController::TestCase
 		assert_response :success
 	end
 
+#	test "should mrss index have item" do  ## merge test to performance
 	test "should mrss index success" do
 		get :index, :format => "mrss", :tag => "cancaonova"
 		# assert_valid_feed # can't validate, because not insert OPTIONAL element of mrss
-		assert_response :success
-	end
-
-	test "should mrss index have item" do
-		get :index, :format => "mrss", :tag => "cancaonova"
 		assert_xml_select "item", 1..20
+		assert_response :success
 	end
 
 	test "should mrss render withou error" do
@@ -345,13 +334,33 @@ class TagControllerTest < ActionController::TestCase
 
   test "should correct tag with dotcomma" do
 		get :index, :tag => "palavra;"
-		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "palavra"}
+		assert_redirected_to :controller => "tag", :action => "index", :tag => "palavra"
   end
 
   test "should redirect after correct tag rss" do
 		get :index, :tag => "oração",:format => 'rss'
-		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "oracao", :format => "rss"},"not redirect tag without accent or to ATOM"
+		assert_redirected_to :controller => "tag", :action => "index", :tag => "oracao", :format => "rss"
   end
+
+  test "should redirect after correct tag but mantain language" do
+		get :index, :tag => "oração.", :locale => 'en'
+		assert_redirected_to :controller => "tag", :action => "index", :tag => "oracao", :locale => "en"
+	end
+
+  test "should insert + in url" do
+		get :index, :tag => "bento-xvi"
+		assert_redirected_to :controller => "tag", :action => "index", :tag => "bento+xvi"
+	end
+
+  test "should redirect variant of cancaonova" do
+		get :index, :tag => "cancao+nova"
+		assert_redirected_to :controller => "tag", :tag => "cancaonova"
+	end
+
+  test "should correct cooliris path" do
+		get :cooliris, :tag => "segunda+cancaonova/cooliris"
+		assert_redirected_to :controller => "tag", :action => "cooliris", :tag => "segunda+cancaonova"
+	end
 
 	test "should have entries in rss index" do
 		get :index, :format => "rss", :tag => "phn"
@@ -393,7 +402,6 @@ class TagControllerTest < ActionController::TestCase
 		assert_redirected_to options = {:controller => "tag", :action => "index", :tag => "cancaonova+com"}
   end
 
-
 # test rss link_to
 
 	test "should link to rss" do
@@ -401,7 +409,7 @@ class TagControllerTest < ActionController::TestCase
 		assert_select 'div#footer a.rss[href=?]' , "/cancaonova.rss"
 	end
 
-	test "link to rss english" do
+	test "should in english link to rss root" do
 		get :index , "tag" => "cancaonova", :locale => "en"
 		assert_select 'div#footer a.rss[href=?]' , "/cancaonova.rss"
 	end
@@ -430,15 +438,14 @@ class TagControllerTest < ActionController::TestCase
 
 # institutional
 
-test "should get about" do
-	get :about 
-	assert_response :success
-end
+	test "should get about" do
+		get :about 
+		assert_response :success
+	end
 
-test "should get api" do
-	get :api 
-	assert_response :success
-end
-
+	test "should get api" do
+		get :api 
+		assert_response :success
+	end
 	
 end

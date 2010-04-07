@@ -121,6 +121,7 @@ class Tag
 				feed_url.each do |url|
 					quotes = url[0].to_s == "video"
 					@is_photo = url[0].to_s.include? "photo"
+					@put_quote = url[0].to_s.include?( "blog") or url[0].to_s.include?( "news")
 					if @is_photo or  url[0].to_s.include? "bookmark"
 						feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag , quotes) ) <<	set_feed( url[1], space_tag( tag , quotes) )						
 					elsif url[0].to_s.include? "microblog"
@@ -132,6 +133,7 @@ class Tag
 			else
 				quotes = feed_url.include?( @url_feed[:video] )	
 				@is_photo = feed_url.include? "flickr.com"
+				@put_quote = feed_url.to_s.include?( "blogsearch") || feed_url.to_s.include?( "news.google")
 				if @is_photo or  feed_url.to_s.include? "delicious.com"
 					feed_urls = [
 									set_feed( feed_url, default_tag( tag ) ),			
@@ -154,6 +156,7 @@ class Tag
 			Feedzirra::Feed.fetch_and_parse(
 				feed_urls,		
 				:on_success => lambda {|feedurl, feeditem|
+RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 					feeditem.entries.each do |entry|
 						check_duplicate = 0
 						check_duplicate = @to_merge.find_all{ |i| i[0] == entry.id }.size if @to_merge.size > 0 				
@@ -219,8 +222,12 @@ class Tag
 			
 	  def self.add_cn_tags(tags, quote)
 	    result = remove_tag_default tags
-			result + "+cancaonova" #"+(cancaonova|#{CGI::escape("cançãonova")}|#{quote_tags("cancao%20nova",quote)}|#{quote_tags(CGI::escape("canção%20nova"), quote)})"
-	  end
+			if @put_quote
+				result + "+" + quote_tags( "cancaonova")
+			else
+				result + "+cancaonova"
+		  end
+		end
 
 	  def self.default_tag(tags)
 	    change_tag_default(tags, "cancaonova")

@@ -221,7 +221,7 @@ class TagControllerTest < ActionController::TestCase
   test "should success request microblog for phn and have some itens" do
 		get :microblog, 'tag' => "phn"
     assert_response :success
-		assert_select "div.timeline div", 1..20
+		assert_select "div.box div", 1..20
   end
 
   test "microblog default tag" do
@@ -256,6 +256,11 @@ class TagControllerTest < ActionController::TestCase
 	end
 
 
+		test "should in list video has href link to player swf" do
+			get :video, 'tag' => "dunga"
+			assert_tag :tag => "div", :attributes => {:class => "even"}, :descendant => {:tag => "a",:attributes => {:class => "origin", :href => /&amp;fs=1&amp;rel=0&amp;autoplay=1/ }} 
+		end
+	
 ## photo
 
 	test "photo spiritual" do
@@ -267,6 +272,11 @@ class TagControllerTest < ActionController::TestCase
 	test "photo DUNGA" do
 		get :photo, 'tag' => "dunga"
 		assert_no_tag :tag => "div", :descendant => {:tag => "small",:attributes => { :class => "no-entrie" }} 
+	end
+
+	test "should in list photo has a href link to JPG" do
+		get :photo, 'tag' => "dunga"
+		assert_tag :tag => "div", :attributes => {:class => "even"}, :descendant => {:tag => 'a', :attributes => {:class => 'origin', :href => /.+\.jpg$/}} 
 	end
 
 	test "rss photo" do

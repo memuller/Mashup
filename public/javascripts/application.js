@@ -1,4 +1,4 @@
-document.observe("dom:loaded", function() {
+document.observe('dom:loaded', function() {
 	Shadowbox.init();
 	
 	Event.observe('search','submit',function(event){

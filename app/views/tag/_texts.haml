@@ -13,4 +13,4 @@
 			= time_ago_in_words entry[4]
 			= t(:by)
 			= auto_link_truncate( author_photo(entry[1]) )
-			= auto_link_truncate( entry[5] )
+			= link_to truncate( entry[5], :length => 40,:ommision =>"..."), entry[5], :class => "origin", :rel=>"shadowbox[#{entry[7]}]", :title => entry[5]

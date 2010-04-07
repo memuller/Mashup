@@ -53,7 +53,7 @@ a{color:#007CC3;}
 	#content .first {font-size:16px;}
 	#content p {font-size:12px;margin:0 14px 0 0;}
 	#content a {font-size:12px;color:#007CC3;}
-	#content a:visited {font-size:12px;color:#F79638;}
+	#content a:visited {color:#F79638;}
 	
 .texts
  	,#blogs

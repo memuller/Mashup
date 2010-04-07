@@ -361,29 +361,26 @@ float:left;
 						,#page.bookmark	h2 span
 						,#page.video h2 span{visibility:hidden;}
 						
-								.origin{display:block; margin:.5em 0}
+								.origin{display:block; margin:.5em 0;text-align:right;}
 div.box div{
 		background-color:#fff;
 		padding:1em .5em;
 		border:1px solid #ddd;
 		float:left;
-		height:15em;
+		height:10em;
 		margin:.5em;
 		overflow:auto;
-		width:12.5em;
+		width:17em;
 		}
 div.box div small{color:#777;font-size:.8em;display:block;clear:both;text-align:right;}
 	.bookmark div.box div
 	,.blog div.box div
 	,.news div.box div
 	,.photo div.box div{height:8.5em;}
-	.microblog div.box div{height:11em;}
 
-		div.box div img{float:left;margin:0 .5em .5em 0;background-color:#eee;padding:2px;border:1px solid #ccc;}
+		div.box div img{float:left;margin:0 .6em .8em 0;background-color:#eee;padding:2px;border:1px solid #ccc;}
 	.odd{background-color:#eee}
 	div.box .avatar{float:left;margin-right:.25em;border:1px solid #fff;padding:2px;}
-	.photo div.box .avatar
-	,.video div.box .avatar{float:none;display:block;margin:auto;}
 	
 	div.box div.even .avatar{border-color:#eee;}
 	

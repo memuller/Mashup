@@ -22,7 +22,7 @@
 				- url = entry[5]
 				- url = medium_photo_url(entry[6]) if photo?( entry[7])	
 				- url = url_player_video(entry[5])+"&fs=1&rel=0&autoplay=1" if video?( entry[7])  	
-				= link_to truncate(url, :length => 35,:ommision =>"..."), url, :class => "origin", :rel=>"shadowbox", :title => entry[2]
+				= link_to truncate(url, :length => 35,:ommision =>"..."), url, :class => "origin", :rel=>"shadowbox[#{entry[7]}]", :title => entry[2]
 
 	- else
 		%small{:class => "no-entrie"}

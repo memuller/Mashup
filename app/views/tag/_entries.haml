@@ -9,7 +9,7 @@
 		- feed.each do |entry|
 			%div{:class => cycle("even", "odd")}
 				- unless entry[6].nil? 
-					%img{:src => entry[6], :class => "avatar", :width => "48", :height => "48" }
+					%img{:src => entry[6], :class => "avatar" }
 				- else
 					%img{:src => "http://www.artviper.net/screenshots/screener.php?w=70&amp;userID=17709aa3c85c360&amp;hash=5015222eafdaeddd4e2805645a99abb5&amp;url="+entry[5], :width=>"70", :height=>"52"}
 				%p
@@ -18,7 +18,7 @@
 				%small
 					= time_ago_in_words entry[4]
 					= t(:by)
-					= entry[1]
+					= author_photo(entry[1])
 
 				= link_to truncate(entry[5], :length => 35,:ommision =>"..."), entry[5], :class => "origin", :rel=>"shadowbox", :title => entry[2]
 

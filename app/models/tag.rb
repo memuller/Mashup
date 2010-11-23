@@ -217,7 +217,7 @@ RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 		def self.or_microblog tag
 	    result = remove_tag_default tag
 			quote = false			
-			tag + "&ors=cancaonova+#{CGI::escape("cançãonova")}+#{quote_tags("cancao%20nova",quote)}+#{quote_tags(CGI::escape("canção%20nova"), quote)}"	
+			tag + "&ors=cancaonova+#{CGI::escape("cançãonova")}+#{quote_tags("cancao%20nova",quote)}+#{quote_tags("canção+nova", quote)}"	
 		end
 			
 	  def self.add_cn_tags(tags, quote)

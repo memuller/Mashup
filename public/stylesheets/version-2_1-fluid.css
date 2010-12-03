@@ -379,12 +379,12 @@ div.box div{
 		}
 			
 div.box div small{color:#777;font-size:.8em;display:block;clear:both;text-align:right;}
-	.blog div.box div
+	.microblog	div.box div
+	,.bookmark	div.box div
+	,.blog div.box div
 	,.news div.box div
 	,.photo div.box div{height:8.5em;}
 
-	.microblog	div.box div,
-	.bookmark	div.box div{height:7em}
 
 		div.box div img{float:left;margin:0 .6em .8em 0;background-color:#eee;padding:2px;border:1px solid #ccc;}
 	.odd{background-color:#eee}

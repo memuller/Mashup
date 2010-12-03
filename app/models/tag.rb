@@ -29,7 +29,7 @@ class Tag
 			
 	def self.all tag
 		{
-			:blogs => blog( tag)[0...5]	, 
+			:blogs => blog( tag, 1)[0...5]	, 
 			:news => news( tag)[0...5]	, 
 			:bookmarks => bookmark( tag, 1)[0...5]	,
 			:videos => video( tag, 1)[0...10],

@@ -17,11 +17,11 @@ class TagController < ApplicationController
   end
 
   def video
-		@entries = Tag.video(@tag)
+		@entries = Tag.video(@tag, @page)
   end
 
   def blog
-		@entries = Tag.blog(@tag)
+		@entries = Tag.blog(@tag, @page)
 	end
 
   def news
@@ -33,11 +33,11 @@ class TagController < ApplicationController
   end
 
   def microblog
-		@entries = Tag.microblog(@tag)
+		@entries = Tag.microblog(@tag, @page)
   end
 
   def bookmark
-		@entries = Tag.bookmark(@tag)
+		@entries = Tag.bookmark(@tag, @page)
   end
 
   def timeline

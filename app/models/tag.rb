@@ -1,20 +1,20 @@
 class Tag
 	@url_feed = Hash.new
-	@url_feed[:blog] = "http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=10&start=1&q=##"
+	@url_feed[:blog] = "http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=12&start=#page#&q=##"
 
 	@url_feed[:news] = "http://news.google.com.br/news?cf=all&output=rss&q=##"
 
-	@url_feed[:bookmark] = "http://feeds.delicious.com/v2/xml/recent/?count=10&page=1&tag=##"
+	@url_feed[:bookmark] = "http://feeds.delicious.com/v2/xml/recent/?count=10&tag=##"
 
-	@url_feed[:video] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&search=tag&category=##"
-	@url_feed[:video_query] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&start-index=1&max-results=10&q=##"
+	@url_feed[:video] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&max-results=12&search=tag&start-index=#page#&category=##"
+	@url_feed[:video_query] = "http://gdata.youtube.com/feeds/api/videos/?orderby=published&max-results=12&start-index=#page#&q=##"
 		# feed://www.webtvcn.com/feed
 		# feed://www.dailymotion.com/rss/search/%22canção+nova%22
 		# http://br.video.yahoo.com/rss/video/search?p=cancaonova
 		# http://pipes.yahoo.com/pipes/pipe.run?_id=sA_Kq5ku3RGWYeJBl7okhQ&_render=rss&tag=cancaonova
 	@url_feed[:photo] = "http://www.flickr.com/services/feeds/photos_public.gne?format=rss_200&tags=[##]"
 
-	@url_feed[:microblog] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
+	@url_feed[:microblog] = "http://search.twitter.com/search.atom?rpp=12&page=#page#&q=##"
 #	@url_feed[:microblog_query] = "http://search.twitter.com/search.atom?rpp=10&page=1&q=##"
 #http://search.twitter.com/search.atom?q=&ands=&phrase=&ors=cancaonova+cançãonova&nots=&tag=&lang=all&from=&to=&ref=&near=&within=15&units=mi&since=&until=&rpp=10
 	
@@ -31,41 +31,48 @@ class Tag
 		{
 			:blogs => blog( tag)[0...5]	, 
 			:news => news( tag)[0...5]	, 
-			:bookmarks => bookmark( tag)[0...5]	,
-			:videos => video( tag)[0...10],
-			:microblogs => microblog( tag)[0...10],
+			:bookmarks => bookmark( tag, 1)[0...5]	,
+			:videos => video( tag, 1)[0...10],
+			:microblogs => microblog( tag, 1)[0...10],
 			:photos => photo( tag)[0...10]	
 		}
 	end
 
-	def self.blog tag
-		fetch_and_parse_feed( @url_feed[:blog], tag )[0...10]	
+	def self.blog tag, page
+		page = 12*page.to_i-11
+		url_feed = set_feed_page(@url_feed[:blog], page)
+		fetch_and_parse_feed( url_feed, tag )[0...12]	
 	end
 	
 	def self.news tag
 		fetch_and_parse_feed( @url_feed[:news], tag )[0...10]		
 	end
 	
-	def self.bookmark tag
-		returno = fetch_and_parse_feed( @url_feed[:bookmark], tag )[0...10]		
+	def self.bookmark tag, page
+		first = page.to_i*12
+		last = first + 12
+		feed_url = @url_feed[:bookmark].gsub( %r{count=10}, "count=100" )
+		returno = fetch_and_parse_feed( feed_url , tag )[first...last]	
 	end
 	
 	def self.photo tag
 		fetch_and_parse_feed( @url_feed[:photo], tag )[0...10]		
 	end
 
-	def self.video tag
+	def self.video tag, page
+		page = 12*page.to_i-11
 		fetch_and_parse_feed( {
-											:video => @url_feed[:video], 
-											:video_query => @url_feed[:video_query]
-											}	, tag )[0...10]		
+											:video => set_feed_page(@url_feed[:video], page), 
+											:video_query => set_feed_page( @url_feed[:video_query], page)
+											}	, tag )[0...12]		
 
 	end
 
-	def self.microblog tag
+	def self.microblog tag, page
+		url_feed = set_feed_page(@url_feed[:microblog], page)
 		fetch_and_parse_feed( {
-										:microblog => @url_feed[:microblog]
-										}, tag )[0...10]		
+										:microblog => url_feed
+										}, tag )[0...12]		
 
 	end
 
@@ -181,10 +188,16 @@ RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 				},	
 				:on_failure => lambda {|url, response_code, response_header, response_body|
 					RAILS_DEFAULT_LOGGER.error { "Url feed	= #{url} | code = #{response_code} | header = #{response_header}" }
+					@to_merge = []
 				}
 			)
 			@to_merge.uniq!
 			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse			
+		end
+
+		def self.set_feed_page feed, page
+Rails.logger.debug feed.gsub( %r{#page#}, page.to_s )			
+			feed.gsub( %r{#page#}, page.to_s ) unless feed.nil?
 		end
 
 		def self.set_feed feed, tag

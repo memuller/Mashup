@@ -24,6 +24,19 @@
 				- url = url_player_video(entry[5])+"&fs=1&rel=0&autoplay=1" if video?( entry[7])  	
 				= link_to truncate(url, :length => 35,:ommision =>"..."), url, :class => "origin", :rel=>"shadowbox[#{entry[7]}]", :title => entry[2]
 
+		#videos_nav
+			%span.folio
+				= t(:paginate_legend)
+				= @page
+			- if @page.to_i > 1
+				= link_to( t(:paginate_before), media_tag_paginate_path( params[:action], tag_nil?, @page.to_i-1), :class=>"before") 
+			- else	
+				= link_to( t(:paginate_before), "#", :class=>"before disable") 
+			- if feed.size < 12
+				= link_to t(:paginate_next), "#", :class=>"next disable"
+			- else
+				= link_to t(:paginate_next), media_tag_paginate_path( params[:action], tag_nil?, @page.to_i+1), :class=>"next"
+			
 	- else
 		%small{:class => "no-entrie"}
 			Nenhuma atualiza&ccedil;&atilde;o!

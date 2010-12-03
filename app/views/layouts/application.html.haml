@@ -55,7 +55,7 @@
 							%a.addthis_button_google
 							%a.addthis_button_twitter
 						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => tag_nil?, :format => "rss", :locale => nil}, :class => "rss"
-						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{I18n.locale.gsub("-","_")}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
+						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{I18n.locale.to_s.gsub("-","_")}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
 							= t(:newsletter)
 
 					.other_views
@@ -103,7 +103,7 @@
 			background_color:'#097EB3', 
 			text_color: 'white',
 			hover_color: '#06C',
-			= "lang: '"+I18n.locale.gsub('-','_')+"'"
+			= "lang: '"+I18n.locale.to_s.gsub('-','_')+"'"
 			})
 
 		%script{:type => "text/javascript"}
@@ -118,7 +118,7 @@
 
 		%script{:type => "text/javascript"}
 			var addthis_config = {
-			= "ui_language: '"+I18n.locale.gsub('-BR','')+"'"
+			= "ui_language: '"+I18n.locale.to_s.gsub('-BR','')+"'"
 			,data_ga_tracker: pageTracker,data_track_linkback: true}
 		= javascript_include_tag "http://s7.addthis.com/js/250/addthis_widget.js#username=mashupcn"
 

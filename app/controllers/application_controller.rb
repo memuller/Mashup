@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 	
-  before_filter :set_tag_url, :check_format, :set_format_mobi, :set_locale_url, :set_locale, :redirect_plug4life_to_mashup, :set_tag!
+  before_filter :set_tag_url, :check_format, :set_format_mobi, :set_locale_url, :set_locale, :redirect_plug4life_to_mashup, :set_tag!, :set_page!
 
 	private
 	
@@ -18,6 +18,11 @@ class ApplicationController < ActionController::Base
 			else
 				@tag = params[:tag]
 			end			
+		end
+
+		def set_page!
+			@page = 1
+			@page = params[:page] if params.include? "page"
 		end
 
 		def set_tag_url

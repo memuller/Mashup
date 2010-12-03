@@ -25,14 +25,14 @@
 				#videos_thumbnails				
 					- @entries[:videos][0...10].each do |entry|
 						%a{:href => entry[5], :id => id_video(entry[5]) , :title => entry[2] + " &mdash; " + time_ago_in_words( entry[4]) +" "+ entry[1]} 
-							= image_tag entry[6]
+							= image_tag entry[6].to_s
 				#videos_nav
-					%span.folio
+					%span.folio.hidden
 						= t(:paginate_legend)
 						777
-					%a{:href=>"/" ,:class=>"before disable"}
+					%a{:href=>"/" ,:class=>"before disable hidden"}
 						= t(:paginate_before)
-					%a{:href=>"/" ,:class=>"next disable"}
+					%a{:href=>"/" ,:class=>"next disable hidden"}
 						= t(:paginate_next)
 					%span.ajax-loader
 					= link_to t(:see_more)+" videos", media_path( :tag => @tag, :action => "video"), :class => "show"
@@ -78,12 +78,12 @@
 						= t(:by)
 						= author_photo(entry[1])
 		#photos_nav
-			%span.folio
+			%span.folio.hidden
 				= t(:paginate_legend)
 				777
-			%a{:href=>"/" ,:class=>"before disable"}
+			%a{:href=>"/" ,:class=>"before disable hidden"}
 				= t(:paginate_before)
-			%a{:href=>"/" ,:class=>"next disable"}
+			%a{:href=>"/" ,:class=>"next disable hidden"}
 				= t(:paginate_next)
 			%span.ajax-loader
 			= link_to t(:see_more)+" photos", media_path( :tag => @tag, :action => "photo"), :class => "show"

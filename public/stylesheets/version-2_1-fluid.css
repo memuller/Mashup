@@ -175,18 +175,23 @@ a{color:#007CC3;}
 
 	#videos_nav,#photos_nav {clear:both;}
 	#videos_nav {padding-left:0;margin:7px 0 0;}
-		#videos_nav a.before,#videos_nav a.next,#photos_nav a.before,#photos_nav a.next, #videos_nav a.before.disable, #photos_nav a.before.disable, #videos_nav a.next.disable,#photos_nav a.next.disable {overflow:hidden;line-height:500px;background:url(img-version-2.1/bt-pag-navigation.gif) 0 0 no-repeat;float:left;display:block;height:36px;width:90px;}
+		#videos_nav a.before, #videos_nav a.next,
+		#photos_nav a.before, #photos_nav a.next, 
+		#videos_nav a.before.disable, #photos_nav a.before.disable, 
+		#videos_nav a.next.disable, #photos_nav a.next.disable {overflow:hidden;line-height:500px;background:url(img-version-2.1/bt-pag-navigation.gif) 0 0 no-repeat;float:left;display:block;height:36px;width:90px;}
 		#videos_nav a.next,#photos_nav a.next {background-position:100% 0;}
 		#videos_nav a.next:hover,#photos_nav a.next:hover {background-position:100% -36px;}
 		#videos_nav a.before:hover,#photos_nav a.before:hover {background-position:0 -36px;}
-		#videos_nav a.before.disable, #photos_nav a.before.disable{ background-position:0 -66px;}/*classe adicionada para desabilitar a paginação*/
+		#videos_nav a.before.disable, #photos_nav a.before.disable{ background-position:0 -66px;cursor:default;}/*classe adicionada para desabilitar a paginação*/
 		#videos_nav a.next.disable, #photos_nav a.next.disable{ background-position:100% -66px; cursor:default;}/*classe adicionada para desabilitar a paginação*/
 
 	#videos_nav a.show {padding:8px 7px 0 0;}
 
-	#photos_nav {padding-left:425px;margin:0;}
-	#photos_nav a.show {padding:10px 8px 10px 0;}
+	#photos_nav{padding-left:425px;margin:0;}
+	#photos_nav a.show{padding:10px 8px 10px 0;}
 
+	.box #videos_nav{float:none;clear:both;border:none;background-color:transparent;height:auto;margin:auto;}
+	
 #photos {background-color:#eee;border:1px solid #e3e3e3;border-width:0 1px;padding:10px 6px;}
 	#photos h2 {width:40%;height:28px;float:left;margin:0;}
 
@@ -372,11 +377,14 @@ div.box div{
 		overflow:auto;
 		width:17em;
 		}
+			
 div.box div small{color:#777;font-size:.8em;display:block;clear:both;text-align:right;}
-	.bookmark div.box div
-	,.blog div.box div
+	.blog div.box div
 	,.news div.box div
 	,.photo div.box div{height:8.5em;}
+
+	.microblog	div.box div,
+	.bookmark	div.box div{height:7em}
 
 		div.box div img{float:left;margin:0 .6em .8em 0;background-color:#eee;padding:2px;border:1px solid #ccc;}
 	.odd{background-color:#eee}
@@ -532,3 +540,6 @@ div.box div small{color:#777;font-size:.8em;display:block;clear:both;text-align:
 		div.sb-message{font-size:12px;padding:10px;text-align:center;}
 		div.sb-message a:link,div.sb-message a:visited{color:#fff;text-decoration:underline;}
 		
+.no-entrie{display: block; text-align: center; padding: 3em 0pt 10em;}
+
+.hidden{visibility:hidden;}

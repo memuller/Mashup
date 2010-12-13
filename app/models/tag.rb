@@ -31,7 +31,7 @@ class Tag
 		{
 			:blogs => blog( tag, 1)[0...5]	, 
 			:news => news( tag)[0...5]	, 
-			:bookmarks => bookmark( tag, 1)[0...5]	,
+			:bookmarks => bookmark( tag, 1).to_a[0...5]	,
 			:videos => video( tag, 1)[0...10],
 			:microblogs => microblog( tag, 1)[0...10],
 			:photos => photo( tag)[0...10]	
@@ -52,7 +52,7 @@ class Tag
 		first = page.to_i*12
 		last = first + 12
 		feed_url = @url_feed[:bookmark].gsub( %r{count=10}, "count=100" )
-		returno = fetch_and_parse_feed( feed_url , tag )[first...last]	
+		fetch_and_parse_feed( feed_url , tag )[first...last]	
 	end
 	
 	def self.photo tag
@@ -192,7 +192,7 @@ RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 				}
 			)
 			@to_merge.uniq!
-			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse			
+			@to_merge.sort{ |row1,row2| row1[4] <=> row2[4]}.reverse
 		end
 
 		def self.set_feed_page feed, page

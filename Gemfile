@@ -1,0 +1,16 @@
+source :gemcutter
+
+gem "rails", "2.3.11"
+
+gem "feedzirra"
+gem "gattica"
+gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'sqlite3-ruby'
+gem "hash_extension"
+gem "rufus-scheduler", :require => 'bcrypt'
+gem "hoptoad_notifier"
+
+group :development, :test do
+	gem "metric_fu"
+	gem "diacritics_fu"
+end

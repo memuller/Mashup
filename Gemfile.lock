@@ -15,6 +15,7 @@ GEM
     arrayfields (4.7.4)
     bcrypt-ruby (2.1.4)
     builder (3.0.0)
+    cgi_multipart_eof_fix (2.5.0)
     chronic (0.3.0)
     churn (0.0.13)
       chronic (>= 0.2.3)
@@ -25,8 +26,10 @@ GEM
       sexp_processor (~> 3.0.3)
     colored (1.2)
     curb (0.7.15)
+    daemons (1.1.4)
     diacritics_fu (1.0.3)
     erubis (2.7.0)
+    fastthread (1.0.7)
     fattr (2.2.0)
     feedzirra (0.0.24)
       activesupport (>= 2.3.8)
@@ -43,6 +46,7 @@ GEM
       sexp_processor (~> 3.0)
     gattica (0.4.3)
       hpricot (>= 0.6.164)
+    gem_plugin (0.2.3)
     haml (3.1.2)
     hash_extension (0.0.4)
     hirb (0.4.5)
@@ -69,6 +73,11 @@ GEM
       reek (>= 1.2.6)
       roodi (>= 2.1.0)
       syntax
+    mongrel (1.1.5)
+      cgi_multipart_eof_fix (>= 2.4)
+      daemons (>= 1.0.3)
+      fastthread (>= 1.0.1)
+      gem_plugin (>= 0.2.3)
     nokogiri (1.4.6)
     rack (1.1.2)
     rails (2.3.11)
@@ -122,6 +131,7 @@ DEPENDENCIES
   hash_extension
   hoptoad_notifier
   metric_fu
+  mongrel
   rails (= 2.3.11)
   rufus-scheduler
   sqlite3-ruby

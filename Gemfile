@@ -11,6 +11,7 @@ gem "rufus-scheduler", :require => 'bcrypt'
 gem "hoptoad_notifier"
 
 group :development, :test do
+	gem "mongrel"
 	gem "metric_fu"
 	gem "diacritics_fu"
 end

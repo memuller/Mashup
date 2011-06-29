@@ -8,8 +8,8 @@ pt-BR:
   copyright: 'todos os direitos reservados'
   about: 'sobre o Mashup'
   api: 'API para desenvolvedores'
-  mobile: veja o {{tags}} no Mashup Mobile
-  cooliris: veja o {{tags}} no Cooliris
+  mobile: veja o %{tags} no Mashup Mobile
+  cooliris: veja o %{tags} no Cooliris
   newsletter: Acompanhe o mashup via newsletter
   share: Compartilhar
   language_legend: 'mude o idioma'
@@ -25,7 +25,7 @@ pt-BR:
   tagcloud_header: 'relacionadas'
   by: 'por'
   ago: 'atr&aacute;s'
-  home_about: <p>Mashup é um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.</p> <p>O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.</p> <p>Oferecendo ao público um único endereço na internet para acompanhar o que sai sobre a Canção Nova.</p> <p>Leia mais {{about}} Canção Nova
+  home_about_html: "<p>Mashup é um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.</p> <p>O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.</p> <p>Oferecendo ao público um único endereço na internet para acompanhar o que sai sobre a Canção Nova.</p> <p>Leia mais %{about} Canção Nova"
   label_updates: '&uacute;ltimas atualiza&ccedil;&otilde;es'
   more_updates: 'veja mais sobre a Can&ccedil;&atilde;o Nova'
 
@@ -56,43 +56,46 @@ pt-BR:
       half_a_minute: 'meio minuto'
       less_than_x_seconds:
         one: 'menos de 1 segundo'
-        other: 'menos de {{count}} segundos'
+        other: 'menos de %{count} segundos'
       
       x_seconds:
         one: '1 segundo'
-        other: '{{count}} segundos'
+        other: '%{count} segundos'
       
       less_than_x_minutes:
         one: 'menos de um minuto'
-        other: 'menos de {{count}} minutos'
+        other: 'menos de %{count} minutos'
       
       x_minutes:
         one: '1 minuto'
-        other: '{{count}} minutos'
+        other: '%{count} minutos'
       
       about_x_hours:
         one: 'aproximadamente 1 hora'
-        other: 'aproximadamente {{count}} horas'
+        other: 'aproximadamente %{count} horas'
       
       x_days:
         one: '1 dia'
-        other: '{{count}} dias'
+        other: '%{count} dias'
       
       about_x_months:
         one: 'aproximadamente 1 mês'
-        other: 'aproximadamente {{count}} meses'
+        other: 'aproximadamente %{count} meses'
       
       x_months:
         one: '1 mês'
-        other: '{{count}} meses'
+        other: '%{count} meses'
       
       about_x_years:
         one: 'aproximadamente 1 ano'
-        other: 'aproximadamente {{count}} anos'
+        other: 'aproximadamente %{count} anos'
       
       over_x_years:
         one: 'mais de 1 ano'
-        other: 'mais de {{count}} anos'
+        other: 'mais de %{count} anos'
+      almost_x_years:
+        one: 'quase um ano'
+        other: 'quase %{count} anos'
     prompts:
       year: "Ano"
       month: "Mês"

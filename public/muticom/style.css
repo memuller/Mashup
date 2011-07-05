@@ -2,11 +2,11 @@
 /* ////////// MUTICOM 2011 ////////// */
 /* ////////////////////////////////// */
 
-#header {height:135px;border-bottom:#BBBBBB 1px solid;background:url(muticom/bg-head.jpg) repeat-x 0 0;}
+#header {height:135px;border-bottom:#BBBBBB 1px solid;background:url(bg-head.jpg) repeat-x 0 0;}
 	#header div.top {padding-top:20px;width:640px;float:left;padding-left:10px;}
 	.top .logo {width:289px;float:left;padding:21px 0 0 0;}
-		#header h1{float:right; background:url(muticom/logo_mashup.png); width:185px;height:72px;}
-		#header h2{float:left; background:url(muticom/logo_cn.png); width:88px;height:72px;}
+		#header h1{float:right; background:url(logo_mashup.png); width:185px;height:72px;}
+		#header h2{float:left; background:url(logo_cn.png); width:88px;height:72px;}
 			#header h2 a {display:block;height:100%;}
 			#header h2 span{display:none;}
 	.top #search {width:300px;float:right;margin-top:49px;}
@@ -23,8 +23,10 @@
 	
 	#header div.logoevento{float:right;margin-right:10px;padding:35px 15px 0;text-align:right;height:100px;background:#ffffff;}
 
-#footer .container {background: url(muticom/logo-footer.jpg) no-repeat scroll 100% 50% transparent;width:940px;}
+#footer .container {background: url(logo-footer.jpg) no-repeat scroll 100% 50% transparent;width:940px;}
 
+
+/* Removes unwanted stuff from Muticom. */
 #blogs, #news, #tagcloud{display:none;}
 
 #content{padding-top:10px;}

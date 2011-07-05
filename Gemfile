@@ -12,6 +12,7 @@ gem "hoptoad_notifier"
 
 group :development, :test do
 	gem "mongrel"
+	gem "ruby-debug"
 	gem "metric_fu"
 	gem "diacritics_fu"
 end

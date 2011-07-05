@@ -7,7 +7,7 @@
 			Mashup Can&ccedil;&atilde;o Nova
 		%meta{ "http-equiv"=>"Content-type", :content=>"text/html; charset=utf-8"} 
 		= stylesheet_link_tag "version-2_1-fluid"
-		%link{:href => "muticom/style.css", :media => 'screen', :rel => 'stylesheet'}
+		%link{:href => "muticom/style.css", :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}
 		= auto_discovery_link_tag(:rss, :format => "rss", :tag => tag_nil?)
 	%body
 		#page{:class => self.request.path_parameters.action}	
@@ -19,24 +19,24 @@
 						%a{:href => "http://noticias.cancaonova.com/"} Notícias
 						%a{:href => "http://blog.cancaonova.com/"} Blogs
 						%a{:href => "http://webtvcn.com/"} WEBtvCN
-				.top
-					.logo
-						%h1
-							%a{:href => "http://mashup.cancaonova.com/", :title => "Página Inicial do Mashup Canção Nova"}
-								%span mashup.cancaonova.com - coberturas online de eventos
-						%h2
-							%a{:href => "http://www.cancaonova.com/", :title => "cancaonova.com"}
-								%span Canção Nova
-					%form#search{:action => "/", :method => "get"}
-						%fieldset
-							%label{:for => "tag"}
-								= t(:form_tags_label)
-							%input#tag{:name => "tag", :size => "20", :value => @tag}
-							%button
-								%span
-									= t(:form_tags_button)
-				.logoevento
-					%img{:alt => "Muticom 2011", :height => "80", :src => "muticom/logo_muticom.jpg", :title => "logo Muticom 2011"}/
+					.top
+						.logo
+							%h1
+								%a{:href => "http://mashup.cancaonova.com/", :title => "Página Inicial do Mashup Canção Nova"}
+									%span mashup.cancaonova.com - coberturas online de eventos
+							%h2
+								%a{:href => "http://www.cancaonova.com/", :title => "cancaonova.com"}
+									%span Canção Nova
+						%form#search{:action => "/", :method => "get"}
+							%fieldset
+								%label{:for => "tag"}
+									= t(:form_tags_label)
+								%input#tag{:name => "tag", :size => "20", :value => @tag}
+								%button
+									%span
+										= t(:form_tags_button)
+					.logoevento
+						%img{:alt => "Muticom 2011", :height => "80", :src => "muticom/logo_muticom.jpg", :title => "logo Muticom 2011"}/
 			- if flash[:notice]
 				#notice
 					= flash[:notice]

@@ -1,8 +1,8 @@
 class TagController < ApplicationController
 	
 	attr_reader :entries
-	before_filter :remove_tag_static, :clear_tag, :redirect_rss_to_feedburner
-	caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline  
+	before_filter :remove_tag_static, :clear_tag, :redirect_rss_to_feedburner, :event_page
+	caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline
 
   def index
 		respond_to do |format|
@@ -10,9 +10,9 @@ class TagController < ApplicationController
 		    format.rss		{ @entries = Tag.all_rss(@tag) }
 		    format.mrss		{ @entries = Tag.all_mrss(@tag) }		
 	    	format.any		{ 
-												params[:format] = "html"
-												@entries = Tag.all(@tag) 
-											}
+								params[:format] = "html"
+								@entries = Tag.all(@tag)
+							}
 		  end
   end
 

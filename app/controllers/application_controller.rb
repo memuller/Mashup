@@ -11,7 +11,13 @@ class ApplicationController < ActionController::Base
   before_filter :set_tag_url, :check_format, :set_format_mobi, :set_locale_url, :set_locale, :redirect_plug4life_to_mashup, :set_tag!, :set_page!
 
 	private
-	
+		
+		def event_page
+			if @tag.include? 'muticom'
+				prepend_view_path "app/views/muticom"
+			end
+		end
+			
 		def set_tag!
 			unless params.include? "tag"
 				@tag = ""

@@ -1,0 +1,126 @@
+!!! Strict 
+%html
+	%head
+		%title<
+			= @tag
+			= "&mdash;" unless @tag.empty?
+			Mashup Can&ccedil;&atilde;o Nova
+		%meta{ "http-equiv"=>"Content-type", :content=>"text/html; charset=utf-8"} 
+		= stylesheet_link_tag "version-2_1-fluid"
+		%link{:href => "muticom/style.css", :media => 'screen', :rel => 'stylesheet'}
+		= auto_discovery_link_tag(:rss, :format => "rss", :tag => tag_nil?)
+	%body
+		#page{:class => self.request.path_parameters.action}	
+			#header
+				.size
+					.institutional
+						%a{:href => "http://euajudo.cancaonova.com/"} Seja sócio
+						%a{:href => "http://shopping.cancaonova.com/"} Shopping
+						%a{:href => "http://noticias.cancaonova.com/"} Notícias
+						%a{:href => "http://blog.cancaonova.com/"} Blogs
+						%a{:href => "http://webtvcn.com/"} WEBtvCN
+				.top
+					.logo
+						%h1
+							%a{:href => "http://mashup.cancaonova.com/", :title => "Página Inicial do Mashup Canção Nova"}
+								%span mashup.cancaonova.com - coberturas online de eventos
+						%h2
+							%a{:href => "http://www.cancaonova.com/", :title => "cancaonova.com"}
+								%span Canção Nova
+					%form#search{:action => "/", :method => "get"}
+						%fieldset
+							%label{:for => "tag"}
+								= t(:form_tags_label)
+							%input#tag{:name => "tag", :size => "20", :value => @tag}
+							%button
+								%span
+									= t(:form_tags_button)
+				.logoevento
+					%img{:alt => "Muticom 2011", :height => "80", :src => "muticom/logo_muticom.jpg", :title => "logo Muticom 2011"}/
+			- if flash[:notice]
+				#notice
+					= flash[:notice]
+			
+			#content
+				= yield	
+				
+			#footer
+				.container
+					.syndication
+						.addthis_toolbox.addthis_default_style
+							%a{ :href => "http://www.addthis.com/bookmark.php?v=250&amp;username=mashupcn", :class =>"addthis_button_compact"} 
+								= t(:share)
+							%span{ :class=>"addthis_separator"} |
+							%a.addthis_button_facebook
+							%a.addthis_button_myspace
+							%a.addthis_button_google
+							%a.addthis_button_twitter
+						= link_to "Feed/RSS #{@tag}", {:controller => "tag", :action => params[:action], :tag => tag_nil?, :format => "rss", :locale => nil}, :class => "rss"
+						%a{ :href => "http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{params[:locale]}", :onclick => "window.open('http://feedburner.google.com/fb/a/mailverify?uri=MashupCancaoNova&amp;loc=#{I18n.locale.to_s.gsub("-","_")}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return false", :class=>"newsletter"}
+							= t(:newsletter)
+
+					.other_views
+						= link_to "timeline " + @tag, {:controller => "tag", :action => "timeline" , :tag => @tag},  :class => "timeline"
+						%a.mobi{ :href=>"http://mashup.cancaonova.mobi/"+@tag} 
+							= t(:mobile, :tags => @tag) 
+						= link_to t('cooliris', :tags => @tag), {:controller => "tag", :action => "cooliris" , :tag => @tag}, :class => "cooliris"
+
+					.options{:style => "display:none"}
+						%span
+							= I18n.t('language_legend')
+						%a{ :href =>"/"}
+							= t(:language_portuguese) 
+						= link_to t(:language_english), language_path(:locale => "en", :tag => @tag)
+						= link_to t(:language_spanish), language_path(:locale => "es", :tag => @tag)
+
+						%form#theme{ :action=>"/"}
+							%fieldset
+								%label
+									= I18n.t('choice_layout_legend')				    
+								%select#layout{ :name=>"layout"}
+									%optgroup{ :label=> I18n.t('choice_layout_optgroup') }
+										%option{ :value=>"Layout version 2.1 (fluid)", :selected=>cookies['style']=='Layout version 2.1 (fluid)' ? "selected" : nil} version 2.1 (fluid)
+										%option{ :value=>"Layout version 1", :selected=>cookies['style']=='Layout version 2.1 (fluid)' ? "selected" : nil} version 1
+
+					.info
+						%p 
+							&copy; copyright Can&ccedil;&atilde;o Nova 
+							= t(:copyright)
+						= link_to t(:about),about_url
+						= link_to t(:api) , api_url
+										
+		%script{:type => "text/javascript"}
+			var uservoiceJsHost = ("https:" == document.location.protocol) ? "https://uservoice.com" : "http://cdn.uservoice.com";
+			document.write(unescape("%3Cscript src='" + uservoiceJsHost + "/javascripts/widgets/tab.js' type='text/javascript'%3E%3C/script%3E"))
+			
+		%script{:type => "text/javascript"}
+			UserVoice.Tab.show({ 
+			/* required */
+			key: 'mashupcn',
+			host: 'mashupcn.uservoice.com', 
+			forum: '29815', 
+			/* optional */
+			alignment: 'right',
+			background_color:'#097EB3', 
+			text_color: 'white',
+			hover_color: '#06C',
+			= "lang: '"+I18n.locale.to_s.gsub('-','_')+"'"
+			})
+
+		%script{:type => "text/javascript"}
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+		%script{:type => "text/javascript"}
+			try {
+			var pageTracker = _gat._getTracker("UA-6535463-1");
+			pageTracker._trackPageview();
+			} catch(err) {}
+
+		%script{:type => "text/javascript"}
+			var addthis_config = {
+			= "ui_language: '"+I18n.locale.to_s.gsub('-BR','')+"'"
+			,data_ga_tracker: pageTracker,data_track_linkback: true}
+		= javascript_include_tag "http://s7.addthis.com/js/250/addthis_widget.js#username=mashupcn"
+
+			

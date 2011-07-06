@@ -12,30 +12,31 @@
 		#page{:class => self.request.path_parameters.action}	
 			#header
 				.size
+					.institutional
+						%a{:href => "http://euajudo.cancaonova.com/"} Seja sócio
+						%a{:href => "http://shopping.cancaonova.com/"} Shopping
+						%a{:href => "http://noticias.cancaonova.com/"} Notícias
+						%a{:href => "http://blog.cancaonova.com/"} Blogs
+						%a{:href => "http://webtvcn.com/"} WEBtvCN
 					.top
-						%h1
-							%a.mobi{:href=>"http://mashup.cancaonova.com/"}
-								%span MASHUP.cancaonova.com
-						%p.slogan
-							= t(:slogan)
-						%form#search{ :action=>"/", :method=>"get"}
+						.logo
+							%h1
+								%a{:href => "http://mashup.cancaonova.com/", :title => "Página Inicial do Mashup Canção Nova"}
+									%span mashup.cancaonova.com - coberturas online de eventos
+							%h2
+								%a{:href => "http://www.cancaonova.com/", :title => "cancaonova.com"}
+									%span Canção Nova
+						%form#search{:action => "/", :method => "get"}
 							%fieldset
-								%label{ :for=>"tag"}
+								%label{:for => "tag"}
 									= t(:form_tags_label)
-								%input#tag{ :name=>"tag", :size=>"20", :value =>@tag }
+								%input#tag{:name => "tag", :size => "20", :value => @tag}
 								%button
 									%span
 										= t(:form_tags_button)
-					.institutional
-						%a.cancaonova{ :href=>"http://cancaonova.com"}
-							= image_tag "http://www.cancaonova.com/i/logo_cancaonova.gif", :size=>"98x67", :alt=>"Logo Canção Nova", :title=>"cancaonova.com"
-						%a{ :href=>"http://euajudo.cancaonova.com"}
-							= t(:institutional_member)
-						%a{ :href=>"http://shopping.cancaonova.com"} Shopping
-						%a{ :href=>"http://noticias.cancaonova.com"}
-							= t(:institutional_news)
-						%a{ :href=>"http://blog.cancaonova.com"} Blogs
-						%a{ :href=>"http://webtvcn.com"} WEBtvCN
+					- if @event
+						.logoevento
+							%img{:alt => "Muticom 2011", :height => "80", :src => "/#{@event}/logo.jpg", :title => "logo Muticom 2011"}/
 			- if flash[:notice]
 				#notice
 					= flash[:notice]

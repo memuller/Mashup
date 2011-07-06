@@ -24,7 +24,7 @@
 				.border
 				#videos_thumbnails				
 					- @entries[:videos][0...10].each do |entry|
-						%a{:href => entry[5], :id => id_video(entry[5]) , :title => entry[2] + " &mdash; " + time_ago_in_words( entry[4]) +" "+ entry[1]} 
+						%a{:href => entry[5], :id => id_video(entry[5]) , :title => entry[2] + " - " + time_ago_in_words( entry[4]) +" "+ entry[1]} 
 							= image_tag entry[6].to_s
 				#videos_nav
 					%span.folio.hidden
@@ -57,14 +57,9 @@
 				= @entries[:photos].first[2]
 						
 		#photos_thumbnails				
-			- @entries[:photos][0...9].each do |entry|
+			- @entries[:photos][0...12].each do |entry|
 				%a{:href => entry[5]+"?photo="+id_photo(entry[6]), :id => "photo="+id_photo(entry[6]), :title => entry[2] } 
 					= image_tag entry[6]
-					= entry[2]
-					%span
-						= time_ago_in_words entry[4]
-						= t(:by)
-						= author_photo(entry[1])
 		#photos_nav
 			%span.folio.hidden
 				= t(:paginate_legend)

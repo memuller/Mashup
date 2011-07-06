@@ -39,24 +39,12 @@
 					
 	.border
 #text2
-	#blogs
-		%h2
-			= link_to "Blogs", media_path( :tag => @tag, :action => "blog")		
-		#blogs_content
-			= render :partial => 'texts', :locals => { :feed => @entries[:blogs][0...3] }
-		= link_to t(:see_more)+" blogs", media_path( :tag => @tag, :action => "blog"), :class => "show"
 	#bookmarks
 		%h2 
 			= link_to "Bookmarks", media_path( :tag => @tag, :action => "bookmark")
 		#bookmarks_content
 			= render :partial => 'texts', :locals => { :feed => @entries[:bookmarks][0...3] }
 			= link_to t(:see_more)+" bookmarks", media_path( :tag => @tag, :action => "bookmark"), :class => "show"
-	#news
-		%h2
-			= link_to "News", media_path( :tag => @tag, :action => "news")
-		#news_content
-			= render :partial => 'texts', :locals => { :feed => @entries[:news][0...3] }
-		= link_to t(:see_more)+" not&iacute;cias", media_path( :tag => @tag, :action => "news"), :class => "show"
 	#clear
 #photos
 	%h2 

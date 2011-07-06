@@ -574,7 +574,7 @@ div.box div small{color:#777;font-size:.8em;display:block;clear:both;text-align:
 
 
 /* Removes unwanted stuff from Muticom. */
-#blogs, #news, #tagcloud{display:none;}
+#tagcloud{display:none;}
 
 #content{padding-top:10px;}
 #bookmarks a.show, #microposts a.show{margin-top:2em;}

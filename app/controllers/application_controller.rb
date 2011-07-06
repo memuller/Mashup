@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
 		def event_page
 			event_name = 'muticom'
 			if @tag.include? event_name
-				prepend_view_path "app/views/#{event_name}"
 				@event = event_name
 			end
 		end

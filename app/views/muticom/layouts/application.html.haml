@@ -7,7 +7,6 @@
 			Mashup Can&ccedil;&atilde;o Nova
 		%meta{ "http-equiv"=>"Content-type", :content=>"text/html; charset=utf-8"} 
 		= stylesheet_link_tag "version-2_1-fluid"
-		%link{:href => "/muticom/style.css", :media => 'screen', :rel => 'stylesheet', :type => 'text/css'}
 		= auto_discovery_link_tag(:rss, :format => "rss", :tag => tag_nil?)
 	%body
 		#page{:class => self.request.path_parameters.action}	
@@ -35,8 +34,9 @@
 								%button
 									%span
 										= t(:form_tags_button)
-					.logoevento
-						%img{:alt => "Muticom 2011", :height => "80", :src => "/muticom/logo_muticom.jpg", :title => "logo Muticom 2011"}/
+					- if @event
+						.logoevento
+							%img{:alt => "Muticom 2011", :height => "80", :src => "/#{@event}/logo.jpg", :title => "logo Muticom 2011"}/
 			- if flash[:notice]
 				#notice
 					= flash[:notice]

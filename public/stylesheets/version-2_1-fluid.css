@@ -543,3 +543,57 @@ div.box div small{color:#777;font-size:.8em;display:block;clear:both;text-align:
 .no-entrie{display: block; text-align: center; padding: 3em 0pt 10em;}
 
 .hidden{visibility:hidden;}
+
+
+/* ////////////////////////////////// */
+/* ////////// MUTICOM 2011 ////////// */
+/* ////////////////////////////////// */
+
+#header {height:135px;border-bottom:#BBBBBB 1px solid;background:url(/images/bg-head.jpg) repeat-x 0 0;}
+	#header div.top {padding-top:20px;width:640px;float:left;padding-left:10px;}
+	.top .logo {width:289px;float:left;padding:21px 0 0 0;}
+		#header h1{float:right; background:url(/images/logo_mashup.png); width:185px;height:72px;}
+		#header .size .top .logo h2{float:left; background:url(/images/logo_cn.png); width:88px;height:72px;}
+			#header h2 a {display:block;height:100%;}
+			#header h2 span{display:none;}
+	.top #search {width:300px;float:right;margin-top:49px;}
+		#header fieldset {position:relative;right:auto;top:auto;}
+		#header input {color: #666666;font-size: 14px;font-weight: bold;height:30px;border-color:#CC7622;line-height:30px;}
+			#header input:hover,#header input:focus {border-color:#F79638;}
+		#header label {background:none;font-size:12px;padding-left:5px;top:-20px;}
+			#header label:hover {color:#F79638;cursor:pointer;}
+		#header button {background:#CC7622;height:34px;width:58px;text-align:center;}
+			#header button:hover, #header button:focus {background:#F79638;}
+			#header button span {color:#FFFFFF;font-size:12px;height:auto;line-height:normal;overflow:hidden;}
+	#header .institutional {position:absolute;width:960px;height:20px;background:#0275BB;padding:0;float:none;padding:0 0 0 10px;line-height:15px;}
+	#header .institutional a {display:inline;color:#007CC3;text-decoration:none;font-size:12px;margin:0 60px 0 0;margin-top:0;color:#ffffff;}
+	
+	#header div.logoevento{float:right;margin-right:10px;padding:35px 15px 0;text-align:right;height:100px;}
+
+#footer .container {background: url(/images/logo-footer.jpg) no-repeat scroll 100% 50% transparent;width:940px;}
+
+
+/* Removes unwanted stuff from Muticom. */
+#blogs, #news, #tagcloud{display:none;}
+
+#content{padding-top:10px;}
+#bookmarks a.show, #microposts a.show{margin-top:2em;}
+.texts, #videos, #text2, #photos {margin-bottom:40px;}
+	.texts, #bookmarks{padding:0 10px;width:240px;}
+	#text2{float:left; width:280px;}
+	#videos{padding:0 10px; width:660px;}
+		#videos_thumbnails img {border-color:#DDDDDD;}
+		#videos_thumbnails a:hover img {border-color:#999999;}
+	#photos{float:right; padding:0 0 0 10px;width:646px;margin-right:11px; background-color:#F2EFE6;border: 1px solid #BBBBBB;position:relative;}
+		#photos_content{margin:0 0 10px 0;padding:10px 0 0 0;border-color:#DDDDDD;width:354px;}
+			#photos_thumbnails {float:right; position:relative; width:269px;}
+				#photos_thumbnails a {height:auto;width:auto;}
+				#photos_thumbnails a span {display:none;}
+				#photos_thumbnails a img {margin:0;}
+			#photos_nav{position:absolute;right:0;bottom:0;width:250px;padding-left:0;margin-right:10px;}
+			#photos_nav .hidden{display:none;}
+			#photos_nav a.show{padding:0;}
+
+#microposts h2, #bookmarks h2, #videos h2 {margin-left:10px;}
+#photos h2 {margin-top:10px; margin-bottom:10px;}
+#bookmarks h2 {margin-top:11px; margin-bottom:10px;}

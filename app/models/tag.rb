@@ -32,7 +32,7 @@ class Tag
 			:bookmarks => bookmark( tag, 1).to_a[0...5]	,
 			:videos => video( tag, 1)[0...10],
 			:microblogs => microblog( tag, 1)[0...10],
-			:photos => photo( tag)[0...10]	
+			:photos => photo( tag)[0...13]	
 		}
 	end
 
@@ -54,13 +54,12 @@ class Tag
 	end
 	
 	def self.photo tag
-		fetch_and_parse_feed( @url_feed[:photo], tag )[0...10]		
+		fetch_and_parse_feed( @url_feed[:photo], tag )[0...13]		
 	end
 
 	def self.video tag, page
 		page = 12*page.to_i-11
-		fetch_and_parse_feed( {
-											:video => set_feed_page(@url_feed[:video], page), 
+		fetch_and_parse_feed( { 
 											:video_query => set_feed_page( @url_feed[:video_query], page)
 											}	, tag )[0...12]		
 
@@ -128,7 +127,7 @@ class Tag
 					@is_photo = url[0].to_s.include? "photo"
 					@put_quote = url[0].to_s.include?( "blog") or url[0].to_s.include?( "news")
 					if @is_photo or  url[0].to_s.include? "bookmark"
-						feed_urls << set_feed( url[1], default_tag( tag ) )	<< set_feed( url[1], tilde_tag( tag ) ) <<	set_feed( url[1], space_tilde_tag( tag , quotes) ) <<	set_feed( url[1], space_tag( tag , quotes) )						
+						feed_urls << set_feed( url[1], default_tag( tag ) )
 					elsif url[0].to_s.include? "microblog"
 						feed_urls << set_feed( url[1], or_microblog( tag ) )
 					elsif
@@ -140,12 +139,7 @@ class Tag
 				@is_photo = feed_url.include? "flickr.com"
 				@put_quote = feed_url.to_s.include?( "blogsearch") || feed_url.to_s.include?( "news.google")
 				if @is_photo or  feed_url.to_s.include? "delicious.com"
-					feed_urls = [
-									set_feed( feed_url, default_tag( tag ) ),			
-									set_feed( feed_url, tilde_tag( tag ) )	,		
-									set_feed( feed_url, space_tilde_tag( tag, quotes) ),
-									set_feed( feed_url, space_tag( tag , quotes ) )						
-								]	
+					feed_urls = set_feed( feed_url, default_tag( tag ) )
 				elsif feed_url.to_s.include? "twitter.com"
 					feed_urls = set_feed( feed_url, or_microblog( tag ) )
 				else
@@ -194,7 +188,7 @@ RAILS_DEFAULT_LOGGER.debug "#{feedurl}"
 		end
 
 		def self.set_feed_page feed, page
-Rails.logger.debug feed.gsub( %r{#page#}, page.to_s )			
+			#Rails.logger.debug feed.gsub( %r{#page#}, page.to_s )			
 			feed.gsub( %r{#page#}, page.to_s ) unless feed.nil?
 		end
 

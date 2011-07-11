@@ -1,0 +1,8 @@
+h1. Mashup
+
+*Mashup* é uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.
+
+O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar, oferecendo ao público um único site para acompanhar as novidades sobre a Canção Nova e seus eventos.
+
+"Mais informações no about oficial.":http://deploy.cancaonova.com/mashup/about
+"Conceito de mashup":http://pt.wikipedia.org/wiki/Mashup

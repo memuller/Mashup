@@ -37,7 +37,7 @@ class TagController < ApplicationController
   end
 
   def bookmark
-		@entries = Tag.bookmark(@tag, @page)
+		@entries = Tag.bookmark(@tag, @page.to_i - 1)
   end
 
   def timeline

@@ -2,7 +2,7 @@ class TagController < ApplicationController
 	
 	attr_reader :entries
 	before_filter :remove_tag_static, :clear_tag, :redirect_rss_to_feedburner, :event_page
-	caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline
+	#caches_page :index, :video, :blog, :news, :photo, :microtext, :bookmark, :timeline
 
   def index
 		respond_to do |format|

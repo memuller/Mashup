@@ -43,7 +43,7 @@
 		%h2 
 			= link_to "Bookmarks", media_path( :tag => @tag, :action => "bookmark")
 		#bookmarks_content
-			= render :partial => 'texts', :locals => { :feed => @entries[:bookmarks][0...3] }
+			= render :partial => 'texts', :locals => { :feed => @entries[:bookmarks][0...5] }
 			= link_to t(:see_more)+" bookmarks", media_path( :tag => @tag, :action => "bookmark"), :class => "show"
 	#clear
 #photos

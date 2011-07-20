@@ -19,7 +19,7 @@ module HomeHelper
 						image_tag( img[6], :class => "avatar", :width => "48", :height => "48" )
 					end
 				else
-					image_tag("http://www.artviper.net/screenshots/screener.php?w=70&amp;userID=17709aa3c85c360&amp;hash=5015222eafdaeddd4e2805645a99abb5&amp;url="+img[5], :width=>"70", :height=>"52", :class => "screenshot")
+					image_tag("http://85.25.9.83/artviper.php?w=70&userID=4f350ce3a8f92857&url="+img[5], :width=>"70", :height=>"52", :class => "screenshot")
 				end
 			else
 				""

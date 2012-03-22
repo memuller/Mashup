@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class TagController < ApplicationController
 	
 	attr_reader :entries

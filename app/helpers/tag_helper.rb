@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module TagHelper
 	
 	def embed_video url_video

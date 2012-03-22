@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Tag
 	@url_feed = Hash.new
 	@url_feed[:blog] = "http://blogsearch.google.com/blogsearch_feeds?scoring=d&num=12&start=#page#&q=##"

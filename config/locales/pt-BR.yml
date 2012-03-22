@@ -1,140 +1,166 @@
-pt-BR:
-  slogan: 'Cobertura online dos eventos da Can&ccedil;&atilde;o Nova'
-  form_tags_label: 'navege através das tags'
-  form_tags_button: 'navegar'
-  institutional_member: 'Seja sócio'
-  institutional_news: 'Notícias'
-  contact: 'fale com a equipe'
-  copyright: 'todos os direitos reservados'
-  about: 'sobre o Mashup'
-  api: 'API para desenvolvedores'
-  mobile: veja o %{tags} no Mashup Mobile
-  cooliris: veja o %{tags} no Cooliris
-  newsletter: Acompanhe o mashup via newsletter
-  share: Compartilhar
-  language_legend: 'mude o idioma'
-  language_english: 'english'
-  language_spanish: 'español'
-  language_portuguese: 'portugu&ecirc;s'
-  choice_layout_legend: 'Mude o tema'
-  choice_layout_optgroup: 'selecione um layout'
-  see_more: 'veja mais'
-  paginate_legend: 'p&aacute;gina'
-  paginate_before: 'anterior'
-  paginate_next: 'pr&oacute;ximo'
-  tagcloud_header: 'relacionadas'
-  by: 'por'
-  ago: 'atr&aacute;s'
-  home_about_html: "<p>Mashup é um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.</p> <p>O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.</p> <p>Oferecendo ao público um único endereço na internet para acompanhar o que sai sobre a Canção Nova.</p> <p>Leia mais %{about} Canção Nova"
-  label_updates: '&uacute;ltimas atualiza&ccedil;&otilde;es'
-  more_updates: 'veja mais sobre a Can&ccedil;&atilde;o Nova'
-
- # formatos de data e hora
-  date:
-    formats:
+--- 
+pt-BR: 
+  about: "sobre o Mashup"
+  ago: atrás
+  api: "API para desenvolvedores"
+  by: por
+  choice_layout_legend: "Mude o tema"
+  choice_layout_optgroup: "selecione um layout"
+  contact: "fale com a equipe"
+  cooliris: "veja o %{tags} no Cooliris"
+  copyright: "todos os direitos reservados"
+  date: 
+    abbr_day_names: 
+      - Dom
+      - Seg
+      - Ter
+      - Qua
+      - Qui
+      - Sex
+      - Sáb
+    abbr_month_names: 
+      - ~
+      - Jan
+      - Fev
+      - Mar
+      - Abr
+      - Mai
+      - Jun
+      - Jul
+      - Ago
+      - Set
+      - Out
+      - Nov
+      - Dez
+    day_names: 
+      - Domingo
+      - Segunda
+      - Terça
+      - Quarta
+      - Quinta
+      - Sexta
+      - Sábado
+    formats: 
       default: "%d/%m/%Y"
-      short: "%d de %B"
       long: "%d de %B de %Y"
-    
-    day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
-    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
-    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
-    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
-    order: [ :day, :month, :year ]
-  
-  time:
-    formats:
-      default: "%A, %d de %B de %Y, %H:%M hs"
-      short: "%d/%m, %H:%M hs"
-      long: "%A, %d de %B de %Y, %H:%M hs"
-    am: ''
-    pm: ''
-  
-  # date helper distanci em palavras
-  datetime:
-    distance_in_words:
-      half_a_minute: 'meio minuto'
-      less_than_x_seconds:
-        one: 'menos de 1 segundo'
-        other: 'menos de %{count} segundos'
-      
-      x_seconds:
-        one: '1 segundo'
-        other: '%{count} segundos'
-      
-      less_than_x_minutes:
-        one: 'menos de um minuto'
-        other: 'menos de %{count} minutos'
-      
-      x_minutes:
-        one: '1 minuto'
-        other: '%{count} minutos'
-      
-      about_x_hours:
-        one: 'aproximadamente 1 hora'
-        other: 'aproximadamente %{count} horas'
-      
-      x_days:
-        one: '1 dia'
-        other: '%{count} dias'
-      
-      about_x_months:
-        one: 'aproximadamente 1 mês'
-        other: 'aproximadamente %{count} meses'
-      
-      x_months:
-        one: '1 mês'
-        other: '%{count} meses'
-      
-      about_x_years:
-        one: 'aproximadamente 1 ano'
-        other: 'aproximadamente %{count} anos'
-      
-      over_x_years:
-        one: 'mais de 1 ano'
-        other: 'mais de %{count} anos'
-      almost_x_years:
-        one: 'quase um ano'
-        other: 'quase %{count} anos'
-    prompts:
-      year: "Ano"
-      month: "Mês"
-      day: "Dia"
-      hour: "Hora"
-      minute: "Minuto"
-      second: "Segundos"
- 
-  # numeros
-  number:
-    format:
-      precision: 3
-      separator: ','
-      delimiter: '.'
-    currency:
-      format:
-        unit: 'R$'
+      short: "%d de %B"
+    month_names: 
+      - ~
+      - Janeiro
+      - Fevereiro
+      - Março
+      - Abril
+      - Maio
+      - Junho
+      - Julho
+      - Agosto
+      - Setembro
+      - Outubro
+      - Novembro
+      - Dezembro
+    order: 
+      - !ruby/symbol day
+      - !ruby/symbol month
+      - !ruby/symbol year
+  datetime: 
+    distance_in_words: 
+      about_x_hours: 
+        one: "aproximadamente 1 hora"
+        other: "aproximadamente %{count} horas"
+      about_x_months: 
+        one: "aproximadamente 1 mês"
+        other: "aproximadamente %{count} meses"
+      about_x_years: 
+        one: "aproximadamente 1 ano"
+        other: "aproximadamente %{count} anos"
+      almost_x_years: 
+        one: "quase um ano"
+        other: "quase %{count} anos"
+      half_a_minute: "meio minuto"
+      less_than_x_minutes: 
+        one: "menos de um minuto"
+        other: "menos de %{count} minutos"
+      less_than_x_seconds: 
+        one: "menos de 1 segundo"
+        other: "menos de %{count} segundos"
+      over_x_years: 
+        one: "mais de 1 ano"
+        other: "mais de %{count} anos"
+      x_days: 
+        one: "1 dia"
+        other: "%{count} dias"
+      x_minutes: 
+        one: "1 minuto"
+        other: "%{count} minutos"
+      x_months: 
+        one: "1 mês"
+        other: "%{count} meses"
+      x_seconds: 
+        one: "1 segundo"
+        other: "%{count} segundos"
+    prompts: 
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      month: Mês
+      second: Segundos
+      year: Ano
+  form_tags_button: navegar
+  form_tags_label: "navege através das tags"
+  home_about_html: "<p>Mashup é um website ou uma aplicação web que usa conteúdo de mais de uma fonte para criar um novo serviço.</p> <p>O Mashup da Canção Nova busca nos maiores sites o conteúdo multimídia referente a Canção Nova e o agrupa em um só lugar.</p> <p>Oferecendo ao público um único endereço na internet para acompanhar o que sai sobre a Canção Nova.</p> <p>Leia mais %{about} Canção Nova"
+  institutional_member: "Seja sócio"
+  institutional_news: Notícias
+  label_updates: "últimas atualizações"
+  language_english: english
+  language_legend: "mude o idioma"
+  language_portuguese: português
+  language_spanish: español
+  mobile: "veja o %{tags} no Mashup Mobile"
+  more_updates: "veja mais sobre a Canção Nova"
+  newsletter: "Acompanhe o mashup via newsletter"
+  number: 
+    currency: 
+      format: 
+        delimiter: "."
+        format: "%u %n"
         precision: 2
-        format: '%u %n'
-        separator: ','
-        delimiter: '.'
-    percentage:
-      format:
-        delimiter: '.'
-    precision:
-      format:
-        delimiter: '.'
-    human:
-      format:
+        separator: ","
+        unit: R$
+    format: 
+      delimiter: "."
+      precision: 3
+      separator: ","
+    human: 
+      format: 
+        delimiter: "."
         precision: 1
-        delimiter: '.'
-      storage_units:
+      storage_units: 
         format: "%n %u"
-        units:
-          byte:
-            one: "Byte"
-            other: "Bytes"
-          kb: "KB"
-          mb: "MB"
-          gb: "GB"
-          tb: "TB"
- 
+        units: 
+          byte: 
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage: 
+      format: 
+        delimiter: "."
+    precision: 
+      format: 
+        delimiter: "."
+  paginate_before: anterior
+  paginate_legend: página
+  paginate_next: próximo
+  see_more: "veja mais"
+  share: Compartilhar
+  slogan: "Cobertura online dos eventos da Canção Nova"
+  tagcloud_header: relacionadas
+  time: 
+    am: ""
+    formats: 
+      default: "%A, %d de %B de %Y, %H:%M hs"
+      long: "%A, %d de %B de %Y, %H:%M hs"
+      short: "%d/%m, %H:%M hs"
+    pm: ""

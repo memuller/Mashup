@@ -1,32 +1,31 @@
+--- 
 en: 
-  slogan: 'Online coverage of events in New Song'
-  form_tags_label: 'browse thought of tags'
-  form_tags_button: 'browser' 
-  institutional_member: 'Be&nbsp;a&nbsp;member'
-  institutional_news: 'News'
-  contact: 'talk with team'
-  copyright: ' all right reserved'
-  about: 'about the Mashup'
-  api: 'API for developers'
-  mobile: view {{tags}} in Mashup Mobile
-  cooliris: view {{tags}} in Cooliris
-  newsletter: Follow Mashup by newsletter
+  about: "about the Mashup"
+  ago: ago
+  api: "API for developers"
+  by: by
+  choice_layout_legend: "change the theme"
+  choice_layout_optgroup: "select a layout"
+  contact: "talk with team"
+  cooliris: "view {{tags}} in Cooliris"
+  copyright: " all right reserved"
+  form_tags_button: browser
+  form_tags_label: "browse thought of tags"
+  home_about: "<p>Mashup is a website or a web application that uses content from more than one source to create a new service. </p><p>The Mashup from Canção Nova search for multimedia content about Canção Nova in the most popular sites and groups in one place. </p><p>Providing to public a single place to monitor what comes out about the Canção Nova. Read more {{about}} Canção Nova</p>"
+  institutional_member: Be a member
+  institutional_news: News
+  label_updates: "last updates"
+  language_english: english
+  language_legend: "choice the language"
+  language_portuguese: português
+  language_spanish: español
+  mobile: "view {{tags}} in Mashup Mobile"
+  more_updates: "see more about Canção Nova"
+  newsletter: "Follow Mashup by newsletter"
+  paginate_before: before
+  paginate_legend: page
+  paginate_next: next
+  see_more: "see the list in"
   share: Share
-  language_legend: choice the language
-  language_english: 'english'
-  language_spanish: 'español'
-  language_portuguese: 'portugu&ecirc;s'
-  choice_layout_legend: 'change the theme'
-  choice_layout_optgroup: 'select a layout'
-  see_more: 'see the list in'
-  paginate_legend: 'page'
-  paginate_before: 'before'
-  paginate_next: 'next'
-  tagcloud_header: 'related'
-  by: 'by'        
-  ago: 'ago'
-  home_about: <p>Mashup is a website or a web application that uses content from more than one source to create a new service. </p><p>The Mashup from Canção Nova search for multimedia content about Canção Nova in the most popular sites and groups in one place. </p><p>Providing to public a single place to monitor what comes out about the Canção Nova. Read more {{about}} Canção Nova</p>
-  label_updates: last updates
-  more_updates: see more about Canção Nova
-
-	
+  slogan: "Online coverage of events in New Song"
+  tagcloud_header: related
